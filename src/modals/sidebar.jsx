@@ -3,7 +3,7 @@ import Image from 'next/image';
 import ImagePopup from './ImagePopup';
 import React, { useState } from 'react';
 
-import Logo from "@assets/img/logo/logo.png";
+import Logo from "@assets/img/logo/lumenta-logo.png";
 import sidebar_img_1 from "@assets/img/portfolio/img-1.jpg";
 import sidebar_img_2 from "@assets/img/portfolio/img-2.jpg";
 import sidebar_img_3 from "@assets/img/portfolio/img-3.jpg";
@@ -50,7 +50,7 @@ const Sidebar = ({sidebarOpen, setSidebarOpen, home_three}) => {
                     <div className="offcanvas__top mb-50 d-flex justify-content-between align-items-center">
                         <div className="offcanvas__logo logo">
                             <Link href="/">
-                            <Image src={Logo} alt="logo" />
+                            <Image src={Logo} alt="logo" width={140} height={40}/>
                             </Link>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ const Sidebar = ({sidebarOpen, setSidebarOpen, home_three}) => {
                     </div>
                     <div className="offcanvas__popup">
                         <p>Web designing in a powerful way of just not an only professions. We have tendency to believe the idea that smart looking .</p>
-                        <div className="offcanvas__popup-gallery">
+                        {/* <div className="offcanvas__popup-gallery">
                             <h4 className="offcanvas__title">Gallery</h4>
                             {images.map((item, i) => 
                                 <a key={i} style={{ cursor: "pointer" }} 
@@ -69,7 +69,7 @@ const Sidebar = ({sidebarOpen, setSidebarOpen, home_three}) => {
                                     <Image src={item.img} alt="theme-pure" />
                                 </a>
                             )}
-                        </div>
+                        </div> */}
                     </div>
                     <div className="offcanvas__contact">
                         <h4 className="offcanvas__title">Contacts</h4>
@@ -78,7 +78,7 @@ const Sidebar = ({sidebarOpen, setSidebarOpen, home_three}) => {
                             <i className="fa-sharp fa-solid fa-location-dot"></i>
                             </div>
                             <div className="offcanvas__contact-content-content">
-                            <a href="https://www.google.com/maps/search/86+Road+Broklyn+Street,+600+New+York,+USA/@40.6897806,-74.0278086,12z/data=!3m1!4b1">86 Road Broklyn Street, 600 </a>
+                            <a href="https://www.google.com/maps/search/86+Road+Broklyn+Street,+600+New+York,+USA/@40.6897806,-74.0278086,12z/data=!3m1!4b1">1315 Derry Road Unit 1, Mississauga, ON L5T1B6, Canada </a>
                             </div>
                         </div>
                         <div className="offcanvas__contact-content d-flex">
@@ -86,7 +86,7 @@ const Sidebar = ({sidebarOpen, setSidebarOpen, home_three}) => {
                             <i className="fa-solid fa-envelope"></i>
                             </div>
                             <div className="offcanvas__contact-content-content">
-                            <a href="mailto:needhelp@company.com">Needhelp@company.com  </a>
+                            <a href="mailto:info@lumentadigital.com">info@lumentadigital.com  </a>
                             </div>
                         </div>
                         <div className="offcanvas__contact-content d-flex">
@@ -94,15 +94,14 @@ const Sidebar = ({sidebarOpen, setSidebarOpen, home_three}) => {
                             <i className="fa-solid fa-phone"></i>
                             </div>
                             <div className="offcanvas__contact-content-content">
-                            <a href="tel:01310-069824"> +92 666 888 0000</a>
+                            <a href="tel:01310-069824"> +1 (416) 996 - 5329</a>
                             </div>
                         </div>
                     </div>
                     <div className="offcanvas__social"> 
                         <a className="icon facebook" href="#"><i className="fab fa-facebook-f"></i></a>
                         <a className="icon twitter" href="#"><i className="fab fa-twitter"></i></a>
-                        <a className="icon youtube" href="#"><i className="fab fa-youtube"></i></a>
-                        <a className="icon linkedin" href="#"><i className="fab fa-linkedin"></i></a>
+                        <a className="icon linkedin" href="https://www.linkedin.com/company/lumenta-digital"><i className="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 </div>

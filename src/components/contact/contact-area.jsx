@@ -23,7 +23,7 @@ const ContactArea = () => {
                                         <EmailIconOne /> 
                                     </span>
                                 </div>
-                                <h3 className="tp-contact-item-title"><a href="mailto:@themepure.gmail.com">thepureingsai.co.uk</a></h3>
+                                <h3 className="tp-contact-item-title"><a href="mailto:info@lumentadigital.com">info@lumentadigital.com</a></h3>
                             </div>
                             <div className="tp-contact-content-phone d-flex align-items-center">
                                 <div className="tp-contact-content-phone-icon">
@@ -32,7 +32,7 @@ const ContactArea = () => {
                                     </span>
                                 </div>
                                 <h3 className="tp-contact-item-title">
-                                    <a href="tel:9266688000">+880 123 456 789 , 99875</a>
+                                    <a href="tel:9266688000">+1 (416) 996 - 5329</a>
                                 </h3>
                             </div>
                             <div className="tp-contact-location-wrapper d-flex">

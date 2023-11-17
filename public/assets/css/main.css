@@ -134,15 +134,15 @@ li,
   */
   --tp-common-white: #ffffff;
   --tp-common-black: #000;
-  --tp-heading-primary: #020626;
+  --tp-heading-primary: #414144;
   --tp-heading-secondary: #000000;
   --tp-grey-1: #F1F1F1;
   --tp-grey-2: #F5F6F8;
   --tp-text-body: #5A627D;
   --tp-text-1: #261F1F;
   --tp-text-2: #0C0808;
-  --tp-theme-primary: #020626;
-  --tp-theme-secondary: #05DAC3;
+  --tp-theme-primary: #414144;
+  --tp-theme-secondary: #ff8d0b;
   --tp-bg-primary: #F3FBFE;
   --tp-border-primary: #000;
   --tp-border-secondary: #000;
@@ -7706,7 +7706,7 @@ div.demo img {
 .tp-feature-wrapper p::after {
   position: absolute;
   content: "";
-  background: #05DAC3;
+  background: #ff8d0b;
   width: 2px;
   height: 41px;
   left: 128px;
@@ -8307,7 +8307,7 @@ div.demo img {
 }
 .tp-service-3-content {
   position: relative;
-  background: #020626;
+  background: #414144;
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 58px 40px 36px 39px;
 }
@@ -9687,7 +9687,7 @@ div.demo img {
 }
 .tp-support-faq.faq-style-1 .tp-faq-tab-content .accordion-item .accordion-button {
   padding: 33px 55px 33px 54px;
-  color: #020626;
+  color: #414144;
 }
 @media (max-width: 575px) {
   .tp-support-faq.faq-style-1 .tp-faq-tab-content .accordion-item .accordion-button {
@@ -9698,10 +9698,10 @@ div.demo img {
   content: "\f063";
 }
 .tp-support-faq.faq-style-1 .tp-faq-tab-content .accordion-item .accordion-button:hover {
-  color: #020626;
+  color: #414144;
 }
 .tp-support-faq.faq-style-1 .tp-faq-tab-content .accordion-item.tp-faq-active .accordion-button {
-  color: #020626;
+  color: #414144;
 }
 .tp-support-faq.faq-style-1 .tp-faq-tab-content .accordion-body {
   position: relative;
@@ -11693,7 +11693,7 @@ div.demo img {
   border-radius: 50%;
   bottom: -25px;
   right: -7px;
-  background-color: #05DAC3;
+  background-color: #ff8d0b;
 }
 .circle-animation span.tp-circle-6 {
   display: block;
@@ -11721,7 +11721,7 @@ div.demo img {
   border-radius: 50%;
   top: -25px;
   right: -6px;
-  background-color: #05DAC3;
+  background-color: #ff8d0b;
 }
 .circle-animation span.tp-circle-7 {
   display: block;
@@ -11909,7 +11909,7 @@ div.demo img {
 .tp-industry-content-title::after {
   position: absolute;
   content: "";
-  background: #05DAC3;
+  background: #ff8d0b;
   width: 2px;
   height: 56px;
   left: -10px;
@@ -12040,7 +12040,7 @@ div.demo img {
   z-index: -1;
 }
 .tp-industry-tab #pills-tab {
-  border-bottom: 1px solid #020626;
+  border-bottom: 1px solid #414144;
 }
 .tp-industry-tab .nav-item .nav-link {
   position: relative;
@@ -13169,7 +13169,7 @@ div.demo img {
 .tp-contact-input {
   margin-bottom: 26px;
 }
-.tp-contact-input input {
+/* .tp-contact-input input {
   width: 100%;
   height: 60px;
   border: 1px solid #D4DCE0;
@@ -13190,8 +13190,8 @@ div.demo img {
 }
 .tp-contact-input input:focus::placeholder {
   font-size: 0;
-}
-.tp-contact-input textarea {
+} */
+/* .tp-contact-input textarea {
   height: 271px;
   background-color: #f8f8f9;
   resize: none;
@@ -13213,7 +13213,7 @@ div.demo img {
 }
 .tp-contact-cta-area {
   margin-top: -165px;
-}
+} */
 .tp-contact-map {
   height: 580px;
   width: 100%;

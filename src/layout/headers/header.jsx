@@ -8,7 +8,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import HomeIcon from '@/src/svg/home-icon';
 import SearchPopup from '@/src/modals/search-popup';
 import Sidebar from '@/src/modals/sidebar';
-import Logo from "@assets/img/logo/logo.png";
+import Logo from "@assets/img/logo/lumenta-logo.png";
 
 const HeaderOne = () => {
    const {sticky}  =  useSticky()
@@ -47,15 +47,15 @@ const HeaderOne = () => {
                                     <a href="https://www.google.com/maps/@36.0758266,-79.4558848,17z" 
                                     target="_blank"><span>
                                        <i className="fa-sharp fa-solid fa-location-dot"></i>
-                                       </span>734 H, Bryan Burlington, NC 27215</a>
+                                       </span>1315 Derry Road Unit 1, Mississauga, ON L5T1B6, Canada</a>
                                  </li>
                                  <li>
                                     <a href="mailto:technix@support.com"><span>
-                                       <i className="fa-solid fa-envelope"></i></span>technix@support.com
+                                       <i className="fa-solid fa-envelope"></i></span>info@lumentadigital.com
                                     </a>
                                  </li>
-                                 <li>
-                                    <div className="tp-header-lang-wrapper d-flex align-items-center">
+                                 {/* <li> 
+                                  <div className="tp-header-lang-wrapper d-flex align-items-center">
                                        <div className="tp-header-lang-img">
                                           <Image src={LangLogo} alt="theme-pure" />
                                        </div>
@@ -70,20 +70,20 @@ const HeaderOne = () => {
                                              <li>Canada</li>
                                           </ul>
                                        </div>
-                                    </div>
-                                 </li>
+                                    </div> 
+                                 </li> */}
                               </ul>
                            </div>
                         </div>
                         <div className="col-xxl-6 col-xl-4">
                            <div className="tp-header-top-right d-flex justify-content-end align-items-center">
                               <div className="header-call">
-                                 <a href="tel:01310-069824"><i className="fa-solid fa-phone"></i> +88 01310-069824</a>
+                                 <a href="tel:01310-069824"><i className="fa-solid fa-phone"></i> +1 (416) 996 - 5329</a>
                               </div>
                               <div className="header-social d-xxl-block d-none">
-                                 <Link href="#"><i className="fa-brands fa-facebook"></i> Facebook</Link>
-                                 <Link href="#"><i className="fa-brands fa-twitter"></i> Skype</Link>
-                                 <Link href="#"><i className="fa-brands fa-linkedin"></i> Linkedin</Link>
+                                 <Link href="https://www.facebook.com/people/Lumenta-Digital-Inc/61551468568740/?sk=about"><i className="fa-brands fa-facebook"></i> Facebook</Link>
+                                 <Link href="https://instagram.com/lumentadigital?igshid=MzRlODBiNWFlZA=="><i className="fa-brands fa-twitter"></i> Instagram</Link>
+                                 <Link href="https://www.linkedin.com/company/lumenta-digital"><i className="fa-brands fa-linkedin"></i> Linkedin</Link>
                               </div>
                            </div>
                         </div>
@@ -106,7 +106,7 @@ const HeaderOne = () => {
                                  </div>
                                  <div className="tp-header-logo">
                                     <Link href="/">
-                                       <Image src={Logo} alt="theme-pure" />
+                                       <Image src={Logo} alt="theme-pure" width={140} height={40}/>
                                     </Link>
                                  </div>
                               </div>
