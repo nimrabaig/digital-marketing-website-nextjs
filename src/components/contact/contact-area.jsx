@@ -41,14 +41,14 @@ const ContactArea = () => {
                                         Office Location
                                         <i className="fa-regular fa-arrow-down"></i>
                                     </h3>
-                                    <p>4517 Washington Ave. Manch ester, Kentucky 39495</p>
+                                    <p>1315 Derry Road East, Unit 1, Mississauga, Ontario, Canada. L5T 1B6</p>
                                 </div>
-                                <div className="tp-contact-location">
+                                {/* <div className="tp-contact-location">
                                     <h3 className="tp-contact-location-title">
                                         Office Location {" "}
                                     <i className="fa-regular fa-arrow-down"></i></h3>
                                     <p>4517 Washington Ave. Manch ester, Kentucky 39495</p>
-                                </div>
+                                </div> */}
                             </div>
                             </div>
                         </div>

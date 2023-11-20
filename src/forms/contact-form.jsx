@@ -161,7 +161,7 @@ const ContactForm = () => {
           <div className="col-md-12">
             <FormGroup>
               <h6 style={{ fontFamily: "inherit" }}>
-                What Services can we Provide you?
+                What services can we provide you?
               </h6>
               <div className="col-md-12">
                 {Object.entries(services).map(([key, checked]) => (

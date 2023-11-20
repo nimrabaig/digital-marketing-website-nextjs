@@ -8,7 +8,7 @@ const Breadcrumb = ({top_title = "Our Company", page_title = "Our Company"}) => 
     <>
       <section
         className="breadcrumb__area breadcrumb-style pt-190 pb-210 p-relative z-index-1"
-        style={{backgroundImage: `url(/assets/img/breadcrumb/breadcrumb-bg-1.jpg)`}}>
+        style={{backgroundImage: `url(/assets/img/breadcrumb/breadcrumb-bg-1.png)`}}>
         <div className="breadcrumb__bg-overlay m-img"></div>
         <div className="container">
           <div className="row justify-content-center">

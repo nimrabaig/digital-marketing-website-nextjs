@@ -2,16 +2,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-import footer_logo from "@assets/img/logo/footer-logo.png";
+import footer_logo from "@assets/img/footer/footer-lumenta-logo.png";
 import SocialLinks, { CopyRight } from '@/src/common/social-links';
 import EmailAeroplan from '@/src/svg/email-aeroplan';
 const footer_contact = {
-    bg_img: "assets/img/footer/footer-bg.jpg",
-    footer_info: <>The world’s first and largest digital marketplace <br />for crypto collectibles and non-fungible tokens (NFTs). Buy</>,
+    bg_img: "assets/img/logo/lumenta-logo.png",
+    footer_info: <></>,
     map_link: "https://www.google.com/maps/search/86+Road+Broklyn+Street,+600+New+York,+USA/@40.6897806,-74.0278086,12z/data=!3m1!4b1",
-    address: <>86 Road Broklyn Street, 600 <br /> New York, USA</>,
-    mail: "needhelp@company.com",
-    phone: "+92 666 888 0000",
+    address: <>1315 Derry Road East, Unit 1, Mississauga <br /> Ontario, Canada. L5T 1B6</>,
+    mail: "info@lumentadigital.com",
+    phone: "+1 (416) 996 - 5329",
     service_links: [
         {title: "Parking permission", link: "#"},
         {title: "Fire Service Noc", link: "#"},
@@ -30,12 +30,12 @@ const FooterThree = () => {
                 <div className="tp-footer-bg" style={{backgroundImage: `url(${bg_img})`}}></div>
                     <div className="container">
                     <div className="tp-footer-3-main-area">
-                        <div className="row">
+                        <div className="row" style={{ justifyContent: "space-between"}}>
                         <div className="col-lg-4 col-md-6">
                             <div className="tp-footer-widget tp-footer-3-col-1">
                                 <div className="tp-footer-logo">
                                     <Link href="/"> 
-                                        <Image src={footer_logo} alt="theme-pure" />
+                                        <Image src={footer_logo} alt="theme-pure" width={155} height={60} />
                                     </Link>
                                 </div>
                                 <div className="tp-footer-widget-content">
@@ -55,7 +55,7 @@ const FooterThree = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-md-6">
+                        {/* <div className="col-lg-4 col-md-6">
                             <div className="tp-footer-widget tp-footer-3-col-2">
                                 <h3 className="tp-footer-widget-title">Services Req</h3>
                                 <div className="tp-footer-widget-content">
@@ -64,7 +64,7 @@ const FooterThree = () => {
                                     </ul>
                                 </div>
                             </div> 
-                        </div>
+                        </div> */}
                         <div className="col-lg-4 col-md-6">
                             <div className="tp-footer-widget tp-footer-3-col-3">
                                 <h3 className="tp-footer-widget-title">Newsletter</h3>

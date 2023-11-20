@@ -3,21 +3,21 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import headphone from "@assets/img/footer/headphone.png";
-import footer_logo from "@assets/img/logo/footer-logo.png";
+import footer_logo from "@assets/img/logo/lumenta-logo.png";
 import user from "@assets/img/footer/user.png";
 import EmailAeroplan from '@/src/svg/email-aeroplan';
 import SocialLinks, { CopyRight } from '@/src/common/social-links';
 
 const footer_content = { 
-    contact_us: <> Contact us at <span>@Themepure.com </span></>,
-    mail: "@themepure.gmail.com",
-    contact_text: "PERFECT SOLUTION From  It Advisor",
-    phone: "92 666 888 0000",
+    contact_us: <> Contact us at <span>info@lumentadigital.com</span></>,
+    mail: "info@lumentadigital.com",
+    contact_text: "PERFECT SOLUTION From Advisor",
+    phone: "+1 (416) 996 - 5329",
     info: <>The world’s first and largest digital market for crypto collectibles and non-fungible (NFTs). Buy</>,
     map: "https://www.google.com/maps/search/86+Road+Broklyn+Street,+600+New+York,+USA/@40.6897806,-74.0278086,12z/data=!3m1!4b1",
-    address: <>86 Road Broklyn Street, 600 <br /> New York, USA</>,
-    mail_2: "needhelp@company.com",
-    mail_phone: <> Needhelp@company.com <br /> +92 666 888 0000</>,
+    address: <>1315 Derry Road East, Unit 1, Mississauga <br /> Ontario, Canada. L5T 1B6</>,
+    mail_2: "",
+    mail_phone: <></>,
 
 
     service_links: [

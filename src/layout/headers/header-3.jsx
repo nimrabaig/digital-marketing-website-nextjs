@@ -68,7 +68,7 @@ const HeaderThree = () => {
                                 <li>
                                     <Link href="https://www.google.com/maps/@36.0758266,-79.4558848,17z" target="_blank">
                                         <span><i className="fa-sharp fa-solid fa-location-dot"></i></span>
-                                        734 H, Bryan Burlington, NC 27215
+                                        1315 Derry Road East, Unit 1, Mississauga, Ontario, Canada. L5T 1B6
                                     </Link>
                                 </li>
                                 <li>

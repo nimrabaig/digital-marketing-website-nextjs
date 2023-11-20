@@ -49,7 +49,7 @@ export default SocialLinks;
 
 
 const copy_right_text = {
-  copy_right: <>© Copyright <span>©{new Date().getFullYear()}</span> Themepure. All Rights Reserved </>,
+  copy_right: <>© Copyright <span>©{new Date().getFullYear()}</span> Lumenta Digital. All Rights Reserved </>,
 }
 const {copy_right}  = copy_right_text
 

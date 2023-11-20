@@ -20,7 +20,7 @@ const FooterContact = ({bg_style, contact_style}) => {
                                 <Image className="shape-1" src={footer_contact_shape_2} alt="theme-pure" />
                                 <div className="tp-cta-4-mail d-flex flex-wrap justify-content-center justify-content-xl-start align-items-center">
                                     <Image src={conversation} alt="theme-pure" />
-                                    <a href="mailto:@themepure.gmail.com">Contact us at <span>@Themepure.com</span></a>
+                                    <a href="mailto:@themepure.gmail.com">Contact us at <span>info@lumentadigital.com</span></a>
                                 </div>
                             </div>
                         </div>
@@ -31,8 +31,8 @@ const FooterContact = ({bg_style, contact_style}) => {
                                         <Image src={headphone} alt="theme-pure" />
                                     </div>
                                     <div className="tp-cta-4-content">
-                                        <p>PERFECT SOLUTION From  <span>It Advisor</span></p>
-                                        <a href="tel:9266688000">+92 666 888 0000</a>
+                                        <p>PERFECT SOLUTION From  <span>Advisor</span></p>
+                                        <a href="tel:9266688000">+1 (416) 996 - 5329</a>
                                     </div>
                                 </div>
                             </div>

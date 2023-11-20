@@ -139,6 +139,9 @@
     }
   }
   &-textarea {
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
     & label.Mui-focused {
         color: var(--tp-theme-secondary) !important;
       }
@@ -173,7 +176,7 @@
     }
     & input {
       width: 100%;
-      height: 60px;
+      // height: 60px;
       // border: 1px solid #000000 !important;
       // background-color: #f8f8f9;
       outline: 0;
