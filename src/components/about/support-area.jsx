@@ -12,7 +12,7 @@ import support_img_3 from "@assets/img/about/home-3/img-3.jpg";
 import support_shape from "@assets/img/about/home-3/shape-1.png";
 
 const support_contact = {
-  sub_title_1: "Tech Change the World",
+  sub_title_1: "Your Journey Starts Here!",
   sub_title_2: "",
   info: (
     <>
@@ -39,10 +39,10 @@ const SupportArea = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="tp-fun-fact-title-wrapper support-breadcrumb">
-                <span className="tp-section-title__pre">
+                {/* <span className="tp-section-title__pre">
                   service <span className="title-pre-color">IT Solutions</span>
                   <AngleArrow />
-                </span>
+                </span> */}
                 <h3 className="tp-section-title">
                   {sub_title_1}
                   <span className="title-color">{sub_title_2}</span>
@@ -64,7 +64,7 @@ const SupportArea = () => {
                   ))}
                 </ul>
                 <div className="tp-support-breadcrumb-btn mb-30">
-                  <Link className="tp-btn" href="/service-details">
+                  <Link className="tp-btn" href="/contact">
                     Tell us How Can We Help
                   </Link>
                 </div>

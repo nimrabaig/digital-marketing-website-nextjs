@@ -47,7 +47,7 @@ const HeaderOne = () => {
                                     <a href="https://www.google.com/maps/@36.0758266,-79.4558848,17z" 
                                     target="_blank"><span>
                                        <i className="fa-sharp fa-solid fa-location-dot"></i>
-                                       </span>1315 Derry Road Unit 1, Mississauga, ON L5T1B6, Canada</a>
+                                       </span>1315 Derry Road Unit 1, Mississauga, ON, Canada</a>
                                  </li>
                                  <li>
                                     <a href="mailto:technix@support.com"><span>

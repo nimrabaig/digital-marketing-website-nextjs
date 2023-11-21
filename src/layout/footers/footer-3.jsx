@@ -55,7 +55,7 @@ const FooterThree = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="col-lg-4 col-md-6">
+                        <div className="col-lg-4 col-md-6">
                             <div className="tp-footer-widget tp-footer-3-col-2">
                                 <h3 className="tp-footer-widget-title">Services Req</h3>
                                 <div className="tp-footer-widget-content">
@@ -64,7 +64,7 @@ const FooterThree = () => {
                                     </ul>
                                 </div>
                             </div> 
-                        </div> */}
+                        </div>
                         <div className="col-lg-4 col-md-6">
                             <div className="tp-footer-widget tp-footer-3-col-3">
                                 <h3 className="tp-footer-widget-title">Newsletter</h3>

@@ -11,7 +11,7 @@ const Contact = () => {
         <>
             <HeaderOne />
             <main>
-                <Breadcrumb top_title="Contact Us"  page_title="Contact Us" />
+                <Breadcrumb top_title="Contact Us"  page_title="Contact Us" imgName="breadcrumb-bg-1" />
                 <ContactArea />
                 <GoogleMap />
                 <FooterContact contact_style={true} />

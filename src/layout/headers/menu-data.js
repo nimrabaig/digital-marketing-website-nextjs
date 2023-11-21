@@ -19,7 +19,7 @@ const menu_data = [
     id: 2,
     mega_menu: false,
     has_dropdown: false,
-    title: "Company",
+    title: "About Us",
     link: "/about",
     active: "",
   },   

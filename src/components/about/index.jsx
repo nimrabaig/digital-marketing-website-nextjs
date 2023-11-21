@@ -19,16 +19,16 @@ const About = () => {
         <>
           <HeaderOne />  
           <main>
-            <Breadcrumb top_title="Our Company"  page_title="Our Company" />
+            <Breadcrumb top_title="Who We Are"  page_title="About Us" />
             <AboutArea about={true} /> 
-            <CounterArea about={true} />
+            {/* <CounterArea about={true} /> */}
             <FeatureArea about={true} />
             <SupportArea />
-            <VideoArea />
-            <TestimonialFeature />
-            <TestimonialArea />
-            <BrandArea />
-            <TeamArea />
+            {/* <VideoArea /> */}
+            {/* <TestimonialFeature /> */}
+            {/* <TestimonialArea /> */}
+            {/* <BrandArea /> */}
+            {/* <TeamArea /> */}
             <BlogArea />
             <FooterContact />
           </main>

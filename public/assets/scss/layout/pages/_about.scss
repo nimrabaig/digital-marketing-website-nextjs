@@ -407,18 +407,18 @@
                         display: none;
                     }
                 }
-                &::after{
-                    position: absolute;
-                    top: 7px;
-                    left: -13px;
-                    content: '';
-                    width: 2px;
-                    height: 72px;
-                    background: var(--tp-theme-secondary);
-                    @media #{$xs} {
-                        display: none;
-                    }
-                }
+                // &::after{
+                //     position: absolute;
+                //     top: 7px;
+                //     left: -13px;
+                //     content: '';
+                //     width: 2px;
+                //     height: 72px;
+                //     background: var(--tp-theme-secondary);
+                //     @media #{$xs} {
+                //         display: none;
+                //     }
+                // }
             }
         }
         &-progressbar{

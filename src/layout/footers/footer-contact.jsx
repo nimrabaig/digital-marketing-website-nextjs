@@ -36,7 +36,7 @@ const FooterContact = ({ bg_style, contact_style }) => {
                     href="mailto:@themepure.gmail.com"
                     className="text-md text-sm text-lg text-xs"
                   >
-                    Contact us at <span>@Themepure.com</span>
+                    Contact us at <span>info@lumentadigital.com</span>
                   </a>
                 </div>
               </div>
@@ -52,7 +52,7 @@ const FooterContact = ({ bg_style, contact_style }) => {
                   </div>
                   <div className="tp-cta-4-content">
                     <p className="text-md text-sm text-lg text-xs">
-                      PERFECT SOLUTION From <span>It Advisor</span>
+                      PERFECT SOLUTION From <span>Advisor</span>
                     </p>
                     <a
                       className="text-lg text-md text-sm text-xs"

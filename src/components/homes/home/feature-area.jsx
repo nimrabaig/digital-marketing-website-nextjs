@@ -11,6 +11,7 @@ import feature_img_3 from "@assets/img/feature/img-3.jpg";
 import shape_1 from "@assets/img/feature/shape-1.png"; 
 import shape_2 from "@assets/img/feature/shape-2.png"; 
 import shape_3 from "@assets/img/feature/img-shape.png"; 
+import { cx, css } from "@emotion/css"
 
 
 const feature_content = {
@@ -18,20 +19,16 @@ const feature_content = {
         {
             id: 1,
             img: feature_img_1,
-            title: "Our mission",
-            description: <>As far as we might be concerned <br /> making an extraordinary ad</>,
+            title: "Our Mission",
+            subTitle: " Driving Success as Your Digital Marketing Agency",
+            description: <>At Lumenta Internet Marketing Agency Canada, we're here to help make your business dreams a reality. We use smart strategies based on data to guide you toward your goals. Lumenta Digital Marketing Services Canada’s focus is on providing practical, top-notch digital marketing and IT solutions that work for your business. As your trusted Digital Marketing Agency USA and Canada, we're like your compass in the ever-changing world of digital marketing services USA trends.</>,
         },
         {
             id: 2,
             img: feature_img_2,
-            title: "About History",
-            description: <>As far as we might be concerned <br /> making an extraordinary ad</>,
-        },
-        {
-            id: 3,
-            img: feature_img_3,
-            title: "Our Partners",
-            description: <>As far as we might be concerned <br /> making an extraordinary ad</>,
+            title: "Our Vision",
+            subTitle: "Your Strategic Digital Marketing Agency",
+            description: <>Imagine your business reaching new heights of success – that's what we envision at Lumenta Digital Marketing Service USA, your go-to Digital Marketing Agency in the USA and Canada. We're not just about projects but about building strong and lasting connections with our clients. With our internet marketing agency USA expertise and a straightforward approach, we aim to take your business to a new level. Please think of us as your digital marketing services USA partners in success, where our smart thinking and strategic ideas drive your business forward with top-notch digital marketing services Canada.</>,
         },
     ],
     
@@ -51,12 +48,12 @@ const FeatureArea = ({about}) => {
             <div className="container container-large">
                <div className="row align-items-center">
                   <div className="col-lg-6">
-                     <div className="tp-feature-title-wrapper">
-                        <span className="tp-section-title__pre">
+                     <div className="tp-feature-title-wrapper" style={{ marginTop: 30 }}>
+                        {/* <span className="tp-section-title__pre">
                            feature <span className="title-pre-color">IT Solutions</span>
                            <AngleArrow />
-                        </span>
-                        <h3 className="tp-section-title">We’ve Been Thriving In <span className="title-color">38 Years</span>
+                        </span> */}
+                        <h3 className="tp-section-title">Lumenta Digital: Illuminating Possibilities, Igniting Results
                            <span className="title-right-shape"> 
                               <LineArrowFive />
                            </span>
@@ -65,14 +62,15 @@ const FeatureArea = ({about}) => {
                   </div>
                   <div className="col-lg-6">
                      <div className="tp-feature-wrapper p-relative">
-                        <p>As the complexity of buildings to increase, the field of architecture <br />
-                         became multi-disciplinary with technological expertise.</p>
+                        <p>Grow your business at a substantial rate with Lumenta Technologies <br />
+                        data-driven digital marketing strategies.</p>
                      </div>
                   </div>
                </div>
-               <div className="row">
+               <div className="row" style={{ justifyContent: "center"}}>
                 {feature_data.map((item, i)  => 
-                    <div key={i} className="col-lg-4 col-md-6">
+                    <div key={i} className="col-lg-4 col-md-6 card"
+                    >
                         <div className="tp-feature-item-box p-relative wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                         <div className="tp-feature-item p-relative mb-30">
                             <div className="tp-feature-item-shape">
@@ -88,17 +86,19 @@ const FeatureArea = ({about}) => {
                                 <div className="tp-feature-item-content">
                                     <h3 className="feature-title">
                                         <Link href="/about">{item.title}</Link>
+                                        <p className="tp-feature-item-subTitle">{item.subTitle}</p>
                                     <span> 
                                         <AngleArrow />                                
                                     </span>
                                     </h3>
-                                    <p>{item.description}</p>
+
+                                    <p style={{ padding: 10 }}>{item.description}</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="tp-feature-item-btn">
+                        {/* <div className="tp-feature-item-btn">
                             <Link href="/about"><i className="fa-regular fa-arrow-right"></i></Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div> 
                 )} 
