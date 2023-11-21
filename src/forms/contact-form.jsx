@@ -8,51 +8,58 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControl from "@mui/material/FormControl";
 import MuiPhoneNumber from "material-ui-phone-number-2";
 
-const ContactForm = () => {
-  const [budget, setBudget] = React.useState("");
+const budgetRanges = [
+  "$0 - $1000",
+  "$1000 - $3000",
+  "$3000 - $6000",
+  "$6000 - $10,000",
+  "$10,000+",
+];
 
-  const [services, setServices] = useState({
-    seo: false,
-    ppc: false,
-    socialMedia: false,
-    webDesign: false,
-    softwareDevelopment: false,
-    contentWriting: false,
-    emailMarketing: false,
-    linkBuilding: false,
+const serviceLabels = {
+  seo: "SEO",
+  ppc: "PPC",
+  socialMedia: "Social Media",
+  webDesign: "Web Design/Development",
+  softwareDevelopment: "Software Development",
+  contentWriting: "Content Writing",
+  emailMarketing: "Email Marketing",
+  linkBuilding: "Link Building",
+};
+
+const ContactForm = () => {
+  const [isSubscribed, setSubscribed] = useState(false);
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    budget: "",
+    services: [],
+    website: "",
+    message: "",
   });
 
-  const budgetRanges = [
-    "$0 - $1000",
-    "$1000 - $3000",
-    "$3000 - $6000",
-    "$6000 - $10,000",
-    "$10,000+",
-  ];
-
-  const serviceLabels = {
-    seo: "SEO",
-    ppc: "PPC",
-    socialMedia: "Social Media",
-    webDesign: "Web Design/Development",
-    softwareDevelopment: "Software Development",
-    contentWriting: "Content Writing",
-    emailMarketing: "Email Marketing",
-    linkBuilding: "Link Building",
-  };
-
   const handleCheckboxChange = (service) => {
-    setServices((prevServices) => ({
-      ...prevServices,
-      [service]: !prevServices[service],
-    }));
+    const _services = [...values.services, service];
+    setValues({
+      ...values,
+      services: _services,
+    });
   };
 
   const handleBudgetChange = (event) => {
-    setBudget(event.target.value);
+    setValues({ ...values, budget: event.target.value });
   };
 
-  // const handleBudgetChange = (event) => {
+  const handleOnSubscribe = () => {
+    // add mutation  "SubscribeNewsLetter"
+  };
+
+  const onSubmit = () => {
+    // add mutation  "ContactUs"
+    // ...values , isSubscribed
+  };
+
   //   // only one radio can be logically checked based on value
   //   switch (event.target.value) {
   //     case "$0 - $1000":
@@ -130,6 +137,7 @@ const ContactForm = () => {
           <div className="col-md-6">
             <div className="tp-contact-input">
               <MuiPhoneNumber
+                countryCodeEditable={false}
                 label="Phone Number"
                 variant="outlined"
                 required={true}
@@ -166,13 +174,13 @@ const ContactForm = () => {
                 What services can we provide you?
               </h6>
               <div className="col-md-12">
-                {Object.entries(services).map(([key, checked]) => (
+                {Object.entries(serviceLabels).map(([key]) => (
                   <FormControlLabel
                     key={key}
                     control={
                       <Checkbox
-                        checked={checked}
-                        onClick={() => handleCheckboxChange(key)}
+                        checked={values.services.includes(serviceLabels[key])}
+                        onClick={() => handleCheckboxChange(serviceLabels[key])}
                         sx={{
                           "&.Mui-checked": {
                             color: "#ff8d0b",
@@ -200,7 +208,7 @@ const ContactForm = () => {
                   value={value}
                   control={
                     <Radio
-                      checked={budget === value}
+                      checked={values.budget === value}
                       sx={{ "&.Mui-checked": { color: "#ff8d0b" } }}
                       onClick={handleBudgetChange}
                     />
@@ -221,10 +229,25 @@ const ContactForm = () => {
             </div>
           </div>
 
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={isSubscribed}
+                onClick={() => handleOnSubscribe()}
+                sx={{
+                  "&.Mui-checked": {
+                    color: "#ff8d0b",
+                  },
+                }}
+              />
+            }
+            label={"Subscribe tou our Newsletter"}
+          />
+
           <br />
 
           <div className="tp-contact-btn mt-10">
-            <button type="submit" className="tp-btn">
+            <button type="submit" className="tp-btn" onClick={onSubmit}>
               Send Message
             </button>
           </div>
