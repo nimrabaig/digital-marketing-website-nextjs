@@ -12,10 +12,10 @@ const footer_content = {
     contact_us: <> Contact us at <span>info@lumentadigital.com</span></>,
     mail: "info@lumentadigital.com",
     contact_text: "PERFECT SOLUTION From Advisor",
-    phone: "+1 (416) 996 - 5329",
+    phone: "+1 (613) 807 - 2399",
     info: <>The world’s first and largest digital market for crypto collectibles and non-fungible (NFTs). Buy</>,
     map: "https://www.google.com/maps/search/86+Road+Broklyn+Street,+600+New+York,+USA/@40.6897806,-74.0278086,12z/data=!3m1!4b1",
-    address: <>1315 Derry Road East, Unit 1, Mississauga <br /> Ontario, Canada. L5T 1B6</>,
+    address: <>1315 Derry Road East, Unit 1, Mississauga, <br /> Ontario, Canada L5T 1B6</>,
     mail_2: "",
     mail_phone: <></>,
 

@@ -6527,7 +6527,7 @@ div.demo img {
   font-weight: 400;
   font-size: 16px;
   color: #535353;
-  /* margin-left: 13px; */
+  margin-left: 13px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .tp-about-3-wrapper .text br {
@@ -12421,7 +12421,7 @@ div.demo img {
 }
 .tp-cta-4-mail a {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 26px;
   color: var(--tp-common-white);
   border: 1px solid rgba(255, 255, 255, 0.4);

@@ -23,7 +23,7 @@ const FooterContact = ({ bg_style, contact_style }) => {
         </div>
         <div className="container footer-contact-container">
           <div className="row gx-0">
-            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+            <div className="col-xl-6">
               <div className="tp-cta-4-wrapper-left" style={{ height: "100%" }}>
                 <Image
                   className="shape-1"
@@ -41,7 +41,7 @@ const FooterContact = ({ bg_style, contact_style }) => {
                 </div>
               </div>
             </div>
-            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+            <div className="col-xl-6">
               <div
                 className="tp-cta-4-wrapper-right"
                 style={{ height: "100%" }}
@@ -56,9 +56,9 @@ const FooterContact = ({ bg_style, contact_style }) => {
                     </p>
                     <a
                       className="text-lg text-md text-sm text-xs"
-                      href="tel:9266688000"
+                      href="tel:16138072399"
                     >
-                      +92 666 888 0000
+                      +1 (613) 807 - 2399
                     </a>
                   </div>
                 </div>
