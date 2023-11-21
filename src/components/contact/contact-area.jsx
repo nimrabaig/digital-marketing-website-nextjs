@@ -9,7 +9,7 @@ const ContactArea = () => {
       <section className="tp-contact-area pt-120 pb-90">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6">
+            <div className="col-lg-5">
               <div className="tp-contact-wrapper">
                 <div className="tp-contact-title-wrapper">
                   <h3 className="tp-contact-title">
@@ -65,7 +65,7 @@ const ContactArea = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-7">
               <div className="tp-contact-form">
                 <h3 className="tp-contact-form-title">Contact Us</h3>
                 <p>
