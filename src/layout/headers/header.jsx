@@ -50,7 +50,7 @@ const HeaderOne = () => {
                         <span>
                           <i className="fa-sharp fa-solid fa-location-dot"></i>
                         </span>
-                        1315 Derry Road East, Unit 1, Mississauga Ontario,
+                        1315 Derry Road East, Suite 1, Mississauga Ontario,
                         Canada L5T 1B6
                       </a>
                     </li>
@@ -87,7 +87,7 @@ const HeaderOne = () => {
                 <div className="tp-header-top-right d-flex justify-content-end align-items-center">
                   <div className="header-call">
                     <a href="tel:16138072399">
-                      <i className="fa-solid fa-phone"></i> +1 (416) 996 - 5329
+                      <i className="fa-solid fa-phone"></i> +1 (613) 807 - 2399
                     </a>
                   </div>
                   <div className="header-social d-xxl-block d-none">

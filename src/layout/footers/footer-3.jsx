@@ -9,9 +9,9 @@ const footer_contact = {
     bg_img: "assets/img/logo/lumenta-logo.png",
     footer_info: <></>,
     map_link: "https://www.google.com/maps/search/86+Road+Broklyn+Street,+600+New+York,+USA/@40.6897806,-74.0278086,12z/data=!3m1!4b1",
-    address: <>1315 Derry Road East, Unit 1, Mississauga, <br /> Ontario, Canada L5T 1B6</>,
+    address: <>1315 Derry Road East, Suite 1, Mississauga, <br /> Ontario, Canada L5T 1B6</>,
     mail: "info@lumentadigital.com",
-    phone: "+1 (416) 996 - 5329",
+    phone: "+1 (613) 807 - 2399",
     service_links: [
         {title: "Parking permission", link: "#"},
         {title: "Fire Service Noc", link: "#"},
@@ -48,7 +48,7 @@ const FooterThree = () => {
                                         </Link>
                                     </div>
                                     <div className="tp-footer-main-mail">
-                                        <a href={`mailto:${mail}`}><i className="fa-light fa-message-dots"></i> 
+                                        <a href={`tel:${phone}`}><i className="fa-light fa-message-dots"></i> 
                                         {mail} <br /> {phone}</a>
                                     </div>
                                     </div>

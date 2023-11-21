@@ -106,7 +106,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, home_three }) => {
                 </div>
                 <div className="offcanvas__contact-content-content">
                   <a href="https://www.google.com/maps/search/86+Road+Broklyn+Street,+600+New+York,+USA/@40.6897806,-74.0278086,12z/data=!3m1!4b1">
-                    1315 Derry Road East, Unit 1, Mississauga, Ontario, Canada.
+                    1315 Derry Road East, Suite 1, Mississauga, Ontario, Canada.
                     L5T 1B6{" "}
                   </a>
                 </div>
@@ -126,7 +126,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, home_three }) => {
                   <i className="fa-solid fa-phone"></i>
                 </div>
                 <div className="offcanvas__contact-content-content">
-                  <a href="tel:01310-069824"> +1 (613) 807 - 2399</a>
+                  <a href="tel:16138072399"> +1 (613) 807 - 2399</a>
                 </div>
               </div>
             </div>

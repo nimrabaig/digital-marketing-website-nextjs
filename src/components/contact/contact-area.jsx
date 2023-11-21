@@ -51,8 +51,7 @@ const ContactArea = () => {
                         <i className="fa-regular fa-arrow-down"></i>
                       </h3>
                       <p>
-                        1315 Derry Road East, Unit 1, Mississauga Ontario,
-                        Canada L5T 1B6
+                      1315 Derry Road East, Suite 1, Mississauga, Ontario, Canada L5T 1B6
                       </p>
                     </div>
                     {/* <div className="tp-contact-location">
