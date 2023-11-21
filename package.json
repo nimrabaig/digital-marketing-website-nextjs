@@ -12,7 +12,6 @@
     "@emotion/css": "^11.11.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/styles": "^5.14.18",
     "@splidejs/react-splide": "^0.7.12",
     "bootstrap": "^5.2.3",
     "material-ui-phone-number": "^3.0.0",
