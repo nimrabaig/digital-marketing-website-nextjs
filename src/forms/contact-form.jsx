@@ -36,6 +36,7 @@ const ContactForm = () => {
     budget: "",
     services: [],
     website: "",
+    company: "",
     message: "",
   });
 
@@ -119,6 +120,8 @@ const ContactForm = () => {
                 label="Your Name"
                 variant="outlined"
                 required
+                value={values.name}
+                onChange={({ target }) => setValues({ ...values, name: target.value})}
                 style={{ width: "100%" }}
               />
             </div>
@@ -130,6 +133,9 @@ const ContactForm = () => {
                 label="Email"
                 variant="outlined"
                 required
+                type="email"
+                value={values.email}
+                onChange={({ target }) => setValues({ ...values, email: target.value})}
                 style={{ width: "100%" }}
               />
             </div>
@@ -142,6 +148,8 @@ const ContactForm = () => {
                 variant="outlined"
                 required={true}
                 defaultCountry="ca"
+                value={values.phone}
+                onChange={({ target }) => setValues({ ...phone, name: target.value})}
                 style={{ backgroundColor: "#EFF0F2" }}
                 onBlur={(e) => {}}
                 // onChange={(value) => handleChange(name, value)}
@@ -155,6 +163,8 @@ const ContactForm = () => {
                 label="Website"
                 variant="outlined"
                 style={{ width: "100%" }}
+                value={values.website}
+                onChange={({ target }) => setValues({ ...values, website: target.value})}
               />
             </div>
           </div>
@@ -165,6 +175,8 @@ const ContactForm = () => {
                 label="Company/Business Name"
                 variant="outlined"
                 style={{ width: "100%" }}
+                value={values.company}
+                onChange={({ target }) => setValues({ ...values, company: target.value})}
               />
             </div>
           </div>
