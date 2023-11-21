@@ -17,6 +17,11 @@ import "react-circular-progressbar/dist/styles.css";
 import about_img from "@assets/img/about/about-1.png";
 import about_img_10 from "@assets/img/business/shape-5.png";
 
+import about1 from "@assets/img/about/innovation.png";
+import about2 from "@assets/img/about/integrity.png";
+import about3 from "@assets/img/about/ccApproach.png";
+import about4 from "@assets/img/about/growth.png";
+
 const AboutArea = ({ about }) => {
   const percentage = 50;
   const percentage2 = 75;
@@ -64,7 +69,7 @@ const AboutArea = ({ about }) => {
             {about ? (
               <div className="col-lg-6">
                 <div className="tp-about-breadcrumb-img p-relative text-center fadeLeft">
-                  <Image src={about_img} alt="theme-pure" />
+                  <Image src={about1} alt="theme-pure" />
                 </div>
               </div>
             ) : (
@@ -141,13 +146,13 @@ const AboutArea = ({ about }) => {
             </div>
             <div className="col-lg-6">
               <div className="tp-about-breadcrumb-img p-relative text-center fadeLeft">
-                <Image src={about_img} alt="theme-pure" />
+                <Image src={about2} alt="theme-pure" />
               </div>
             </div>
 
             <div className="col-lg-6">
               <div className="tp-about-breadcrumb-img p-relative text-center fadeLeft">
-                <Image src={about_img} alt="theme-pure" />
+                <Image src={about3} alt="theme-pure" />
               </div>
             </div>
             <div className="col-lg-6" style={{ marginTop: 80 }}>
@@ -184,7 +189,7 @@ const AboutArea = ({ about }) => {
             </div>
             <div className="col-lg-6">
               <div className="tp-about-breadcrumb-img p-relative text-center fadeLeft">
-                <Image src={about_img} alt="theme-pure" />
+                <Image src={about4} alt="theme-pure" />
               </div>
             </div>
           </div>
