@@ -77,7 +77,7 @@ const HeroArea = () => {
                   <div className="tp-hero-2-message">
                     <p>
                       <i className="fa-solid fa-comments"></i> 1315 Derry Road
-                      East, Unit 1, Mississauga, Ontario, Canada L5T 1B6
+                      East, S 1, Mississauga, Ontario, Canada L5T 1B6
                     </p>
                   </div>
                 </div>
