@@ -6,7 +6,7 @@ import Checkbox from "@mui/material/Checkbox";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControl from "@mui/material/FormControl";
-import PhoneField from 'material-ui-phone-number';
+import MuiPhoneNumber from "material-ui-phone-number-2";
 
 const ContactForm = () => {
   const [budget, setBudget] = React.useState("");
@@ -129,15 +129,15 @@ const ContactForm = () => {
           </div>
           <div className="col-md-6">
             <div className="tp-contact-input">
-            <PhoneField
-            label="Phone Number"
-            variant="outlined"
-            required={true}
-             defaultCountry='ca'
-             style={{ backgroundColor: "#EFF0F2"}}
-            onBlur={(e) => {}}
-            // onChange={(value) => handleChange(name, value)}
-          />
+              <MuiPhoneNumber
+                label="Phone Number"
+                variant="outlined"
+                required={true}
+                defaultCountry="ca"
+                style={{ backgroundColor: "#EFF0F2" }}
+                onBlur={(e) => {}}
+                // onChange={(value) => handleChange(name, value)}
+              />
             </div>
           </div>
           <div className="col-md-6">
