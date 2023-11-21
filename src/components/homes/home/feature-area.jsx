@@ -5,9 +5,8 @@ import Image from 'next/image';
 import AngleArrow from '@/src/svg/angle-arrow'; 
 import LineArrowFive from '@/src/svg/line-arrow-5';
 
-import feature_img_1 from "@assets/img/feature/img-1.jpg";
-import feature_img_2 from "@assets/img/feature/img-2.jpg";
-import feature_img_3 from "@assets/img/feature/img-3.jpg";
+import feature_img_1 from "@assets/img/feature/mission.png";
+import feature_img_2 from "@assets/img/feature/vision.png";
 import shape_1 from "@assets/img/feature/shape-1.png"; 
 import shape_2 from "@assets/img/feature/shape-2.png"; 
 import shape_3 from "@assets/img/feature/img-shape.png"; 
