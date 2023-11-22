@@ -82,7 +82,7 @@ const ContactForm = () => {
 
     try {
       const { data } = await ContactUs({ variables: { input } });
-      console.log("New user created:", data.createUser);
+      // console.log("New user created:", data.createUser);
 
       if (isSubscribed) {
         const subscribtionData = {
@@ -94,7 +94,7 @@ const ContactForm = () => {
           const { data } = await SubscribetoNewsLetter({
             variables: { subscribtionData },
           });
-          console.log("New user subcribed:", data.createUser);
+          // console.log("New user subcribed:", data.createUser);
           // Handle success
         } catch (error) {
           console.log("Error creating subscribtion:", error);
