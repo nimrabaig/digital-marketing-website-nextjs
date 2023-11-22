@@ -16,9 +16,8 @@ const ContactArea = () => {
                     Contact <span className="title-color">With us</span>
                   </h3>
                   <p>
-                    Email, call, or complete the form to learn how Kion can{" "}
-                    <br />
-                    solve your cloud management and governance cha.
+                    Email, call, or complete the form to let us know how
+                    can we help you.
                   </p>
                 </div>
                 <div className="tp-contact-content">

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import headphone from "@assets/img/footer/headphone.png";
-import footer_logo from "@assets/img/logo/lumenta-logo.png";
+import footer_logo from "@assets/img/footer/footer-lumenta-logo.png";
 import user from "@assets/img/footer/user.png";
 import EmailAeroplan from '@/src/svg/email-aeroplan';
 import SocialLinks, { CopyRight } from '@/src/common/social-links';
@@ -74,7 +74,7 @@ const Footer = () => {
                             <div className="col-xl-3 col-lg-4 col-md-6">
                                 <div className="tp-footer-widget tp-footer-col-1">
                                 <div className="tp-footer-logo">
-                                <a href="index.html"> <Image src={footer_logo} alt="theme-pure" /></a>
+                                <a href="index.html"> <Image src={footer_logo} alt="theme-pure" width={155} height={60} /></a>
                                 </div>
                                 <div className="tp-footer-widget-content">
                                     <div className="tp-footer-info">

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { useMutation } from "@apollo/client";
 import { CONTACT_US, SUBSCRIBE_NEWS_LETTER } from "@/src/graphql/mutation";
-
+import toast from "react-hot-toast";
 import TextField from "@mui/material/TextField";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -46,7 +46,13 @@ const ContactForm = () => {
   });
 
   const handleCheckboxChange = (service) => {
-    const _services = [...values.services, service];
+    let _services = [];
+    if (values.services.includes(service)) {
+      const _filtered = values.services.filter(
+        (_service) => _service !== service
+      );
+      _services = _filtered;
+    } else _services = [...values.services, service];
     setValues({
       ...values,
       services: _services,
@@ -57,55 +63,41 @@ const ContactForm = () => {
     setValues({ ...values, budget: event.target.value });
   };
 
-  const handleOnSubscribe = async () => {
-    // add mutation  "SubscribeNewsLetter"
+  const handleOnSubscribe = useCallback(() => {
     setSubscribed(!isSubscribed);
-  };
+    SubscribetoNewsLetter({
+      variables: { name: values.name, email: values.email },
+    })
+      .then((response) => {
+        if (isSubscribed)
+          toast.success("You have subscribed to our Newsletter!");
+        else toast.success("You have unsubscribed to our Newsletter!");
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [isSubscribed]);
 
-  const onSubmit = async () => {
-    // add mutation  "ContactUs"
-    // ...values , isSubscribed
-
-    const input = {
-      //from values state
-      name: values.name,
-      email: values.email,
-      phone: values.phone,
-      budget: values.budget,
-      services: values.services,
-      website: values.website,
-      company: values.company,
-      message: values.message,
-      isSubscribed: isSubscribed,
-      // countryCode: values.countryCode,
-    };
-
-    try {
-      const { data } = await ContactUs({ variables: { input } });
-      // console.log("New user created:", data.createUser);
-
-      if (isSubscribed) {
-        const subscribtionData = {
-          name: values.name,
-          email: values.email,
-        };
-
-        try {
-          const { data } = await SubscribetoNewsLetter({
-            variables: { subscribtionData },
-          });
-          // console.log("New user subcribed:", data.createUser);
-          // Handle success
-        } catch (error) {
-          console.log("Error creating subscribtion:", error);
-          // Handle error
+  const onSubmit = () => {
+    toast.loading("Sending request...");
+    ContactUs({
+      variables: { ...values, isSubscribed },
+    })
+      .then((resp) => {
+        toast.dismiss();
+        if (resp.data?.ContactUs?.success) {
+          toast.success("Mesaage sent!");
+        } else {
+          toast.error(resp.data?.ContactUs?.raw?.message);
         }
-      }
-      // Handle success
-    } catch (error) {
-      console.log("Error creating user:", error);
-      // Handle error
-    }
+        console.log(resp);
+      })
+      .catch((err) => {
+        toast.dismiss();
+        toast.error("Unable to send message. Try again!");
+        console.log(err);
+      });
   };
 
   return (
@@ -120,8 +112,8 @@ const ContactForm = () => {
                 variant="outlined"
                 required
                 value={values.name}
-                onChange={({ target }) =>
-                  setValues({ ...values, name: target.value })
+                onChange={(event) =>
+                  setValues({ ...values, name: event.target.value })
                 }
                 style={{ width: "100%" }}
               />
@@ -152,9 +144,7 @@ const ContactForm = () => {
                 required={true}
                 defaultCountry="ca"
                 value={values.phone}
-                onChange={({ target }) =>
-                  setValues({ ...phone, name: target.value })
-                }
+                onChange={(phone) => setValues({ ...values, phone: phone })}
                 style={{ backgroundColor: "#EFF0F2" }}
                 onBlur={(e) => {}}
                 // onChange={(value) => handleChange(name, value)}
@@ -265,7 +255,7 @@ const ContactForm = () => {
             label={"Subscribe tou our Newsletter"}
           />
 
-          <br />
+          <div style={{ marginBottom: 40 }} />
 
           <div className="tp-contact-btn mt-10">
             <button type="submit" className="tp-btn" onClick={onSubmit}>
