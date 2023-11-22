@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { CONTACT_US, SUBSCRIBE_NEWS_LETTER } from "@/src/graphql/mutation";
+
 import TextField from "@mui/material/TextField";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -28,6 +31,8 @@ const serviceLabels = {
 };
 
 const ContactForm = () => {
+  const [ContactUs] = useMutation(CONTACT_US);
+  const [SubscribetoNewsLetter] = useMutation(SUBSCRIBE_NEWS_LETTER);
   const [isSubscribed, setSubscribed] = useState(false);
   const [values, setValues] = useState({
     name: "",
@@ -52,62 +57,53 @@ const ContactForm = () => {
     setValues({ ...values, budget: event.target.value });
   };
 
-  const handleOnSubscribe = () => {
+  const handleOnSubscribe = async () => {
     // add mutation  "SubscribeNewsLetter"
+    setSubscribed(!isSubscribed);
+    if (isSubscribed) {
+      const input = {
+        name: values.name,
+        email: values.email,
+      };
+
+      try {
+        const { data } = await SubscribetoNewsLetter({ variables: { input } });
+        console.log("New user created:", data.createUser);
+        // Handle success
+      } catch (error) {
+        console.log("Error creating user:", error);
+        // Handle error
+      }
+    }
   };
 
-  const onSubmit = () => {
+  const onSubmit = async () => {
     // add mutation  "ContactUs"
     // ...values , isSubscribed
+
+    const input = {
+      //from values state
+      name: values.name,
+      email: values.email,
+      phone: values.phone,
+      budget: values.budget,
+      services: values.services,
+      website: values.website,
+      company: values.company,
+      message: values.message,
+      isSubscribed: isSubscribed,
+      // countryCode: values.countryCode,
+    };
+
+    try {
+      const { data } = await ContactUs({ variables: { input } });
+      console.log("New user created:", data.createUser);
+      // Handle success
+    } catch (error) {
+      console.log("Error creating user:", error);
+      // Handle error
+    }
   };
-
-  //   // only one radio can be logically checked based on value
-  //   switch (event.target.value) {
-  //     case "$0 - $1000":
-  //       setRadioOneChecked(true);
-  //       setRadioTwoChecked(false);
-  //       setRadioThreeChecked(false);
-  //       setRadioFourChecked(false);
-  //       setRadioFiveChecked(false);
-  //       break;
-
-  //     case "$1000 - $3000":
-  //       setRadioOneChecked(false);
-  //       setRadioTwoChecked(true);
-  //       setRadioThreeChecked(false);
-  //       setRadioFourChecked(false);
-  //       setRadioFiveChecked(false);
-  //       break;
-
-  //     case "$3000 - $6000":
-  //       setRadioOneChecked(false);
-  //       setRadioTwoChecked(false);
-  //       setRadioThreeChecked(true);
-  //       setRadioFourChecked(false);
-  //       setRadioFiveChecked(false);
-  //       break;
-
-  //     case "$6000 - $10,000":
-  //       setRadioOneChecked(false);
-  //       setRadioTwoChecked(false);
-  //       setRadioThreeChecked(false);
-  //       setRadioFourChecked(true);
-  //       setRadioFiveChecked(false);
-  //       break;
-
-  //     case "$10,000+":
-  //       setRadioOneChecked(false);
-  //       setRadioTwoChecked(false);
-  //       setRadioThreeChecked(false);
-  //       setRadioFourChecked(false);
-  //       setRadioFiveChecked(true);
-  //       break;
-
-  //     default:
-  //       // Handle the default case if needed
-  //       break;
-  //   }
-  // };
 
   return (
     <>
@@ -121,7 +117,9 @@ const ContactForm = () => {
                 variant="outlined"
                 required
                 value={values.name}
-                onChange={({ target }) => setValues({ ...values, name: target.value})}
+                onChange={({ target }) =>
+                  setValues({ ...values, name: target.value })
+                }
                 style={{ width: "100%" }}
               />
             </div>
@@ -135,7 +133,9 @@ const ContactForm = () => {
                 required
                 type="email"
                 value={values.email}
-                onChange={({ target }) => setValues({ ...values, email: target.value})}
+                onChange={({ target }) =>
+                  setValues({ ...values, email: target.value })
+                }
                 style={{ width: "100%" }}
               />
             </div>
@@ -149,7 +149,9 @@ const ContactForm = () => {
                 required={true}
                 defaultCountry="ca"
                 value={values.phone}
-                onChange={({ target }) => setValues({ ...phone, name: target.value})}
+                onChange={({ target }) =>
+                  setValues({ ...phone, name: target.value })
+                }
                 style={{ backgroundColor: "#EFF0F2" }}
                 onBlur={(e) => {}}
                 // onChange={(value) => handleChange(name, value)}
@@ -164,7 +166,9 @@ const ContactForm = () => {
                 variant="outlined"
                 style={{ width: "100%" }}
                 value={values.website}
-                onChange={({ target }) => setValues({ ...values, website: target.value})}
+                onChange={({ target }) =>
+                  setValues({ ...values, website: target.value })
+                }
               />
             </div>
           </div>
@@ -176,7 +180,9 @@ const ContactForm = () => {
                 variant="outlined"
                 style={{ width: "100%" }}
                 value={values.company}
-                onChange={({ target }) => setValues({ ...values, company: target.value})}
+                onChange={({ target }) =>
+                  setValues({ ...values, company: target.value })
+                }
               />
             </div>
           </div>
