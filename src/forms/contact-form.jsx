@@ -60,21 +60,6 @@ const ContactForm = () => {
   const handleOnSubscribe = async () => {
     // add mutation  "SubscribeNewsLetter"
     setSubscribed(!isSubscribed);
-    if (isSubscribed) {
-      const input = {
-        name: values.name,
-        email: values.email,
-      };
-
-      try {
-        const { data } = await SubscribetoNewsLetter({ variables: { input } });
-        console.log("New user created:", data.createUser);
-        // Handle success
-      } catch (error) {
-        console.log("Error creating user:", error);
-        // Handle error
-      }
-    }
   };
 
   const onSubmit = async () => {
@@ -98,6 +83,24 @@ const ContactForm = () => {
     try {
       const { data } = await ContactUs({ variables: { input } });
       console.log("New user created:", data.createUser);
+
+      if (isSubscribed) {
+        const subscribtionData = {
+          name: values.name,
+          email: values.email,
+        };
+
+        try {
+          const { data } = await SubscribetoNewsLetter({
+            variables: { subscribtionData },
+          });
+          console.log("New user subcribed:", data.createUser);
+          // Handle success
+        } catch (error) {
+          console.log("Error creating subscribtion:", error);
+          // Handle error
+        }
+      }
       // Handle success
     } catch (error) {
       console.log("Error creating user:", error);
