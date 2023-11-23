@@ -84,8 +84,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, home_three }) => {
             </div>
             <div className="offcanvas__popup">
               <p>
-                Web designing in a powerful way of just not an only professions.
-                We have tendency to believe the idea that smart looking .
+                We're an innovative and dynamic digital marketing agency,
+                harnessing the power of data-driven strategies to propel our
+                clients toward their business objectives.
               </p>
               {/* <div className="offcanvas__popup-gallery">
                             <h4 className="offcanvas__title">Gallery</h4>

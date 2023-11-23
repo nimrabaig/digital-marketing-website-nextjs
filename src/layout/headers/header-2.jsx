@@ -4,7 +4,7 @@ import Image from 'next/image';
 import NavMenu from './nav-menu';
 import useSticky from '@/src/hooks/use-sticky';
 
-import logo_img from "@assets/img/logo/home-2-logo.png";
+import logo_img from "@assets/img/logo/lumenta-logo.png";
 import logo_shape from "@assets/img/hero/hero-2/logo-shape.png";
 import SearchPopup from '@/src/modals/search-popup';
 import Sidebar from '@/src/modals/sidebar';
@@ -97,7 +97,8 @@ const HeaderTwo = () => {
                            <div className="tp-header-2-main-left d-flex align-items-center justify-content-xl-center justify-content-xxl-end p-relative">
                               <div className="tp-header-2-logo">
                                  <Link href="/">
-                                    <Image src={logo_img} alt="theme-pure" />
+                                    <Image src={logo_img} alt="theme-pure" width={140}
+                          height={40} />
                                  </Link>
                                  <Image src={logo_shape} className="logo-shape" alt="theme-pure" />
                               </div>

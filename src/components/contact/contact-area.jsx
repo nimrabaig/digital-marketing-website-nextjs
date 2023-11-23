@@ -16,8 +16,7 @@ const ContactArea = () => {
                     Contact <span className="title-color">With us</span>
                   </h3>
                   <p>
-                    Email, call, or complete the form to let us know how
-                    can we help you.
+                  Stay informed and connected with the latest updates by subscribing to our newsletter.
                   </p>
                 </div>
                 <div className="tp-contact-content">
