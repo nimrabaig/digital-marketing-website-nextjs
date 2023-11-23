@@ -114,7 +114,7 @@ const AboutArea = ({ about }) => {
             <div className="col-lg-6" style={{ marginTop: 80 }}>
               <div className="tp-about-3-wrapper">
                 <div className="tp-about-3-title-wrapper">
-                  <h3 className="tp-section-title">Innovation</h3>
+                  <h3 className="tp-section-title">Pioneering <span className="title-color">Innovation</span> for Digital Excellence</h3>
                 </div>
                 <p className="text">
                   Lumenta Digital Marketing Agency USA embraces creativity and
@@ -131,7 +131,7 @@ const AboutArea = ({ about }) => {
             <div className="col-lg-6" style={{ marginTop: 80 }}>
               <div className="tp-about-3-wrapper">
                 <div className="tp-about-3-title-wrapper">
-                  <h3 className="tp-section-title">Integrity</h3>
+                  <h3 className="tp-section-title">Upholding Uncompromising <span className="title-color"> Integrity</span> in Every Endeavor</h3>
                 </div>
                 <p className="text">
                   Trust is the foundation of our relationships at Lumenta
@@ -158,7 +158,7 @@ const AboutArea = ({ about }) => {
             <div className="col-lg-6" style={{ marginTop: 80 }}>
               <div className="tp-about-3-wrapper">
                 <div className="tp-about-3-title-wrapper">
-                  <h3 className="tp-section-title">Client-Centric Approach</h3>
+                  <h3 className="tp-section-title">Refining Customer Experience Through a <span className="title-color">Centric Approach</span></h3>
                 </div>
                 <p className="text">
                   At Lumenta, clients are at the heart of everything we do. We
@@ -173,7 +173,7 @@ const AboutArea = ({ about }) => {
             <div className="col-lg-6" style={{ marginTop: 80 }}>
               <div className="tp-about-3-wrapper">
                 <div className="tp-about-3-title-wrapper">
-                  <h3 className="tp-section-title">Growth</h3>
+                  <h3 className="tp-section-title">Nurturing Sustainable <span className="title-color">Growth</span> Strategies for Lasting Success</h3>
                 </div>
                 <p className="text">
                   In the ever-evolving digital internet marketing agency

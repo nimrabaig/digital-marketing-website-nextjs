@@ -32,7 +32,7 @@ const HomeTwo = () => {
         <BrandArea />
         <SupportArea />
         <CategoryArea />
-        <FeatureArea />
+        {/* <FeatureArea /> */}
         <TestimonialArea />
         <FaqArea />
       </main>

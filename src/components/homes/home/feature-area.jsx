@@ -19,7 +19,7 @@ const feature_content = {
             img: feature_img_1,
             title: "Our Mission",
             subTitle: " Driving Success as Your Digital Marketing Agency",
-            description: <>At Lumenta Internet Marketing Agency Canada, we're here to help make your business dreams a reality. We use smart strategies based on data to guide you toward your goals. Lumenta Digital Marketing Services Canada’s focus is on providing practical, top-notch digital marketing and IT solutions that work for your business. As your trusted Digital Marketing Agency USA and Canada, we're like your compass in the ever-changing world of digital marketing services USA trends.</>,
+            description: <>At Lumenta Internet Marketing Agency Canada, we're here to help make your business dreams a reality. We use smart strategies based on data to guide you toward your goals. Lumenta Digital Marketing Services Canada’s focus is on providing practical, top-notch digital marketing and IT solutions that work for your business. As your trusted Digital Marketing Agency USA and Canada, we're like your compass in the ever-changing world of digital marketing services USA trends..</>,
         },
         {
             id: 2,
