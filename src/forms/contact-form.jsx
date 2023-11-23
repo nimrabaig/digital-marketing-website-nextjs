@@ -111,6 +111,8 @@ const ContactForm = () => {
                 label="Your Name"
                 variant="outlined"
                 required
+                // error={values.name === ""}
+                // helperText={values.name === "" ? "Name is required" : ""}
                 value={values.name}
                 onChange={(event) =>
                   setValues({ ...values, name: event.target.value })
