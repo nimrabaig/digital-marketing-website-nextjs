@@ -58,8 +58,8 @@ const HeroArea = () => {
                 <div className="tp-hero-2-content text-center pt-200">
                   <div className="tp-hero-2-title-wrapper fadeUp">
                     <h3 className="tp-hero-2-title">
-                      Most Trusted <LineArrowFour />
-                      <br /> Technology <span>Services</span>
+                    Result-Orientated  <LineArrowFour />
+                      <br /> Digital Marketing <span>Agency</span>
                     </h3>
                   </div>
                   <div className="tp-hero-2-btn fadeUp">
@@ -85,7 +85,7 @@ const HeroArea = () => {
             </div>
           </div>
         </div>
-        <div className="tp-hero-2-bottom p-relative d-none d-md-block">
+        {/* <div className="tp-hero-2-bottom p-relative d-none d-md-block">
           <Swiper {...setting} modules={[Navigation]} className="hero-active-2">
             {slider_data.map((item, i) => (
               <SwiperSlide key={i}>
@@ -101,7 +101,7 @@ const HeroArea = () => {
               Next
             </button>
           </div>
-        </div>
+        </div> */}
       </section>
     </>
   );

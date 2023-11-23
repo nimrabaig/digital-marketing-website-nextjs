@@ -19,33 +19,76 @@ const HeaderTwo = () => {
     return (
         <>
             <header className="tp-header-2-area tp-header-height p-relative">
-               <div className="tp-header-2-top tp-header-2-space d-none d-xl-block">
-                  <div className="container-fluid">
-                     <div className="row align-items-center">
-                        <div className="col-xl-6">
-                           <div className="tp-header-2-top-info">
-                              <p><i className="fa-solid fa-clock"></i> Open Hours of City Govt. (Mon - Fri: <span>8.00</span> am - <span>6.00</span> pm)</p>
-                           </div>
-                        </div>
-                        <div className="col-xl-6">
-                           <div className="tp-header-2-top-right d-flex justify-content-end align-items-center">
-                              <div className="header-date">
-                                 <p><i className="fa-regular fa-calendar-days"></i> Friday - Jul 27, 2023</p>
-                              </div>
-                              <div className="header-location">
-                                 <Link target='_blank' href="https://www.google.com/maps/place/Taco+Bell/@33.9694034,-112.7228178,17z/data=!3m1!4b1!4m6!3m5!1s0x80d34e9ca49e9761:0x8b141f1593605d2a!8m2!3d33.9694034!4d-112.7206291!16s%2Fg%2F1tdwkssz"><i className="fa-sharp fa-solid fa-location-dot"></i> 684 West College St. Sun City, USA</Link>
-                              </div>
-                              <div className="header-social d-xxl-block d-none">
-                                 <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
-                                 <a href="#"><i className="fa-brands fa-twitter"></i></a>
-                                 <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                                 <a href="#"><i className="fa-brands fa-youtube"></i></a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+                 <div className="tp-header-top tp-header-space d-none d-xl-block">
+          <div className="container-fluid">
+            <div className="row align-items-center">
+              <div className="col-xxl-6 col-xl-8">
+                <div className="tp-header-top-info">
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.google.com/maps/@36.0758266,-79.4558848,17z"
+                        target="_blank"
+                      >
+                        <span>
+                          <i className="fa-sharp fa-solid fa-location-dot"></i>
+                        </span>
+                        1315 Derry Road East, Suite 1, Mississauga Ontario,
+                        Canada L5T 1B6
+                      </a>
+                    </li>
+                    <li>
+                      <a href="mailto:technix@support.com">
+                        <span>
+                          <i className="fa-solid fa-envelope"></i>
+                        </span>
+                        info@lumentadigital.com
+                      </a>
+                    </li>
+                    {/* <li> 
+                                  <div className="tp-header-lang-wrapper d-flex align-items-center">
+                                       <div className="tp-header-lang-img">
+                                          <Image src={LangLogo} alt="theme-pure" />
+                                       </div>
+                                       <div className="tp-header-lang">
+                                          <span className="tp-header-lang-selected-lang tp-lang-toggle" 
+                                          id="tp-header-lang-toggle" 
+                                          ref={langToggleRef}>English</span>
+                                           
+                                          <ul className={`tp-header-lang-list tp-lang-list ${isLangListOpen ? 'tp-lang-list-open' : ''}`}>
+                                             <li>Spanish</li>
+                                             <li>English</li>
+                                             <li>Canada</li>
+                                          </ul>
+                                       </div>
+                                    </div> 
+                                 </li> */}
+                  </ul>
+                </div>
+              </div>
+              <div className="col-xxl-6 col-xl-4">
+                <div className="tp-header-top-right d-flex justify-content-end align-items-center">
+                  <div className="header-call">
+                    <a href="tel:16138072399">
+                      <i className="fa-solid fa-phone"></i> +1 (613) 807 - 2399
+                    </a>
                   </div>
-               </div>
+                  <div className="header-social d-xxl-block d-none">
+                    <Link href="https://www.facebook.com/people/Lumenta-Digital-Inc/61551468568740/?sk=about">
+                      <i className="fa-brands fa-facebook"></i> Facebook
+                    </Link>
+                    <Link href="https://instagram.com/lumentadigital?igshid=MzRlODBiNWFlZA==">
+                      <i className="fa-brands fa-twitter"></i> Instagram
+                    </Link>
+                    <Link href="https://www.linkedin.com/company/lumenta-digital">
+                      <i className="fa-brands fa-linkedin"></i> Linkedin
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
                <div id="header-sticky" className={`tp-header-2-bottom header__sticky p-relative ${sticky && "tp-header-sticky"}`}>
                   <div className="tp-header-2-bottom-inner p-relative" style={{backgroundImage : `url(/assets/img/hero/hero-2/header-bg.png)`}}>
                      <div className="container-fluid gx-0">
