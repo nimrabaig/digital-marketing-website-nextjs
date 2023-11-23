@@ -10,6 +10,7 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControl from "@mui/material/FormControl";
 import MuiPhoneNumber from "material-ui-phone-number-2";
+import Typography from "@mui/material/Typography";
 
 const budgetRanges = [
   "$0 - $1000",
@@ -45,6 +46,21 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [validation, setValidation] = useState({
+    name: { error: false, helperText: "" },
+    email: { error: false, helperText: "" },
+    phone: { error: false, helperText: "" },
+    budget: { error: false, helperText: "" },
+  });
+
+  const handleInputChange = (field, value) => {
+    setValues((prevValues) => ({ ...prevValues, [field]: value }));
+    setValidation((prevValidation) => ({
+      ...prevValidation,
+      [field]: { error: false, helperText: "" },
+    }));
+  };
+
   const handleCheckboxChange = (service) => {
     let _services = [];
     if (values.services.includes(service)) {
@@ -61,6 +77,10 @@ const ContactForm = () => {
 
   const handleBudgetChange = (event) => {
     setValues({ ...values, budget: event.target.value });
+    setValidation((prevValidation) => ({
+      ...prevValidation,
+      budget: { error: false, helperText: "" },
+    }));
   };
 
   const handleOnSubscribe = useCallback(() => {
@@ -80,24 +100,69 @@ const ContactForm = () => {
   }, [isSubscribed]);
 
   const onSubmit = () => {
-    toast.loading("Sending request...");
-    ContactUs({
-      variables: { ...values, isSubscribed },
-    })
-      .then((resp) => {
-        toast.dismiss();
-        if (resp.data?.ContactUs?.success) {
-          toast.success("Mesaage sent!");
-        } else {
-          toast.error(resp.data?.ContactUs?.raw?.message);
-        }
-        console.log(resp);
+    let isValid = true;
+
+    // Validate name
+    if (values.name.trim() === "") {
+      setValidation((prevValidation) => ({
+        ...prevValidation,
+        name: { error: true, helperText: "Name is required" },
+      }));
+      isValid = false;
+    }
+
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(values.email)) {
+      setValidation((prevValidation) => ({
+        ...prevValidation,
+        email: { error: true, helperText: "Invalid email address" },
+      }));
+      isValid = false;
+    }
+
+    // Validate phone
+    const phoneRegex =
+      /^\+\d{1,3}\s?(\(\d{1,}\))?\s?\d{1,}[-\s]?\d{1,}[-\s]?\d{1,}$/;
+    if (!phoneRegex.test(values.phone)) {
+      setValidation((prevValidation) => ({
+        ...prevValidation,
+        phone: { error: true, helperText: "Invalid phone number" },
+      }));
+      isValid = false;
+    }
+
+    // Validate budget
+    if (values.budget.trim() === "") {
+      setValidation((prevValidation) => ({
+        ...prevValidation,
+        budget: { error: true, helperText: "Please select a budget" },
+      }));
+      isValid = false;
+    }
+    if (isValid) {
+      toast.loading("Sending request...");
+      ContactUs({
+        variables: { ...values, isSubscribed },
       })
-      .catch((err) => {
-        toast.dismiss();
-        toast.error("Unable to send message. Try again!");
-        console.log(err);
-      });
+        .then((resp) => {
+          toast.dismiss();
+          if (resp.data?.ContactUs?.success) {
+            toast.success("Message sent!");
+          } else {
+            toast.error(resp.data?.ContactUs?.raw?.message);
+          }
+          console.log(resp);
+        })
+        .catch((err) => {
+          toast.dismiss();
+          toast.error("Unable to send message. Try again!");
+          console.log(err);
+        });
+    } else {
+      toast.error("Please fill all the required fields");
+    }
   };
 
   return (
@@ -111,11 +176,11 @@ const ContactForm = () => {
                 label="Your Name"
                 variant="outlined"
                 required
-                // error={values.name === ""}
-                // helperText={values.name === "" ? "Name is required" : ""}
+                error={validation.name.error}
+                helperText={validation.name.helperText}
                 value={values.name}
                 onChange={(event) =>
-                  setValues({ ...values, name: event.target.value })
+                  handleInputChange("name", event.target.value)
                 }
                 style={{ width: "100%" }}
               />
@@ -130,9 +195,11 @@ const ContactForm = () => {
                 required
                 type="email"
                 value={values.email}
-                onChange={({ target }) =>
-                  setValues({ ...values, email: target.value })
-                }
+                error={validation.email.error}
+                helperText={validation.email.helperText}
+                onChange={(event) => {
+                  handleInputChange("email", event.target.value);
+                }}
                 style={{ width: "100%" }}
               />
             </div>
@@ -146,11 +213,16 @@ const ContactForm = () => {
                 required={true}
                 defaultCountry="ca"
                 value={values.phone}
-                onChange={(phone) => setValues({ ...values, phone: phone })}
+                error={validation.phone.error}
+                onChange={(phone) => handleInputChange("phone", phone)}
                 style={{ backgroundColor: "#EFF0F2" }}
                 onBlur={(e) => {}}
-                // onChange={(value) => handleChange(name, value)}
               />
+              {validation.phone.error && (
+                <Typography variant="body2" color="#d32f2f !important">
+                  {validation.phone.helperText}
+                </Typography>
+              )}
             </div>
           </div>
           <div className="col-md-6">
@@ -212,8 +284,6 @@ const ContactForm = () => {
             <RadioGroup
               aria-labelledby="demo-controlled-radio-buttons-group"
               name="controlled-radio-buttons-group"
-              // value={value}
-              // onChange={handleChange}
             >
               {budgetRanges.map((value) => (
                 <FormControlLabel
@@ -230,6 +300,11 @@ const ContactForm = () => {
                 />
               ))}
             </RadioGroup>
+            {validation.budget.error && (
+              <Typography variant="body2" color="#d32f2f !important">
+                {validation.budget.helperText}
+              </Typography>
+            )}
           </FormControl>
           <div className="col-md-12">
             <div className="tp-contact-textarea">
@@ -254,7 +329,7 @@ const ContactForm = () => {
                 }}
               />
             }
-            label={"Subscribe tou our Newsletter"}
+            label={"Subscribe to our Newsletter"}
           />
 
           <div style={{ marginBottom: 40 }} />
