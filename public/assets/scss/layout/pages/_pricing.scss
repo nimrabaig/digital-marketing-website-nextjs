@@ -1,0 +1,168 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  8.1 pricing css
+/*----------------------------------------*/
+
+.tp-pricing-card {
+  z-index: 1;
+  position: relative;
+  min-height: 450px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(226, 226, 226);
+  color: rgb(85, 85, 85);
+  padding: 20px;
+  border-radius: 10px;
+
+  &:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .tp-pricing-seperator {
+    width: 90%;
+    border: 0.2px solid rgba(207, 207, 207, 0.7);
+    margin: 20px 0px;
+  }
+
+  .tp-pricing-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    text-align: left;
+    margin-left: 20px;
+
+    .pricing-title {
+      color: rgb(41, 41, 48);
+      text-align: center;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110.5%;
+      margin-right: auto;
+    }
+
+    .pricing-price {
+      color: rgb(41, 41, 48);
+      text-align: left;
+
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 110.5%;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .tp-pricing-content {
+    overflow: hidden;
+    width: 100%;
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+    width: 100%;
+    text-align: left;
+    transition: max-height 0.3s ease;
+    .pricing-content-section {
+      width: 100%;
+    }
+
+    &.open-dropdown {
+      display: block;
+      max-height: 500px; /* Set a reasonable max-height */
+    }
+    ul {
+      display: none;
+      margin: 10px 0 20px;
+      padding: 10px;
+      list-style: none;
+
+      li {
+        margin-bottom: 5px;
+      }
+    }
+    .dropdown-heading {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+
+      h4 {
+        color: rgb(41, 41, 48);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+
+  .open-dropdown svg {
+    transform: rotate(180deg);
+  }
+
+  ul.dropdown-open {
+    display: block;
+    max-height: 500px; /* Set a reasonable max-height */
+    transition: max-height 0.3s ease;
+
+    li {
+      // ... existing li styles ...
+    }
+  }
+}
+
+// ... (previous styles)
+
+.tp-popular-pricing {
+  background-color: rgb(41, 41, 48);
+  color: #fff;
+
+  > .tp-pricing-header {
+    .pricing-title {
+      color: #fff;
+    }
+
+    .pricing-price {
+      color: #fff;
+    }
+  }
+  .tp-pricing-content {
+    .dropdown-heading {
+      h4 {
+        color: #fff;
+      }
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+
+  &:hover {
+    // Adjust hover styles if needed for popular pricing
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+}

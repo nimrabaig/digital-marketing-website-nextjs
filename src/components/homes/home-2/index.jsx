@@ -9,11 +9,12 @@ import FaqArea from "../home/faq-area";
 import BrandArea from "../home/brand-area";
 import BlogArea from "./blog-area";
 import FeatureArea from "../home-3/feature-area";
-import CategoryArea from "../home-3/category-area"
+import CategoryArea from "../home-3/category-area";
 import TestimonialArea from "../../../common/testimonial-area";
 import ServiceArea from "../home/service-area";
 import FooterTwo from "@/src/layout/footers/footer-2";
 import SupportArea from "../home/support-area";
+import PricingArea from "./pricing-area";
 
 const HomeTwo = () => {
   return (
@@ -28,7 +29,8 @@ const HomeTwo = () => {
         {/* <FeatureArea /> */}
         {/* <BrandArea />
           <BlogArea /> */}
-        <ServiceArea />
+         {/* <ServiceArea />  */}
+        <PricingArea />
         <BrandArea />
         <SupportArea />
         <CategoryArea />
