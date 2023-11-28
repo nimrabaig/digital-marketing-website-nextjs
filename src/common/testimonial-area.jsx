@@ -22,11 +22,9 @@ const slider_img = [
 
 
 const slider_text = [
-    <>Denouncing <span>pleasure</span> and praising pain was <br /> born and I will give you a complete account <br /> of the system, and expound the actual  <br /> teachings of the great explorer of truth the <br />  master builder</>,
-    <>Ennings appetite disposed me an at <span>subjects</span> an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week.</>,
-    <>Maximum consultation discover <span>apartments</span>. ndulgence off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts.</>,
-    <>The system, and expound the <span>actual Denouncing</span> pleasure and praising pain was
-    born and I will give you a complete account of teachings of the great explorer of truth the master builder</>,
+    <>Lumenta Digital transformed our online presence with their SEO expertise! Our website's visibility skyrocketed, and we've seen a significant increase in organic traffic. Their meticulous approach and strategic insights have been a game-changer for our business. If you want your brand to shine in search results, <span>Lumenta Digital</span> is the way to go!</>,
+    <>Lumenta Digital excelled in managing our PPC campaigns, delivering unmatched expertise in pay-per-click advertising. They boosted conversions and optimized ad spend effectively, becoming a partner that understands our business goals and delivers exceptional results.</>,
+    <>Lumenta Digital realized our vision through outstanding website design and development. The new site is visually stunning, user-friendly, and significantly increased engagement. Their creative and technical expertise combine seamlessly to create websites that look great and drive results. Highly recommend for top-notch web design and development.</>,
 ]
 
 

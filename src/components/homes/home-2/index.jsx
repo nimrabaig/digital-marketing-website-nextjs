@@ -32,7 +32,7 @@ const HomeTwo = () => {
          {/* <ServiceArea />  */}
         <PricingArea />
         <BrandArea />
-        <SupportArea />
+        {/* <SupportArea /> */}
         <CategoryArea />
         {/* <FeatureArea /> */}
         <TestimonialArea />

@@ -36,7 +36,7 @@ const HeroArea = () => {
       >
         <div
           style={{
-            backgroundColor: "rgba(255, 255, 255, 0.5)",
+            backgroundColor: "rgba(255, 255, 255, 0.6)",
             minHeight: 920,
             width: "100%",
           }}
@@ -45,7 +45,7 @@ const HeroArea = () => {
             <div className="container">
               <div className="row align-items-center justify-content-center">
                 <div className="col-xl-12">
-                  <div className="tp-hero-2-shape">
+                  {/* <div className="tp-hero-2-shape">
                     <Image
                       className="shape-1 d-none d-lg-block"
                       src={shape_1}
@@ -61,10 +61,10 @@ const HeroArea = () => {
                       src={shape_3}
                       alt="theme-pure"
                     />
-                  </div>
+                  </div> */}
                   <div className="tp-hero-2-content text-center pt-200">
                     <div className="tp-hero-2-title-wrapper fadeUp">
-                      <h3 className="tp-hero-2-title">
+                      <h3 className="tp-hero-2-title" style={{     textShadow: "0 0 #000" }}>
                         Result-Orientated
                         <br /> <span>Digital Marketing </span>Agency
                       </h3>
@@ -75,20 +75,7 @@ const HeroArea = () => {
                       </Link>
                     </div>
                   </div>
-                  <div className="tp-hero-2-side-text">
-                    <div className="tp-hero-2-mail">
-                      <a href="mailto:Contact@gmail.com">
-                        <i className="fa-light fa-envelope"></i>{" "}
-                        info@lumentadigital.com
-                      </a>
-                    </div>
-                    <div className="tp-hero-2-message">
-                      <p>
-                        <i className="fa-solid fa-comments"></i> 1315 Derry Road
-                        East, S 1, Mississauga, Ontario, Canada L5T 1B6
-                      </p>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>

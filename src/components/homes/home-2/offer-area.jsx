@@ -7,10 +7,10 @@ import LineArrowTwo from "@/src/svg/line-arrow-2";
 import offer_shape_1 from "@assets/img/offering/shape.png";
 import offer_shape_2 from "@assets/img/offering/shape-2.png";
 
-import offering_img_1 from "@assets/img/offering/img-1.svg";
-import offering_img_2 from "@assets/img/offering/img-2.svg";
-import offering_img_3 from "@assets/img/offering/img-3.svg";
-import offering_img_4 from "@assets/img/offering/img-4.svg";
+import offering_img_1 from "@assets/img/offering/SEO.svg";
+import offering_img_2 from "@assets/img/offering/web-design.svg";
+import offering_img_3 from "@assets/img/offering/social-media.svg";
+import offering_img_4 from "@assets/img/offering/ppc.svg";
 
 const offering_data = [
   {
@@ -18,12 +18,12 @@ const offering_data = [
     img: offering_img_1,
     title: (
       <>
-        Search Engine <br /> Optimization - SEO
+        Search Engine <br /> Optimization (SEO)
       </>
     ),
     description: (
       <>
-        Increase your search rankings and attract high-quality, relevant traffic
+       Increase search rankings and attract high-quality, relevant traffic
       </>
     ),
   },
@@ -37,7 +37,7 @@ const offering_data = [
     ),
     description: (
       <>
-        Boost your digital marketing performance with a well-optimized website
+        Improve digital marketing results by creating a well-developed website.
       </>
     ),
   },
@@ -51,7 +51,7 @@ const offering_data = [
       </>
     ),
     description: (
-      <>Elevate your brand story across online channels with unique presence</>
+      <>EElevate brand story across online channels with a unique presence</>
     ),
   },
   {
@@ -59,11 +59,11 @@ const offering_data = [
     img: offering_img_4,
     title: (
       <>
-        Pay Per Click <br /> PPC
+        Pay Per Click <br /> (PPC)
       </>
     ),
     description: (
-      <>Optimize your search engine visibility and capture valuable leads</>
+      <>Optimize search engine visibility and capture valuable leads</>
     ),
   },
 ];
@@ -86,22 +86,21 @@ const OfferArea = () => {
         </div>
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-8">
+            <div className="col-lg-6">
               <div className="tp-feature-title-wrapper">
                 <h3 className="tp-section-title">
-                  Our Digital Marketing Services
-                  <span className="title-left-shape">
+                  Our <span>Digital Marketing</span><br /> Services
+                  {/* <span className="title-left-shape">
                     <LineArrowTwo />
-                  </span>
+                  </span> */}
                 </h3>
               </div>
             </div>
-            {/* <div className="col-lg-6">
+            <div className="col-lg-6">
                      <div id='tp-feature-wrapper2' className="tp-feature-wrapper offer p-relative">
-                        <p>As the complexity of buildings to increase, the field of arch <br /> 
-                        became multi-disciplinary with technological expertise. </p>
+                        <p>Lumenta Digital provides diverse innovative digital marketing services tailored to amplify online presence and drive impactful results.</p>
                      </div>
-                  </div> */}
+                  </div>
           </div>
           <div className="row justify-content-center">
             {offering_data.map((item, i) => (
@@ -122,7 +121,7 @@ const OfferArea = () => {
               </div>
             ))}
 
-            <div className="col-lg-12">
+            {/* <div className="col-lg-12">
               <div className="tp-offer-all-btn text-center mt-30 fadeUp">
                 <p>
                   Bring them together and you overcome the ordinary.
@@ -134,7 +133,7 @@ const OfferArea = () => {
                   </Link>
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

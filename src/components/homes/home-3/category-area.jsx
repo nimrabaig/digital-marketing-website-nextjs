@@ -6,11 +6,11 @@ import React, { useEffect, useRef, useState } from "react";
 import category_shape_1 from "@assets/img/category/shape-1.png";
 import category_shape_2 from "@assets/img/category/shape-2.png";
 
-import category_icon_1 from "@assets/img/category/icon-1.png";
-import category_icon_2 from "@assets/img/category/icon-2.png";
-import category_icon_3 from "@assets/img/category/icon-3.png";
-import category_icon_4 from "@assets/img/category/icon-4.png";
-import category_icon_5 from "@assets/img/category/icon-5.png";
+import category_icon_1 from "@assets/img/category/Consulting.svg";
+import category_icon_2 from "@assets/img/category/planing.svg";
+import category_icon_3 from "@assets/img/category/developement.svg";
+import category_icon_4 from "@assets/img/category/marketing.svg";
+import category_icon_5 from "@assets/img/category/conversion.svg";
 
 const CategoryArea = () => {
   const [x, setX] = useState(1);
@@ -77,13 +77,10 @@ const CategoryArea = () => {
           <div className="row">
             <div className="col-xl-12">
               <div className="tp-category-title-wrapper text-center">
-                <span className="tp-section-title__pre">
-                  feature <span className="title-pre-color">IT Solutions</span>
-                  <AngleArrow />
-                </span>
+              
                 <h3 className="tp-section-title">
-                  Best Digital <span className="title-color">Technology</span>{" "}
-                  <br /> Agency For People
+                  Our  <span className="title-color">Digital</span>{" "}
+                  <br /> MarketingProcess
                 </h3>
               </div>
             </div>
@@ -100,7 +97,7 @@ const CategoryArea = () => {
                 <div className="tp-category-content two">
                   <div className="tp-category-icon">
                     <Image src={category_icon_2} alt="theme-pure" />
-                    <h4 className="tp-category-content-title">Software</h4>
+                    <h4 className="tp-category-content-title">Planing</h4>
                   </div>
                 </div>
               </div>
@@ -111,7 +108,7 @@ const CategoryArea = () => {
                   <div className="tp-category-icon">
                     <Image src={category_icon_3} alt="theme-pure" />
                     <h4 className="tp-category-content-title">
-                      Data <br /> services
+                       Development
                     </h4>
                   </div>
                 </div>
@@ -123,34 +120,20 @@ const CategoryArea = () => {
                   <div className="tp-category-icon">
                     <Image src={category_icon_4} alt="theme-pure" />
                     <h4 className="tp-category-content-title">
-                      Cyber security
+                      Marketing
                     </h4>
                   </div>
                 </div>
                 <div className="tp-category-content five">
                   <div className="tp-category-icon">
                     <Image src={category_icon_5} alt="theme-pure" />
-                    <h4 className="tp-category-content-title">Education</h4>
+                    <h4 className="tp-category-content-title">Conversion</h4>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="tp-offer-all-btn text-center mt-50">
-                <p>
-                  Bring them together and you overcome the ordinary.
-                  <Link href="/service-details">
-                    View More SErvice{" "}
-                    <span>
-                      <i className="fa-regular fa-plus"></i>
-                    </span>
-                  </Link>
-                </p>
-              </div>
-            </div>
-          </div>
+         
         </div>
       </section>
     </>

@@ -4,13 +4,18 @@ const answer_question_data = [
     question: <>What sets Lumenta Digital apart from others?</>,
     answer: (
       <>
-        Our commitment to delivering exceptional and distinct solutions to each
-        client stands as a key hallmark of our company. As trendsetters, not
-        followers, we attract clients with our innovative approach.
+        At Lumenta Digital Marketing Agency, we understand the uniqueness of
+        your business. Unlike a 'one size fits all' approach, we customize
+        solutions based on your specific needs and goals. Our team of
+        experienced professionals collaborates to create a tailored strategy,
+        ensuring your business achieves remarkable success. We believe in
+        treating each business as a unique entity because what works for one may
+        not work for another. Choose innovation and customization – choose our
+        digital marketing expertise.
       </>
     ),
     accordion_id: "One",
-    collapsed: "collapsed",
+    collapsed: "",
     aria_expanded: false,
     active: "",
   },
@@ -21,14 +26,15 @@ const answer_question_data = [
       <>
         Lumenta offers the following digital marketing services to its clients:
         <br />
-        · Search Engine Optimization (SEO) <br />
-        · Website Design & Development <br />
-        . Social Media Marketing <br />
-        · Pay Per Click (PPC) <br />
+        ·Search Engine Optimization (SEO) <br />
+        · Website Optimization <br />
+        · Social Media Marketing <br />
+        · Pay Per Click (PPC)
+        <br />
       </>
     ),
     accordion_id: "Two",
-    collapsed: "",
+    collapsed: "collapsed",
     aria_expanded: true,
     show: true,
     active: "tp-faq-active",
@@ -38,10 +44,12 @@ const answer_question_data = [
     question: <>Is your content optimized for SEO?</>,
     answer: (
       <>
-        Our team of skilled and trained SEO professionals is dedicated to
-        securing the top-ranking position for your website. If you're seeking a
-        departure from ineffective and meaningless SEO tactics, trust us to
-        formulate a robust SEO strategy tailored to your website.
+        Our team comprises adept and highly trained SEO professionals committed
+        to optimizing your website to the pinnacle of digital platforms. Our
+        primary focus is on enhancing your Google ranking and boosting organic
+        (non-paid) traffic to your website. Beyond mere keyword incorporation,
+        we specialize in optimizing every element to ensure a comprehensive and
+        effective SEO strategy.
       </>
     ),
     accordion_id: "Three",
@@ -54,12 +62,39 @@ const answer_question_data = [
     question: <>What is social media marketing strategy?</>,
     answer: (
       <>
-        A social media strategy aligns your business objectives with your social
-        media priorities. Once you establish the role of social media in your
-        broader business strategy, crucial decisions can be made regarding
-        tactics, such as: <br />
-        · Which social platforms should we prioritize?
-        <br />· What type of content resonates effectively on these platforms?
+        Social media marketing is about using online platforms to connect with
+        your audience and promote your business. A social media strategy aligns
+        your business goals with your online priorities. Key aspects include:{" "}
+        <br />
+        <br />
+        <ul>
+          <li>
+            <b>Goal Alignment:</b> Ensure your social media efforts directly
+            contribute to broader business objectives.
+          </li>{" "}
+          <br />
+          <li>
+            <b>Platform Focus: </b>Prioritize platforms relevant to your
+            audience, considering demographics and content nature.
+          </li>{" "}
+          <br />
+          <li>
+            <b>Content Tailoring:</b> Create content that suits each platform,
+            adapting to audience preferences.{" "}
+          </li>
+          <br />
+          <li>
+            <b>Consistency and Engagement:</b> Maintain a regular posting
+            schedule and engage with your audience for community building.{" "}
+          </li>
+          <br />
+          <li>
+            <b>Analytics and Optimization:</b> Track performance metrics,
+            optimizing strategies based on data for continual improvement. A
+            social media strategy is your roadmap for effective online presence,
+            enhancing brand visibility and achieving business success.
+          </li>
+        </ul>
       </>
     ),
     accordion_id: "Four",
@@ -72,9 +107,8 @@ const answer_question_data = [
     question: <>What Is PPC?</>,
     answer: (
       <>
-        PPC, or Pay-Per-Click, is an internet advertising method designed to
-        generate targeted website traffic. In this model, advertisers pay
-        publishers for each click on their ads.
+        Search engine advertising, or pay-per-click advertising, helps you reach
+        new customers and guarantees a consistent traffic flow to your website.
       </>
     ),
     accordion_id: "Five",

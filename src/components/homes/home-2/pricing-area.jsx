@@ -444,7 +444,7 @@ const PricingArea = () => {
               </div>
             ))}
 
-            <div className="col-lg-12">
+            {/* <div className="col-lg-12">
               <div className="tp-offer-all-btn text-center mt-30 fadeUp">
                 <p>
                   Bring them together and you overcome the ordinary.
@@ -456,7 +456,7 @@ const PricingArea = () => {
                   </Link>
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

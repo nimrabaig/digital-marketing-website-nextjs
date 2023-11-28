@@ -25,10 +25,7 @@ const FaqArea = () => {
                <div className="row justify-content-center">
                   <div className="col-xxl-8 col-xl-10">
                      <div className="tp-support-title-wrapper text-center">
-                        <span className="tp-section-title__pre">
-                           best IT <span className="title-pre-color">Support</span>
-                           <AngleArrow /> 
-                        </span>
+                      
                         <h3 className="tp-section-title">Frequently Ask <span className="title-color">Question?</span>
                            <span className="title-center-shape">
                             <LineArrowTwo /> 
