@@ -80,7 +80,7 @@ const CategoryArea = () => {
               
                 <h3 className="tp-section-title">
                   Our  <span className="title-color">Digital</span>{" "}
-                  <br /> MarketingProcess
+                  <br /> Marketing Process
                 </h3>
               </div>
             </div>
