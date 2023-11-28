@@ -10,32 +10,25 @@ import footer_logo from "@assets/img/footer/footer-lumenta-logo.png";
 const footer_two_content = {
   bg_img: "/assets/img/footer/footer-2-bg.png",
   footer_widget: [
-    "Parking permission",
-    "Fire Service Noc",
-    "Report a Parking Violation",
-    "Residential Parking",
-    "Vendor Registration",
+    "Pricing",
   ],
   google_map:
     "https://www.google.com/maps/place/254+Lillian+Blvd,+Holbrook,+NY+11741,+USA/@40.7937446,-73.0774993,17z/data=!3m1!4b1!4m5!3m4!1s0x89e8483b469d706f:0xa6841f8aafc2ef19!8m2!3d40.7937446!4d-73.0753106",
   about_us: (
     <>
-      The world’s first and largest digital marketplace <br /> for crypto
-      collectibles and non-fungible tokens (NFTs). Buy
+      We're an innovative and dynamic digital marketing agency, harnessing the power of data-driven strategies to propel our clients toward their business objectives.
     </>
   ),
-  address: " 254 Lillian Blvd, Holbrook",
-  phone: "1-800-654-3210",
-  email: "needhelp@company.com",
+  address: <>1315 Derry Road East, Suite 1, Mississauga, <br /> Ontario, Canada L5T 1B6</>,
+  phone: "+1 (613) 807 - 2399",
+  email: "info@lumentadigital.com",
   footer_nav: [
     { title: "Home", link: "/" },
-    { title: "Company", link: "/" },
+    { title: "About Us", link: "/" },
     { title: "services", link: "/service" },
-    { title: "Resources", link: "#" },
-    { title: "Shop", link: "#" },
     { title: "contact", link: "/contact" },
   ],
-  mobile: "+88 1900 6789 56",
+  mobile: "+1 (613) 807 - 2399",
 };
 const {
   bg_img,
@@ -94,7 +87,7 @@ const FooterTwo = () => {
                 </div>
                 <div className="col-xl-4 col-lg-3 col-md-6">
                   <div className="tp-footer-widget tp-footer-2-col-2">
-                    <h3 className="tp-footer-widget-title">Services Req</h3>
+                    <h3 className="tp-footer-widget-title">Important Links</h3>
                     <div className="tp-footer-widget-content">
                       <ul>
                         {footer_widget.map((item, i) => (
