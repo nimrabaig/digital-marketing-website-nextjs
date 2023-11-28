@@ -127,7 +127,7 @@
     }
 
     .pricing-price {
-      color: rgb(41, 41, 48);
+      color: #ff8d0b;
       text-align: left;
 
       font-size: 38px;
@@ -202,7 +202,6 @@
 
   ul.dropdown-open {
     display: block;
-    max-height: 500px; /* Set a reasonable max-height */
     transition: max-height 0.3s ease;
 
     li {

@@ -72,7 +72,7 @@ const OfferArea = () => {
   return (
     <>
       <section
-        className="tp-offer-area p-relative pt-120 pb-90"
+        className="tp-offer-area p-relative pt-120 "
         style={{ backgroundImage: `url(/assets/img/offering/bg.png)` }}
       >
         <div className="tp-offer-overlay"></div>
@@ -89,7 +89,7 @@ const OfferArea = () => {
             <div className="col-lg-6">
               <div className="tp-feature-title-wrapper">
                 <h3 className="tp-section-title">
-                  Our <span>Digital Marketing</span><br /> Services
+                  Our <span style={{ color: "#ff8d0b"}}>Digital Marketing</span><br /> Services
                   {/* <span className="title-left-shape">
                     <LineArrowTwo />
                   </span> */}

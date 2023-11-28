@@ -379,10 +379,10 @@ const PricingArea = () => {
             <div className="col-lg-8">
               <div className="tp-feature-title-wrapper">
                 <h3 className="tp-section-title">
-                  Our Pricing Plans
-                  <span className="title-left-shape">
+                  Our <span style={{ color: "#ff8d0b"}}>Pricing </span>Plans
+                  {/* <span className="title-left-shape">
                     <LineArrowTwo />
-                  </span>
+                  </span> */}
                 </h3>
               </div>
             </div>
