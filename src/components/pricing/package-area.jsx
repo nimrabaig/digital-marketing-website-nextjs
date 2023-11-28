@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
 
 const packages_data = [
   {
@@ -330,111 +328,41 @@ const packages_data = [
 const PackageArea = () => {
   return (
     <>
-      {/* grid table for packages(pricing plans) for contents(heading only)  */}
-
       <div className={`container gridContainer`}>
         <div className={`row gridRow headerRow`}>
-          <div className={`col gridColumn headerCell firstColumn`}>
-            Header 1
-          </div>
-          <div className={`col gridColumn headerCell`}>Header 2</div>
-          <div className={`col gridColumn headerCell`}>Header 3</div>
-          <div className={`col gridColumn headerCell`}>Header 4</div>
-        </div>
-        <div className={`row gridRow`}>
-          <div className={`col gridColumn firstColumn`}>Row 1, Column 1</div>
-          <div className={`col gridColumn`}>Row 1, Column 2</div>
-          <div className={`col gridColumn`}>Row 1, Column 3</div>
-          <div className={`col gridColumn`}>Row 1, Column 4</div>
-        </div>
-        <div className={`row gridRow`}>
-          <div className={`col gridColumn firstColumn`}>Row 1, Column 1</div>
-          <div className={`col gridColumn`}>Row 1, Column 2</div>
-          <div className={`col gridColumn`}>Row 1, Column 3</div>
-          <div className={`col gridColumn`}>Row 1, Column 4</div>
-        </div>
-        <div className={`row gridRow`}>
-          <div className={`col gridColumn firstColumn`}>Row 1, Column 1</div>
-          <div className={`col gridColumn`}>Row 1, Column 2</div>
-          <div className={`col gridColumn`}>Row 1, Column 3</div>
-          <div className={`col gridColumn`}>Row 1, Column 4</div>
-        </div>
-        <div className={`row gridRow`}>
-          <div className={`col gridColumn firstColumn`}>Row 1, Column 1</div>
-          <div className={`col gridColumn`}>Row 1, Column 2</div>
-          <div className={`col gridColumn`}>Row 1, Column 3</div>
-          <div className={`col gridColumn`}>Row 1, Column 4</div>
-        </div>
-        <div className={`row gridRow`}>
-          <div className={`col gridColumn firstColumn`}>Row 1, Column 1</div>
-          <div className={`col gridColumn`}>Row 1, Column 2</div>
-          <div className={`col gridColumn`}>Row 1, Column 3</div>
-          <div className={`col gridColumn`}>Row 1, Column 4</div>
-        </div>
-        <div className={`row gridRow`}>
-          <div className={`col gridColumn firstColumn`}>Row 1, Column 1</div>
-          <div className={`col gridColumn`}>Row 1, Column 2</div>
-          <div className={`col gridColumn`}>Row 1, Column 3</div>
-          <div className={`col gridColumn`}>Row 1, Column 4</div>
-        </div>
-        <div className={`row gridRow`}>
-          <div className={`col gridColumn firstColumn`}>Row 2, Column 1</div>
-          <div className={`col gridColumn`}>Row 2, Column 2</div>
-          <div className={`col gridColumn`}>Row 2, Column 3</div>
-          <div className={`col gridColumn`}>Row 2, Column 4</div>
-        </div>
-        <div className={`row gridRow`}>
-          <div className={`col gridColumn firstColumn`}>Row 3, Column 1</div>
-          <div className={`col gridColumn`}>Row 3, Column 2</div>
-          <div className={`col gridColumn`}>Row 3, Column 3</div>
-          <div className={`col gridColumn`}>Row 3, Column 4</div>
-        </div>
-        <div className={`row gridRow`}>
-          <div className={`col gridColumn firstColumn`}>Row 4, Column 1</div>
-          <div className={`col gridColumn`}>Row 4, Column 2</div>
-          <div className={`col gridColumn`}>Row 4, Column 3</div>
-          <div className={`col gridColumn`}>Row 4, Column 4</div>
+          <div className={`col gridColumn headerCell firstColumn`}></div>
+          {packages_data.map((packageData) => (
+            <div key={packageData.id} className={`col gridColumn headerCell`}>
+              {packageData.title}
+            </div>
+          ))}
         </div>
 
-        {/* Repeat the above structure for other rows */}
+        {packages_data[0].contents.map((content, index) => (
+          <div key={index} className={`row gridRow`}>
+            <div className={`col gridColumn firstColumn`}>
+              {content.heading}
+            </div>
+            {packages_data.map((packageData) => (
+              <div key={packageData.id} className={`col gridColumn`}>
+                {content.sub_contents.map((subContent, subIndex) => (
+                  <div key={subIndex}>{subContent}</div>
+                ))}
+              </div>
+            ))}
+          </div>
+        ))}
 
         <div className={`row gridRow`}>
           <div className={`col gridColumn firstColumn`}></div>
-          <div className={`col gridColumn`}>
-            <button className="tp-btn tp-btn-default mt-30">
-              Purchase Now
-            </button>{" "}
-          </div>
-          <div className={`col gridColumn`}>
-            <button className="tp-btn tp-btn-default mt-30">
-              Purchase Now
-            </button>{" "}
-          </div>
-          <div className={`col gridColumn`}>
-            <button className="tp-btn tp-btn-default mt-30">
-              Purchase Now
-            </button>{" "}
-          </div>
+          {packages_data.map((packageData) => (
+            <div key={packageData.id} className={`col gridColumn`}>
+              <button className="tp-btn tp-btn-default mt-30">
+                Purchase Now
+              </button>
+            </div>
+          ))}
         </div>
-
-        {/* <div className={`row gridRow lastRow`}>
-          <div className={`col gridColumn`}></div>
-          <div className={`col gridColumn`}>
-            <button className="tp-btn tp-btn-default mt-30">
-              Purchase Now
-            </button>{" "}
-          </div>
-          <div className={`col gridColumn`}>
-            <button className="tp-btn tp-btn-default mt-30">
-              Purchase Now
-            </button>{" "}
-          </div>
-          <div className={`col gridColumn`}>
-            <button className="tp-btn tp-btn-default mt-30  buy-button">
-              Purchase Now
-            </button>{" "}
-          </div>
-        </div> */}
       </div>
     </>
   );

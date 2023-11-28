@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AngleArrow from "@/src/svg/angle-arrow";
 import VideoPopup from "@/src/modals/video-popup";
+
 // about img import here
 import about_img_1 from "@assets/img/about/home-3/shape-4.png";
 import about_img_2 from "@assets/img/about/home-3/img-1.jpg";
@@ -23,8 +24,6 @@ import about3 from "@assets/img/about/ccApproach.png";
 import about4 from "@assets/img/about/growth.png";
 
 const AboutArea = ({ about }) => {
-  const percentage = 50;
-  const percentage2 = 75;
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
@@ -114,7 +113,10 @@ const AboutArea = ({ about }) => {
             <div className="col-lg-6" style={{ marginTop: 80 }}>
               <div className="tp-about-3-wrapper">
                 <div className="tp-about-3-title-wrapper">
-                  <h3 className="tp-section-title">Pioneering <span className="title-color">Innovation</span> for Digital Excellence</h3>
+                  <h3 className="tp-section-title">
+                    Pioneering <span className="title-color">Innovation</span>{" "}
+                    for Digital Excellence
+                  </h3>
                 </div>
                 <p className="text">
                   Lumenta Digital Marketing Agency USA embraces creativity and
@@ -131,7 +133,11 @@ const AboutArea = ({ about }) => {
             <div className="col-lg-6" style={{ marginTop: 80 }}>
               <div className="tp-about-3-wrapper">
                 <div className="tp-about-3-title-wrapper">
-                  <h3 className="tp-section-title">Upholding Uncompromising <span className="title-color"> Integrity</span> in Every Endeavor</h3>
+                  <h3 className="tp-section-title">
+                    Upholding Uncompromising{" "}
+                    <span className="title-color"> Integrity</span> in Every
+                    Endeavor
+                  </h3>
                 </div>
                 <p className="text">
                   Trust is the foundation of our relationships at Lumenta
@@ -158,7 +164,10 @@ const AboutArea = ({ about }) => {
             <div className="col-lg-6" style={{ marginTop: 80 }}>
               <div className="tp-about-3-wrapper">
                 <div className="tp-about-3-title-wrapper">
-                  <h3 className="tp-section-title">Refining Customer Experience Through a <span className="title-color">Centric Approach</span></h3>
+                  <h3 className="tp-section-title">
+                    Refining Customer Experience Through a{" "}
+                    <span className="title-color">Centric Approach</span>
+                  </h3>
                 </div>
                 <p className="text">
                   At Lumenta, clients are at the heart of everything we do. We
@@ -173,7 +182,11 @@ const AboutArea = ({ about }) => {
             <div className="col-lg-6" style={{ marginTop: 80 }}>
               <div className="tp-about-3-wrapper">
                 <div className="tp-about-3-title-wrapper">
-                  <h3 className="tp-section-title">Nurturing Sustainable <span className="title-color">Growth</span> Strategies for Lasting Success</h3>
+                  <h3 className="tp-section-title">
+                    Nurturing Sustainable{" "}
+                    <span className="title-color">Growth</span> Strategies for
+                    Lasting Success
+                  </h3>
                 </div>
                 <p className="text">
                   In the ever-evolving digital internet marketing agency

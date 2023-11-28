@@ -13,6 +13,7 @@
 
 .gridRow {
   display: flex;
+  
 }
 
 .headerRow {
@@ -20,7 +21,7 @@
 }
 
 .gridColumn {
-  border: none;
+  border-bottom: 1px solid var(--tp-theme-secondary);
   padding: 10px;
   text-align: center;
   justify-content: center;
@@ -34,8 +35,12 @@
   background: var(--tp-theme-secondary);
 }
 
+
+
 .firstColumn {
   flex: 2;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .buyButton {
