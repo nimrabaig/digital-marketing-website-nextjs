@@ -27,9 +27,9 @@ const FaqArea = () => {
                      <div className="tp-support-title-wrapper text-center">
                       
                         <h3 className="tp-section-title">Frequently Ask <span className="title-color">Question?</span>
-                           <span className="title-center-shape">
+                           {/* <span className="title-center-shape">
                             <LineArrowTwo /> 
-                           </span>
+                           </span> */}
                         </h3>
                      </div>
 
