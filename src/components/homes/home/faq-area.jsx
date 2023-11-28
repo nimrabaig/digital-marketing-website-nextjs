@@ -26,7 +26,7 @@ const FaqArea = () => {
                   <div className="col-xxl-8 col-xl-10">
                      <div className="tp-support-title-wrapper text-center">
                       
-                        <h3 className="tp-section-title">Frequently Ask <span className="title-color">Question?</span>
+                        <h3 className="tp-section-title">Frequently Ask <span className="title-color">Questions</span>
                            {/* <span className="title-center-shape">
                             <LineArrowTwo /> 
                            </span> */}
