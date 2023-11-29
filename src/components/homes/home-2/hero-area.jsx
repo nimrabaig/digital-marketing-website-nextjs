@@ -36,7 +36,7 @@ const HeroArea = () => {
       >
         <div
           style={{
-            backgroundColor: "rgba(255, 255, 255, 0.6)",
+            backgroundColor: "rgba(255, 255, 255, 0.3)",
             minHeight: 920,
             width: "100%",
           }}
