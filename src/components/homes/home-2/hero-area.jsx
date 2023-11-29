@@ -26,7 +26,7 @@ const setting = {
     0: {},
   },
 };
-const slider_data = ["technology", "architecture", "Computer"];
+const slider_data = ["SEO", "Digitize", "Outreach", "Development",];
 const HeroArea = () => {
   return (
     <>
@@ -80,7 +80,7 @@ const HeroArea = () => {
               </div>
             </div>
           </div>
-          {/* <div className="tp-hero-2-bottom p-relative d-none d-md-block">
+         <div className="tp-hero-2-bottom p-relative d-none d-md-block">
           <Swiper {...setting} modules={[Navigation]} className="hero-active-2">
             {slider_data.map((item, i) => (
               <SwiperSlide key={i}>
@@ -96,7 +96,7 @@ const HeroArea = () => {
               Next
             </button>
           </div>
-        </div> */}
+        </div> 
         </div>
       </section>
     </>
