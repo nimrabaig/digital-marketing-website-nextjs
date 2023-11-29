@@ -209,7 +209,7 @@ const packages_data = [
   },
   {
     heading: "Customer Support",
-    sub_contents: ["Phone Support", "Email Support", "Chat Support"],
+    sub_contents: ["Phone Support", "Email Support", "Chat Support", "meeting"],
     p1: [null, false, true, false, true],
     p2: [null, false, true, true, true],
     p3: [null, true, true, true, true],
