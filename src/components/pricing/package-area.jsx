@@ -229,13 +229,15 @@ const PackageArea = () => {
           <div className={`col gridColumn headerCell`}>SEO Diamond</div>
         </div>
         {packages_data.map((service, index) => (
-          <div key={index} className={`row gridRow`}>
-            <div className={`col gridColumn firstColumn`}>
-              {service.heading}
+          <>
+            <div key={index} className={`row gridRow`}>
+              <div className={`col gridColumn firstColumn`}>
+                {service.heading}
+              </div>
+              <div className={`col gridColumn `}></div>
+              <div className={`col gridColumn `}></div>
+              <div className={`col gridColumn `}></div>
             </div>
-            <div className={`col gridColumn `}></div>
-            <div className={`col gridColumn `}></div>
-            <div className={`col gridColumn `}></div>
 
             {service.sub_contents.map((subContent, index) => (
               <div className={`row gridRow`}>
@@ -329,7 +331,7 @@ const PackageArea = () => {
                 </div>
               ))}
             </div> */}
-          </div>
+          </>
         ))}
 
         {/* <div className={`row gridRow`}>

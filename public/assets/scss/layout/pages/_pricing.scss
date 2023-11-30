@@ -9,17 +9,16 @@
 
 .gridContainer {
   margin: 80px 60px;
-  //different shades of grey for the rows
-  &:nth-child(even) {
-    background: var(#6e6d6d);
-  }
-  &:nth-child(odd) {
-    background: var(--tp-common-white);
-  }
 }
 
 .gridRow {
   display: flex;
+  &:nth-child(even) {
+    background: #ffffff !important;
+  }
+  &:nth-child(odd) {
+    background: #f6f6f4 !important;
+  }
 }
 
 .headerRow {
@@ -27,7 +26,7 @@
 }
 
 .gridColumn {
-  border-bottom: 1px solid var(--tp-theme-secondary);
+  // border-bottom: 1px solid var(--tp-theme-secondary);
   padding: 10px;
   white-space: normal;
   overflow: hidden;
