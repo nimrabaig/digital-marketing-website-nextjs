@@ -3,7 +3,7 @@ import HeaderOne from "@/src/layout/headers/header";
 import React from "react";
 import ServiceDetailsArea from "./service-details-area";
 import FooterContact from "@/src/layout/footers/footer-contact";
-import Footer from "@/src/layout/footers/footer-2";
+import FooterTwo from "@/src/layout/footers/footer-2";
 import service_data from "@/src/data/service-data";
 import { useRouter } from "next/router";
 

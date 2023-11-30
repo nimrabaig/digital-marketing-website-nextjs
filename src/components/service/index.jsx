@@ -7,7 +7,7 @@ import IndustryArea from "@/src/common/industry-area";
 import BrandArea from "@/src/common/brand-area";
 import BlogArea from "@/src/common/blog-area";
 import FooterContact from "@/src/layout/footers/footer-contact";
-import Footer from "@/src/layout/footers/footer-2";
+import FooterTwo from "@/src/layout/footers/footer-2";
 
 const Sevice = () => {
   return (

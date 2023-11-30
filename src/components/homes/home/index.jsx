@@ -10,7 +10,7 @@ import TestimonialArea from "./testimonial-area";
 import SliderArea from "./slider-area";
 import FaqArea from "./faq-area";
 import BlogArea from "./blog-area";
-import Footer from "@/src/layout/footers/footer-2";
+import FooterTwo from "@/src/layout/footers/footer-2";
 
 const HomeOne = () => {
   return (
