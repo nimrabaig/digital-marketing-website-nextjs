@@ -16,7 +16,7 @@ const answer_question_data = [
     ),
     accordion_id: "One",
     collapsed: "",
-    aria_expanded: false,
+    aria_expanded: true,
     active: "",
   },
   {
@@ -38,7 +38,7 @@ const answer_question_data = [
     ),
     accordion_id: "Two",
     collapsed: "collapsed",
-    aria_expanded: true,
+    aria_expanded: false,
     show: true,
     active: "tp-faq-active",
   },

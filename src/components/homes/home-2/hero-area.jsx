@@ -71,7 +71,7 @@ const HeroArea = () => {
                     </div>
                     <div className="tp-hero-2-btn fadeUp">
                       <Link className="tp-btn" href="/contact">
-                        Get In Touch
+                        Get Free Proposal
                       </Link>
                     </div>
                   </div>
