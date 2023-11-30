@@ -339,35 +339,50 @@ const PricingArea = () => {
   const [openDropdowns, setOpenDropdowns] = useState([]);
   const [isExpanded, setExpandAll] = useState(null);
 
-  useEffect(() => {
-    if (isExpanded !== null) {
+  const toggleExpandAll = (cardId) => {
+    setExpandAll((prev) => {
+      if (prev === cardId) {
+        return null;
+      } else {
+        return cardId;
+      }
+    });
+
+    if (isExpanded === cardId) {
+      console.log("1", openDropdowns);
       setOpenDropdowns((prev) => {
-        prev?.some((item) => item.cardId === isExpanded);
+        return prev?.filter((item) => item.cardId !== cardId);
       });
     } else {
-      setOpenDropdowns((prev) => prev
-        ?.filter((item) => item.cardId === cardId)
-        )
+      console.log("2", openDropdowns);
+
+      setOpenDropdowns((prev) => {
+        return prev
+          ?.filter((item) => item.cardId !== cardId)
+          .concat(
+            pricing_data[cardId - 1].contents.map((content, index) => ({
+              cardId,
+              headingIndex: index,
+            }))
+          );
+      });
+      console.log("2.1", openDropdowns);
     }
-  }, [isExpanded]);
-
+  };
   const toggleDropdown = (cardId, headingIndex) => {
-
-   
     setOpenDropdowns((prev) => {
       let isOpen;
-      isExpanded === cardId ? 
-      isOpen = prev?.some(
-        (item) => item.cardId === cardId
-      )
-      :
-     isOpen = prev?.some(
-        (item) => item.cardId === cardId && item.headingIndex === headingIndex
-      );
+      isExpanded === cardId
+        ? (isOpen = prev?.some((item) => item.cardId === cardId))
+        : (isOpen = prev?.some(
+            (item) =>
+              item.cardId === cardId && item.headingIndex === headingIndex
+          ));
 
       if (isOpen) {
-        console.log("====", openDropdowns)
+        console.log("====", openDropdowns);
         // If dropdown is open, close it
+        setExpandAll(null);
         return prev?.filter(
           (item) =>
             !(item.cardId === cardId && item.headingIndex === headingIndex)
@@ -410,7 +425,8 @@ const PricingArea = () => {
                   </span> */}
                 </h3>
                 <p>
-                Explore our pricing plans, each with unique service offerings to match your needs.
+                  Explore our pricing plans, each with unique service offerings
+                  to match your needs.
                 </p>
               </div>
             </div>
@@ -439,8 +455,8 @@ const PricingArea = () => {
                       }}
                       onClick={() =>
                         isExpanded === item.id
-                          ? setExpandAll(null)
-                          : setExpandAll(item.id)
+                          ? toggleExpandAll(item.id)
+                          : toggleExpandAll(item.id)
                       }
                     >
                       {isExpanded === item.id ? "Collapse All" : "Expand All"}
@@ -449,30 +465,34 @@ const PricingArea = () => {
                       <div key={index} className="pricing-content-section">
                         <div
                           className={
-                            (openDropdowns?.some(
+                            openDropdowns?.some(
                               (openDropdown) =>
                                 openDropdown.cardId === item.id &&
                                 openDropdown.headingIndex === index
-                            ) || isExpanded === item.id)
+                            )
                               ? "dropdown-open dropdown-heading"
                               : "dropdown-heading"
                           }
                           onClick={() => toggleDropdown(item.id, index)}
                         >
                           <h4>{content.heading}</h4>
-                          {(openDropdowns?.some(
-                              (openDropdown) =>
-                                openDropdown.cardId === item.id &&
-                                openDropdown.headingIndex === index
-                            ) || isExpanded === item.id) ? <Minus /> : <Plus />}
+                          {openDropdowns?.some(
+                            (openDropdown) =>
+                              openDropdown.cardId === item.id &&
+                              openDropdown.headingIndex === index
+                          ) ? (
+                            <Minus />
+                          ) : (
+                            <Plus />
+                          )}
                         </div>
                         <ul
                           className={
-                            (openDropdowns?.some(
+                            openDropdowns?.some(
                               (openDropdown) =>
                                 openDropdown.cardId === item.id &&
                                 openDropdown.headingIndex === index
-                            )|| isExpanded === item.id)
+                            )
                               ? "dropdown-open"
                               : ""
                           }
@@ -484,7 +504,10 @@ const PricingArea = () => {
                       </div>
                     ))}
                   </div>
-                  <button className="tp-btn tp-btn-default mt-30" onClick={() => router.push("/contact")}>
+                  <button
+                    className="tp-btn tp-btn-default mt-30"
+                    onClick={() => router.push("/contact")}
+                  >
                     Purchase Now
                   </button>
                 </div>
