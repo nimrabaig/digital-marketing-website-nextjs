@@ -30,7 +30,7 @@ const BlogDetailsPostbox = () => {
 
   return (
     <>
-      <section className="postbox__area pt-120 pb-100">
+      <section className="postbox__area pt-120 pb-100" >
         <div className="container">
           <div className="row">
             <div className="col-xxl-12 col-xl-12 col-lg-12">

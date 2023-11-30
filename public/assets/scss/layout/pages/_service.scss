@@ -452,3 +452,9 @@
     flex-direction: column !important;
   }
 }
+
+.postbox__area {
+  > * {
+    text-align: center !important;
+  }
+}
