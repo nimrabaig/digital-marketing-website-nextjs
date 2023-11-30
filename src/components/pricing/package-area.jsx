@@ -35,7 +35,7 @@ const packages_data = [
       "Internal Linking",
       "Schema Code Implementation",
       "Internal Linking & Optimization",
-      "Bing Webmaster Tools Setup*",
+      "Bing Webmaster Tools Setup",
       "Check The Broken Links",
       "Favicon Creation",
       "Initial Link Analysis and Disavow",
