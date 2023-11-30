@@ -9,11 +9,17 @@
 
 .gridContainer {
   margin: 80px 60px;
+  //different shades of grey for the rows
+  &:nth-child(even) {
+    background: var(#6e6d6d);
+  }
+  &:nth-child(odd) {
+    background: var(--tp-common-white);
+  }
 }
 
 .gridRow {
   display: flex;
-  
 }
 
 .headerRow {
@@ -23,21 +29,22 @@
 .gridColumn {
   border-bottom: 1px solid var(--tp-theme-secondary);
   padding: 10px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
   white-space: normal;
   overflow: hidden;
   word-wrap: break-word;
+  display: flex;
+  // text-align: center;
+  // justify-content: center;
+  // align-items: center;
+  flex: 2;
+  text-align: center !important;
+  align-items: center;
+  justify-content: center;
 }
-
-
 
 .headerCell {
   background: var(--tp-theme-secondary);
 }
-
-
 
 .firstColumn {
   flex: 2;
@@ -50,12 +57,10 @@
   justify-content: flex-start;
 
   span {
+    text-align: left;
     font-weight: 400;
     margin-left: 10px;
     padding: 6px;
-  
-  
-
   }
 }
 

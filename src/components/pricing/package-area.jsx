@@ -232,11 +232,59 @@ const PackageArea = () => {
           <div key={index} className={`row gridRow`}>
             <div className={`col gridColumn firstColumn`}>
               {service.heading}
-              {service.sub_contents.map((subContent) => (
-                <span>{subContent}</span>
-              ))}
             </div>
-            <div className="col gridColumn firstColumn">
+            <div className={`col gridColumn `}></div>
+            <div className={`col gridColumn `}></div>
+            <div className={`col gridColumn `}></div>
+
+            {service.sub_contents.map((subContent, index) => (
+              <div className={`row gridRow`}>
+                <div className={`col gridColumn firstColumn`}>
+                  <span>{subContent}</span>
+                </div>
+                <div className={`col gridColumn`}>
+                  <span>
+                    {service?.p1?.[index] == null ? (
+                      <p></p>
+                    ) : service?.p1?.[index] === true ? (
+                      <Image src={CheckIcon} alt="" style={{ margin: 12 }} />
+                    ) : service?.p1?.[index] === false ? (
+                      <Image src={CrossIcon} alt="" style={{ margin: 12 }} />
+                    ) : (
+                      <span>{service?.p1?.[index]}</span>
+                    )}
+                  </span>
+                </div>
+                <div className={`col gridColumn `}>
+                  <span>
+                    {service?.p2?.[index] == null ? (
+                      <p></p>
+                    ) : service?.p2?.[index] === true ? (
+                      <Image src={CheckIcon} alt="" style={{ margin: 12 }} />
+                    ) : service?.p2?.[index] === false ? (
+                      <Image src={CrossIcon} alt="" style={{ margin: 12 }} />
+                    ) : (
+                      <span>{service?.p2?.[index]}</span>
+                    )}
+                  </span>
+                </div>
+                <div className={`col gridColumn `}>
+                  <span>
+                    {service?.p3?.[index] == null ? (
+                      <p></p>
+                    ) : service?.p3?.[index] === true ? (
+                      <Image src={CheckIcon} alt="" style={{ margin: 12 }} />
+                    ) : service?.p3?.[index] === false ? (
+                      <Image src={CrossIcon} alt="" style={{ margin: 12 }} />
+                    ) : (
+                      <span>{service?.p3?.[index]}</span>
+                    )}
+                  </span>
+                </div>
+              </div>
+            ))}
+
+            {/* <div className="col gridColumn firstColumn">
               {service?.p1?.map((item) => (
                 <div>
                   {item == null ? (
@@ -244,8 +292,10 @@ const PackageArea = () => {
                   ) : item === true ? (
                     <Image src={CheckIcon} alt="" style={{ margin: 12 }} />
                   ) : item === false ? (
-                   <Image src={CrossIcon} alt="" style={{ margin: 12 }} />
-                  ) : <span>{item}</span>}
+                    <Image src={CrossIcon} alt="" style={{ margin: 12 }} />
+                  ) : (
+                    <span>{item}</span>
+                  )}
                 </div>
               ))}
             </div>
@@ -255,10 +305,12 @@ const PackageArea = () => {
                   {item == null ? (
                     <p></p>
                   ) : item === true ? (
-                    <Image src={CheckIcon} alt="" style={{ margin: 12 }}/>
+                    <Image src={CheckIcon} alt="" style={{ margin: 12 }} />
                   ) : item === false ? (
-                   <Image src={CrossIcon} alt="" style={{ margin: 12 }} />
-                  ) : <span>{item}</span>}
+                    <Image src={CrossIcon} alt="" style={{ margin: 12 }} />
+                  ) : (
+                    <span>{item}</span>
+                  )}
                 </div>
               ))}
             </div>
@@ -270,11 +322,13 @@ const PackageArea = () => {
                   ) : item === true ? (
                     <Image src={CheckIcon} alt="" style={{ margin: 12 }} />
                   ) : item === false ? (
-                   <Image src={CrossIcon} alt="" style={{ margin: 12 }} />
-                  ) : <span>{item}</span>}
+                    <Image src={CrossIcon} alt="" style={{ margin: 12 }} />
+                  ) : (
+                    <span>{item}</span>
+                  )}
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         ))}
 
