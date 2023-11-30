@@ -30,7 +30,7 @@ const HomeTwo = () => {
         {/* <BrandArea />
           <BlogArea /> */}
         <PricingArea />
-         <ServiceArea /> 
+        <ServiceArea />
         <BrandArea />
         {/* <SupportArea /> */}
         <CategoryArea />

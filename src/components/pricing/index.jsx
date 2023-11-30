@@ -1,7 +1,7 @@
 import HeaderTwo from "@/src/layout/headers/header-2";
 import React from "react";
 import PackageArea from "./package-area";
-import FooterTwo from "@/src/layout/footers/footer-2";
+import Footer from "@/src/layout/footers/footer-2-";
 import Breadcrumb from "@/src/common/breadcrumb/breadcrumb";
 
 const Pricing = () => {

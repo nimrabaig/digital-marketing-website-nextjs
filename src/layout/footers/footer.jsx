@@ -38,7 +38,7 @@ const {contact_us, mail, contact_text, phone, info, map, address, mail_2, mail_p
 const Footer = () => {
     return (
         <>
-            <footer className="tp-footer-area p-relative">
+            <FooterTwo className="tp-footer-area p-relative">
                 <div className="tp-footer-bg" style={{backgroundImage: `url(/assets/img/footer/footer-bg.jpg)`}}></div>
                 <div className="tp-footer-top-shape" style={{backgroundImage: `url(/assets/img/footer/footer-top-bg.png)`}}></div>
                 
