@@ -63,7 +63,7 @@ const offering_data = [
       </>
     ),
     description: (
-      <>Optimize search engine visibility and capture valuable leads</>
+      <>Optimize search engine visibility, boost visibility, and attract valuable leads.</>
     ),
   },
 ];
@@ -112,7 +112,7 @@ const OfferArea = () => {
                     <Image src={item.img} alt="theme-pure" />
                   </div>
                   <div className="tp-offer-wrapper-btn">
-                    <Link href="/service-details">
+                    <Link href="/services/1">
                       Read Out More{" "}
                       <i className="fa-solid fa-arrow-up-right"></i>
                     </Link>
@@ -120,20 +120,6 @@ const OfferArea = () => {
                 </div>
               </div>
             ))}
-
-            {/* <div className="col-lg-12">
-              <div className="tp-offer-all-btn text-center mt-30 fadeUp">
-                <p>
-                  Bring them together and you overcome the ordinary.
-                  <Link href="/service-details">
-                    View More Service
-                    <span>
-                      <i className="fa-regular fa-plus"></i>
-                    </span>
-                  </Link>
-                </p>
-              </div>
-            </div> */}
           </div>
         </div>
       </section>

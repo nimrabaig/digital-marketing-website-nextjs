@@ -4877,7 +4877,7 @@ div.demo img {
 .postbox__blockquote blockquote p {
   font-family: var(--tp-ff-heading);
   font-weight: 600;
-  font-size: 24px;
+  font-size: 24px;;
   color: #121D2C;
   margin-bottom: 25px;
 }

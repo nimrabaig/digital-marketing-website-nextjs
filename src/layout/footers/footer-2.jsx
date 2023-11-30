@@ -9,7 +9,21 @@ import footer_logo from "@assets/img/footer/footer-lumenta-logo.png";
 
 const footer_two_content = {
   bg_img: "/assets/img/footer/footer-2-bg.png",
-  footer_widget: ["Pricing", "Blogs", "Portfolio", "Sitemap"],
+  footer_widget: [
+    {
+      title: "Pricing",
+      path: "/pricing",
+    },
+    {
+      title: "Blogs",
+      path: "/blogs",
+    },
+    {
+      title: "Portfolio",
+      path: "",
+    },
+    { title: "Sitemap", path: "/" },
+  ],
   google_map:
     "https://www.google.com/maps/place/254+Lillian+Blvd,+Holbrook,+NY+11741,+USA/@40.7937446,-73.0774993,17z/data=!3m1!4b1!4m5!3m4!1s0x89e8483b469d706f:0xa6841f8aafc2ef19!8m2!3d40.7937446!4d-73.0753106",
   about_us: (
@@ -96,7 +110,7 @@ const FooterTwo = () => {
                       <ul>
                         {footer_widget.map((item, i) => (
                           <li key={i}>
-                            <Link href="#">{item}</Link>
+                            <Link href={item.path}>{item.title}</Link>
                           </li>
                         ))}
                       </ul>

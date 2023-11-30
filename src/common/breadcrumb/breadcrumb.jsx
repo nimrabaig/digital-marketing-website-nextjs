@@ -19,7 +19,8 @@ const Breadcrumb = ({top_title = "About Us", page_title = "About Us", imgName= "
                   <Image src={breadcrumb_img} alt="theme-pure" />
                 </h3>
                 <div className="breadcrumb__list breadcrumb__list-translate">
-                  <span>You Need a Digital Marketing Agency that You Can Rely On</span>
+                  <span>{page_title ?? 
+                  "You Need a Digital Marketing Agency that You Can Rely On"}</span>
                 </div>
               </div>
             </div>
