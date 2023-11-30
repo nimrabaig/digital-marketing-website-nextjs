@@ -50,7 +50,7 @@ const BlogDetailsPostbox = () => {
                           <div className="col-xl-7 col-lg-12">
                             <div className="postbox__list-content">
                               <ul>
-                                {data?.check_list.map((item, i) => (
+                                {data?.check_list2.map((item, i) => (
                                   <li key={i}>
                                     <span className={item.active}>
                                       {item.icon}
@@ -83,9 +83,12 @@ const BlogDetailsPostbox = () => {
                           <p>{data?.blockquote}</p>
                         </blockquote>
                       </div>
-                      <div className="row justify-content-center" style={{ textAlign: "center"}}>
+                      <div
+                        className="row justify-content-center"
+                        style={{ textAlign: "center" }}
+                      >
                         <h3 className="postbox__title">{data?.heading2}</h3>
-                        <p style={{ fontSize: 24}}>
+                        <p style={{ fontSize: 24 }}>
                           We guarantee to bring high-quality, relevant traffic.
                         </p>
                         {data?.services?.map((item, i) => (
@@ -93,8 +96,7 @@ const BlogDetailsPostbox = () => {
                             <div className="tp-offer-wrapper text-center mb-30">
                               <h3 className="offer-title">{item.title}</h3>
                               <p>{item.description}</p>
-                              <div className="tp-offer-wrapper-thumb">
-                              </div>
+                              <div className="tp-offer-wrapper-thumb"></div>
                               <div className="tp-offer-wrapper-btn">
                                 <Link href="/services/1">
                                   Read Out More{" "}
@@ -104,6 +106,32 @@ const BlogDetailsPostbox = () => {
                             </div>
                           </div>
                         ))}
+                      </div>
+
+                      <div className="postbox__content">
+                        <h3 className="postbox__title">{data?.heading3}</h3>
+                        <div className="postbox__text">
+                          <p>{data?.paragraph3}</p>
+                        </div>
+                      </div>
+
+                      <div className="postbox__content">
+                        <h3 className="postbox__title">{data?.heading4}</h3>
+                        <div className="postbox__text">
+                          <p>{data?.paragraph4}</p>
+                          <div className="postbox__list-content">
+                          <ul>
+                                {data?.check_list4.map((item, i) => (
+                                  <li key={i}>
+                                    <span className={item.active}>
+                                      <RightSymbol />
+                                    </span>
+                                    {item}
+                                  </li>
+                                ))}
+                              </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
