@@ -11,7 +11,7 @@ const Pricing = () => {
       <main>
         <Breadcrumb
           top_title="Pricing Plans"
-          page_title="Pricing Plans"
+          page_title=""
           imgName="pricing-bg"
         />
         <PackageArea />
