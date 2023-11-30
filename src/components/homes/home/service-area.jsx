@@ -211,18 +211,18 @@ const ServiceArea = () => {
 
 Offering <span style={{ color: "#ff8d0b" }}>Our Services</span> Worldwide
                     </h3>
-                    <p>
+                    <p style={{ color: "rgb(255, 255, 255,0.8)"}}>
                     Boost your brand's digital footprint with Lumenta Digital's innovative marketing solutions tailored to enhance visibility, engagement, and conversions worldwide
                     </p>
                     <ul>
-                      <li>
+                      <li style={{ color: "rgb(255, 255, 255,0.8)"}}>
                         <span>
                           {" "}
                           <GreenRightArrow />
                         </span>
                         Wide Range of Services
                       </li>
-                      <li>
+                      <li style={{ color: "rgb(255, 255, 255,0.8)"}}>
                         <span>
                           <GreenRightArrow />{" "}
                         </span>
