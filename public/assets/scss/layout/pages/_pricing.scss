@@ -52,7 +52,7 @@
   flex-direction: column;
   align-items: flex-start;
   display: flex;
-  text-align: left;
+  text-align: left !important;
   justify-content: flex-start;
 
   span {

@@ -66,8 +66,7 @@ const ContactArea = () => {
               <div className="tp-contact-form">
                 <h3 className="tp-contact-form-title">Contact Us</h3>
                 <p>
-                  Your email address will not be published. Required fields{" "}
-                  <br /> are marked *
+                  Your privacy matters to us. Rest assured; we do not disclose your information to third-party entities. Mandatory fields are marked with *.
                 </p>
                 <ContactForm />
                 <p className="ajax-response"></p>

@@ -26,11 +26,14 @@ const answer_question_data = [
       <>
         Lumenta offers the following digital marketing services to its clients:
         <br />
-        ·Search Engine Optimization (SEO) <br />
-        · Website Optimization <br />
-        · Social Media Marketing <br />
-        · Pay Per Click (PPC)
-        <br />
+      <ol>
+          <li>Search Engine Optimization (SEO)</li>
+          <li>Website Optimization </li>
+     
+          <li>Social Media Marketing </li>
+      
+          <li> Pay Per Click (PPC)</li>
+        </ol>
       </>
     ),
     accordion_id: "Two",
@@ -67,7 +70,7 @@ const answer_question_data = [
         your business goals with your online priorities. Key aspects include:{" "}
         <br />
         <br />
-        <ul>
+        <ol>
           <li>
             <b>Goal Alignment:</b> Ensure your social media efforts directly
             contribute to broader business objectives.
@@ -94,7 +97,7 @@ const answer_question_data = [
             social media strategy is your roadmap for effective online presence,
             enhancing brand visibility and achieving business success.
           </li>
-        </ul>
+        </ol>
       </>
     ),
     accordion_id: "Four",

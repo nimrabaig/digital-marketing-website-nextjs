@@ -178,8 +178,8 @@ const ServiceArea = () => {
               />
             </div>
 
-            <div className="row">
-              <div className="col-lg-2 col-md-4">
+            <div className="row" style={{ justifyContent: "space-between"}}>
+              {/* <div className="col-lg-2 col-md-4">
                 <div className="tp-fun-fact-wrapper-box">
                   {counter_content.map((item, i) => (
                     <div key={i} className="tp-fun-fact-wrapper">
@@ -195,31 +195,24 @@ const ServiceArea = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div> */}
               <div className="col-lg-4 col-md-8">
                 <div className="tp-fun-fact-thumb p-relative">
                   <Image id="reload" src={reload_img} alt="scroll" />
                 </div>
               </div>
 
-              <div className="col-lg-6 col-md-12">
+              <div className="col-lg-7 col-md-12">
                 <div className="tp-fun-fact-content">
                   <div className="tp-fun-fact-title-wrapper">
-                    <span className="tp-section-title__pre">
-                      service{" "}
-                      <span className="title-pre-color">IT Solutions</span>
-                      <AngleArrow />
-                    </span>
+                    
                     <h3 className="tp-section-title">
-                      Tech Change The World
-                      <span className="title-left-shape">
-                        <LineArrowTwo />
-                      </span>
+                    Digital Marketing Solutions
+
+Offering <span style={{ color: "#ff8d0b" }}>Our Services</span> Worldwide
                     </h3>
                     <p>
-                      Our company provides a full range of services for the
-                      construction of <br /> private houses and cottages since
-                      19
+                    Boost your brand's digital footprint with Lumenta Digital's innovative marketing solutions tailored to enhance visibility, engagement, and conversions worldwide
                     </p>
                     <ul>
                       <li>
@@ -227,20 +220,21 @@ const ServiceArea = () => {
                           {" "}
                           <GreenRightArrow />
                         </span>
-                        series of manual and semi-manual activities.
+                        Wide Range of Services
                       </li>
                       <li>
                         <span>
                           <GreenRightArrow />{" "}
                         </span>
-                        onstruction is different from other industries.
+
+ International Expertise
                       </li>
                     </ul>
-                    <div className="tp-fun-fact-btn">
+                    {/* <div className="tp-fun-fact-btn">
                       <Link className="tp-btn" href="/service-details">
                         Tell us How Can We Help
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

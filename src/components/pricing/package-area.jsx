@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CheckIcon from "@assets/img/pricing/check.svg";
 import CrossIcon from "@assets/img/pricing/cross.svg";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const packages_data = [
   {
@@ -217,6 +218,7 @@ const packages_data = [
 ];
 
 const PackageArea = () => {
+  const router = useRouter()
   return (
     <>
       <div className={`container gridContainer`}>
@@ -334,16 +336,28 @@ const PackageArea = () => {
           </>
         ))}
 
-        {/* <div className={`row gridRow`}>
+        <div className={`row gridRow`}>
           <div className={`col gridColumn firstColumn`}></div>
-          {packages_data.map((packageData) => (
-            <div key={packageData.id} className={`col gridColumn`}>
-              <button className="tp-btn tp-btn-default mt-30">
+        
+            <div className={`col gridColumn`}>
+              <button className="tp-btn tp-btn-default mt-30" onClick={() => router.push("/contact")}>
                 Purchase Now
               </button>
             </div>
-          ))}
-        </div> */}
+
+            <div className={`col gridColumn`}>
+              <button className="tp-btn tp-btn-default mt-30" onClick={() => router.push("/contact")}>
+                Purchase Now
+              </button>
+            </div>
+
+            <div className={`col gridColumn`}>
+              <button className="tp-btn tp-btn-default mt-30" onClick={() => router.push("/contact")}>
+                Purchase Now
+              </button>
+            </div>
+     
+        </div>
       </div>
     </>
   );
