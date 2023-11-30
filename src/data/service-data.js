@@ -133,7 +133,52 @@ const service_data = [
       " Organic SEO Tactics ",
       " Syndication of Articles ",
       " Google Analytics and Data Tracking",
-      " Data Tracking  "
+      " Data Tracking  ",
+    ],
+
+    faq: [
+      {
+        id: 1,
+        question: "What is SEO, and why is it essential for my business?",
+        answer:
+          "SEO, or Search Engine Optimization, is optimizing your website to enhance its visibility on search engines like Google. It is crucial for your business as it improves online presence, drives organic traffic, and boosts overall digital performance.",
+      },
+      {
+        id: 2,
+        question: "How does Lumenta Digital approach SEO differently?",
+        answer:
+          "At Lumenta Digital, we tailor our SEO strategies to your unique business needs. We emphasize white hat techniques, ensuring long-term success and sustainable growth. Our comprehensive approach covers everything from custom strategies to in-depth analytics.",
+      },
+      {
+        id: 3,
+        question: "What makes a good SEO strategy?",
+        answer:
+          "A strong SEO strategy involves comprehensive keyword research, on-site optimization, quality content creation, and ethical link building. At Lumenta Digital, we excel in aligning strategy with industry standards, standing out among top search engine optimization companies. Our precision in Google SEO ensures your online presence exceeds benchmarks.",
+      },
+      {
+        id: 4,
+        question: "How long does it take to see results from SEO efforts?",
+        answer:
+          "SEO is a gradual process, and the timeframe for results can vary based on factors like industry competition and the current state of your website. Noticeable improvements may take a few months, with more significant gains over time.",
+      },
+      {
+        id: 5,
+        question: "What role does content play in SEO?",
+        answer:
+          "Content is a cornerstone of effective SEO. Lumenta Digital ensures high-quality, relevant content that not only engages your audience but also aligns with search engine algorithms, contributing to improved rankings.",
+      },
+      {
+        id: 6,
+        question: "Is local SEO important for my business?",
+        answer:
+          "Absolutely. Local SEO is crucial for businesses targeting a local audience. Lumenta Digital specializes in optimizing your online presence for local searches, enhancing your visibility in geographic-specific searches.",
+      },
+      {
+        id: 7,
+        question: "How does Lumenta Digital measure SEO success?",
+        answer:
+          "We measure SEO success by using various metrics, including keyword rankings, organic traffic growth, and conversion rates. Our transparent reporting keeps you informed about the impact of our efforts on your business.",
+      },
     ],
   },
   {

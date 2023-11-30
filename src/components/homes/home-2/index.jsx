@@ -15,7 +15,7 @@ import ServiceArea from "../home/service-area";
 import FooterTwo from "@/src/layout/footers/footer-2";
 import SupportArea from "../home/support-area";
 import PricingArea from "./pricing-area";
-
+import answer_question_data from "@/src/data/answer-question-data";
 const HomeTwo = () => {
   return (
     <>
@@ -36,7 +36,7 @@ const HomeTwo = () => {
         <CategoryArea />
         {/* <FeatureArea /> */}
         <TestimonialArea />
-        <FaqArea />
+        <FaqArea answerQuestionData={answer_question_data} />
       </main>
       <FooterTwo />
     </>

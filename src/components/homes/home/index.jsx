@@ -11,6 +11,7 @@ import SliderArea from "./slider-area";
 import FaqArea from "./faq-area";
 import BlogArea from "./blog-area";
 import FooterTwo from "@/src/layout/footers/footer-2";
+import answer_question_data from "@/src/data/answer-question-data";
 
 const HomeOne = () => {
   return (
@@ -25,7 +26,7 @@ const HomeOne = () => {
         <SupportArea />
         <TestimonialArea />
         <SliderArea />
-        <FaqArea />
+        <FaqArea answerQuestionData={answer_question_data} />
         <BlogArea />
         <FooterTwo />
       </main>

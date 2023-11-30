@@ -93,8 +93,13 @@ const BlogDetailsPostbox = () => {
                         </p>
                         {data?.services?.map((item, i) => (
                           <div key={i} className="col-lg-3 col-md-6 col-sm-6">
-                            <div className="tp-offer-wrapper text-center mb-30">
-                              <h3 className="offer-title">{item.title}</h3>
+                            <div className="tp-service-wrapper text-center mb-30">
+                              <h3
+                                className="offer-title"
+                                style={{ paddingBottom: "8px" }}
+                              >
+                                {item.title}
+                              </h3>
                               <p>{item.description}</p>
                               <div className="tp-offer-wrapper-thumb"></div>
                               <div className="tp-offer-wrapper-btn">
@@ -120,8 +125,10 @@ const BlogDetailsPostbox = () => {
                         <div className="postbox__text">
                           <p>{data?.paragraph4}</p>
                           <div className="postbox__list-content">
-                          <ul>
-                                {data?.check_list4.map((item, i) => (
+                            <ul>
+                              {data?.check_list4
+                                .slice(0, data.check_list4.length / 2)
+                                .map((item, i) => (
                                   <li key={i}>
                                     <span className={item.active}>
                                       <RightSymbol />
@@ -129,7 +136,19 @@ const BlogDetailsPostbox = () => {
                                     {item}
                                   </li>
                                 ))}
-                              </ul>
+                            </ul>
+                            <ul>
+                              {data?.check_list4
+                                .slice(data.check_list4.length / 2)
+                                .map((item, i) => (
+                                  <li key={i}>
+                                    <span className={item.active}>
+                                      <RightSymbol />
+                                    </span>
+                                    {item}
+                                  </li>
+                                ))}
+                            </ul>
                           </div>
                         </div>
                       </div>
@@ -141,6 +160,7 @@ const BlogDetailsPostbox = () => {
           </div>
         </div>
       </section>
+      
     </>
   );
 };
