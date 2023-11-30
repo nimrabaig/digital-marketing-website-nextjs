@@ -41,7 +41,6 @@ const packages_data = [
       "Initial Link Analysis and Disavow",
     ],
     p1: [
-      null,
       true,
       true,
       true,
@@ -80,7 +79,6 @@ const packages_data = [
       true,
     ],
     p3: [
-      null,
       true,
       true,
       true,
@@ -119,7 +117,6 @@ const packages_data = [
       "4 Guest Posting",
     ],
     p1: [
-      null,
       75,
       true,
       true,
@@ -136,7 +133,6 @@ const packages_data = [
       false,
     ],
     p2: [
-      null,
       150,
       true,
       true,
@@ -153,7 +149,6 @@ const packages_data = [
       1,
     ],
     p3: [
-      null,
       300,
       true,
       true,
@@ -177,9 +172,9 @@ const packages_data = [
       "2 Website Blog Writing",
       "Web Page Content Writing To Increase Keywords Density",
     ],
-    p1: [null, true, false, false],
-    p2: [null, true, 2, false],
-    p3: [null, true, 2, true],
+    p1: [true, false, false],
+    p2: [true, 2, false],
+    p3: [true, 2, true],
   },
   {
     heading: "Social Media Accounts Set-up and Posting",
@@ -190,9 +185,9 @@ const packages_data = [
       "8 Pinterest Post",
       "4 Gmb Posting",
     ],
-    p1: [null, 1, 1, 1, 1, 1],
-    p2: [null, 3, 3, 3, 3, 2],
-    p3: [null, 5, 5, 5, 8, 4],
+    p1: [1, 1, 1, 1, 1],
+    p2: [3, 3, 3, 3, 2],
+    p3: [5, 5, 5, 8, 4],
   },
   {
     heading: "Monthly Reporting",
@@ -204,21 +199,21 @@ const packages_data = [
       "Monthly Link Building",
       "Monthly Ranking Reporting & Conversion Tracking",
     ],
-    p1: [null, true, true, true, true, true, true],
-    p2: [null, true, true, true, true, true, true],
-    p3: [null, true, true, true, true, true, true],
+    p1: [true, true, true, true, true, true],
+    p2: [true, true, true, true, true, true],
+    p3: [true, true, true, true, true, true],
   },
   {
     heading: "Customer Support",
     sub_contents: ["Phone Support", "Email Support", "Chat Support", "meeting"],
-    p1: [null, false, true, false, true],
-    p2: [null, false, true, true, true],
-    p3: [null, true, true, true, true],
+    p1: [false, true, false, true],
+    p2: [false, true, true, true],
+    p3: [true, true, true, true],
   },
 ];
 
 const PackageArea = () => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <>
       <div className={`container gridContainer`}>
@@ -287,76 +282,38 @@ const PackageArea = () => {
                 </div>
               </div>
             ))}
-
-            {/* <div className="col gridColumn firstColumn">
-              {service?.p1?.map((item) => (
-                <div>
-                  {item == null ? (
-                    <p></p>
-                  ) : item === true ? (
-                    <Image src={CheckIcon} alt="" style={{ margin: 12 }} />
-                  ) : item === false ? (
-                    <Image src={CrossIcon} alt="" style={{ margin: 12 }} />
-                  ) : (
-                    <span>{item}</span>
-                  )}
-                </div>
-              ))}
-            </div>
-            <div className="col gridColumn firstColumn">
-              {service?.p2?.map((item) => (
-                <div>
-                  {item == null ? (
-                    <p></p>
-                  ) : item === true ? (
-                    <Image src={CheckIcon} alt="" style={{ margin: 12 }} />
-                  ) : item === false ? (
-                    <Image src={CrossIcon} alt="" style={{ margin: 12 }} />
-                  ) : (
-                    <span>{item}</span>
-                  )}
-                </div>
-              ))}
-            </div>
-            <div className="col gridColumn firstColumn">
-              {service?.p3?.map((item) => (
-                <div>
-                  {item == null ? (
-                    <p></p>
-                  ) : item === true ? (
-                    <Image src={CheckIcon} alt="" style={{ margin: 12 }} />
-                  ) : item === false ? (
-                    <Image src={CrossIcon} alt="" style={{ margin: 12 }} />
-                  ) : (
-                    <span>{item}</span>
-                  )}
-                </div>
-              ))}
-            </div> */}
           </>
         ))}
 
         <div className={`row gridRow`}>
           <div className={`col gridColumn firstColumn`}></div>
-        
-            <div className={`col gridColumn`}>
-              <button className="tp-btn tp-btn-default mt-30" onClick={() => router.push("/contact")}>
-                Purchase Now
-              </button>
-            </div>
 
-            <div className={`col gridColumn`}>
-              <button className="tp-btn tp-btn-default mt-30" onClick={() => router.push("/contact")}>
-                Purchase Now
-              </button>
-            </div>
+          <div className={`col gridColumn`}>
+            <button
+              className="tp-btn tp-btn-default mt-30"
+              onClick={() => router.push("/contact")}
+            >
+              Purchase SEO Silver Now
+            </button>
+          </div>
 
-            <div className={`col gridColumn`}>
-              <button className="tp-btn tp-btn-default mt-30" onClick={() => router.push("/contact")}>
-                Purchase Now
-              </button>
-            </div>
-     
+          <div className={`col gridColumn`}>
+            <button
+              className="tp-btn tp-btn-default mt-30"
+              onClick={() => router.push("/contact")}
+            >
+              Purchase SEO Gold Now
+            </button>
+          </div>
+
+          <div className={`col gridColumn`}>
+            <button
+              className="tp-btn tp-btn-default mt-30"
+              onClick={() => router.push("/contact")}
+            >
+              Purchase SEO Diamond Now
+            </button>
+          </div>
         </div>
       </div>
     </>

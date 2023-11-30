@@ -508,7 +508,7 @@ const PricingArea = () => {
                     className="tp-btn tp-btn-default mt-30"
                     onClick={() => router.push("/contact")}
                   >
-                    Purchase Now
+                    Purchase {item.title} Now
                   </button>
                 </div>
               </div>
