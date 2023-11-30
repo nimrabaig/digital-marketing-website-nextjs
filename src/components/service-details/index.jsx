@@ -19,7 +19,7 @@ const ServiceDetails = () => {
           page_title={service_data[index]?.subTitle}
         />
         <ServiceDetailsArea />
-        <FooterTwoContact bg_style={true} />
+        <FooterContact bg_style={true} />
       </main>
       <FooterTwo />
     </>

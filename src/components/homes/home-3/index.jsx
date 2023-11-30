@@ -30,7 +30,7 @@ const HomeThree = () => {
         <BrandArea />
         <TeamArea />
         <BlogArea />
-        <FooterTwoContact />
+        <FooterContact />
       </main>
       <FooterTwo />
     </>

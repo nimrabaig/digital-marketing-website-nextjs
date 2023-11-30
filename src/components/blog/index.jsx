@@ -12,7 +12,7 @@ const Blog = () => {
       <main>
         <Breadcrumb top_title="Blog Page" page_title="Blog" />
         <PostboxArea />
-        <FooterTwoContact bg_style={true} />
+        <FooterContact bg_style={true} />
       </main>
       <FooterTwo />
     </>

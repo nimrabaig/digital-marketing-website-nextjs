@@ -18,7 +18,7 @@ const Contact = () => {
         />
         <ContactArea />
         <GoogleMap />
-        <FooterTwoContact contact_style={true} />
+        <FooterContact contact_style={true} />
       </main>
       <FooterTwo />
     </>

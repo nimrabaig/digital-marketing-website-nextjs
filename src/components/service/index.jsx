@@ -20,7 +20,7 @@ const Sevice = () => {
         <IndustryArea service={true} />
         <BrandArea service={true} />
         <BlogArea service={true} />
-        <FooterTwoContact />
+        <FooterContact />
       </main>
       <FooterTwo />
     </>

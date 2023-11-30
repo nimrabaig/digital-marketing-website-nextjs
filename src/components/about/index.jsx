@@ -30,7 +30,7 @@ const About = () => {
         {/* <BrandArea /> */}
         {/* <TeamArea /> */}
         <BlogArea />
-        <FooterTwoContact />
+        <FooterContact />
       </main>
       <FooterTwo />
     </>

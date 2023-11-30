@@ -12,7 +12,7 @@ const Team = () => {
       <main>
         <Breadcrumb top_title="IT Advisor" page_title="Team" />
         <TeamMembers />
-        <FooterTwoContact bg_style={true} />
+        <FooterContact bg_style={true} />
       </main>
       <FooterTwo />
     </>

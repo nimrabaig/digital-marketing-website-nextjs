@@ -12,7 +12,7 @@ const BlogDetails = () => {
       <main>
         <Breadcrumb top_title="Blog Details" page_title="Blog Details" />
         <BlogDetailsPostbox />
-        <FooterTwoContact bg_style={true} />
+        <FooterContact bg_style={true} />
       </main>
       <FooterTwo />
     </>

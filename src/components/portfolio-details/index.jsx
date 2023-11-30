@@ -12,7 +12,7 @@ const PortfolioDetails = () => {
       <main>
         <Breadcrumb top_title="IT Advisor" page_title=" Portfolio Details" />
         <PortfolioDetailsArea />
-        <FooterTwoContact bg_style={true} />
+        <FooterContact bg_style={true} />
       </main>
       <FooterTwo />
     </>
