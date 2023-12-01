@@ -9,7 +9,7 @@ import UserProfile from "../blog/user-profile";
 import CommentForm from "@/src/forms/comment-form";
 
 import thumb_1 from "@assets/img/services/service-details/img-1.jpg";
-import thumb_2 from "@assets/img/blog/details/blog-2.jpg";
+import thumb_2 from "@assets/img/services/service-details/seo-img.png";
 import thumb_3 from "@assets/img/blog/details/blog-3.jpg";
 
 import person_1 from "@assets/img/blog/details/comment-1.jpg";
@@ -26,7 +26,6 @@ const BlogDetailsPostbox = () => {
   const router = useRouter();
   const index = router.query.id - 1;
   const data = service_data[index];
-  console.log("dbswdj", service_data[index]);
 
   return (
     <>
@@ -36,9 +35,9 @@ const BlogDetailsPostbox = () => {
             <div className="col-xxl-12 col-xl-12 col-lg-12">
               <div className="postbox__wrapper">
                 <article className="postbox__item format-image mb-50 transition-3">
-                  <div className="postbox__thumb m-img">
+                  {/* <div className="postbox__thumb m-img">
                     <Image src={thumb_1} alt="theme-pure" />
-                  </div>
+                  </div> */}
                   <div className="postbox__content">
                     <h3 className="postbox__title">{data?.heading1}</h3>
                     <div className="postbox__text">
@@ -47,10 +46,10 @@ const BlogDetailsPostbox = () => {
 
                       <div className="postbox__list">
                         <div className="row">
-                          <div className="col-xl-7 col-lg-12">
+                          <div className="col-xl-6 col-lg-12">
                             <div className="postbox__list-content">
                               <ul>
-                                {data?.check_list2.map((item, i) => (
+                                {data?.check_list1.map((item, i) => (
                                   <li key={i}>
                                     <span className={item.active}>
                                       {item.icon}
@@ -61,7 +60,7 @@ const BlogDetailsPostbox = () => {
                               </ul>
                             </div>
                           </div>
-                          {/* <div className="col-xl-5 col-lg-12">
+                          <div className="col-xl-5 col-lg-12">
                             <div className="posbox__list-img">
                               <Image
                                 src={thumb_2}
@@ -69,7 +68,7 @@ const BlogDetailsPostbox = () => {
                                 height={300}
                               />
                             </div>
-                          </div> */}
+                          </div>
                         </div>
                       </div>
 

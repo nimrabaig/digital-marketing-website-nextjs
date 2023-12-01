@@ -91,7 +91,7 @@
     &::after{
       content: '';
       position: absolute;
-      bottom: 0;
+      bottom: 10px;
       left: 0;
       clip-path: polygon(0 0, 0% 100%, 100% 100%);
       background: var(--tp-theme-secondary);
