@@ -6,6 +6,7 @@ import SEO from "../common/seo";
 import HeaderOne from "../layout/headers/header";
 import error_shape from "@assets/img/error/error-shape.png";
 import error_img from "@assets/img/error/404.png";
+import FooterTwo from "@/src/layout/footers/footer-2";
 
 const index = () => {
   return (

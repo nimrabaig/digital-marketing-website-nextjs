@@ -17,7 +17,8 @@ const answer_question_data = [
     accordion_id: "One",
     collapsed: "",
     aria_expanded: true,
-    active: "",
+    active: "tp-faq-active",
+    show: true,
   },
   {
     id: 2,
@@ -39,8 +40,7 @@ const answer_question_data = [
     accordion_id: "Two",
     collapsed: "collapsed",
     aria_expanded: false,
-    show: true,
-    active: "tp-faq-active",
+    active: "",
   },
   {
     id: 3,

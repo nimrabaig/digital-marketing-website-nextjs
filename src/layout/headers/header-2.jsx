@@ -17,76 +17,7 @@ const HeaderTwo = () => {
   return (
     <>
       <header className="tp-header-2-area tp-header-height p-relative">
-        <div className="tp-header-top tp-header-space d-none d-xl-block">
-          <div className="container-fluid">
-            <div className="row align-items-center">
-              <div className="col-xxl-6 col-xl-8">
-                <div className="tp-header-top-info">
-                  <ul>
-                    <li>
-                      <a
-                        href="https://www.google.com/maps/@36.0758266,-79.4558848,17z"
-                        target="_blank"
-                      >
-                        <span>
-                          <i className="fa-sharp fa-solid fa-location-dot"></i>
-                        </span>
-                        1315 Derry Road East, Suite 1, Mississauga Ontario,
-                        Canada L5T 1B6
-                      </a>
-                    </li>
-                    <li>
-                      <a href="mailto:technix@support.com">
-                        <span>
-                          <i className="fa-solid fa-envelope"></i>
-                        </span>
-                        info@lumentadigital.com
-                      </a>
-                    </li>
-                    {/* <li> 
-                                  <div className="tp-header-lang-wrapper d-flex align-items-center">
-                                       <div className="tp-header-lang-img">
-                                          <Image src={LangLogo} alt="theme-pure" />
-                                       </div>
-                                       <div className="tp-header-lang">
-                                          <span className="tp-header-lang-selected-lang tp-lang-toggle" 
-                                          id="tp-header-lang-toggle" 
-                                          ref={langToggleRef}>English</span>
-                                           
-                                          <ul className={`tp-header-lang-list tp-lang-list ${isLangListOpen ? 'tp-lang-list-open' : ''}`}>
-                                             <li>Spanish</li>
-                                             <li>English</li>
-                                             <li>Canada</li>
-                                          </ul>
-                                       </div>
-                                    </div> 
-                                 </li> */}
-                  </ul>
-                </div>
-              </div>
-              <div className="col-xxl-6 col-xl-4">
-                <div className="tp-header-top-right d-flex justify-content-end align-items-center">
-                  <div className="header-call">
-                    <a href="tel:16138072399">
-                      <i className="fa-solid fa-phone"></i> +1 (613) 807 - 2399
-                    </a>
-                  </div>
-                  <div className="header-social d-xxl-block d-none">
-                    <Link href="https://www.facebook.com/people/Lumenta-Digital-Inc/61551468568740/?sk=about">
-                      <i className="fa-brands fa-facebook"></i> Facebook
-                    </Link>
-                    <Link href="https://instagram.com/lumentadigital?igshid=MzRlODBiNWFlZA==">
-                      <i className="fa-brands fa-twitter"></i> Instagram
-                    </Link>
-                    <Link href="https://www.linkedin.com/company/lumenta-digital">
-                      <i className="fa-brands fa-linkedin"></i> Linkedin
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  
         <div
           id="header-sticky"
           className={`tp-header-2-bottom header__sticky p-relative ${

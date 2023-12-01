@@ -7,8 +7,6 @@ import AngleArrow from "@/src/svg/angle-arrow";
 import LineArrowTwo from "@/src/svg/line-arrow-2";
 
 const FaqArea = ({ answerQuestionData }) => {
-  console.log("answerQuestionData", answerQuestionData);
-  console.log(Array.isArray(answerQuestionData));
   const [activeIndex, setActiveIndex] = useState(null);
   function handleClick(index) {
     setActiveIndex(index === activeIndex ? null : index);
