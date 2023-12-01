@@ -500,8 +500,9 @@ const PricingArea = () => {
                   <button
                     className="tp-btn tp-btn-default mt-30"
                     onClick={() => router.push("/contact")}
+                    // style={{ lineHeight: 20 }}
                   >
-                    Purchase {item.title} Now
+                    Purchase Now <br />{item.title.split(' ')[1]} Plan 
                   </button>
                 </div>
               </div>
