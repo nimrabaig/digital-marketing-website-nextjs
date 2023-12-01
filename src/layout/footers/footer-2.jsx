@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import toast from "react-hot-toast";
+
 import Link from "next/link";
 import Image from "next/image";
-import EmailAeroplan from "@/src/svg/email-aeroplan";
+// import EmailAeroplan from "@/src/svg/email-aeroplan";
 import SocialLinks from "@/src/common/social-links";
 
 import footer_shape_1 from "@assets/img/footer/shape-1.png";
 import footer_logo from "@assets/img/footer/footer-lumenta-logo.png";
+import { CONTACT_US } from "@/src/graphql/mutation";
 
 const footer_two_content = {
   bg_img: "/assets/img/footer/footer-2-bg.png",
@@ -61,6 +65,73 @@ const {
 } = footer_two_content;
 
 const FooterTwo = () => {
+  const [ContactUs] = useMutation(CONTACT_US);
+
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+  });
+
+  const [validation, setValidation] = useState({
+    name: { error: false, helperText: "" },
+    email: { error: false, helperText: "" },
+  });
+
+  const handleInputChange = (field, value) => {
+    setValues((prevValues) => ({ ...prevValues, [field]: value }));
+    setValidation((prevValidation) => ({
+      ...prevValidation,
+      [field]: { error: false, helperText: "" },
+    }));
+  };
+
+  const onSubmit = () => {
+    let isValid = true;
+
+    // Validate name
+    if (values.name.trim() === "") {
+      setValidation((prevValidation) => ({
+        ...prevValidation,
+        name: { error: true, helperText: "Name is required" },
+      }));
+      isValid = false;
+    }
+
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(values.email)) {
+      setValidation((prevValidation) => ({
+        ...prevValidation,
+        email: { error: true, helperText: "Invalid email address" },
+      }));
+      isValid = false;
+    }
+
+    if (isValid) {
+      toast.loading("Sending request...");
+      ContactUs({
+        variables: { ...values },
+      })
+        .then((resp) => {
+          toast.dismiss();
+          if (resp.data?.ContactUs?.success) {
+            toast.success("Message sent!");
+          } else {
+            toast.error(resp.data?.ContactUs?.raw?.message);
+          }
+          console.log(resp);
+        })
+        .catch((err) => {
+          toast.dismiss();
+          toast.error("Unable to send message. Try again!");
+          console.log(err);
+        });
+    } else {
+      toast.error("Please fill all the required fields");
+    }
+  };
+
   return (
     <>
       <footer className="tp-footer-2-area p-relative">
@@ -77,14 +148,46 @@ const FooterTwo = () => {
                 <div className="col-xl-4 col-lg-5 col-md-6">
                   <div className="tp-footer-widget tp-footer-2-col-1">
                     <h3 className="tp-footer-widget-title">Newsletter</h3>
-                    <div className="tp-footer-from">
+                    <form
+                      className="tp-footer-from"
+                      onClick={(e) => e.preventDefault()}
+                      method="POST"
+                    >
                       <div className="tp-footer-text-email p-relative">
-                        <input type="text" placeholder="Enter Email Address" />
-                        <span>
-                          <EmailAeroplan />
-                        </span>
+                        <input
+                          type="text"
+                          placeholder="Enter Your Name"
+                          value={values.name}
+                          onChange={(event) =>
+                            handleInputChange("name", event.target.value)
+                          }
+                        />
                       </div>
-                      <div className="tp-footer-form-check">
+                      <div className="tp-footer-text-email p-relative">
+                        <input
+                          type="text"
+                          placeholder="Enter Email Address"
+                          value={values.email}
+                          onChange={(event) =>
+                            handleInputChange("email", event.target.value)
+                          }
+                        />
+                      </div>
+                      <div className="tp-footer-btn">
+                        <button
+                          className="btn btn-primary"
+                          type="submit"
+                          style={{
+                            background: "#fff",
+                            color: "#000",
+                            marginBottom: "10px",
+                          }}
+                          onClick={onSubmit}
+                        >
+                          Subscribe
+                        </button>
+                      </div>
+                      {/* <div className="tp-footer-form-check">
                         <input
                           className="form-check-input"
                           id="flexCheckChecked"
@@ -96,11 +199,11 @@ const FooterTwo = () => {
                         >
                           I agree to all your terms and policies
                         </label>
-                      </div>
+                      </div> */}
                       <div className="tp-footer-widget-social">
                         <SocialLinks />
                       </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
                 <div className="col-xl-4 col-lg-3 col-md-6">
