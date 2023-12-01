@@ -298,13 +298,8 @@ const PackageArea = () => {
                 query: { scrollContactForm: true },
               }}
             >
-<<<<<<< Updated upstream
-              Purchase SEO Silver Now
-            </Link>
-=======
               Purchase Now <br /> SEO Silver
-            </button>
->>>>>>> Stashed changes
+            </Link>
           </div>
 
           <div className={`col gridColumn`}>
@@ -316,13 +311,8 @@ const PackageArea = () => {
                 query: {scrollContactForm: true },
               }}
             >
-<<<<<<< Updated upstream
-              Purchase SEO Gold Now
-            </Link>
-=======
               Purchase Now <br />SEO Gold
-            </button>
->>>>>>> Stashed changes
+            </Link>
           </div>
 
           <div className={`col gridColumn`}>
@@ -334,13 +324,8 @@ const PackageArea = () => {
                 query: { scrollContactForm: true },
               }}
             >
-<<<<<<< Updated upstream
-              Purchase SEO Diamond Now
-            </Link>
-=======
               Purchase Now <br />SEO Diamond 
-            </button>
->>>>>>> Stashed changes
+            </Link>
           </div>
         </div>
       </div>
