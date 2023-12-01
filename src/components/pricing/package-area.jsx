@@ -298,7 +298,7 @@ const PackageArea = () => {
                 query: { scrollContactForm: true },
               }}
             >
-              Purchase Now <br /> SEO Silver
+              Purchase Now <br /> Silver Plan
             </Link>
           </div>
 
@@ -311,7 +311,7 @@ const PackageArea = () => {
                 query: {scrollContactForm: true },
               }}
             >
-              Purchase Now <br />SEO Gold
+              Purchase Now <br />Gold Plan
             </Link>
           </div>
 
@@ -324,7 +324,7 @@ const PackageArea = () => {
                 query: { scrollContactForm: true },
               }}
             >
-              Purchase Now <br />SEO Diamond 
+              Purchase Now <br />Diamond Plan
             </Link>
           </div>
         </div>
