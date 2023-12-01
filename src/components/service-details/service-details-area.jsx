@@ -30,7 +30,7 @@ const BlogDetailsPostbox = () => {
 
   return (
     <>
-      <section className="postbox__area pt-120 pb-100" >
+      <section className="postbox__area pt-120 pb-100">
         <div className="container">
           <div className="row">
             <div className="col-xxl-12 col-xl-12 col-lg-12">
@@ -61,7 +61,7 @@ const BlogDetailsPostbox = () => {
                               </ul>
                             </div>
                           </div>
-                          <div className="col-xl-5 col-lg-12">
+                          {/* <div className="col-xl-5 col-lg-12">
                             <div className="posbox__list-img">
                               <Image
                                 src={thumb_2}
@@ -69,7 +69,7 @@ const BlogDetailsPostbox = () => {
                                 height={300}
                               />
                             </div>
-                          </div>
+                          </div> */}
                         </div>
                       </div>
 
@@ -92,7 +92,7 @@ const BlogDetailsPostbox = () => {
                           We guarantee to bring high-quality, relevant traffic.
                         </p>
                         {data?.services?.map((item, i) => (
-                          <div key={i} className="col-lg-6 col-md-6 col-sm-10">
+                          <div key={i} className="col-lg-5 col-md-5 col-sm-10">
                             <div className="tp-service-wrapper text-center mb-30">
                               <h3
                                 className="offer-title"
@@ -100,14 +100,11 @@ const BlogDetailsPostbox = () => {
                               >
                                 {item.title}
                               </h3>
-                              <p>{item.description}</p>
+                              <p className="para">
+                                {item.description}
+                              </p>
                               <div className="tp-offer-wrapper-thumb"></div>
-                              <div className="tp-offer-wrapper-btn">
-                                <Link href="/services/1">
-                                  Read Out More{" "}
-                                  <i className="fa-solid fa-arrow-up-right"></i>
-                                </Link>
-                              </div>
+                              <div className="tp-offer-wrapper-btn"></div>
                             </div>
                           </div>
                         ))}
@@ -160,7 +157,6 @@ const BlogDetailsPostbox = () => {
           </div>
         </div>
       </section>
-      
     </>
   );
 };
