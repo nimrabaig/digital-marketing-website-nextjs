@@ -45,7 +45,7 @@
       height: 560px !important;
     }
     @media (max-width: 1280px) {
-      height: 600px !important;
+      height: 530px !important;
     }
     @media screen and (max-width: 768px) {
       height: 500px !important;
@@ -463,6 +463,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    text-align: left !important;
     li {
       color: #838383 !important;
     }
