@@ -63,7 +63,7 @@ const offering_data = [
       </>
     ),
     description: (
-      <>Optimize search engine visibility, boost visibility, & attract valuable leads.</>
+      <>Optimize & boost search engine visibility and attract valuable leads.</>
     ),
   },
 ];

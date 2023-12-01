@@ -9,7 +9,7 @@ import SocialLinks from "@/src/common/social-links";
 
 import footer_shape_1 from "@assets/img/footer/shape-1.png";
 import footer_logo from "@assets/img/footer/footer-lumenta-logo.png";
-import { CONTACT_US } from "@/src/graphql/mutation";
+import { SUBSCRIBE_NEWS_LETTER } from "@/src/graphql/mutation";
 
 const footer_two_content = {
   bg_img: "/assets/img/footer/footer-2-bg.png",
@@ -65,7 +65,7 @@ const {
 } = footer_two_content;
 
 const FooterTwo = () => {
-  const [ContactUs] = useMutation(CONTACT_US);
+  const [Subscribe] = useMutation(SUBSCRIBE_NEWS_LETTER);
 
   const [values, setValues] = useState({
     name: "",
@@ -110,17 +110,20 @@ const FooterTwo = () => {
 
     if (isValid) {
       toast.loading("Sending request...");
-      ContactUs({
+      Subscribe({
         variables: { ...values },
       })
         .then((resp) => {
           toast.dismiss();
-          if (resp.data?.ContactUs?.success) {
-            toast.success("Message sent!");
+          if (resp.data?.SubscribeNewsLetter?.success) {
+            toast.success("You have subscribed to our Newsletter!");
+            setValues({
+              name: "",
+              email: ""
+            })
           } else {
-            toast.error(resp.data?.ContactUs?.raw?.message);
+            toast.error(resp.data?.SubscribeNewsLetter?.raw?.message);
           }
-          console.log(resp);
         })
         .catch((err) => {
           toast.dismiss();
@@ -174,18 +177,14 @@ const FooterTwo = () => {
                         />
                       </div>
                       <div className="tp-footer-btn">
-                        <button
-                          className="btn btn-primary"
+                        <div
+                          className="tp-btn tp-btn-default mt-10 mb-30"
                           type="submit"
-                          style={{
-                            background: "#fff",
-                            color: "#000",
-                            marginBottom: "10px",
-                          }}
+                          href=""
                           onClick={onSubmit}
                         >
                           Subscribe
-                        </button>
+                        </div>
                       </div>
                       {/* <div className="tp-footer-form-check">
                         <input

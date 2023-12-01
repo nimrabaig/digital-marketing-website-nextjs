@@ -91,12 +91,11 @@
     &::after{
       content: '';
       position: absolute;
-      bottom: 10px;
+      bottom: 0;
       left: 0;
       clip-path: polygon(0 0, 0% 100%, 100% 100%);
       background: var(--tp-theme-secondary);
       height: 57px;
-      width: 57px !important;
       transition: all .4s ;
   }
   &:hover{
@@ -104,7 +103,7 @@
           animation: icon-bounce 0.8s 1;
       }
       &::after{
-          width: 31px;
+          width: 57px;
       }
       & .tp-offer-wrapper-btn{
           & a{

@@ -2,6 +2,7 @@ import RightSymbol from "@/src/svg/right-symbol";
 import SEOImg from "@assets/img/services/service-details/seo-img.png";
 import SSMImg from "@assets/img/services/service-details/social-media-img.png";
 import WebImg from "@assets/img/services/service-details/web-img.png";
+import PPCImg from "@assets/img/services/service-details/ppc-img.png";
 
 const service_data = [
   {
@@ -196,7 +197,7 @@ const service_data = [
         marketing strategy. As more than just a web agency, we offer
         comprehensive website design and development services. Whether you need
         a professional web designer or a skilled developer, we bring your vision
-        to life. <br />
+        to life. <br /><br />
         Your website stands as the epicenter of your entire digital marketing
         strategy. Ignite its potential with exceptional web design, ensuring
         survival and thriving in the dynamic digital landscape. With Lumenta,
@@ -298,7 +299,9 @@ const service_data = [
         services and website development expertise. Contact us today to unleash
         your website's full potential.
         <br />
+        <br />
         Now, let's explore why Lumenta Digital stands out.
+        <br />
         <br />
         At Lumenta Digital, our dedication goes beyond creating custom website
         designs. As a client-centric web design and development company, we
@@ -388,6 +391,7 @@ const service_data = [
         Media Marketing converge. Let's synchronize your Social Media Marketing
         with our comprehensive Digital Marketing Services for unparalleled
         impact and sustained growth.
+        <br />
         <br />
         Lumenta Digital's SMM services provide a strategic edge for startups and
         established brands. Our tailored plans and robust campaign monitoring
@@ -525,6 +529,164 @@ const service_data = [
         question: "How does Lumenta Digital measure SEO success?",
         answer:
           "We measure SEO success by using various metrics, including keyword rankings, organic traffic growth, and conversion rates. Our transparent reporting keeps you informed about the impact of our efforts on your business.",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Pay Per Click Advertising",
+    subTitle: "Increase Your Brand Exposure and Attract Leads  ",
+    banner: "ppc-banner",
+    img: PPCImg,
+    heading1: "Optimize PPC Marketing for Consumer Search Opportunities ",
+    des_1: (
+      <>
+        As the digital marketing landscape evolves, businesses are on the
+        lookout for swift and impactful strategies to showcase their brands to
+        high-converting customers. Elevate your search engine visibility and
+        achieve instant results with Lumenta Digital's PPC management services.
+      </>
+    ),
+    des_2: (
+      <>
+        {" "}
+        Empower your business with strategically placed pay-per-click ads across
+        various online platforms. Lumenta Digital goes beyond Google, extending
+        its reach to social media sites like YouTube, Facebook, Pinterest, and
+        LinkedIn. Our experts focus on boosting brand awareness and engagement,
+        guiding you through the fundamentals of PPC management for effective,
+        cost-efficient campaigns.
+        <br />
+        <br />
+        Discover the power of pay-per-click with Lumenta Digital and enjoy
+        benefits such as:
+      </>
+    ),
+    des_3: <>Boost Brand Recognition and Increase Online Revenue </>,
+    check_list1: [
+      {
+        id: 1,
+        active: "",
+        title: "Low Barrier to Entry ",
+        icon: <RightSymbol />,
+      },
+      {
+        id: 2,
+        active: "",
+        title: "Improved Brand Visibility ",
+        icon: <RightSymbol />,
+      },
+      {
+        id: 3,
+        active: "",
+        title: "Granular Targeting",
+        icon: <RightSymbol />,
+      },
+      {
+        id: 4,
+        active: "",
+        title: "Immediate and Consistent Traffic ",
+        icon: <RightSymbol />,
+      },
+      {
+        id: 5,
+        active: "",
+        title: "Expansive Traction Channels ",
+        icon: <RightSymbol />,
+      },
+    ],
+    blockquote:
+      "Ready to boost your digital marketing success? - Contact Us Today ",
+    heading2: "Our Pay Per Click Services   ",
+    paragraph2: "Get More Clicks, Conversions, and Customers ",
+    services: [
+      {
+        title: "Keyword Research & Analysis ",
+        description:
+          "Lumenta Digital employs advanced tools for insightful keyword research, understanding your audience's search behavior. We predict and categorize keywords based on industry relevance, search volume, and competition. Our PPC specialists continually refine your keyword list, ensuring it captures your audience's interest and search intent. ",
+      },
+      {
+        title: "Landing Page Optimization ",
+        description:
+          "Enhance lead quantity and quality with Lumenta Digital's PPC expertise. Crafting compelling headlines, using high-performing keywords, and implementing clear calls-to-action, we integrate SEO with PPC best practices on your landing pages. Trust our agency to drive online users to take desired actions. ",
+      },
+      {
+        title: "PPC Management",
+        description:
+          "Partner with Lumenta Digital for stress-free, immediate, and qualified traffic to your landing pages. From comprehensive keyword research to campaign launch, monitoring, and A/B testing, our PPC management company ensures conversion-driven campaigns within your budget.  ",
+      },
+      {
+        title: "Paid Search Advertising ",
+        description:
+          "Elevate your brand to the top of search results with Lumenta Digital's PPC services. Our specialists optimize ad targeting, identify high-value keywords, develop strategic bidding, and monitor ROI. This enhances your Quality Score, CTR, and impression share for effective campaigns. ",
+      },
+      {
+        title: "Conversion Rate Optimization (CRO) ",
+        description:
+          "Capture your target customers and guide them through the sales funnel. Lumenta Digital crafts persuasive PPC ads, tests landing page designs, and develops user-friendly forms to boost your Quality Score and conversion rate. Increase profits without escalating ad spending—call our paid search experts now. ",
+      },
+      {
+        title: "Bing & Google Ads Management ",
+        description:
+          "Reach your ideal customers across search engines with Lumenta Digital's PPC prowess. Our specialists conduct thorough PPC audits, ensuring your products reach the right audience. We optimize ads, refine SEM targeting, and leverage site link extensions for higher engagement rates. ",
+      },
+    ],
+    heading3: "Why Lumenta Digital's Pay Per Click Team Stands Out ",
+    paragraph3:
+      "Boost your digital success with Lumenta Digital, the premier pay-per-click partner committed to propelling your brand to new heights. With years of industry expertise, our dedicated team goes beyond the basics, managing every aspect of your PPC journey—from meticulous audits and strategic account setup to compelling ad creation and vigilant campaign monitoring. At Lumenta Digital, we bring a 101 percent commitment to improving your online performance, combining data-driven strategies, creative excellence, and a client-centric focus to ensure your success story stands out in the competitive digital landscape. ",
+    heading4:
+      "Pay Per Click Services You Can Expect from Lumenta Digital ",
+    paragraph4:
+      "Experience the Lumenta Digital Advantage with our Pay-Per-Click Marketing Agency. Choose us, and anticipate a transformative partnership, where innovative strategies and unwavering commitment converge for unparalleled digital success. Choose us, we’re offering: ",
+    check_list4: [
+      " Comprehensive PPC Audit ",
+      " Detailed Reporting ",
+      " Customer-Focused PPC Company ",
+      " Multi-Location PPC ",
+    ],
+    faq_heading: "Pay Per Click",
+    faq: [
+      {
+        id: 1,
+        question: "What is Pay Per Click (PPC)? ",
+        answer:
+          "PPC is an online advertising model where advertisers pay a fee each time their ad is clicked. It's a way of buying visits to your site rather than attempting to earn those visits organically. ",
+      },
+      {
+        id: 2,
+        question: "How does PPC work?",
+        answer:
+          "Advertisers bid on keywords relevant to their target audience. When users search for these keywords, the ads appear at the top or bottom of the search engine results. Advertisers only pay when their ad is clicked.  ",
+      },
+      {
+        id: 3,
+        question: "What platforms support PPC advertising? ",
+        answer:
+          "Major platforms include Google Ads, Bing Ads, and social media platforms like Facebook, Instagram, and LinkedIn. Each platform has its own advertising system and audience targeting options. ",
+      },
+      {
+        id: 4,
+        question: "What is the advantage of using PPC? ",
+        answer:
+          "PPC offers instant visibility, measurable results, and precise audience targeting. It allows businesses to control their budget, track conversions, and adjust strategies in real-time for optimal performance. ",
+      },
+      {
+        id: 5,
+        question: "What is Quality Score, and why does it matter? ",
+        answer:
+          "Quality Score is a metric used by search engines to measure the relevance and quality of your ads, keywords, and landing pages. A higher Quality Score can result in lower costs and better ad placements. ",
+      },
+      {
+        id: 6,
+        question: "How does Lumenta Digital measure the success of its PPC campaign? ",
+        answer:
+          "Key performance indicators (KPIs) include Click-Through Rate (CTR), Conversion Rate, Cost Per Click (CPC), and Return on Ad Spend (ROAS). Regular monitoring and analysis are essential for ongoing campaign optimization. ",
+      },
+      {
+        id: 7,
+        question: "Is PPC suitable for all businesses? ",
+        answer:
+          "PPC can benefit a wide range of businesses, but its effectiveness depends on factors like industry, competition, and campaign management. A well-strategized PPC campaign can deliver significant ROI for businesses of all sizes. ",
       },
     ],
   },
