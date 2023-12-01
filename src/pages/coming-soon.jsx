@@ -27,7 +27,7 @@ const index = () => {
                     </div>
                     <div className="tp-error-text-box text-center">
                       <h4 className="error-title-sm">we are cooking something great</h4>
-                      <p>The page vou are looking for does not exist'</p>
+                      <p>The page you are looking for does not exist right now</p>
                       <Link className="tp-btn-inner alt-color-black" href="/">
                         <span className="tp-btn"> Back To Home</span>
                         <b></b>

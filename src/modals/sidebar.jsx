@@ -106,7 +106,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, home_three }) => {
                   <i className="fa-sharp fa-solid fa-location-dot"></i>
                 </div>
                 <div className="offcanvas__contact-content-content">
-                  <a href="https://www.google.com/maps/search/86+Road+Broklyn+Street,+600+New+York,+USA/@40.6897806,-74.0278086,12z/data=!3m1!4b1">
+                  <a href="https://maps.app.goo.gl/HkccwAFkhdHNYukw7" target="_blank">
                     1315 Derry Road East, Suite 1, Mississauga, Ontario, Canada.
                     L5T 1B6{" "}
                   </a>
@@ -132,14 +132,15 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, home_three }) => {
               </div>
             </div>
             <div className="offcanvas__social">
-              <a className="icon facebook" href="#">
+              <a className="icon facebook" href="https://www.facebook.com/people/Lumenta-Digital-Inc/61551468568740/?sk=about" target="_blank">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a className="icon twitter" href="#">
+              <a className="icon twitter" href="https://twitter.com/lumentadigital" target="_blank">
                 <i className="fab fa-twitter"></i>
               </a>
               <a
                 className="icon linkedin"
+                target="_blank"
                 href="https://www.linkedin.com/company/lumenta-digital"
               >
                 <i className="fab fa-linkedin"></i>

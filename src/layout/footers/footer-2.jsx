@@ -199,9 +199,9 @@ const FooterTwo = () => {
                           I agree to all your terms and policies
                         </label>
                       </div> */}
-                      <div className="tp-footer-widget-social">
+                      {/* <div className="tp-footer-widget-social">
                         <SocialLinks />
-                      </div>
+                      </div> */}
                     </form>
                   </div>
                 </div>

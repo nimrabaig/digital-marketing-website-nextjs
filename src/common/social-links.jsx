@@ -3,39 +3,40 @@ import Link from "next/link";
 
 const social_links = [
   {
-    link: "http://facebook.com",
+    link: "https://www.facebook.com/people/Lumenta-Digital-Inc/61551468568740/?sk=about",
     target: "_blank",
     icon: "fab fa-facebook-f", 
   },
   {
-    link: "http://twitter.com",
+    link: "https://twitter.com/lumentadigital",
     target: "_blank",
     icon: "fab fa-twitter", 
   },
   {
-    link: "https://www.instagram.com",
+    link: "https://instagram.com/lumentadigital?igshid=MzRlODBiNWFlZA==",
     target: "_blank",
     icon: "fa-brands fa-instagram", 
-  }, 
-  {
-    link: "https://www.pinterest.com",
-    target: "_blank",
-    icon: "fa-brands fa-pinterest", 
   },
+  {
+    link: "https://www.linkedin.com/company/lumenta-digital",
+    target: "_blank",
+    icon: "fa-brands fa-linkedin", 
+  }, 
 ];
 
 const SocialLinks = () => {
   return (
     <>
       {social_links.map((l, i) => (
-        <Link
+        <a
           key={i}
           href={l.link}
+          target="_blank"
           className={l.color}
-          target={l.target ? l.target : ""}
+          rel="noopener noreferrer"
         >
           <i className={l.icon}></i>
-        </Link>
+        </a>
       ))}
     </>
   );

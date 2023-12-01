@@ -13,7 +13,7 @@ const index = () => {
   return (
     <Wrapper>
       <SEO pageTitle={"Blog"} />
-      <Blog />
+      {/* <Blog /> */}
     </Wrapper>
   );
 };
