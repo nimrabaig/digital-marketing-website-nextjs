@@ -92,7 +92,7 @@ const BlogDetailsPostbox = () => {
                           We guarantee to bring high-quality, relevant traffic.
                         </p>
                         {data?.services?.map((item, i) => (
-                          <div key={i} className="col-lg-4 col-md-6 col-sm-10">
+                          <div key={i} className="col-lg-6 col-md-6 col-sm-10">
                             <div className="tp-service-wrapper text-center mb-30">
                               <h3
                                 className="offer-title"
