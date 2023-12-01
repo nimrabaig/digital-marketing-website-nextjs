@@ -1,9 +1,28 @@
 import ContactForm from "@/src/forms/contact-form";
 import EmailIconOne from "@/src/svg/email-icon-1";
 import PhoneIcon from "@/src/svg/phone-icon";
-import React from "react";
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const ContactArea = () => {
+  const router = useRouter();
+  const scrollContactForm = router.query.scrollContactForm;
+
+  console.log(router.query);
+
+  //if packagTitle is not null, then scroll to contact form
+  useEffect(() => {
+    if (scrollContactForm != null) {
+      const element = document.getElementById("contact-form");
+      console.log(element);
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    }
+  }, []);
+
   return (
     <>
       <section className="tp-contact-area pt-120 pb-90">
@@ -16,7 +35,8 @@ const ContactArea = () => {
                     Contact <span className="title-color">With us</span>
                   </h3>
                   <p>
-                  Stay informed and connected with the latest updates by subscribing to our newsletter.
+                    Stay informed and connected with the latest updates by
+                    subscribing to our newsletter.
                   </p>
                 </div>
                 <div className="tp-contact-content">
@@ -49,7 +69,8 @@ const ContactArea = () => {
                         <i className="fa-regular fa-arrow-down"></i>
                       </h3>
                       <p>
-                      1315 Derry Road East, Suite 1, Mississauga, Ontario, Canada L5T 1B6
+                        1315 Derry Road East, Suite 1, Mississauga, Ontario,
+                        Canada L5T 1B6
                       </p>
                     </div>
                     {/* <div className="tp-contact-location">
@@ -66,9 +87,11 @@ const ContactArea = () => {
               <div className="tp-contact-form">
                 <h3 className="tp-contact-form-title">Contact Us</h3>
                 <p>
-                  Your privacy matters to us. Rest assured; we do not disclose your information to third-party entities. Mandatory fields are marked with *.
+                  Your privacy matters to us. Rest assured; we do not disclose
+                  your information to third-party entities. Mandatory fields are
+                  marked with *.
                 </p>
-                <ContactForm />
+                <ContactForm id="contact-form" />
                 <p className="ajax-response"></p>
               </div>
             </div>

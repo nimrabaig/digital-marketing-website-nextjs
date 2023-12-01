@@ -26,7 +26,7 @@ const setting = {
     0: {},
   },
 };
-const slider_data = ["SEO", "Digitize", "Outreach", "Development",];
+const slider_data = ["SEO", "Digitize", "Outreach", "Development"];
 const HeroArea = () => {
   return (
     <>
@@ -64,39 +64,52 @@ const HeroArea = () => {
                   </div> */}
                   <div className="tp-hero-2-content text-center pt-200">
                     <div className="tp-hero-2-title-wrapper fadeUp">
-                      <h3 className="tp-hero-2-title" style={{     textShadow: "0 0 #000" }}>
+                      <h3
+                        className="tp-hero-2-title"
+                        style={{ textShadow: "0 0 #000" }}
+                      >
                         Result-Orientated
                         <br /> <span>Digital Marketing </span>Agency
                       </h3>
                     </div>
                     <div className="tp-hero-2-btn fadeUp">
-                      <Link className="tp-btn" href="/contact">
+                      <Link
+                        className="tp-btn "
+                        // onClick={() => router.push("/contact")}
+                        href={{
+                          pathname: "/contact",
+                          query: { scrollContactForm: true },
+                        }}
+                      >
                         Get Free Proposal
                       </Link>
                     </div>
                   </div>
-                  
                 </div>
               </div>
             </div>
           </div>
-         <div className="tp-hero-2-bottom p-relative d-none d-md-block">
-          <Swiper {...setting} modules={[Navigation]} className="hero-active-2">
-            {slider_data.map((item, i) => (
-              <SwiperSlide key={i}>
-                <h3 className="tp-hero-2-bottom-title">{item}</h3>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="tp-hero-2-nav d-none d-xl-block">
-            <button type="button" className="hero-button-prev-1">
-              prev
-            </button>
-            <button type="button" className="hero-button-next-1">
-              Next
-            </button>
+          <div className="tp-hero-2-bottom p-relative d-none d-md-block">
+            <Swiper
+              {...setting}
+              modules={[Navigation]}
+              className="hero-active-2"
+            >
+              {slider_data.map((item, i) => (
+                <SwiperSlide key={i}>
+                  <h3 className="tp-hero-2-bottom-title">{item}</h3>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <div className="tp-hero-2-nav d-none d-xl-block">
+              <button type="button" className="hero-button-prev-1">
+                prev
+              </button>
+              <button type="button" className="hero-button-next-1">
+                Next
+              </button>
+            </div>
           </div>
-        </div> 
         </div>
       </section>
     </>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CheckIcon from "@assets/img/pricing/check.svg";
 import CrossIcon from "@assets/img/pricing/cross.svg";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 const packages_data = [
@@ -289,30 +290,42 @@ const PackageArea = () => {
           <div className={`col gridColumn firstColumn`}></div>
 
           <div className={`col gridColumn`}>
-            <button
+            <Link
               className="tp-btn tp-btn-default mt-30"
-              onClick={() => router.push("/contact")}
+              // onClick={() => router.push("/contact")}
+              href={{
+                pathname: "/contact",
+                query: { scrollContactForm: true },
+              }}
             >
               Purchase SEO Silver Now
-            </button>
+            </Link>
           </div>
 
           <div className={`col gridColumn`}>
-            <button
+            <Link
               className="tp-btn tp-btn-default mt-30"
-              onClick={() => router.push("/contact")}
+              // onClick={() => router.push("/contact")}
+              href={{
+                pathname: "/contact",
+                query: {scrollContactForm: true },
+              }}
             >
               Purchase SEO Gold Now
-            </button>
+            </Link>
           </div>
 
           <div className={`col gridColumn`}>
-            <button
+            <Link
               className="tp-btn tp-btn-default mt-30"
-              onClick={() => router.push("/contact")}
+              // onClick={() => router.push("/contact")}
+              href={{
+                pathname: "/contact",
+                query: { scrollContactForm: true },
+              }}
             >
               Purchase SEO Diamond Now
-            </button>
+            </Link>
           </div>
         </div>
       </div>

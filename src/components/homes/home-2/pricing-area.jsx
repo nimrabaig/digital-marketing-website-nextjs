@@ -497,13 +497,18 @@ const PricingArea = () => {
                       </div>
                     ))}
                   </div>
-                  <button
+                  <Link
                     className="tp-btn tp-btn-default mt-30"
-                    onClick={() => router.push("/contact")}
+                    // onClick={() => router.push("/contact")}
                     // style={{ lineHeight: 20 }}
+                    href={{
+                      pathname: "/contact",
+                      query: { scrollContactForm: true },
+                    }}
                   >
-                    Purchase Now <br />{item.title.split(' ')[1]} Plan 
-                  </button>
+                    Purchase Now <br />
+                    {item.title.split(" ")[1]} Plan
+                  </Link>
                 </div>
               </div>
             ))}

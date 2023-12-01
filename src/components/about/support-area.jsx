@@ -64,7 +64,14 @@ const SupportArea = () => {
                   ))}
                 </ul>
                 <div className="tp-support-breadcrumb-btn mb-30">
-                  <Link className="tp-btn" href="/contact">
+                <Link
+              className="tp-btn"
+              // onClick={() => router.push("/contact")}
+              href={{
+                pathname: "/contact",
+                query: { scrollContactForm: true },
+              }}
+            >
                     Tell us How Can We Help
                   </Link>
                 </div>
