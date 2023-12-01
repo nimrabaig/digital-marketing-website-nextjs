@@ -16,7 +16,7 @@ const footer_two_content = {
     },
     {
       title: "Blogs",
-      path: "/blogs",
+      path: "/blog",
     },
     {
       title: "Portfolio",
