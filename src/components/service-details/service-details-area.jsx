@@ -87,6 +87,7 @@ const BlogDetailsPostbox = () => {
                               <div className="tp-offer-wrapper-thumb"></div>
                               <div className="tp-offer-wrapper-btn"></div>
                             </div>
+                            <br />
                           </div>
                         ))}
                       </div>

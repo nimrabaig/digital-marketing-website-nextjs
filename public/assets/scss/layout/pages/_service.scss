@@ -88,31 +88,33 @@
       padding: 0 30px;
       transition: all 0.3s ease-in-out;
     }
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
       clip-path: polygon(0 0, 0% 100%, 100% 100%);
       background: var(--tp-theme-secondary);
       height: 57px;
-      transition: all .4s ;
-  }
-  &:hover{
-      & .tp-offer-wrapper-thumb{
-          animation: icon-bounce 0.8s 1;
+      width: 0px;
+      transition: all 0.4s;
+    }
+    &:hover {
+      box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.35);
+      & .tp-offer-wrapper-thumb {
+        animation: icon-bounce 0.8s 1;
       }
-      &::after{
-          width: 57px;
+      &::after {
+        width: 57px;
       }
-      & .tp-offer-wrapper-btn{
-          & a{
-              & i{
-                  transform: rotate(45deg);
-              }
+      & .tp-offer-wrapper-btn {
+        & a {
+          & i {
+            transform: rotate(45deg);
           }
+        }
       }
-  }
+    }
   }
   &-designation {
     & p {
