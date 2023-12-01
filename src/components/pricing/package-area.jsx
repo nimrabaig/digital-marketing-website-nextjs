@@ -17,9 +17,9 @@ const packages_data = [
       "Keyword URL Mapping",
       "Baseline Rank Report",
     ],
-    p1: [null, true, true, true, false, true, true, true],
-    p2: [null, true, true, true, true, true, true, true],
-    p3: [null, true, true, true, true, true, true, true],
+    p1: [true, true, true, false, true, true, true],
+    p2: [true, true, true, true, true, true, true],
+    p3: [true, true, true, true, true, true, true],
   },
   {
     heading: "On-Page Optimization",
@@ -298,8 +298,13 @@ const PackageArea = () => {
                 query: { scrollContactForm: true },
               }}
             >
+<<<<<<< Updated upstream
               Purchase SEO Silver Now
             </Link>
+=======
+              Purchase Now <br /> SEO Silver
+            </button>
+>>>>>>> Stashed changes
           </div>
 
           <div className={`col gridColumn`}>
@@ -311,8 +316,13 @@ const PackageArea = () => {
                 query: {scrollContactForm: true },
               }}
             >
+<<<<<<< Updated upstream
               Purchase SEO Gold Now
             </Link>
+=======
+              Purchase Now <br />SEO Gold
+            </button>
+>>>>>>> Stashed changes
           </div>
 
           <div className={`col gridColumn`}>
@@ -324,8 +334,13 @@ const PackageArea = () => {
                 query: { scrollContactForm: true },
               }}
             >
+<<<<<<< Updated upstream
               Purchase SEO Diamond Now
             </Link>
+=======
+              Purchase Now <br />SEO Diamond 
+            </button>
+>>>>>>> Stashed changes
           </div>
         </div>
       </div>

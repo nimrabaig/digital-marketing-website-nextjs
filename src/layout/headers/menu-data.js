@@ -21,13 +21,15 @@ const menu_data = [
   {
     id: 3,
     mega_menu: false,
-    has_dropdown: false,
+    has_dropdown: true,
     title: "Services",
-    link: "/service",
+    link: "",
     active: "",
     sub_menus: [
-      // { link: "/service", title: "Service" },
-      // { link: "/service-details", title: "Services Details" }, 
+      { link: "/services/1", title: "Search Engine Optimization" },
+      { link: "/services/2", title: "Website Design & Development" }, 
+      { link: "/services/3", title: "Social Media Marketing" }, 
+      { link: "/services/4", title: "Pay Per Click" }, 
     ],
   },
   // {

@@ -1,24 +1,6 @@
-import React, { useState } from "react";
-import Link from "next/link";
+import React from "react";
 import Image from "next/image";
-import Tags from "../blog/tags";
-import Category from "../blog/category";
-import SearchArea from "../blog/search-area";
-import RecentPost from "../blog/recent-post";
-import UserProfile from "../blog/user-profile";
-import CommentForm from "@/src/forms/comment-form";
-
-import thumb_1 from "@assets/img/services/service-details/img-1.jpg";
-import thumb_2 from "@assets/img/services/service-details/seo-img.png";
-import thumb_3 from "@assets/img/blog/details/blog-3.jpg";
-
-import person_1 from "@assets/img/blog/details/comment-1.jpg";
-import person_2 from "@assets/img/blog/details/comment-2.jpg";
-
-import quate from "@assets/img/blog/details/quate.jpg";
 import RightSymbol from "@/src/svg/right-symbol";
-import VideoPopup from "@/src/modals/video-popup";
-import ReplyIcon from "@/src/svg/reply-icon";
 import service_data from "@/src/data/service-data";
 import { useRouter } from "next/router";
 
@@ -29,7 +11,7 @@ const BlogDetailsPostbox = () => {
 
   return (
     <>
-      <section className="postbox__area pt-120 pb-100">
+      <section className="postbox__area pt-60 pb-100">
         <div className="container">
           <div className="row">
             <div className="col-xxl-12 col-xl-12 col-lg-12">
@@ -63,7 +45,7 @@ const BlogDetailsPostbox = () => {
                           <div className="col-xl-5 col-lg-12">
                             <div className="posbox__list-img">
                               <Image
-                                src={thumb_2}
+                                src={data?.img}
                                 alt="theme-pure"
                                 height={300}
                               />
@@ -88,7 +70,7 @@ const BlogDetailsPostbox = () => {
                       >
                         <h3 className="postbox__title">{data?.heading2}</h3>
                         <p style={{ fontSize: 24 }}>
-                          We guarantee to bring high-quality, relevant traffic.
+                          {data?.paragraph2}
                         </p>
                         {data?.services?.map((item, i) => (
                           <div key={i} className="col-lg-5 col-md-5 col-sm-10">

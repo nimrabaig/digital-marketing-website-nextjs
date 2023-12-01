@@ -6,7 +6,7 @@ import shape_2 from "@assets/img/support/shape-bg.png";
 import AngleArrow from "@/src/svg/angle-arrow";
 import LineArrowTwo from "@/src/svg/line-arrow-2";
 
-const FaqArea = ({ answerQuestionData }) => {
+const FaqArea = ({ heading = "", answerQuestionData }) => {
   const [activeIndex, setActiveIndex] = useState(null);
   function handleClick(index) {
     setActiveIndex(index === activeIndex ? null : index);
@@ -24,10 +24,14 @@ const FaqArea = ({ answerQuestionData }) => {
             <div className="col-xxl-8 col-xl-10">
               <div className="tp-support-title-wrapper text-center">
                 <h3 className="tp-section-title">
-                  Frequently Ask <span className="title-color">Questions</span>
-                  {/* <span className="title-center-shape">
-                            <LineArrowTwo /> 
-                           </span> */}
+                  {heading ? (
+                    <><span className="title-color">{heading}</span>{" "}FAQs</> 
+                  ) : (
+                    <>
+                      Frequently Ask{" "}
+                      <span className="title-color">Questions</span>
+                    </>
+                  )}
                 </h3>
               </div>
 

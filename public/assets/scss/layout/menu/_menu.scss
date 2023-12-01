@@ -73,7 +73,7 @@
 
             & a{
                 display: inline-block;
-                padding: 40px 0;
+                padding: 25px 0;
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 21px;
@@ -206,16 +206,16 @@
                     &:hover{
                         & > a{
                             color: var(--tp-theme-secondary);
-                            & span{
-                            margin-left: 14px;
-                            }
+                            // & span{
+                            // margin-left: 14px;
+                            // }
                            
-                            &::after{
-                                color: var(--tp-common-white);
-                            }
-                            &::before{
-                                width: 10px;
-                            }
+                            // &::after{
+                            //     color: var(--tp-common-white);
+                            // }
+                            // &::before{
+                            //     width: 10px;
+                            // }
                             
                         }
                         & > .submenu{

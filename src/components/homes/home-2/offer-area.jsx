@@ -112,7 +112,7 @@ const OfferArea = () => {
                     <Image src={item.img} alt="theme-pure" />
                   </div>
                   <div className="tp-offer-wrapper-btn">
-                    <Link href="/services/1">
+                    <Link href={`/services/${i+1}`}>
                       Read Out More{" "}
                       <i className="fa-solid fa-arrow-up-right"></i>
                     </Link>

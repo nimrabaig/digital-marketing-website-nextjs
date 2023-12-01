@@ -43,11 +43,11 @@ const HeaderTwo = () => {
                           height={40}
                         />
                       </Link>
-                      <Image
+                      {/* <Image
                         src={logo_shape}
                         className="logo-shape"
                         alt="theme-pure"
-                      />
+                      /> */}
                     </div>
                   </div>
                 </div>

@@ -58,7 +58,7 @@
             position: absolute;
             top: -60%;
             left: 0;
-            z-index: -1;
+            display: none;
             @media #{$xl} {
                 top: 7%;
                 left: 0;
