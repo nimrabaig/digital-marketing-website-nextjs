@@ -354,22 +354,15 @@ const PricingArea = () => {
         return prev?.filter((item) => item.cardId !== cardId);
       });
     } else {
-      console.log("2", openDropdowns);
-
-      setOpenDropdowns((prev) => {
-        return prev
-          ?.filter((item) => item.cardId !== cardId)
-          .concat(
-            pricing_data[cardId - 1].contents.map((content, index) => ({
-              cardId,
-              headingIndex: index,
-            }))
-          );
-      });
-      console.log("2.1", openDropdowns);
+      const _array = pricing_data[cardId].contents.map((content, index) => ({
+        cardId,
+        headingIndex: index,
+      }));
+      setOpenDropdowns(_array);
     }
   };
   const toggleDropdown = (cardId, headingIndex) => {
+    setExpandAll(null);
     setOpenDropdowns((prev) => {
       let isOpen;
       isExpanded === cardId
