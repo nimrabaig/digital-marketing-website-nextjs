@@ -10,7 +10,8 @@ export const CONTACT_US = gql`
     $website: String
     $company: String
     $services: [String]
-    $budget: String
+    $budget: String!
+    $ipAddress: String
     $message: String
     $isSubscribed: Boolean
   ) {
@@ -23,6 +24,7 @@ export const CONTACT_US = gql`
       company: $company
       services: $services
       budget: $budget
+      ipAddress: $ipAddress
       message: $message
       isSubscribed: $isSubscribed
     )
