@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import breadcrumb_img from "@assets/img/breadcrumb/titile.svg";
 
-const Breadcrumb = ({top_title = "About Us", page_title = "About Us", imgName= "about-us-breadcrumb"}) => {
+const Breadcrumb = ({top_title = "About Us", page_title = "About Us", imgName= ""}) => {
   return (
     <>
       <section

@@ -32,7 +32,7 @@ const HeroArea = () => {
     <>
       <section
         className="tp-hero-2-area p-relative"
-        style={{ backgroundImage: `url(/assets/img/hero/hero-2/hero-bg.png)` }}
+        style={{ backgroundImage: `url(/assets/img/hero/hero-2/hero-banner.png)` }}
       >
         <div
           style={{
@@ -78,7 +78,7 @@ const HeroArea = () => {
                         // onClick={() => router.push("/contact")}
                         href={{
                           pathname: "/contact",
-                          query: { scrollContactForm: true },
+                          
                         }}
                       >
                         Get Free Proposal

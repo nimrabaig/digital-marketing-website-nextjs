@@ -176,7 +176,7 @@ const FooterTwo = () => {
                           }
                         />
                       </div>
-                      <div className="tp-footer-btn">
+                      <div className="tp-footer-btn" style={{ display: "flex", justifyContent: "flex-end"}}>
                         <div
                           className="tp-btn tp-btn-default mt-10 mb-30"
                           type="submit"

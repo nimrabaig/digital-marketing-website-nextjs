@@ -69,7 +69,7 @@ const SupportArea = () => {
               // onClick={() => router.push("/contact")}
               href={{
                 pathname: "/contact",
-                query: { scrollContactForm: true },
+                
               }}
             >
                     Tell us How Can We Help

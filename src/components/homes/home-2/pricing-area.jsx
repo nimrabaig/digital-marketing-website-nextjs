@@ -503,7 +503,7 @@ const PricingArea = () => {
                     // style={{ lineHeight: 20 }}
                     href={{
                       pathname: "/contact",
-                      query: { scrollContactForm: true },
+                      
                     }}
                   >
                     Purchase Now <br />

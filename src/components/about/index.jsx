@@ -13,7 +13,7 @@ const About = () => {
     <>
       <HeaderTwo />
       <main>
-        <Breadcrumb top_title="Who We Are" page_title="" />
+        <Breadcrumb top_title="Who We Are" page_title="" imgName="about-us-breadcrumb"/>
         <AboutArea about={true} />
         {/* <CounterArea about={true} /> */}
         <FeatureArea about={true} />

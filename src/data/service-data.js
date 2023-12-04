@@ -197,7 +197,8 @@ const service_data = [
         marketing strategy. As more than just a web agency, we offer
         comprehensive website design and development services. Whether you need
         a professional web designer or a skilled developer, we bring your vision
-        to life. <br /><br />
+        to life. <br />
+        <br />
         Your website stands as the epicenter of your entire digital marketing
         strategy. Ignite its potential with exceptional web design, ensuring
         survival and thriving in the dynamic digital landscape. With Lumenta,
@@ -443,49 +444,72 @@ const service_data = [
     paragraph2: "We Drive Customer Engagement and Brand Loyalty ",
     services: [
       {
-        title: "Search Engine Optimization (SEO) ",
+        title: "Better Online Exposure  ",
         description:
-          "Boost online presence with integrated SEO and social media marketing from Lumenta Digital. Our experts perform strategic keyword research, crafting SEO-optimized content, including videos and infographics, to enhance organic traffic and engage social media users ",
+          "Elevate your digital presence with Lumenta Digital. We harness the power of social media platforms like Facebook, Twitter, LinkedIn, and Instagram to boost exposure and interest in your brand dynamically. We drive engagements, likes, and shares through strategic content marketing, fostering connections in a broader online community.  ",
       },
       {
-        title: "Pay-Per-Click (PPC) Advertising ",
+        title: "High Search Rankings  ",
         description:
-          "Maximize social media PPC impact with Lumenta Digital. Our services enhance PPC ad impressions and engagement, identifying target markets, utilizing high-performing keywords, and creating compelling sponsored updates with images, videos, and captions to optimize return on ad spend (ROAS).  ",
+          "Optimize your search rankings with Lumenta Digital. Major search engines recognize the impact of social interaction, incorporating updates and shares. As your content circulates on social media, it enhances website traffic and improves your search engine rankings.   ",
       },
       {
-        title: "Email Marketing ",
+        title: "Specific Audience Targeting  ",
         description:
-          "Extend reach and boost lead conversion with Lumenta Digital's integrated email marketing solutions. We analyze your market, address prospects' needs with tailored content, and strategically showcase social media profiles in emails for heightened engagement.  ",
+          "Achieve precise audience targeting with Lumenta Digital. We empower you to categorize ideal customers by age, location, and online behaviour. Our experts analyze your niche market, ensuring tailored content and ads resonate with your target audience's needs.  ",
       },
       {
-        title: "Content Writing ",
+        title: "Complete Brand Control  ",
         description:
-          "Elevate your digital channels with compelling content from Lumenta Digital. Our B2B social media marketing experts perform market research, adopt your brand voice, and craft valuable content for website, Instagram, Twitter, and LinkedIn platforms, ensuring marketing success.  ",
+          "Take charge of your brand with Lumenta Digital. Our tailored social media marketing packages offer complete control over branding, budget, and strategy. Master the art of using social media for marketing to consistently appeal to your target audience, ensuring your B2B efforts are always effective.  ",
       },
       {
-        title: "Conversion Rate Optimization (CRO) ",
+        title: "Enhanced Customer Trust  ",
         description:
-          "Revamp social media conversion rates with Lumenta Digital. We optimize landing pages, create strong CTAs, test headlines, and leverage diverse social media content to enhance Snapchat social media marketing strategies and overall conversion success.  ",
+          "Build customer trust with Lumenta Digital. Beyond promotion, we establish your brand as a thought leader, fostering meaningful connections. Through valuable content, online engagement, and strategic video marketing, we showcase client testimonials, case studies, and content that validates your brand.   ",
       },
       {
-        title: "Link Building ",
+        title: "Increased Profitability  ",
         description:
-          "Advance your link-building strategies with Lumenta Digital. Our experts maximize LinkedIn and Pinterest marketing, connecting with niche bloggers, sharing content across Twitter and other platforms, and submitting to social networks to acquire quality backlinks.  ",
+          "Boost profitability with Lumenta Digital's cost-effective social media marketing. Showcase products and services on various platforms at a low cost—benefit from reaching unlimited prospects across locations without additional work or expenses.  ",
       },
     ],
     heading3: "Why Lumenta Digital's Social Media Marketing Team Stands Out ",
-    paragraph3:
-      "Discover the Lumenta Digital difference in Social Media Marketing! Our agency transforms Digital Marketing with innovative strategies. Amplify brand interaction through our specialized Social Media Management Services, forging deeper connections with your target audience. Your journey to social media excellence starts here. ",
+    paragraph3: (
+      <>
+        Discover the Lumenta Digital Difference in Social Media Marketing! Our
+        agency transforms Digital Marketing with innovative strategies. Amplify
+        brand interaction through our specialized Social Media Management
+        Services, forging deeper connections with your target audience. Your
+        journey to social media excellence starts here. <br />
+        Explore our comprehensive range of services, including top-notch
+        Instagram Marketing Services, designed to elevate your brand's presence
+        on this influential platform. We are not just any social media marketing
+        firm; we are your partner in creating an effective social media
+        marketing strategy tailored to your business needs. As one of the top
+        social media marketing companies, we specialize in providing social
+        media marketing for small businesses, offering unmatched SMM marketing
+        expertise.
+        <br />
+        Lumenta Digital is among the top social media marketing companies known
+        for its commitment to excellence. Whether you're looking for an
+        Instagram marketing agency or seeking effective social media marketing
+        for small business, we've got you covered. Trust us to leverage the
+        power of social media for business, ensuring your brand stands out in
+        the digital landscape.
+      </>
+    ),
     heading4:
       "Social Media Marketing Services You Can Expect from Lumenta Digital ",
     paragraph4:
-      "Explore the world of Social Media Marketing with Lumenta Digital – a trusted leader in social media management. Our commitment to transparency allows you to see the direct impact of our data-driven strategies on your online revenue. We provide a valuable network resource for all your online marketing needs, offering:  ",
+      "Explore the world of Social Media Marketing with Lumenta Digital – a trusted leader in social media management. Our commitment to transparency allows you to see the direct impact of our data-driven strategies on your online revenue. We provide a valuable network resource for all your online marketing needs, offering:   ",
     check_list4: [
       " Customized Social Media Marketing Strategy ",
       " Detailed Social Media Campaign Reports  ",
       " Expertise in both Paid and Organic Approaches ",
       " Diverse Marketing Experience  ",
     ],
+    paragraph5: "Discover the benefits of our specialized services, including top-notch Instagram Marketing Services to enhance your brand's visibility on this influential platform. Our comprehensive approach covers everything from creating a tailored social media plan to executing effective social media ads. We understand the various ways to promote your business on social media, ensuring your brand thrives in the ever-evolving landscape of social media and marketing. Trust Lumenta Digital to optimize social media for business, bringing your brand to new heights. ",
     faq_heading: "Social Media Marketing",
     faq: [
       {
@@ -613,7 +637,7 @@ const service_data = [
       {
         title: "PPC Management",
         description:
-          "Partner with Lumenta Digital for stress-free, immediate, and qualified traffic to your landing pages. From comprehensive keyword research to campaign launch, monitoring, and A/B testing, our PPC management company ensures conversion-driven campaigns within your budget.  ",
+          "Partner with Lumenta Digital for stress-free, immediate, and qualified traffic to your landing pages. From comprehensive keyword research to campaign launch, monitoring, and A/B testing, our PPC management company ensures conversion-driven campaigns within your budget. ",
       },
       {
         title: "Paid Search Advertising ",
@@ -634,8 +658,7 @@ const service_data = [
     heading3: "Why Lumenta Digital's Pay Per Click Team Stands Out ",
     paragraph3:
       "Boost your digital success with Lumenta Digital, the premier pay-per-click partner committed to propelling your brand to new heights. With years of industry expertise, our dedicated team goes beyond the basics, managing every aspect of your PPC journey—from meticulous audits and strategic account setup to compelling ad creation and vigilant campaign monitoring. At Lumenta Digital, we bring a 101 percent commitment to improving your online performance, combining data-driven strategies, creative excellence, and a client-centric focus to ensure your success story stands out in the competitive digital landscape. ",
-    heading4:
-      "Pay Per Click Services You Can Expect from Lumenta Digital ",
+    heading4: "Pay Per Click Services You Can Expect from Lumenta Digital ",
     paragraph4:
       "Experience the Lumenta Digital Advantage with our Pay-Per-Click Marketing Agency. Choose us, and anticipate a transformative partnership, where innovative strategies and unwavering commitment converge for unparalleled digital success. Choose us, we’re offering: ",
     check_list4: [
@@ -678,7 +701,8 @@ const service_data = [
       },
       {
         id: 6,
-        question: "How does Lumenta Digital measure the success of its PPC campaign? ",
+        question:
+          "How does Lumenta Digital measure the success of its PPC campaign? ",
         answer:
           "Key performance indicators (KPIs) include Click-Through Rate (CTR), Conversion Rate, Cost Per Click (CPC), and Return on Ad Spend (ROAS). Regular monitoring and analysis are essential for ongoing campaign optimization. ",
       },

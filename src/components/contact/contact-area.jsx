@@ -25,7 +25,7 @@ const ContactArea = () => {
 
   return (
     <>
-      <section className="tp-contact-area pt-120 pb-90">
+      <section className="tp-contact-area pt-60 pb-90">
         <div className="container">
           <div className="row">
             <div className="col-lg-5">
@@ -66,7 +66,6 @@ const ContactArea = () => {
                     <div className="tp-contact-location">
                       <h3 className="tp-contact-location-title">
                         Office Location
-                        <i className="fa-regular fa-arrow-down"></i>
                       </h3>
                       <p>
                         1315 Derry Road East, Suite 1, Mississauga, Ontario,

@@ -129,6 +129,7 @@ const BlogDetailsPostbox = () => {
                                 ))}
                             </ul>
                           </div>
+                          {data?.paragraph5 && <p>{data?.paragraph5}</p>}
                         </div>
                       </div>
                     </div>

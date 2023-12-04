@@ -11,11 +11,11 @@ const Contact = () => {
     <>
       <HeaderTwo />
       <main>
-        <Breadcrumb
+        {/* <Breadcrumb
           top_title="Contact Us"
           page_title=""
           imgName="breadcrumb-bg-1"
-        />
+        /> */}
         <ContactArea />
         <GoogleMap />
         <FooterContact contact_style={true} />

@@ -156,11 +156,11 @@ const ServiceArea = () => {
                 src={fun_fact_shape_1}
                 alt="theme-pure"
               />
-              <Image
+              {/* <Image
                 className="shape-2"
                 src={fun_fact_shape_2}
                 alt="theme-pure"
-              />
+              /> */}
               <Image
                 className="shape-3"
                 src={fun_fact_shape_3}

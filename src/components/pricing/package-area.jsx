@@ -295,7 +295,7 @@ const PackageArea = () => {
               // onClick={() => router.push("/contact")}
               href={{
                 pathname: "/contact",
-                query: { scrollContactForm: true },
+                
               }}
             >
               Purchase Now <br /> Silver Plan
@@ -308,7 +308,6 @@ const PackageArea = () => {
               // onClick={() => router.push("/contact")}
               href={{
                 pathname: "/contact",
-                query: {scrollContactForm: true },
               }}
             >
               Purchase Now <br />Gold Plan
@@ -321,7 +320,7 @@ const PackageArea = () => {
               // onClick={() => router.push("/contact")}
               href={{
                 pathname: "/contact",
-                query: { scrollContactForm: true },
+                
               }}
             >
               Purchase Now <br />Diamond Plan

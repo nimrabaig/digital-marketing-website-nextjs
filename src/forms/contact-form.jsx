@@ -11,6 +11,7 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControl from "@mui/material/FormControl";
 import MuiPhoneNumber from "material-ui-phone-number-2";
 import Typography from "@mui/material/Typography";
+// import Select from 'react-select';
 
 const budgetRanges = [
   "$0 - $1000",
@@ -259,6 +260,14 @@ const ContactForm = () => {
                 What services can we provide you?
               </h6>
               <div className="col-md-12">
+              {/* <Select
+    defaultValue={serviceLabels}
+    isMulti
+    name="services"
+    options={serviceLabels}
+    className="basic-multi-select"
+    classNamePrefix="select"
+  /> */}
                 {Object.entries(serviceLabels).map(([key]) => (
                   <FormControlLabel
                     key={key}
