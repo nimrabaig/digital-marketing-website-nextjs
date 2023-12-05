@@ -1,0 +1,35 @@
+@use "../../utils" as *;
+
+// .unsubsribe-form-container {
+//   margin-top: 50%;
+// }
+
+.unsubscribe-form {
+  margin: 15vh 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (max-width: 992px) {
+    margin: 10vh 20px;
+  }
+  .unsunscribe-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    .unsubscribe-btn {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 2px;
+      width: 140px;
+      height: 43px;
+      font-size: 13px;
+      word-wrap: break-word;
+      white-space: normal;
+      @media only screen and (max-width: 575px) {
+        width: 120px;
+        height: 60px;
+      }
+    }
+  }
+}
