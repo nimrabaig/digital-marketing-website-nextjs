@@ -337,57 +337,116 @@ const pricing_data = [
 const PricingArea = () => {
   const router = useRouter();
   const [openDropdowns, setOpenDropdowns] = useState([]);
-  const [isExpanded, setExpandAll] = useState(null);
+  const [isExpanded, setExpandAll] = useState([]);
+
+  // const toggleExpandAll = (cardId) => {
+  //   setExpandAll((prev) => {
+  //     if (prev === cardId) {
+  //       return null;
+  //     } else {
+  //       return cardId;
+  //     }
+  //   });
+
+  //   if (isExpanded === cardId) {
+  //     console.log("1", openDropdowns);
+  //     setOpenDropdowns((prev) => {
+  //       return prev?.filter((item) => item.cardId !== cardId);
+  //     });
+  //   } else {
+  //     const _array = pricing_data[cardId].contents.map((content, index) => ({
+  //       cardId,
+  //       headingIndex: index,
+  //     }));
+  //     setOpenDropdowns(_array);
+  //   }
+  // };
+  // const toggleDropdown = (cardId, headingIndex) => {
+  //   setExpandAll(null);
+  //   setOpenDropdowns((prev) => {
+  //     let isOpen;
+  //     isExpanded === cardId
+  //       ? (isOpen = prev?.some((item) => item.cardId === cardId))
+  //       : (isOpen = prev?.some(
+  //           (item) =>
+  //             item.cardId === cardId && item.headingIndex === headingIndex
+  //         ));
+
+  //     if (isOpen) {
+  //       console.log("====", openDropdowns);
+  //       // If dropdown is open, close it
+  //       setExpandAll(null);
+  //       return prev?.filter(
+  //         (item) =>
+  //           !(item.cardId === cardId && item.headingIndex === headingIndex)
+  //       );
+  //     } else {
+  //       // If dropdown is closed, close other dropdowns from other cards and open this one
+  //       return prev
+  //         ?.filter((item) => item.cardId === cardId)
+  //         .concat({
+  //           cardId,
+  //           headingIndex,
+  //         });
+  //     }
+  //   });
+  // };
 
   const toggleExpandAll = (cardId) => {
-    setExpandAll((prev) => {
-      if (prev === cardId) {
-        return null;
-      } else {
-        return cardId;
-      }
-    });
+    // setExpandAll((prev) => (prev === cardId ? null : cardId));
 
-    if (isExpanded === cardId) {
-      console.log("1", openDropdowns);
+    // if (isExpanded !== cardId) {
+    //   const _array = pricing_data[cardId].contents.map((content, index) => ({
+    //     cardId,
+    //     headingIndex: index,
+    //   }));
+    //   setOpenDropdowns(_array);
+    // } else {
+    //   setOpenDropdowns([]);
+    // }
+
+    //if isExpanded array has cardId then remove it and close all dropdowns of that card but dont remove any previous cardId or close any dropdowns of previous cardId
+    // else add it and open all dropdowns of that card
+
+    if (isExpanded.includes(cardId)) {
+      setExpandAll((prev) => prev.filter((item) => item !== cardId));
       setOpenDropdowns((prev) => {
         return prev?.filter((item) => item.cardId !== cardId);
       });
     } else {
+      setExpandAll((prev) => prev.concat(cardId));
       const _array = pricing_data[cardId].contents.map((content, index) => ({
         cardId,
         headingIndex: index,
       }));
-      setOpenDropdowns(_array);
+      setOpenDropdowns((prev) => prev.concat(_array));
     }
   };
+
   const toggleDropdown = (cardId, headingIndex) => {
-    setExpandAll(null);
+    // setExpandAll(null);
+
     setOpenDropdowns((prev) => {
-      let isOpen;
-      isExpanded === cardId
-        ? (isOpen = prev?.some((item) => item.cardId === cardId))
-        : (isOpen = prev?.some(
-            (item) =>
-              item.cardId === cardId && item.headingIndex === headingIndex
-          ));
+      const isOpen = prev?.some(
+        (item) => item.cardId === cardId && item.headingIndex === headingIndex
+      );
 
       if (isOpen) {
-        console.log("====", openDropdowns);
-        // If dropdown is open, close it
-        setExpandAll(null);
         return prev?.filter(
           (item) =>
             !(item.cardId === cardId && item.headingIndex === headingIndex)
         );
       } else {
-        // If dropdown is closed, close other dropdowns from other cards and open this one
-        return prev
-          ?.filter((item) => item.cardId === cardId)
-          .concat({
-            cardId,
-            headingIndex,
-          });
+        // return prev
+        //   ?.filter((item) => item.cardId === cardId)
+        //   .concat({
+        //     cardId,
+        //     headingIndex,
+        //   });
+        return prev.concat({
+          cardId,
+          headingIndex,
+        });
       }
     });
   };
@@ -446,13 +505,11 @@ const PricingArea = () => {
                         color: "#ff8d0b",
                         cursor: "pointer",
                       }}
-                      onClick={() =>
-                        isExpanded === item.id
-                          ? toggleExpandAll(item.id)
-                          : toggleExpandAll(item.id)
-                      }
+                      onClick={() => toggleExpandAll(item.id)}
                     >
-                      {isExpanded === item.id ? "Collapse All" : "Expand All"}
+                      {isExpanded.includes(item.id)
+                        ? "Collapse All"
+                        : "Expand All"}
                     </div>
                     {item.contents.map((content, index) => (
                       <div key={index} className="pricing-content-section">
@@ -503,7 +560,6 @@ const PricingArea = () => {
                     // style={{ lineHeight: 20 }}
                     href={{
                       pathname: "/contact",
-                      
                     }}
                   >
                     Purchase Now <br />
