@@ -228,7 +228,7 @@ const PackageArea = () => {
         {packages_data.map((service, index) => (
           <>
             <div key={index} className={`row gridRow`}>
-              <div className={`col gridColumn firstColumn`}>
+              <div className={`col gridColumn firstColumn`} style={{ color: "#ff8d0b" }}>
                 {service.heading}
               </div>
               <div className={`col gridColumn `}></div>

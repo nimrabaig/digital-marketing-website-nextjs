@@ -21,7 +21,7 @@ const budgetRanges = [
   { value: "$3000 - $6000", label: "$3000 - $6000" },
   { value: "$6000 - $10,000", label: "$6000 - $10,000" },
   { value: "$10,000 - $50,000", label: "$10,000 - $50,000" },
-  { value: "$50,000+", label: "$10,000+" },
+  { value: "$50,000+", label: "$50,000+" },
 ];
 
 const serviceLabels = [
