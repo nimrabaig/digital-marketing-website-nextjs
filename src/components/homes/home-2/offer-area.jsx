@@ -23,7 +23,7 @@ const offering_data = [
     ),
     description: (
       <>
-       Increase search rankings and attract high-quality, relevant traffic
+       Increase search rankings and attract high-quality, relevant traffic.
       </>
     ),
   },
@@ -51,7 +51,7 @@ const offering_data = [
       </>
     ),
     description: (
-      <>EElevate brand story across online channels with a unique presence</>
+      <>Elevate brand story across online channels with a unique presence.</>
     ),
   },
   {

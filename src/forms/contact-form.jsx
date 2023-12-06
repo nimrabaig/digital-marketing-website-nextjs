@@ -281,10 +281,10 @@ const ContactForm = () => {
   /> */}
 
             <FormGroup>
-              <h6 style={{ fontFamily: "inherit" }}>
+              <span style={{ fontFamily: "inherit", marginBottom: 4 }}>
                 What services can we provide you?
-              </h6>
-              <div className="col-md-12">
+              </span>
+              <div style={{ width: "100%"}}>
                 <Select
                   className="contact-services-dropdown react-select-container"
                   isMulti
@@ -302,6 +302,7 @@ const ContactForm = () => {
                     control: (provided, state) => ({
                       ...provided,
                       height: 54,
+                      flexWrap: "wrap",
                       backgroundColor: "#EFF0F2",
                       border: state.isFocused
                         ? "1px solid #ff8d0b"
@@ -312,6 +313,15 @@ const ContactForm = () => {
                       "&:hover": {
                         border: "none !important",
                       },
+                      "&:active": {
+                        border: "none !important",
+                      },
+                    }),
+                    valueContainer: (provided) => ({
+                      padding: "0px 8px",
+                      display: "flex",
+                      alignItems: "center",
+                      height: 54
                     }),
                     menu: (provided) => ({
                       ...provided,
@@ -346,7 +356,7 @@ const ContactForm = () => {
             </FormGroup>
           </div>
           <FormControl>
-            <h6 style={{ marginTop: 20, fontFamily: "inherit" }}>Budget*</h6>
+            <span style={{ marginTop: 20, fontFamily: "inherit" }}>Budget*</span>
             <Select
               options={budgetRanges}
               value={budgetRanges.find(
@@ -369,6 +379,12 @@ const ContactForm = () => {
                   "&:hover": {
                     border: "none !important",
                   },
+                }),
+                valueContainer: (provided) => ({
+                  padding: "0px 8px",
+                  display: "flex",
+                  alignItems: "center",
+                  height: 54
                 }),
                 menu: (provided) => ({
                   ...provided,

@@ -35,7 +35,7 @@ const HomeTwo = () => {
         {/* <SupportArea /> */}
         <CategoryArea />
         {/* <FeatureArea /> */}
-        <TestimonialArea />
+        {/* <TestimonialArea /> */}
         <FaqArea answerQuestionData={answer_question_data} />
       </main>
       <FooterTwo />
