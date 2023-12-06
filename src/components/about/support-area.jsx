@@ -88,12 +88,12 @@ const SupportArea = () => {
                 <div className="shape-2 p-relative">
                   <Image src={support_img_3} alt="theme-pure" />
                   <div className="tp-video-play">
-                    <a
+                    {/* <a
                       className="popup-video"
                       onClick={() => setIsVideoOpen(true)}
                     >
                       <i className="fa-sharp fa-solid fa-play"></i>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
                 <Image
