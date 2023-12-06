@@ -32,7 +32,7 @@ const HeaderTwo = () => {
           >
             <div className="container-fluid gx-0">
               <div className="row gx-0 align-items-center">
-                <div className="col-xxl-2 col-xl-2 col-lg-10 col-md-6">
+                <div className="col-xxl-2 col-xl-2 col-lg-9 col-md-5">
                   <div className="tp-header-2-main-left d-flex align-items-center justify-content-xl-center justify-content-xxl-end p-relative">
                     <div className="tp-header-2-logo">
                       <Link href="/">
@@ -60,7 +60,7 @@ const HeaderTwo = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-xxl-4 col-xl-3 col-lg-2 col-md-6">
+                <div className="col-xxl-4 col-xl-3 col-lg-3 col-md-7">
                   {/* <div className="tp-header-2-right d-none d-xxl-block">
                                  <div className="tp-header-2-main-right d-flex align-items-center justify-content-xxl-end">
                                     <div className="tp-header-2-phone d-flex align-items-center">
@@ -80,6 +80,14 @@ const HeaderTwo = () => {
                                  </div>
                               </div> */}
                   <div className="tp-header-2-mobile-menu d-flex justify-content-end d-block">
+                  <div className="tp-header-2-phone align-items-center">
+                                       <div className="tp-header-2-phone-icon">
+                                          <i className="fa-solid fa-phone"></i>
+                                       </div>
+                                       <div className="tp-header-2-phone-content">
+                                          <a href="tel:16138072399">+1 (613) 807 - 2399</a>
+                                       </div>
+                                    </div>
                     <div
                       className="tp-header-2-hamburger-btn offcanvas-open-btn"
                       onClick={() => setSidebarOpen(true)}

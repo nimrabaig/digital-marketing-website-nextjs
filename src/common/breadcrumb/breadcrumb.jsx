@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import breadcrumb_img from "@assets/img/breadcrumb/titile.svg";
 
-const Breadcrumb = ({top_title = "About Us", page_title = "About Us", imgName= ""}) => {
+const Breadcrumb = ({top_title = "About Us", page_title = "About Us", imgName= "", info=""}) => {
   return (
     <>
       <section
@@ -21,6 +21,7 @@ const Breadcrumb = ({top_title = "About Us", page_title = "About Us", imgName= "
                 <div className="breadcrumb__list breadcrumb__list-translate">
                   <span>{page_title ?? 
                   "You Need a Digital Marketing Agency that You Can Rely On"}</span>
+                  {info && <span>{info}</span>}
                 </div>
               </div>
             </div>

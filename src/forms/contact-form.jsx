@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useMutation } from "@apollo/client";
 import { CONTACT_US, SUBSCRIBE_NEWS_LETTER } from "@/src/graphql/mutation";
 import toast from "react-hot-toast";
@@ -71,43 +71,31 @@ const ContactForm = () => {
     }));
   };
 
-  const handleCheckboxChange = (service) => {
-    let _services = [];
-    if (values.services.includes(service)) {
-      const _filtered = values.services.filter(
-        (_service) => _service !== service
-      );
-      _services = _filtered;
-    } else _services = [...values.services, service];
-    setValues({
-      ...values,
-      services: _services,
-    });
-  };
+  // const handleCheckboxChange = (service) => {
+  //   let _services = [];
+  //   if (values.services.includes(service)) {
+  //     const _filtered = values.services.filter(
+  //       (_service) => _service !== service
+  //     );
+  //     _services = _filtered;
+  //   } else _services = [...values.services, service];
+  //   setValues({
+  //     ...values,
+  //     services: _services,
+  //   });
+  // };
 
-  const handleBudgetChange = (event) => {
-    setValues({ ...values, budget: event.target.value });
-    setValidation((prevValidation) => ({
-      ...prevValidation,
-      budget: { error: false, helperText: "" },
-    }));
-  };
+  // const handleBudgetChange = (event) => {
+  //   setValues({ ...values, budget: event.target.value });
+  //   setValidation((prevValidation) => ({
+  //     ...prevValidation,
+  //     budget: { error: false, helperText: "" },
+  //   }));
+  // };
 
-  const handleOnSubscribe = useCallback(() => {
+  const handleOnSubscribe = () => {
     setSubscribed(!isSubscribed);
-    SubscribetoNewsLetter({
-      variables: { name: values.name, email: values.email },
-    })
-      .then((response) => {
-        if (isSubscribed)
-          toast.success("You have subscribed to our Newsletter!");
-        else toast.success("You have unsubscribed to our Newsletter!");
-        console.log(response);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [isSubscribed]);
+  };
 
   const onSubmit = async () => {
     let isValid = true;
@@ -158,9 +146,22 @@ const ContactForm = () => {
         variables: { ...values, isSubscribed, ipAddress },
       })
         .then((resp) => {
-          toast.dismiss();
           if (resp.data?.ContactUs?.success) {
-            toast.success("Message sent!");
+            if (isSubscribed) {
+              SubscribetoNewsLetter({
+                variables: { name: values.name, email: values.email },
+              })
+                .then((response) => {
+                  toast.dismiss();
+                  toast.success("You have subscribed to our Newsletter!");
+                })
+                .catch((err) => {
+                  console.log(err);
+                });
+            } else {
+              toast.dismiss();
+              toast.success("Message sent!");
+            }
           } else {
             toast.error(resp.data?.ContactUs?.raw?.message);
           }
@@ -278,7 +279,6 @@ const ContactForm = () => {
     className="basic-multi-select"
     classNamePrefix="select"
   /> */}
-         
 
             <FormGroup>
               <h6 style={{ fontFamily: "inherit" }}>
@@ -301,6 +301,7 @@ const ContactForm = () => {
                   styles={{
                     control: (provided, state) => ({
                       ...provided,
+                      height: 54,
                       backgroundColor: "#EFF0F2",
                       border: state.isFocused
                         ? "1px solid #ff8d0b"
@@ -308,7 +309,7 @@ const ContactForm = () => {
                       boxShadow: state.isFocused
                         ? "0 0 0 0.2rem rgba(255,141,11,.25)"
                         : "none",
-                        "&:hover": {
+                      "&:hover": {
                         border: "none !important",
                       },
                     }),
@@ -358,6 +359,7 @@ const ContactForm = () => {
                 control: (provided, state) => ({
                   ...provided,
                   backgroundColor: "#EFF0F2",
+                  height: 54,
                   border: state.isFocused
                     ? "1px solid #ff8d0b"
                     : "1px solid #ced4da",

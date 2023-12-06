@@ -12,8 +12,10 @@ import { useRouter } from "next/router";
 const pricing_data = [
   {
     id: 1,
-    title: "SEO Silver",
+    title: "Silver Plan",
     price: "$300",
+    type: "Basic",
+    features: 37,
     popular: false,
     contents: [
       {
@@ -89,8 +91,10 @@ const pricing_data = [
   },
   {
     id: 2,
-    title: "SEO Gold",
+    title: "Gold Plan",
     price: "$450",
+    type: "Recommended",
+    features: 46,
     popular: false,
     contents: [
       {
@@ -173,10 +177,11 @@ const pricing_data = [
       },
     ],
   },
-
   {
     id: 3,
-    title: "SEO Diamond",
+    title: "Diamond Plan",
+    type: "Premium",
+    features: 55,
     price: "$1000+",
     contents: [
       {
@@ -410,8 +415,9 @@ const PricingArea = () => {
         </div>
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="tp-feature-title-wrapper">
+                <div>
                 <h3 className="tp-section-title">
                   Our <span style={{ color: "#ff8d0b" }}>Pricing </span>Plans
                   {/* <span className="title-left-shape">
@@ -422,6 +428,10 @@ const PricingArea = () => {
                   Explore our pricing plans, each with unique service offerings
                   to match your needs.
                 </p>
+                </div>
+                <Link href="/pricing" className="tp-btn-inner alt-color-black">
+                <span className="tp-btn">Compare Plans</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -435,10 +445,23 @@ const PricingArea = () => {
                   }`}
                 >
                   <br></br>
+
+                  <span
+                    className="badge badge-success"
+                    style={{
+                      backgroundColor: item.id ===1 ? "#ffc107" : item.id === 2 ? "#28a745" : "#17a2b8",
+                      color: "#fff",
+                      fontSize: 14,
+                      marginRight: "auto",
+                    }}
+                  >
+                    {item?.type}
+                  </span>
                   <div className="tp-pricing-header">
                     <span className="pricing-title">{item.title}</span>
-                    <p className="pricing-price">{item.price}</p>
+                    <span className="pricing-price">{item.price}</span>
                   </div>
+                  <span style={{ marginRight: "auto"}}>This plan has <b>{item.features}</b> features.</span>
                   <hr class="tp-pricing-seperator" />
                   <div className="tp-pricing-content">
                     <div

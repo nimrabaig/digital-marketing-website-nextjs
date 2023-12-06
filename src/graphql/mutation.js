@@ -1,6 +1,5 @@
 import { gql } from "@apollo/client";
 
-
 export const CONTACT_US = gql`
   mutation ContactUs(
     $name: String!
@@ -31,16 +30,34 @@ export const CONTACT_US = gql`
   }
 `;
 
-
-
 export const SUBSCRIBE_NEWS_LETTER = gql`
-    mutation SubscribeNewsLetter(
-        $name: String!
-        $email: String!
-     ) {
-        SubscribeNewsLetter(
-            name: $name
-            email: $email
+  mutation SubscribeNewsLetter($name: String!, $email: String!) {
+    SubscribeNewsLetter(name: $name, email: $email)
+  }
+`;
+
+export const UNSUBSCRIBE_WITH_FEEDBACK = gql`
+  mutation SubmitUnsubscribeFeedback(
+    $contactId: String!
+    $feedbackOptionId: Int!
+    $reason: String
+  ) {
+    SubmitUnsubscribeFeedback(
+      contactId: $contactId
+      feedbackOptionId: $feedbackOptionId
+      reason: $reason
     )
-     }
- `;
+  }
+`;
+
+export const UNSUBSCRIBE = gql`
+  mutation UnsubscribeFromNewsletter($contactId: String!) {
+    UnsubscribeFromNewsletter(contactId: $contactId)
+  }
+`;
+
+export const SUBSCRIBE_BY_ID = gql`
+  mutation SubscribeToNewsletter($contactId: String!) {
+    SubscribeToNewsletter(contactId: $contactId)
+  }
+`;

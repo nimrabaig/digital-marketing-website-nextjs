@@ -436,7 +436,7 @@
                 padding-top: 120px;
             }
             @media #{$xl,$xs} {
-                padding-top: 100px;
+                padding-top: 150px;
             }
             & .tp-hero-2-title{
                 position: relative;
@@ -875,5 +875,17 @@
             }
         }
     }
+}
+
+.tp-info {
+    margin: 30px auto 40px;
+    width: 80%;
+}
+
+.tp-hero-description {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-shadow: 0 0 #000;
 }
 

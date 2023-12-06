@@ -140,6 +140,10 @@
         }
     }
     &-phone{
+        @media #{$md,$sm,$xs} {
+            display: none;
+        }
+        display: flex;
         &-icon{
             height: 32px;
             width: 32px;
@@ -223,6 +227,7 @@
         }
     }
     &-hamburger-btn{
+        display: none;
         background: var(--tp-theme-primary);
         width: 175px;
         height: 81px;
@@ -230,6 +235,7 @@
         margin-right: 0;
         text-align: center;
         cursor: pointer;
+        
         & .hamburger-btn{
             & span{
                 color: var(--tp-common-white);
@@ -244,7 +250,8 @@
             height: 100px;
             line-height: 100px;
         }
-        @media #{$sm,$xs} {
+        @media #{$md,$sm,$xs} {
+            display: block;
             width: 110px;
         }
     }

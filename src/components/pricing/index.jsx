@@ -10,8 +10,8 @@ const Pricing = () => {
       <HeaderTwo />
       <main>
         <Breadcrumb
-          top_title="Pricing Plans"
-          page_title=""
+          top_title="Compare Our Plans"
+          page_title="Your Guide to Making Informed Decision"
           imgName="pricing-bg"
         />
         <PackageArea />

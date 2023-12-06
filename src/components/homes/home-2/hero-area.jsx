@@ -72,13 +72,20 @@ const HeroArea = () => {
                         <br /> <span>Digital Marketing </span>Agency
                       </h3>
                     </div>
+                    <div className="tp-info">
+                    <span className="tp-hero-description">
+                  We're an innovative and dynamic digital marketing agency,
+          harnessing the power of data-driven strategies to propel our
+          clients toward their business objectives.
+                    </span>
+                    </div>
                     <div className="tp-hero-2-btn fadeUp">
                       <Link
                         className="tp-btn "
                         // onClick={() => router.push("/contact")}
                         href={{
                           pathname: "/contact",
-                          
+                          query: { scrollContactForm: true },
                         }}
                       >
                         Get Free Proposal
