@@ -59,9 +59,11 @@ const pricing_data = [
       },
       {
         heading: "SEO Content Creation",
+        sub_contents: ["Content Writing for Backlinks"],
+      },
+      {
+        heading: "Social Media Accounts Set-up and Posting",
         sub_contents: [
-          "Content Writing for Backlinks",
-          "Social Media Accounts Set-up and Posting",
           "1 Facebook Post",
           "1 Instagram Post",
           "1 Twitter Post",
