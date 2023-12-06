@@ -265,7 +265,7 @@ const ContactForm = () => {
               />
             </div>
           </div>
-          <div className="col-md-12">
+          <div className="">
             {/* <FormGroup>
               <h6 style={{ fontFamily: "inherit" }}>
                 What services can we provide you?
@@ -419,7 +419,7 @@ const ContactForm = () => {
               </Typography>
             )}
           </FormControl>
-          <div className="col-md-12">
+          <div className="">
             <div className="tp-contact-textarea">
               <TextField
                 placeholder="Message"
