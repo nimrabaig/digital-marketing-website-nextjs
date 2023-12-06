@@ -227,7 +227,7 @@ const ContactForm = () => {
                 value={values.phone}
                 error={validation.phone.error}
                 onChange={(phone) => handleInputChange("phone", phone)}
-                style={{ backgroundColor: "#EFF0F2" }}
+                style={{ backgroundColor: "#EFF0F2", width: "100%" }}
                 onBlur={(e) => {}}
               />
               {validation.phone.error && (
