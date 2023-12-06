@@ -150,6 +150,16 @@ const FooterTwo = () => {
               <div className="row">
                 <div className="col-xl-4 col-lg-5 col-md-6">
                   <div className="tp-footer-widget tp-footer-2-col-1">
+                  <div className="col-lg-2 col-md-2" style={{ marginBottom: 20 }}>
+                  <div className="tp-footer-2-logo">
+                    <Image
+                      src={footer_logo}
+                      alt="theme-pure"
+                      width={160}
+                      height={60}
+                    />
+                  </div>
+                </div>
                     <h3 className="tp-footer-widget-title">Newsletter</h3>
                     <form
                       className="tp-footer-from"
@@ -245,28 +255,21 @@ const FooterTwo = () => {
             </div>
             <div className="tp-footer-2-menu-area p-relative">
               <div className="row align-items-center">
-                <div className="col-lg-2 col-md-2">
-                  <div className="tp-footer-2-logo">
-                    <Image
-                      src={footer_logo}
-                      alt="theme-pure"
-                      width={160}
-                      height={60}
-                    />
-                  </div>
-                </div>
-                <div className="col-lg-8 col-md-10">
+               
+                <div className="col-md-12">
                   <div className="tp-footer-2-menu">
-                    <ul>
+                  Copyright © 2023 - Lumenta Digital Inc
+                    {/* <ul>
                       {footer_nav.map((item, i) => (
                         <li key={i}>
                           <Link href={item.link}>{item.title}</Link>
                         </li>
                       ))}
-                    </ul>
+                    </ul> */}
+
                   </div>
                 </div>
-                <div className="col-lg-2 col-md-6">
+                {/* <div className="col-lg-2 col-md-6">
                   <div className="tp-footer-2-call d-flex justify-content-lg-end">
                     <div className="ddf">
                       <p>Phone:</p>
@@ -275,7 +278,7 @@ const FooterTwo = () => {
                       </span>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

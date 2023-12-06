@@ -178,7 +178,7 @@ const ServiceArea = () => {
               />
             </div>
 
-            <div className="row" style={{ justifyContent: "space-between"}}>
+            <div className="row" style={{ justifyContent: "space-between" }}>
               {/* <div className="col-lg-2 col-md-4">
                 <div className="tp-fun-fact-wrapper-box">
                   {counter_content.map((item, i) => (
@@ -205,29 +205,29 @@ const ServiceArea = () => {
               <div className="col-lg-7 col-md-12">
                 <div className="tp-fun-fact-content">
                   <div className="tp-fun-fact-title-wrapper">
-                    
                     <h3 className="tp-section-title">
-                    Digital Marketing Solutions
-
-Offering <span style={{ color: "#ff8d0b" }}>Our Services</span> Worldwide
+                      Digital Marketing Solutions Offering{" "}
+                      <span style={{ color: "#ff8d0b" }}>Our Services</span>{" "}
+                      Worldwide
                     </h3>
-                    <p style={{ color: "rgb(255, 255, 255,0.8)"}}>
-                    Boost your brand's digital footprint with Lumenta Digital's innovative marketing solutions tailored to enhance visibility, engagement, and conversions worldwide
+                    <p style={{ color: "rgb(255, 255, 255,0.8)" }}>
+                      Boost your brand's digital footprint with Lumenta
+                      Digital's innovative marketing solutions tailored to
+                      enhance visibility, engagement, and conversions worldwide
                     </p>
                     <ul>
-                      <li style={{ color: "rgb(255, 255, 255,0.8)"}}>
+                      <li style={{ color: "rgb(255, 255, 255,0.8)" }}>
                         <span>
                           {" "}
                           <GreenRightArrow />
                         </span>
                         Wide Range of Services
                       </li>
-                      <li style={{ color: "rgb(255, 255, 255,0.8)"}}>
+                      <li style={{ color: "rgb(255, 255, 255,0.8)" }}>
                         <span>
                           <GreenRightArrow />{" "}
                         </span>
-
- International Expertise
+                        International Expertise
                       </li>
                     </ul>
                     {/* <div className="tp-fun-fact-btn">

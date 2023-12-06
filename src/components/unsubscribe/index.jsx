@@ -1,18 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import RadioGroup from "@mui/material/RadioGroup";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useMutation } from "@apollo/client";
+import category_shape_1 from "@assets/img/category/shape-1.png";
+import category_shape_2 from "@assets/img/category/shape-2.png";
 import {
   SUBSCRIBE_BY_ID,
   UNSUBSCRIBE,
   UNSUBSCRIBE_WITH_FEEDBACK,
 } from "@/src/graphql/mutation";
 import { toast } from "react-hot-toast";
+import HeaderTwo from "@/src/layout/headers/header-2";
+import FooterTwo from "@/src/layout/footers/footer-2";
 
 const options = [
   {
@@ -99,7 +104,57 @@ const UnSubsribe = () => {
         });
     }
   };
+
+  const [x, setX] = useState(1);
+  const [y, setY] = useState(1);
+  const mouseRef = useRef(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const r = mouseRef.current.getBoundingClientRect();
+      setX(e.clientX - (r.left + Math.floor(r.width / 2)));
+      setY(e.clientY - (r.top + Math.floor(r.height / 2)));
+    };
+
+    const handleMouseLeave = () => {
+      setX(1);
+      setY(1);
+    };
+
+    const mouseElem = mouseRef.current;
+    mouseElem.addEventListener("mousemove", handleMouseMove);
+    mouseElem.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      mouseElem.removeEventListener("mousemove", handleMouseMove);
+      mouseElem.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
+
   return (
+    <>
+      <HeaderTwo />
+      <main>
+      <section
+        id="mousemove"
+        ref={mouseRef}
+        style={{ "--x": x, "--y": y, marginBottom: 130 }}
+        className="tp-category-area p-relative fix pt-0 pb-120"
+      >
+        <div className="tp-category-shape">
+          <Image
+            className="shape-1 mousemove__image"
+            src={category_shape_1}
+            alt="theme-pure"
+          />
+          <Image
+            className="shape-2 mousemove__image"
+            src={category_shape_2}
+            alt="theme-pure"
+          />
+        </div>
+        
+     
     <form
       id="unsubscribe-form"
       onClick={(e) => e.preventDefault()}
@@ -115,7 +170,7 @@ const UnSubsribe = () => {
                   marginTop: 20,
                   fontFamily: "inherit",
                   fontWeight: 700,
-                  marginBottom: 20,
+                  marginBottom: 60,
                 }}
               >
                 <Typography variant="h5" gutterBottom component="div">
@@ -174,6 +229,10 @@ const UnSubsribe = () => {
         </div>
       </div>
     </form>
+    </section>
+    </main>
+    <FooterTwo />
+    </>
   );
 };
 export default UnSubsribe;

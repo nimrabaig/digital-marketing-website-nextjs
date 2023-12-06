@@ -72,6 +72,8 @@
         &-area{
             padding-top: 25px;
             padding-bottom: 25px;
+            display: flex;
+            justify-content: center;
         }
         & ul{
             & li{

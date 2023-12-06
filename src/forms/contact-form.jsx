@@ -12,24 +12,35 @@ import FormControl from "@mui/material/FormControl";
 import MuiPhoneNumber from "material-ui-phone-number-2";
 import Typography from "@mui/material/Typography";
 import Select from "react-select";
+import ReCAPTCHA from "react-google-recaptcha";
+import { SITE_KEY } from "../constants/recaptcha";
 
 const budgetRanges = [
   { value: "$0 - $1000", label: "$0 - $1000" },
   { value: "$1000 - $3000", label: "$1000 - $3000" },
   { value: "$3000 - $6000", label: "$3000 - $6000" },
   { value: "$6000 - $10,000", label: "$6000 - $10,000" },
-  { value: "$10,000+", label: "$10,000+" },
+  { value: "$10,000 - $50,000", label: "$10,000 - $50,000" },
+  { value: "$50,000+", label: "$10,000+" },
 ];
 
 const serviceLabels = [
-  { value: "seo", label: "SEO" },
-  { value: "ppc", label: "PPC" },
-  { value: "socialMedia", label: "Social Media" },
-  { value: "webDesign", label: "Web Design/Development" },
-  { value: "softwareDevelopment", label: "Software Development" },
-  { value: "contentWriting", label: "Content Writing" },
-  { value: "emailMarketing", label: "Email Marketing" },
-  { value: "linkBuilding", label: "Link Building" },
+  { value: "General Inquires", label: "General Inquires" },
+  { value: "Silver Plan", label: "Silver Plan" },
+  { value: "Gold Plan", label: "Gold Plan" },
+  { value: "Diomand Plan", label: "Diomand Plan" },
+  { value: "SEO", label: "SEO" },
+  { value: "PPC", label: "PPC" },
+  { value: "Social Media", label: "Social Media" },
+  { value: "Web Design/Development", label: "Web Design/Development" },
+  { value: "Software Development", label: "Software Development" },
+  { value: "Content Writing", label: "Content Writing" },
+  { value: "Email Marketing", label: "Email Marketing" },
+  { value: "Link Building", label: "Link Building" },
+  { value: "Website Enhancement", label: "Website Enhancement" },
+  { value: "Software Development", label: "Software Development" },
+  {value: "Data Science & AI Solutions", label:"Data Science & AI Solutions "},
+  { value: "Other", label: "Other" },
 ];
 
 const ContactForm = () => {
@@ -241,20 +252,6 @@ const ContactForm = () => {
             <div className="tp-contact-input">
               <TextField
                 id="outlined-basic"
-                label="Website"
-                variant="outlined"
-                style={{ width: "100%" }}
-                value={values.website}
-                onChange={({ target }) =>
-                  setValues({ ...values, website: target.value })
-                }
-              />
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="tp-contact-input">
-              <TextField
-                id="outlined-basic"
                 label="Company/Business Name"
                 variant="outlined"
                 style={{ width: "100%" }}
@@ -265,24 +262,24 @@ const ContactForm = () => {
               />
             </div>
           </div>
+          <div className="col-md-12">
+            <div className="tp-contact-input">
+              <TextField
+                id="outlined-basic"
+                label="Website"
+                variant="outlined"
+                style={{ width: "100%" }}
+                value={values.website}
+                onChange={({ target }) =>
+                  setValues({ ...values, website: target.value })
+                }
+              />
+            </div>
+          </div>
           <div className="">
-            {/* <FormGroup>
-              <h6 style={{ fontFamily: "inherit" }}>
-                What services can we provide you?
-              </h6>
-              <div className="col-md-12">
-              {/* <Select
-    defaultValue={serviceLabels}
-    isMulti
-    name="services"
-    options={serviceLabels}
-    className="basic-multi-select"
-    classNamePrefix="select"
-  /> */}
-
             <FormGroup>
               <span style={{ fontFamily: "inherit", marginBottom: 4 }}>
-                What services can we provide you?
+                What services can we provide you?*
               </span>
               <div style={{ width: "100%" }}>
                 <Select
@@ -369,9 +366,7 @@ const ContactForm = () => {
             </FormGroup>
           </div>
           <FormControl>
-            <span style={{ marginTop: 20, fontFamily: "inherit" }}>
-              Budget*
-            </span>
+            <span style={{ marginTop: 24, fontFamily: "inherit", marginBottom: 4 }}>Budget*</span>
             <Select
               options={budgetRanges}
               value={budgetRanges.find(
@@ -460,6 +455,9 @@ const ContactForm = () => {
             }
             label={"Subscribe to our Newsletter"}
           />
+            <div style={{ marginBottom: 20 }} />
+
+          <ReCAPTCHA sitekey={SITE_KEY} />
 
           <div style={{ marginBottom: 40 }} />
 
@@ -468,6 +466,7 @@ const ContactForm = () => {
               Send Message
             </button>
           </div>
+
         </div>
       </form>
     </>

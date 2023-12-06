@@ -528,7 +528,7 @@ const PricingArea = () => {
                     }}
                   >
                     Purchase Now <br />
-                    {item.title.split(" ")[1]} Plan
+                    {item.title.split(" ")[0]} Plan
                   </Link>
                 </div>
               </div>

@@ -11,7 +11,12 @@ const service_data = [
     subTitle: "Choose a Result-Driven SEO Partner",
     banner: "seo-banner",
     img: SEOImg,
-    heading1: "Get High – Quality Organic & Paid SEO Services",
+    heading1: (
+      <>
+        Get High – Quality <span style={{ color: "#ff8d0b" }}>Organic</span> &{" "}
+        <span style={{ color: "#ff8d0b" }}>Paid</span> SEO Services
+      </>
+    ),
     des_1: (
       <>
         In navigating today's intricate online landscape, Lumenta Digital
@@ -80,40 +85,52 @@ const service_data = [
     paragraph2: "We guarantee to bring high-quality, relevant traffic.",
     services: [
       {
-        title: "Keyword Research & Strategy",
+        title: (
+          <span style={{ color: "#ff8d0b" }}>Keyword Research & Strategy</span>
+        ),
         description:
           "Lumenta Digital understands the nuances of your industry, boosting your ranking for specific search terms. Our SEO specialists review your current keyword rankings, analyze your wish list, and conduct thorough keyword research to curate a list tailored to your website and competitive landscape.   ",
       },
       {
-        title: "Link Building ",
+        title: <span style={{ color: "#ff8d0b" }}>Link Building </span>,
         description:
           "Backlinks are crucial for higher search results—partner with Lumenta Digital, a leading SEO provider with a dedicated link-building team. Our strong connections ensure top-notch search engine optimization techniques. As a trusted name among full-service digital marketing agencies, we go beyond link-building for comprehensive online presence solutions.   ",
       },
       {
-        title: "Technical SEO ",
+        title: <span style={{ color: "#ff8d0b" }}>Technical SEO </span>,
         description:
           "Improve your rankings with expert optimization, including enhancements to page speed, through Google Search Engine Optimization. Addressing these issues streamlines search engine crawls, resulting in improved rankings. When search engines, especially Google, are pleased, your satisfaction with your rankings increases.   ",
       },
       {
-        title: "Local SEO",
+        title: <span style={{ color: "#ff8d0b" }}>Local SEO</span>,
         description:
           "With 64 percent of customers searching for local businesses online, Lumenta Digital, one of the best SEO companies, enhances your company's local SEO rankings through Google Business Profile or Google My Business (GMB) optimization. We optimize your GMB profile and manage your online reputation to attract high-intent customers and grow your local following.  ",
       },
       {
-        title: "On-Page SEO",
+        title: <span style={{ color: "#ff8d0b" }}>On-Page SEO</span>,
         description:
           "Elevate your online visibility with Lumenta Digital's top-notch website SEO services. Our experts optimize your site with best practices, ensuring trustworthiness and looking for the Best SEO website? Lumenta Digital offers tailored on-site SEO techniques for seamless user experiences and improved rankings.  ",
       },
       {
-        title: "Off-Page SEO",
+        title: <span style={{ color: "#ff8d0b" }}>Off-Page SEO</span>,
         description:
           "Establish brand credibility and boost online exposure with Lumenta Digital's strategic search engine marketing. As a top SEO marketing agency, our expert SEO specialists in Canada/USA utilize social media, link building, and influencer marketing for effective online marketing. Elevate your brand with our comprehensive online marketing solutions.  ",
       },
     ],
-    heading3: "Why Lumenta Digital's SEO Team Stands Out",
+    heading3: (
+      <>
+        Why Lumenta Digital's <span style={{ color: "#ff8d0b" }}>SEO Team</span>{" "}
+        Stands Out
+      </>
+    ),
     paragraph3:
       "With seasoned experts, strong leadership, and a commitment to ethical practices, we simplify the SEO process. Ensuring transparency and providing real-time insights through custom reporting, we are the proactive choice for businesses seeking online growth and revenue.",
-    heading4: "SEO Services You Can Expect from Lumenta Digital ",
+    heading4: (
+      <>
+        <span style={{ color: "#ff8d0b" }}>SEO Services</span> You Can Expect
+        from Lumenta Digital
+      </>
+    ),
     paragraph4:
       "As a full-service SEO optimization agency, Lumenta Digital provides a comprehensive range of professional search engine optimization services to enhance your business's visibility in search. We employ trustworthy, future-proof, white hat SEO techniques, including: ",
     check_list4: [
@@ -178,9 +195,14 @@ const service_data = [
     id: 2,
     title: "Web Design & Development ",
     subTitle: "Showcase Your Brand with a Well-Optimized Website",
-    banner: "web-dev-banner",
+    banner: "social-media-banner",
     img: WebImg,
-    heading1: "Boost Digital Performance and Turn Clicks into Customers ",
+    heading1: (
+      <>
+        Boost <span style={{ color: "#ff8d0b" }}>Digital Performance</span> and
+        Turn <span style={{ color: "#ff8d0b" }}>Clicks</span> into Customers{" "}
+      </>
+    ),
     des_1: (
       <>
         Unleash boundless online opportunities for your business with Lumenta
@@ -260,37 +282,46 @@ const service_data = [
     paragraph2: "We Ensure Optimized, Future-Ready Web Design & Development  ",
     services: [
       {
-        title: "Content Writing",
+        title: <span style={{ color: "#ff8d0b" }}>Content Writing</span>,
         description:
           "Keep your website dynamic with engaging, industry-specific content. Our team of content specialists at Lumenta Digital crafts data-driven strategies to address your audience's needs. Partner with us for optimized site content that resonates with search engines and online users.    ",
       },
       {
-        title: "Logo Design  ",
+        title: <span style={{ color: "#ff8d0b" }}>Logo Design</span>,
         description:
           "Make a lasting impression with a custom logo that reflects your brand identity. Lumenta Digital offers logo design services, ensuring professionalism and trustworthiness shine through. Enhance your branding with our competitively priced logo creation and redesign services.    ",
       },
       {
-        title: "Search Engine Optimization (SEO)  ",
+        title: (
+          <span style={{ color: "#ff8d0b" }}>
+            Search Engine Optimization (SEO)
+          </span>
+        ),
         description:
           "Optimize your website for search engines seamlessly. Lumenta Digital's custom web design integrates SEO practices, enhancing crawlability and indexing. From content optimization to search-friendly navigation, we boost your search rankings through W3C standards and effective link building.  ",
       },
       {
-        title: "Website Analysis  ",
+        title: <span style={{ color: "#ff8d0b" }}>Website Analysis</span>,
         description:
           "Uncover opportunities and fortify weaknesses with Lumenta Digital's comprehensive website analysis. We conduct SEO audits, competitor analysis, and performance tests, refining your site's usability. Leverage our insights to enhance engagement, conversions, and overall site effectiveness.   ",
       },
       {
-        title: "Website Hosting  ",
+        title: <span style={{ color: "#ff8d0b" }}>Website Hosting</span>,
         description:
           "Supercharge your website's performance and security with Lumenta Digital's hosting services. Tailored plans, including hosting and cloud storage, ensure a seamless experience—access to 24/7 customer support and robust domain management tools for a secure and stable online presence.  ",
       },
       {
-        title: "Website Maintenance  ",
+        title: <span style={{ color: "#ff8d0b" }}>Website Maintenance</span>,
         description:
           "Ensure peak website performance with Lumenta Digital's proactive maintenance. Our scheduled checkups and gap analyses identify areas for improvement. Leverage our analytics-driven strategies to enhance security, drive traffic, and optimize page experience.  ",
       },
     ],
-    heading3: "Why Lumenta Digital's Web Team Stands Out",
+    heading3: (
+      <>
+        Why <span style={{ color: "#ff8d0b" }}>Lumenta Digital's</span> Web Team
+        Stands Out
+      </>
+    ),
     paragraph3: (
       <>
         Are you looking for top-notch web design and development services in the
@@ -313,7 +344,12 @@ const service_data = [
         presence with bespoke web design and marketing services.
       </>
     ),
-    heading4: "Website Services You Can Expect from Lumenta Digital    ",
+    heading4: (
+      <>
+        <span style={{ color: "#ff8d0b" }}>Website Services</span> You Can
+        Expect from Lumenta Digital{" "}
+      </>
+    ),
     paragraph4:
       "A website that ranks well becomes a conduit for organic traffic, capable of generating significant business even without running advertisements. Lumenta Digital assists you in making a substantial impact on your website. As one of the best web development companies in the USA, our professional web developers create visually stunning and functional websites. At the forefront of web design websites, Lumenta Digital is your trusted website development company offering top-tier web development services. Partner with us for an unmatched digital presence among the top web design agencies. With us, you can expect:  ",
     check_list4: [
@@ -372,9 +408,14 @@ const service_data = [
     id: 3,
     title: "Social Media Marketing",
     subTitle: "Your Brand, Your Story, Everywhere",
-    banner: "social-media-banner",
+    banner: "web-dev-banner",
     img: SSMImg,
-    heading1: "Promote Your Company Story and News Across Online Channels ",
+    heading1: (
+      <>
+        Promote Your <span style={{ color: "#ff8d0b" }}>Company Story</span> and{" "}
+        <span style={{ color: "#ff8d0b" }}>News</span> Across Online Channels{" "}
+      </>
+    ),
     des_1: (
       <>
         Is your brand making waves on social platforms? Lumenta Digital ensures
@@ -444,37 +485,51 @@ const service_data = [
     paragraph2: "We Drive Customer Engagement and Brand Loyalty ",
     services: [
       {
-        title: "Better Online Exposure  ",
+        title: (
+          <span style={{ color: "#ff8d0b" }}>Better Online Exposure </span>
+        ),
         description:
           "Elevate your digital presence with Lumenta Digital. We harness the power of social media platforms like Facebook, Twitter, LinkedIn, and Instagram to boost exposure and interest in your brand dynamically. We drive engagements, likes, and shares through strategic content marketing, fostering connections in a broader online community.  ",
       },
       {
-        title: "High Search Rankings  ",
+        title: <span style={{ color: "#ff8d0b" }}>High Search Rankings </span>,
         description:
           "Optimize your search rankings with Lumenta Digital. Major search engines recognize the impact of social interaction, incorporating updates and shares. As your content circulates on social media, it enhances website traffic and improves your search engine rankings.   ",
       },
       {
-        title: "Specific Audience Targeting  ",
+        title: (
+          <span style={{ color: "#ff8d0b" }}>Specific Audience Targeting </span>
+        ),
         description:
           "Achieve precise audience targeting with Lumenta Digital. We empower you to categorize ideal customers by age, location, and online behaviour. Our experts analyze your niche market, ensuring tailored content and ads resonate with your target audience's needs.  ",
       },
       {
-        title: "Complete Brand Control  ",
+        title: <span style={{ color: "#ff8d0b" }}>Complete Brand Control</span>,
         description:
           "Take charge of your brand with Lumenta Digital. Our tailored social media marketing packages offer complete control over branding, budget, and strategy. Master the art of using social media for marketing to consistently appeal to your target audience, ensuring your B2B efforts are always effective.  ",
       },
       {
-        title: "Enhanced Customer Trust  ",
+        title: (
+          <span style={{ color: "#ff8d0b" }}>Enhanced Customer Trust</span>
+        ),
         description:
           "Build customer trust with Lumenta Digital. Beyond promotion, we establish your brand as a thought leader, fostering meaningful connections. Through valuable content, online engagement, and strategic video marketing, we showcase client testimonials, case studies, and content that validates your brand.   ",
       },
       {
-        title: "Increased Profitability  ",
+        title: (
+          <span style={{ color: "#ff8d0b" }}>Increased Profitability</span>
+        ),
         description:
           "Boost profitability with Lumenta Digital's cost-effective social media marketing. Showcase products and services on various platforms at a low cost—benefit from reaching unlimited prospects across locations without additional work or expenses.  ",
       },
     ],
-    heading3: "Why Lumenta Digital's Social Media Marketing Team Stands Out ",
+    heading3: (
+      <>
+        Why Lumenta Digital's{" "}
+        <span style={{ color: "#ff8d0b" }}>Social Media Marketing</span> Team
+        Stands Out{" "}
+      </>
+    ),
     paragraph3: (
       <>
         Discover the Lumenta Digital Difference in Social Media Marketing! Our
@@ -499,8 +554,12 @@ const service_data = [
         the digital landscape.
       </>
     ),
-    heading4:
-      "Social Media Marketing Services You Can Expect from Lumenta Digital ",
+    heading4: (
+      <>
+        <span style={{ color: "#ff8d0b" }}>Social Media Marketing</span>{" "}
+        Services You Can Expect from Lumenta Digital{" "}
+      </>
+    ),
     paragraph4:
       "Explore the world of Social Media Marketing with Lumenta Digital – a trusted leader in social media management. Our commitment to transparency allows you to see the direct impact of our data-driven strategies on your online revenue. We provide a valuable network resource for all your online marketing needs, offering:   ",
     check_list4: [
@@ -509,7 +568,8 @@ const service_data = [
       " Expertise in both Paid and Organic Approaches ",
       " Diverse Marketing Experience  ",
     ],
-    paragraph5: "Discover the benefits of our specialized services, including top-notch Instagram Marketing Services to enhance your brand's visibility on this influential platform. Our comprehensive approach covers everything from creating a tailored social media plan to executing effective social media ads. We understand the various ways to promote your business on social media, ensuring your brand thrives in the ever-evolving landscape of social media and marketing. Trust Lumenta Digital to optimize social media for business, bringing your brand to new heights. ",
+    paragraph5:
+      "Discover the benefits of our specialized services, including top-notch Instagram Marketing Services to enhance your brand's visibility on this influential platform. Our comprehensive approach covers everything from creating a tailored social media plan to executing effective social media ads. We understand the various ways to promote your business on social media, ensuring your brand thrives in the ever-evolving landscape of social media and marketing. Trust Lumenta Digital to optimize social media for business, bringing your brand to new heights. ",
     faq_heading: "Social Media Marketing",
     faq: [
       {
@@ -562,7 +622,12 @@ const service_data = [
     subTitle: "Increase Your Brand Exposure and Attract Leads  ",
     banner: "ppc-banner",
     img: PPCImg,
-    heading1: "Optimize PPC Marketing for Consumer Search Opportunities ",
+    heading1: (
+      <>
+        Optimize <span style={{ color: "#ff8d0b" }}>PPC Marketing</span> for
+        Consumer Search Opportunities{" "}
+      </>
+    ),
     des_1: (
       <>
         As the digital marketing landscape evolves, businesses are on the
@@ -576,10 +641,13 @@ const service_data = [
         {" "}
         Empower your business with strategically placed pay-per-click ads across
         various online platforms. Lumenta Digital goes beyond Google, extending
-        its reach to social media sites like YouTube, Facebook, Pinterest, and
-        LinkedIn. Our experts focus on boosting brand awareness and engagement,
-        guiding you through the fundamentals of PPC management for effective,
-        cost-efficient campaigns.
+        its reach to social media sites like{" "}
+        <span style={{ color: "#ff8d0b" }}>
+          YouTube, Facebook, Pinterest, and LinkedIn
+        </span>{" "}
+        . Our experts focus on boosting brand awareness and engagement, guiding
+        you through the fundamentals of PPC management for effective,
+        cost-efficientcampaigns.
         <br />
         <br />
         Discover the power of pay-per-click with Lumenta Digital and enjoy
@@ -625,40 +693,62 @@ const service_data = [
     paragraph2: "Get More Clicks, Conversions, and Customers ",
     services: [
       {
-        title: "Keyword Research & Analysis ",
+        title: (
+          <span style={{ color: "#ff8d0b" }}>Keyword Research & Analysis</span>
+        ),
         description:
           "Lumenta Digital employs advanced tools for insightful keyword research, understanding your audience's search behavior. We predict and categorize keywords based on industry relevance, search volume, and competition. Our PPC specialists continually refine your keyword list, ensuring it captures your audience's interest and search intent. ",
       },
       {
-        title: "Landing Page Optimization ",
+        title: (
+          <span style={{ color: "#ff8d0b" }}>Landing Page Optimization </span>
+        ),
         description:
           "Enhance lead quantity and quality with Lumenta Digital's PPC expertise. Crafting compelling headlines, using high-performing keywords, and implementing clear calls-to-action, we integrate SEO with PPC best practices on your landing pages. Trust our agency to drive online users to take desired actions. ",
       },
       {
-        title: "PPC Management",
+        title: <span style={{ color: "#ff8d0b" }}>PPC Management</span>,
         description:
           "Partner with Lumenta Digital for stress-free, immediate, and qualified traffic to your landing pages. From comprehensive keyword research to campaign launch, monitoring, and A/B testing, our PPC management company ensures conversion-driven campaigns within your budget. ",
       },
       {
-        title: "Paid Search Advertising ",
+        title: (
+          <span style={{ color: "#ff8d0b" }}>Paid Search Advertising</span>
+        ),
         description:
           "Elevate your brand to the top of search results with Lumenta Digital's PPC services. Our specialists optimize ad targeting, identify high-value keywords, develop strategic bidding, and monitor ROI. This enhances your Quality Score, CTR, and impression share for effective campaigns. ",
       },
       {
-        title: "Conversion Rate Optimization (CRO) ",
+        title: (
+          <span style={{ color: "#ff8d0b" }}>
+            Conversion Rate Optimization (CRO)
+          </span>
+        ),
         description:
           "Capture your target customers and guide them through the sales funnel. Lumenta Digital crafts persuasive PPC ads, tests landing page designs, and develops user-friendly forms to boost your Quality Score and conversion rate. Increase profits without escalating ad spending—call our paid search experts now. ",
       },
       {
-        title: "Bing & Google Ads Management ",
+        title: (
+          <span style={{ color: "#ff8d0b" }}>Bing & Google Ads Management</span>
+        ),
         description:
           "Reach your ideal customers across search engines with Lumenta Digital's PPC prowess. Our specialists conduct thorough PPC audits, ensuring your products reach the right audience. We optimize ads, refine SEM targeting, and leverage site link extensions for higher engagement rates. ",
       },
     ],
-    heading3: "Why Lumenta Digital's Pay Per Click Team Stands Out ",
+    heading3: (
+      <>
+        Why Lumenta Digital's{" "}
+        <span style={{ color: "#ff8d0b" }}>Pay Per Click Team</span> Stands Out
+      </>
+    ),
     paragraph3:
       "Boost your digital success with Lumenta Digital, the premier pay-per-click partner committed to propelling your brand to new heights. With years of industry expertise, our dedicated team goes beyond the basics, managing every aspect of your PPC journey—from meticulous audits and strategic account setup to compelling ad creation and vigilant campaign monitoring. At Lumenta Digital, we bring a 101 percent commitment to improving your online performance, combining data-driven strategies, creative excellence, and a client-centric focus to ensure your success story stands out in the competitive digital landscape. ",
-    heading4: "Pay Per Click Services You Can Expect from Lumenta Digital ",
+    heading4: (
+      <>
+        Pay Per Click Services You Can Expect from{" "}
+        <span style={{ color: "#ff8d0b" }}>Lumenta Digital</span>
+      </>
+    ),
     paragraph4:
       "Experience the Lumenta Digital Advantage with our Pay-Per-Click Marketing Agency. Choose us, and anticipate a transformative partnership, where innovative strategies and unwavering commitment converge for unparalleled digital success. Choose us, we’re offering: ",
     check_list4: [
