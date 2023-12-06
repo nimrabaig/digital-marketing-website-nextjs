@@ -116,7 +116,7 @@ const FooterTwo = () => {
         .then((resp) => {
           toast.dismiss();
           if (resp.data?.SubscribeNewsLetter?.success) {
-            toast.success("You have subscribed to our Newsletter!");
+            toast.success(resp.data?.SubscribeNewsLetter?.raw?.message);;
             setValues({
               name: "",
               email: ""

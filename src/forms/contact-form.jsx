@@ -29,14 +29,7 @@ const serviceLabels = [
   { value: "Silver Plan", label: "Silver Plan" },
   { value: "Gold Plan", label: "Gold Plan" },
   { value: "Diomand Plan", label: "Diomand Plan" },
-  { value: "SEO", label: "SEO" },
-  { value: "PPC", label: "PPC" },
-  { value: "Social Media", label: "Social Media" },
   { value: "Web Design/Development", label: "Web Design/Development" },
-  { value: "Software Development", label: "Software Development" },
-  { value: "Content Writing", label: "Content Writing" },
-  { value: "Email Marketing", label: "Email Marketing" },
-  { value: "Link Building", label: "Link Building" },
   { value: "Website Enhancement", label: "Website Enhancement" },
   { value: "Software Development", label: "Software Development" },
   {value: "Data Science & AI Solutions", label:"Data Science & AI Solutions "},
@@ -164,14 +157,14 @@ const ContactForm = () => {
               })
                 .then((response) => {
                   toast.dismiss();
-                  toast.success("You have subscribed to our Newsletter!");
+                  toast.success(resp.data?.ContactUs?.raw?.message);;
                 })
                 .catch((err) => {
                   console.log(err);
                 });
             } else {
               toast.dismiss();
-              toast.success("Message sent!");
+              toast.success(resp.data?.ContactUs?.raw?.message);;
             }
           } else {
             toast.error(resp.data?.ContactUs?.raw?.message);

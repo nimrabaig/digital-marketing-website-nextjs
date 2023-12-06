@@ -27,27 +27,26 @@ const options = [
   {
     value: "2",
     label:
-      "The emails are no longer the content that I originally signed up for",
+      "The current email content doesn't match what I originally signed up for. ",
   },
   {
     value: "3",
     label:
-      "I never gave permission to receive these emails, please report this as abuse",
+      "I didn't intend to receive these emails; please help me address this issue. ",
   },
   {
     value: "4",
-    label: "I unsubsribed by accident! Please add me back to this list",
+    label: "I unsubscribed by accident! Please add me back to the list. ",
   },
   {
     value: "5",
-    label: "Other",
+    label: "Other (please specify):",
   },
 ];
 
 const UnSubsribe = () => {
   const router = useRouter();
   const id = router.query.id;
-  console.log("--fds id", id)
   const [option, setOption] = useState(null);
   const [feedback, setFeedback] = React.useState("");
   const [Unsubscribe] = useMutation(UNSUBSCRIBE);
@@ -165,6 +164,7 @@ const UnSubsribe = () => {
         <div className="col-md-12 text-center unsubsribe-form-container">
           <div>
             <FormControl>
+              <h2>Unsubscribe Confirmation  </h2>
               <h5
                 style={{
                   marginTop: 20,
@@ -174,9 +174,9 @@ const UnSubsribe = () => {
                 }}
               >
                 <Typography variant="h5" gutterBottom component="div">
-                  You have been unsubscribed from our emails.
-                  <br />
-                  Please take a moment and let us know why you unsubscribed.
+                Thank you for letting us know about your email preferences. Your request has been received, and you will no longer receive emails from Lumenta Digital. 
+                <br />
+                Please take a moment and let us know why you have unsubscribed.  
                 </Typography>
               </h5>
               <RadioGroup
