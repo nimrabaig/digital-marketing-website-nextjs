@@ -17,7 +17,7 @@ const packages_data = [
       "Keyword URL Mapping",
       "Baseline Rank Report",
     ],
-    p1: [true, true, true, false, true, true, true],
+    p1: [true, true, true, true, true, false, true],
     p2: [true, true, true, true, true, true, true],
     p3: [true, true, true, true, true, true, true],
   },
@@ -42,6 +42,7 @@ const packages_data = [
       "Initial Link Analysis and Disavow",
     ],
     p1: [
+      false,
       true,
       true,
       true,
@@ -49,12 +50,11 @@ const packages_data = [
       true,
       true,
       true,
+      false,
+      false,
+      false,
       true,
-      true,
-      true,
-      true,
-      true,
-      true,
+      false,
       true,
       true,
       false,
@@ -69,11 +69,11 @@ const packages_data = [
       true,
       true,
       true,
+      false,
       true,
       true,
       true,
-      true,
-      true,
+      false,
       true,
       true,
       true,
@@ -119,18 +119,18 @@ const packages_data = [
     ],
     p1: [
       75,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
       true,
       true,
       true,
       true,
       true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
+      false,
       false,
     ],
     p2: [
@@ -140,13 +140,13 @@ const packages_data = [
       true,
       true,
       true,
+      false,
       true,
       true,
       true,
+      false,
       true,
-      true,
-      true,
-      true,
+      false,
       1,
     ],
     p3: [
@@ -186,8 +186,8 @@ const packages_data = [
       "8 Pinterest Post",
       "4 Gmb Posting",
     ],
-    p1: [1, 1, 1, 1, 1],
-    p2: [3, 3, 3, 3, 2],
+    p1: [1, 1, 1, false, false],
+    p2: [3, 3, 3, 3, false],
     p3: [5, 5, 5, 8, 4],
   },
   {
@@ -200,21 +200,20 @@ const packages_data = [
       "Monthly Link Building",
       "Monthly Ranking Reporting & Conversion Tracking",
     ],
-    p1: [true, true, true, true, true, true],
+    p1: [true, true, true, false, true, true],
     p2: [true, true, true, true, true, true],
     p3: [true, true, true, true, true, true],
   },
   {
     heading: "Customer Support",
     sub_contents: ["Phone Support", "Email Support", "Chat Support", "meeting"],
-    p1: [false, true, false, true],
+    p1: [false, true, false, false],
     p2: [false, true, true, true],
     p3: [true, true, true, true],
   },
 ];
 
 const PackageArea = () => {
-  const router = useRouter();
   return (
     <>
       <div className={`container gridContainer`}>
@@ -295,7 +294,6 @@ const PackageArea = () => {
               // onClick={() => router.push("/contact")}
               href={{
                 pathname: "/contact",
-                
               }}
             >
               Purchase Now <br /> Silver Plan
@@ -310,7 +308,8 @@ const PackageArea = () => {
                 pathname: "/contact",
               }}
             >
-              Purchase Now <br />Gold Plan
+              Purchase Now <br />
+              Gold Plan
             </Link>
           </div>
 
@@ -320,10 +319,10 @@ const PackageArea = () => {
               // onClick={() => router.push("/contact")}
               href={{
                 pathname: "/contact",
-                
               }}
             >
-              Purchase Now <br />Diamond Plan
+              Purchase Now <br />
+              Diamond Plan
             </Link>
           </div>
         </div>
