@@ -332,6 +332,7 @@ const PricingArea = () => {
   // };
 
   const toggleExpandAll = (cardId) => {
+    console.log("ss111s");
     // setExpandAll((prev) => (prev === cardId ? null : cardId));
 
     // if (isExpanded !== cardId) {
@@ -348,13 +349,15 @@ const PricingArea = () => {
     // else add it and open all dropdowns of that card
 
     if (isExpanded.includes(cardId)) {
+      console.log("sss");
       setExpandAll((prev) => prev.filter((item) => item !== cardId));
       setOpenDropdowns((prev) => {
         return prev?.filter((item) => item.cardId !== cardId);
       });
     } else {
+      console.log(cardId);
       setExpandAll((prev) => prev.concat(cardId));
-      const _array = pricing_data[cardId].contents.map((content, index) => ({
+      const _array = pricing_data[cardId-1].contents.map((content, index) => ({
         cardId,
         headingIndex: index,
       }));
