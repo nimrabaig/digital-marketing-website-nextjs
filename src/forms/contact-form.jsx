@@ -425,7 +425,7 @@ const ContactForm = () => {
                 placeholder="Message"
                 multiline
                 rows={4}
-                style={{ width: "100%" }}
+                style={{ width: "100%", backgroundColor: "#EFF0F2" }}
               />
             </div>
           </div>
