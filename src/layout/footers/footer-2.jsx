@@ -250,7 +250,7 @@ const FooterTwo = () => {
                     <Image
                       src={footer_logo}
                       alt="theme-pure"
-                      width={155}
+                      width={160}
                       height={60}
                     />
                   </div>

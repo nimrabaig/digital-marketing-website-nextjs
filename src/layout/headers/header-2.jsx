@@ -79,7 +79,7 @@ const HeaderTwo = () => {
                                     </div>
                                  </div>
                               </div> */}
-                  <div className="tp-header-2-mobile-menu d-flex justify-content-end d-block">
+                  <div className="tp-header-2-mobile-menu d-flex justify-content-end d-block" style={{     marginRight: 10 }}>
                   <div className="tp-header-2-phone align-items-center">
                                        <div className="tp-header-2-phone-icon">
                                           <i className="fa-solid fa-phone"></i>
