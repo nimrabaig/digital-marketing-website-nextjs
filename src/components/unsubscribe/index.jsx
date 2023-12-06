@@ -42,6 +42,7 @@ const options = [
 const UnSubsribe = () => {
   const router = useRouter();
   const id = router.query.id;
+  console.log("--fds id", id)
   const [option, setOption] = useState(null);
   const [feedback, setFeedback] = React.useState("");
   const [Unsubscribe] = useMutation(UNSUBSCRIBE);
@@ -49,8 +50,8 @@ const UnSubsribe = () => {
   const [SubscribeAgain] = useMutation(SUBSCRIBE_BY_ID);
 
   useEffect(() => {
-    unsubscribeNewsletter();
-  }, []);
+    if (id) unsubscribeNewsletter();
+  }, [id]);
 
   const handleOption = (event) => {
     setOption(event.target.value);
