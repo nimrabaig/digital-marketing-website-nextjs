@@ -284,7 +284,7 @@ const ContactForm = () => {
               <span style={{ fontFamily: "inherit", marginBottom: 4 }}>
                 What services can we provide you?
               </span>
-              <div style={{ width: "100%"}}>
+              <div style={{ width: "100%" }}>
                 <Select
                   className="contact-services-dropdown react-select-container"
                   isMulti
@@ -299,30 +299,43 @@ const ContactForm = () => {
                     setValues({ ...values, services: selectedValues });
                   }}
                   styles={{
-                    control: (provided, state) => ({
-                      ...provided,
-                      height: 54,
-                      flexWrap: "wrap",
-                      backgroundColor: "#EFF0F2",
-                      border: state.isFocused
-                        ? "1px solid #ff8d0b"
-                        : "1px solid #ced4da",
-                      boxShadow: state.isFocused
-                        ? "0 0 0 0.2rem rgba(255,141,11,.25)"
-                        : "none",
-                      "&:hover": {
-                        border: "none !important",
-                      },
-                      "&:active": {
-                        border: "none !important",
-                      },
-                    }),
-                    valueContainer: (provided) => ({
-                      padding: "0px 8px",
-                      display: "flex",
-                      alignItems: "center",
-                      height: 54
-                    }),
+                    control: (provided, state) => {
+                      const maxHeight = state.hasValue ? "auto" : "54px"; // Set initial height
+                      const overflow = state.hasValue ? "auto" : "hidden"; // Set overflow property
+                      return {
+                        ...provided,
+                        height: maxHeight,
+                        overflowY: overflow,
+                        flexWrap: "wrap",
+                        backgroundColor: "#EFF0F2",
+                        border: state.isFocused
+                          ? "1px solid #ff8d0b"
+                          : "1px solid #ced4da",
+                        boxShadow: state.isFocused
+                          ? "0 0 0 0.2rem rgba(255,141,11,.25)"
+                          : "none",
+                        "&:hover": {
+                          border: "none !important",
+                        },
+                        "&:active": {
+                          border: "none !important",
+                        },
+                      };
+                    },
+                    valueContainer: (provided, state) => {
+                      const maxHeight = state.hasValue ? "auto" : "54px"; // Set initial height
+                      const overflow = state.hasValue ? "auto" : "hidden"; // Set overflow property
+
+                      return {
+                        ...provided,
+                        padding: "0px 8px",
+                        display: "flex",
+                        alignItems: "center",
+                        height: maxHeight,
+                        overflowY: overflow,
+                      };
+                    },
+
                     menu: (provided) => ({
                       ...provided,
                       backgroundColor: "#EFF0F2",
@@ -356,7 +369,9 @@ const ContactForm = () => {
             </FormGroup>
           </div>
           <FormControl>
-            <span style={{ marginTop: 20, fontFamily: "inherit" }}>Budget*</span>
+            <span style={{ marginTop: 20, fontFamily: "inherit" }}>
+              Budget*
+            </span>
             <Select
               options={budgetRanges}
               value={budgetRanges.find(
@@ -384,7 +399,7 @@ const ContactForm = () => {
                   padding: "0px 8px",
                   display: "flex",
                   alignItems: "center",
-                  height: 54
+                  height: 54,
                 }),
                 menu: (provided) => ({
                   ...provided,
@@ -395,6 +410,7 @@ const ContactForm = () => {
                   backgroundColor: state.isFocused ? "#ff8d0b" : "transparent",
                   color: state.isFocused ? "#fff" : "#495057",
                 }),
+
                 multiValue: (provided) => ({
                   ...provided,
                   backgroundColor: "#f8d7da",
