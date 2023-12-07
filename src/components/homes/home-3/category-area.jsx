@@ -12,10 +12,19 @@ import category_icon_3 from "@assets/img/category/developement.svg";
 import category_icon_4 from "@assets/img/category/marketing.svg";
 import category_icon_5 from "@assets/img/category/conversion.svg";
 
+const descriptions = [
+  "Collaborate with our experts to shape a strategic digital roadmap that aligns with your brand's unique identity. ",
+  "Craft bespoke strategies for digital triumphs, ensuring your brand stands out in the competitive online landscape. ",
+  "Experience your brand come to life digitally, utilizing cutting-edge technologies for captivating online experiences. ",
+  "Ignite brand awareness with targeted strategies, propelling your brand forward across various online platforms. ",
+  "Optimize user experiences to transform clicks into conversions, achieving measurable success in the digital realm. ",
+];
+
 const CategoryArea = () => {
   const [x, setX] = useState(1);
   const [y, setY] = useState(1);
   const mouseRef = useRef(null);
+  const [displayItem, setDisplayItem] = useState(null);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -45,7 +54,7 @@ const CategoryArea = () => {
         id="mousemove"
         ref={mouseRef}
         style={{ "--x": x, "--y": y, marginBottom: 130 }}
-        className="tp-category-area p-relative fix pt-120 pb-120"
+        className="tp-category-area p-relative fix pt-120 pb-200"
       >
         <div className="tp-category-shape">
           <Image
@@ -87,89 +96,67 @@ const CategoryArea = () => {
           <div className="row">
             <div className="col-xl-5 col-lg-5 col-md-6">
               <div className="tp-category-content-wrapper d-flex">
-                <div className="tp-category-content one">
+                <div
+                  className="tp-category-content one"
+                  onMouseEnter={() => setDisplayItem(0)}
+                >
                   <div className="tp-category-icon">
-                    <Image
-                      src={category_icon_1}
-                      alt="theme-pure"
-                      className="process-img"
-                    />
+                    <Image src={category_icon_1} alt="theme-pure" />
                     <h4 className="tp-category-content-title">Consulting</h4>
                   </div>
-                  <span className="one-description">
-                    Collaborate with our experts to shape a strategic digital
-                    roadmap that aligns with your brand's unique identity.
-                  </span>
                 </div>
-                <div className="tp-category-content two">
+                <div
+                  className="tp-category-content two"
+                  onMouseEnter={() => setDisplayItem(1)}
+                  onMouseLeave={() => setDisplayItem(null)}
+                >
                   <div className="tp-category-icon">
-                    <Image
-                      src={category_icon_2}
-                      alt="theme-pure"
-                      className="process-img"
-                    />
+                    <Image src={category_icon_2} alt="theme-pure" />
                     <h4 className="tp-category-content-title">Planning</h4>
                   </div>
-                  <span className="one-description">
-                    Craft bespoke strategies for digital triumphs, ensuring your
-                    brand stands out in the competitive online landscape.
-                  </span>
                 </div>
               </div>
             </div>
             <div className="col-xl-2 col-lg-2 col-md-4 order-3 order-md-2">
               <div className="tp-category-content-wrapper d-flex">
-                <div className="tp-category-content three">
+                <div
+                  className="tp-category-content three"
+                  onMouseEnter={() => setDisplayItem(2)}
+                  onMouseLeave={() => setDisplayItem(null)}
+                >
                   <div className="tp-category-icon">
-                    <Image
-                      src={category_icon_3}
-                      alt="theme-pure"
-                      className="process-img"
-                    />
+                    <Image src={category_icon_3} alt="theme-pure" />
                     <h4 className="tp-category-content-title">Development</h4>
                   </div>
-                  <span className="one-description">
-                    Experience your brand come to life digitally, utilizing
-                    cutting-edge technologies for captivating online
-                    experiences.
-                  </span>
                 </div>
               </div>
             </div>
             <div className="col-xl-5 col-lg-5 col-md-12 order-2 order-md-3">
               <div className="tp-category-content-wrapper d-flex">
-                <div className="tp-category-content four">
+                <div
+                  className="tp-category-content four"
+                  onMouseEnter={() => setDisplayItem(3)}
+                  onMouseLeave={() => setDisplayItem(null)}
+                >
                   <div className="tp-category-icon">
-                    <Image
-                      src={category_icon_4}
-                      alt="theme-pure"
-                      className="process-img"
-                    />
+                    <Image src={category_icon_4} alt="theme-pure" />
                     <h4 className="tp-category-content-title">Marketing</h4>
                   </div>
-                  <span className="one-description">
-                    Ignite brand awareness with targeted strategies, propelling
-                    your brand forward across various online platforms.
-                  </span>
                 </div>
-                <div className="tp-category-content five">
+                <div
+                  className="tp-category-content five"
+                  onMouseEnter={() => setDisplayItem(4)}
+                  onMouseLeave={() => setDisplayItem(null)}
+                >
                   <div className="tp-category-icon">
-                    <Image
-                      src={category_icon_5}
-                      alt="theme-pure"
-                      className="process-img"
-                    />
+                    <Image src={category_icon_5} alt="theme-pure" />
                     <h4 className="tp-category-content-title">Conversion</h4>
                   </div>
-                  <span className="one-description">
-                    Optimize user experiences to transform clicks into
-                    conversions, achieving measurable success in the digital
-                    realm.
-                  </span>
                 </div>
               </div>
             </div>
           </div>
+          {displayItem !== null && <div className="description">{descriptions[displayItem]}</div>}
         </div>
       </section>
     </>

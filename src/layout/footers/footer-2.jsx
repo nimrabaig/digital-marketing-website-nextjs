@@ -29,7 +29,7 @@ const footer_two_content = {
     { title: "Sitemap", path: "/coming-soon" },
   ],
   google_map:
-    "https://www.google.com/maps/place/254+Lillian+Blvd,+Holbrook,+NY+11741,+USA/@40.7937446,-73.0774993,17z/data=!3m1!4b1!4m5!3m4!1s0x89e8483b469d706f:0xa6841f8aafc2ef19!8m2!3d40.7937446!4d-73.0753106",
+    "https://maps.app.goo.gl/HkccwAFkhdHNYukw7",
   about_us: (
     <>
       We're an innovative and dynamic digital marketing agency, harnessing the
@@ -155,7 +155,7 @@ const FooterTwo = () => {
                     <Image
                       src={footer_logo}
                       alt="theme-pure"
-                      width={160}
+                      width={180}
                       height={60}
                     />
                   </div>
@@ -209,9 +209,6 @@ const FooterTwo = () => {
                           I agree to all your terms and policies
                         </label>
                       </div> */}
-                      {/* <div className="tp-footer-widget-social">
-                        <SocialLinks />
-                      </div> */}
                     </form>
                   </div>
                 </div>
@@ -247,7 +244,11 @@ const FooterTwo = () => {
                             {phone}
                           </Link>
                         </div>
+                        <div className="tp-footer-widget-social">
+                        <SocialLinks />
                       </div>
+                      </div>
+                       
                     </div>
                   </div>
                 </div>

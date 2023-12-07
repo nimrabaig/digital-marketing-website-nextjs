@@ -3,6 +3,15 @@
 /*----------------------------------------*/
 /*  8.6 category css
 /*----------------------------------------*/
+@mixin animate($animation, $duration, $method, $times) {
+  animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
 
 .tp-category {
   &-area {
@@ -86,8 +95,8 @@
   &-content {
     position: relative;
     text-align: center;
-    height: 200px;
-    width: 200px;
+    height: 175px;
+    width: 175px;
     background: var(--tp-common-white);
     box-shadow: 0px 7px 29px rgba(13, 39, 69, 0.05);
     border-radius: 50%;
@@ -97,9 +106,6 @@
     justify-content: center;
     align-items: center;
     transition: all 0.3s;
-    .one-description {
-      display: none;
-    }
     &:hover {
       & .tp-category-icon {
         &::before {
@@ -108,28 +114,7 @@
         }
       }
       & .tp-category-content-title {
-        display: none;
         color: var(--tp-common-white);
-      }
-      .process-img {
-        display: none;
-      }
-      .one-description {
-        display: flex !important;
-        color: var(--tp-common-white);
-        z-index: 100;
-      }
-      &.two {
-        padding-top: 20px;
-      }
-      &.two {
-        padding-top: 24px;
-      }
-      &.three {
-        padding-top: 20px;
-      }
-      &.five {
-        padding-top: 20px;
       }
     }
     &-wrapper {
@@ -139,7 +124,7 @@
       }
     }
     &.one {
-      margin-left: -63px;
+      margin-left: -22px;
       // margin-top: 20px;
       @media #{$sm,$xs} {
         margin-right: 20px;
@@ -150,6 +135,7 @@
     }
     &.two {
       margin-left: 82px;
+      margin-top: 40px;
       @media #{$lg} {
         margin-left: 40px;
       }
@@ -157,10 +143,6 @@
         margin-left: 0;
         margin-bottom: 30px;
       }
-    }
-    .two-description {
-      position: absolute;
-      top: 178px;
     }
     &.three {
       margin-top: 80px;
@@ -209,4 +191,28 @@
       color: var(--tp-heading-secondary);
     }
   }
+}
+.description {
+  display: flex;
+  margin-top: 50px;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  left: 0px;
+  justify-content: center;
+  position: absolute;
+  bottom: 100px;
+  @include keyframes(fade) {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @include animate(fade, 10s, linear, 1);
 }
