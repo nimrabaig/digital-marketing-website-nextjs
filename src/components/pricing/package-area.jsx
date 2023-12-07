@@ -290,39 +290,37 @@ const PackageArea = () => {
 
           <div className={`col gridColumn`}>
             <Link
-              className="tp-btn tp-btn-default mt-30"
+              className="package-btn mt-30"
               // onClick={() => router.push("/contact")}
               href={{
                 pathname: "/contact",
               }}
             >
-              Purchase Now <br /> Silver Plan
+              Purchase Now 
             </Link>
           </div>
 
           <div className={`col gridColumn`}>
             <Link
-              className="tp-btn tp-btn-default mt-30"
+              className="package-btn mt-30"
               // onClick={() => router.push("/contact")}
               href={{
                 pathname: "/contact",
               }}
             >
-              Purchase Now <br />
-              Gold Plan
+              Purchase Now 
             </Link>
           </div>
 
           <div className={`col gridColumn`}>
             <Link
-              className="tp-btn tp-btn-default mt-30"
+              className="package-btn mt-30"
               // onClick={() => router.push("/contact")}
               href={{
                 pathname: "/contact",
               }}
             >
-              Purchase Now <br />
-              Diamond Plan
+              Purchase Now 
             </Link>
           </div>
         </div>
