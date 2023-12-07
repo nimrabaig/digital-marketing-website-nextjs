@@ -470,3 +470,40 @@
   line-height: 110%;
   font-size: calc(1rem + 4.15vw);
 }
+
+// ShapeComponent.module.scss
+.shapeWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  position: relative;
+  margin: 5px 15px;
+}
+
+.shapeImage {
+  max-width: 50px; /* Adjust the width as needed */
+  height: 50px;
+  margin: 0 5px;
+  transition: transform 0.3s ease-in-out;
+  @media screen and (max-width: 992px) {
+    max-width: 40px;
+    height: 40px;
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 30px;
+    height: 30px;
+  }
+}
+
+.label {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.shapeWrapper:hover .shapeImage {
+  transform: translateY(
+    -10px
+  ); /* Adjust the translateY value for the desired hover effect */
+}

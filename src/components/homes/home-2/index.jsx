@@ -28,7 +28,7 @@ const HomeTwo = () => {
         {/* <IndustryArea /> */}
         {/* <FeatureArea /> */}
         {/* <BrandArea />
-          <BlogArea /> */}
+          <BlogArea /> */}     
         <PricingArea />
         <ServiceArea />
         <BrandArea />

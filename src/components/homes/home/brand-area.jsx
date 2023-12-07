@@ -15,14 +15,14 @@ import bg_shape from "@assets/img/brand/shape-1.png";
 
 // shape data
 const shape_img = [
-  { id: "1 mousemove__image", img: shape_1 },
-  { id: "2 mousemove__image", img: shape_2 },
-  { id: "3 mousemove__image", img: shape_3 },
-  { id: "4 mousemove__image", img: shape_4 },
-  { id: "5 mousemove__image", img: shape_5 },
-  { id: "6 mousemove__image", img: shape_6 },
-  { id: "7 mousemove__image", img: shape_7 },
-  { id: "8 mousemove__image", img: shape_8 },
+  { id: "1 mousemove__image", img: shape_1, label: "bing" },
+  { id: "2 mousemove__image", img: shape_2, label: "facebook" },
+  { id: "3 mousemove__image", img: shape_3, label: "instagram" },
+  { id: "4 mousemove__image", img: shape_4, label: "youtube" },
+  { id: "5 mousemove__image", img: shape_5, label: "reddit" },
+  { id: "6 mousemove__image", img: shape_6, label: "quora" },
+  { id: "7 mousemove__image", img: shape_7, label: "google" },
+  { id: "8 mousemove__image", img: shape_8, label: "adobe" },
 ];
 
 const BrandArea = () => {
@@ -45,55 +45,78 @@ const BrandArea = () => {
   };
 
   return (
-    <>
-      <div
-        id="mousemove"
-        ref={mouseRef}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        className="tp-brand-area pt-160 p-relative"
-      >
-        <div className="container container-large">
-          <div className="tp-brand-shape">
-            <Image className="bg-shape" src={bg_shape} alt="theme-pure" />
-          </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="tp-brand-wrapper">
-                <div className="tp-brand-shape">
-                  {shape_img.map((item, i) => (
-                    <div
-                      className={`shape-${item.id}`}
-                      style={{
-                        backgroundColor: "#fff",
-                        borderRadius: "50%",
-                        height: 100,
-                        width: 100,
-                      }}
-                    >
-                      <Image
-                        key={i}
-                        // className={`shape-${item.id}`}
-                        style={{
-                           position: "absolute",
-                           left: "29%",
-                           top: "29%"
-                        }}
-                        src={item.img}
-                        alt="theme-pure"
-                      />
-                    </div>
-                  ))}
-                </div>
-                <div className="tp-brand-thumb text-center fadeUp">
-                  <Image src={brand_thumb} alt="theme-pure" />
-                </div>
-              </div>
-            </div>
-          </div>
+    // <>
+    //   <div
+    //     id="mousemove"
+    //     ref={mouseRef}
+    //     onMouseMove={handleMouseMove}
+    //     onMouseLeave={handleMouseLeave}
+    //     className="tp-brand-area pt-160 p-relative"
+    //   >
+    //     <div className="container container-large">
+    //       <div className="tp-brand-shape">
+    //         <Image className="bg-shape" src={bg_shape} alt="theme-pure" />
+    //       </div>
+    //       <div className="row">
+    //         <div className="col-lg-12">
+    //           <div className="tp-brand-wrapper">
+    //             <div className="tp-brand-shape">
+    //               {shape_img.map((item, i) => (
+    //                 <div
+    //                   className={`shape-${item.id}`}
+    //                   style={{
+    //                     backgroundColor: "#fff",
+    //                     borderRadius: "50%",
+    //                     height: 100,
+    //                     width: 100,
+    //                   }}
+    //                 >
+    //                   <Image
+    //                     key={i}
+    //                     // className={`shape-${item.id}`}
+    //                     style={{
+    //                        position: "absolute",
+    //                        left: "29%",
+    //                        top: "29%"
+    //                     }}
+    //                     src={item.img}
+    //                     alt="theme-pure"
+    //                   />
+    //                 </div>
+    //               ))}
+    //             </div>
+    //             {/* <div className="tp-brand-thumb text-center fadeUp">
+    //               <Image src={brand_thumb} alt="theme-pure" />
+    //             </div> */}
+    //           </div>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-evenly",
+        background: "transparent",
+        alignItems: "center",
+        height: "max-content",
+        flexWrap: "wrap",
+        margin: "15px 10px",
+      }}
+    >
+      {shape_img.map((item, i) => (
+        <div className="shapeWrapper">
+          <Image
+            key={i}
+            src={item.img}
+            alt={item.label}
+            className="shapeImage"
+          />
+          <div className="label">{item.label}</div>
         </div>
-      </div>
-    </>
+      ))}
+    </div>
   );
 };
 
