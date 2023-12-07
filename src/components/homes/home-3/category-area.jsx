@@ -77,10 +77,9 @@ const CategoryArea = () => {
           <div className="row">
             <div className="col-xl-12">
               <div className="tp-category-title-wrapper text-center">
-              
                 <h3 className="tp-section-title">
-                  Our  <span className="title-color">Digital</span>{" "}
-                  <br /> Marketing Process
+                  Our <span className="title-color">Digital</span> <br />{" "}
+                  Marketing Process
                 </h3>
               </div>
             </div>
@@ -90,15 +89,31 @@ const CategoryArea = () => {
               <div className="tp-category-content-wrapper d-flex">
                 <div className="tp-category-content one">
                   <div className="tp-category-icon">
-                    <Image src={category_icon_1} alt="theme-pure" />
+                    <Image
+                      src={category_icon_1}
+                      alt="theme-pure"
+                      className="process-img"
+                    />
                     <h4 className="tp-category-content-title">Consulting</h4>
                   </div>
+                  <span className="one-description">
+                    Collaborate with our experts to shape a strategic digital
+                    roadmap that aligns with your brand's unique identity.
+                  </span>
                 </div>
                 <div className="tp-category-content two">
                   <div className="tp-category-icon">
-                    <Image src={category_icon_2} alt="theme-pure" />
+                    <Image
+                      src={category_icon_2}
+                      alt="theme-pure"
+                      className="process-img"
+                    />
                     <h4 className="tp-category-content-title">Planning</h4>
                   </div>
+                  <span className="one-description">
+                    Craft bespoke strategies for digital triumphs, ensuring your
+                    brand stands out in the competitive online landscape.
+                  </span>
                 </div>
               </div>
             </div>
@@ -106,11 +121,18 @@ const CategoryArea = () => {
               <div className="tp-category-content-wrapper d-flex">
                 <div className="tp-category-content three">
                   <div className="tp-category-icon">
-                    <Image src={category_icon_3} alt="theme-pure" />
-                    <h4 className="tp-category-content-title">
-                       Development
-                    </h4>
+                    <Image
+                      src={category_icon_3}
+                      alt="theme-pure"
+                      className="process-img"
+                    />
+                    <h4 className="tp-category-content-title">Development</h4>
                   </div>
+                  <span className="one-description">
+                    Experience your brand come to life digitally, utilizing
+                    cutting-edge technologies for captivating online
+                    experiences.
+                  </span>
                 </div>
               </div>
             </div>
@@ -118,22 +140,36 @@ const CategoryArea = () => {
               <div className="tp-category-content-wrapper d-flex">
                 <div className="tp-category-content four">
                   <div className="tp-category-icon">
-                    <Image src={category_icon_4} alt="theme-pure" />
-                    <h4 className="tp-category-content-title">
-                      Marketing
-                    </h4>
+                    <Image
+                      src={category_icon_4}
+                      alt="theme-pure"
+                      className="process-img"
+                    />
+                    <h4 className="tp-category-content-title">Marketing</h4>
                   </div>
+                  <span className="one-description">
+                    Ignite brand awareness with targeted strategies, propelling
+                    your brand forward across various online platforms.
+                  </span>
                 </div>
                 <div className="tp-category-content five">
                   <div className="tp-category-icon">
-                    <Image src={category_icon_5} alt="theme-pure" />
+                    <Image
+                      src={category_icon_5}
+                      alt="theme-pure"
+                      className="process-img"
+                    />
                     <h4 className="tp-category-content-title">Conversion</h4>
                   </div>
+                  <span className="one-description">
+                    Optimize user experiences to transform clicks into
+                    conversions, achieving measurable success in the digital
+                    realm.
+                  </span>
                 </div>
               </div>
             </div>
           </div>
-         
         </div>
       </section>
     </>
