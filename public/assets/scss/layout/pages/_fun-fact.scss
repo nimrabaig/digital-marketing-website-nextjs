@@ -101,11 +101,12 @@
             margin-left: 0;
         }
         @media #{$md} {
-            margin-left: -60px;
+            margin: 0px auto 60px;
         }
         @media #{$sm,$xs} {
             margin-left: 0px;
             margin-bottom: 40px;
+            display: none;
         }
         & img{
             @media #{$xl} {
@@ -364,6 +365,13 @@
                 }
             }
         }
+    }
+}
+
+.rolling-container {
+    justify-content: space-between;
+    @media #{$md} {
+        justify-content: center;
     }
 }
 

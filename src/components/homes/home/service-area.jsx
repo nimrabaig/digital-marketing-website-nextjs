@@ -178,7 +178,7 @@ const ServiceArea = () => {
               />
             </div>
 
-            <div className="row" style={{ justifyContent: "space-between" }}>
+            <div className="row rolling-container">
               {/* <div className="col-lg-2 col-md-4">
                 <div className="tp-fun-fact-wrapper-box">
                   {counter_content.map((item, i) => (

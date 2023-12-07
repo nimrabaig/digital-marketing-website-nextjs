@@ -27,14 +27,8 @@ const answer_question_data = [
       <>
         Lumenta offers the following digital marketing services to its clients:
         <br />
-      <ol>
-          <li>Search Engine Optimization (SEO)</li>
-          <li>Website Optimization </li>
-     
-          <li>Social Media Marketing </li>
-      
-          <li> Pay Per Click (PPC)</li>
-        </ol>
+        1. Search Engine Optimization (SEO) <br /> 2. Website Optimization <br />3. Social
+        Media Marketing <br />4.Pay Per Click (PPC)
       </>
     ),
     accordion_id: "Two",
@@ -70,34 +64,32 @@ const answer_question_data = [
         your business goals with your online priorities. Key aspects include:{" "}
         <br />
         <br />
-        <ol>
-          <li>
-            <b>Goal Alignment:</b> Ensure your social media efforts directly
+        
+            <b>1. Goal Alignment:</b> Ensure your social media efforts directly
             contribute to broader business objectives.
-          </li>{" "}
+        
           <br />
-          <li>
-            <b>Platform Focus: </b>Prioritize platforms relevant to your
+
+            <b>2. Platform Focus: </b>Prioritize platforms relevant to your
             audience, considering demographics and content nature.
-          </li>{" "}
+      
           <br />
-          <li>
-            <b>Content Tailoring:</b> Create content that suits each platform,
+
+            <b>3. Content Tailoring:</b> Create content that suits each platform,
             adapting to audience preferences.{" "}
-          </li>
+     
           <br />
-          <li>
-            <b>Consistency and Engagement:</b> Maintain a regular posting
+ 
+            <b>4. Consistency and Engagement:</b> Maintain a regular posting
             schedule and engage with your audience for community building.{" "}
-          </li>
+ 
           <br />
-          <li>
-            <b>Analytics and Optimization:</b> Track performance metrics,
+     
+            <b>5. Analytics and Optimization:</b> Track performance metrics,
             optimizing strategies based on data for continual improvement. A
             social media strategy is your roadmap for effective online presence,
             enhancing brand visibility and achieving business success.
-          </li>
-        </ol>
+        
       </>
     ),
     accordion_id: "Four",
