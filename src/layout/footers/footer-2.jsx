@@ -116,13 +116,13 @@ const FooterTwo = () => {
         .then((resp) => {
           toast.dismiss();
           if (resp.data?.SubscribeNewsLetter?.success) {
-            toast.success(resp.data?.SubscribeNewsLetter?.raw?.message);;
+            toast.success(resp.data?.SubscribeNewsLetter?.message);;
             setValues({
               name: "",
               email: ""
             })
           } else {
-            toast.error(resp.data?.SubscribeNewsLetter?.raw?.message);
+            toast.error(resp.data?.SubscribeNewsLetter?.message);
           }
         })
         .catch((err) => {
