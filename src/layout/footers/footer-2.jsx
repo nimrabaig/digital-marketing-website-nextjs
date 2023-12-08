@@ -22,10 +22,6 @@ const footer_two_content = {
       title: "Blogs",
       path: "/blog",
     },
-    {
-      title: "Portfolio",
-      path: "/coming-soon",
-    },
     { title: "Sitemap", path: "/coming-soon" },
   ],
   google_map:

@@ -28,7 +28,7 @@ const answer_question_data = [
         Lumenta offers the following digital marketing services to its clients:
         <br />
         1. Search Engine Optimization (SEO) <br /> 2. Website Optimization <br />3. Social
-        Media Marketing <br />4.Pay Per Click (PPC)
+        Media Marketing <br />4. Pay Per Click (PPC)
       </>
     ),
     accordion_id: "Two",

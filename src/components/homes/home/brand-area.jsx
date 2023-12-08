@@ -15,14 +15,14 @@ import bg_shape from "@assets/img/brand/shape-1.png";
 
 // shape data
 const shape_img = [
-  { id: "1 mousemove__image", img: shape_1, label: "bing" },
-  { id: "2 mousemove__image", img: shape_2, label: "facebook" },
-  { id: "3 mousemove__image", img: shape_3, label: "instagram" },
-  { id: "4 mousemove__image", img: shape_4, label: "youtube" },
+  { id: "1 mousemove__image", img: shape_1, label: "Bing" },
+  { id: "2 mousemove__image", img: shape_2, label: "Facebook" },
+  { id: "3 mousemove__image", img: shape_3, label: "Instagram" },
+  { id: "4 mousemove__image", img: shape_4, label: "Youtube" },
   { id: "5 mousemove__image", img: shape_5, label: "reddit" },
-  { id: "6 mousemove__image", img: shape_6, label: "quora" },
-  { id: "7 mousemove__image", img: shape_7, label: "google" },
-  { id: "8 mousemove__image", img: shape_8, label: "adobe" },
+  { id: "6 mousemove__image", img: shape_6, label: "Quora" },
+  { id: "7 mousemove__image", img: shape_7, label: "Google" },
+  { id: "8 mousemove__image", img: shape_8, label: "Adobe" },
 ];
 
 const BrandArea = () => {

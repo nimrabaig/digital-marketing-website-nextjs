@@ -32,7 +32,10 @@ const serviceLabels = [
   { value: "Web Design/Development", label: "Web Design/Development" },
   { value: "Website Enhancement", label: "Website Enhancement" },
   { value: "Software Development", label: "Software Development" },
-  {value: "Data Science & AI Solutions", label:"Data Science & AI Solutions "},
+  {
+    value: "Data Science & AI Solutions",
+    label: "Data Science & AI Solutions ",
+  },
   { value: "Other", label: "Other" },
 ];
 
@@ -40,6 +43,7 @@ const ContactForm = () => {
   const [ContactUs] = useMutation(CONTACT_US);
   const [SubscribetoNewsLetter] = useMutation(SUBSCRIBE_NEWS_LETTER);
   const [isSubscribed, setSubscribed] = useState(false);
+  const [sendCopyEmail, setCopyEmail] = useState(false);
   const [ipAddress, setIPAddress] = useState("");
 
   useEffect(() => {
@@ -74,28 +78,6 @@ const ContactForm = () => {
       [field]: { error: false, helperText: "" },
     }));
   };
-
-  // const handleCheckboxChange = (service) => {
-  //   let _services = [];
-  //   if (values.services.includes(service)) {
-  //     const _filtered = values.services.filter(
-  //       (_service) => _service !== service
-  //     );
-  //     _services = _filtered;
-  //   } else _services = [...values.services, service];
-  //   setValues({
-  //     ...values,
-  //     services: _services,
-  //   });
-  // };
-
-  // const handleBudgetChange = (event) => {
-  //   setValues({ ...values, budget: event.target.value });
-  //   setValidation((prevValidation) => ({
-  //     ...prevValidation,
-  //     budget: { error: false, helperText: "" },
-  //   }));
-  // };
 
   const handleOnSubscribe = () => {
     setSubscribed(!isSubscribed);
@@ -147,24 +129,45 @@ const ContactForm = () => {
       toast.loading("Sending request...");
 
       ContactUs({
-        variables: { ...values, isSubscribed, ipAddress },
+        variables: {
+          ...values,
+          isSubscribed,
+          ipAddress,
+          emailCopyToSender: sendCopyEmail,
+        },
       })
         .then((resp) => {
           if (resp.data?.ContactUs?.success) {
+            setValues({
+              name: "",
+              email: "",
+              phone: "",
+              budget: "",
+              services: [],
+              website: "",
+              company: "",
+              message: "",
+            });
+            setSubscribed(false);
+            setCopyEmail(false);
+            toast.success(resp.data?.ContactUs?.message);
             if (isSubscribed) {
               SubscribetoNewsLetter({
                 variables: { name: values.name, email: values.email },
               })
                 .then((response) => {
                   toast.dismiss();
-                  toast.success(resp.data?.ContactUs?.raw?.message);;
+                  if (response?.data?.SubscribeNewsLetter?.success) {
+                    toast.success(response.data?.SubscribeNewsLetter?.message);
+                  } else
+                    toast.error(response.data?.SubscribeNewsLetter?.message);
                 })
                 .catch((err) => {
                   console.log(err);
                 });
             } else {
               toast.dismiss();
-              toast.success(resp.data?.ContactUs?.raw?.message);;
+              toast.success(resp.data?.ContactUs?.message);
             }
           } else {
             toast.error(resp.data?.ContactUs?.raw?.message);
@@ -359,7 +362,11 @@ const ContactForm = () => {
             </FormGroup>
           </div>
           <FormControl>
-            <span style={{ marginTop: 24, fontFamily: "inherit", marginBottom: 4 }}>Budget*</span>
+            <span
+              style={{ marginTop: 24, fontFamily: "inherit", marginBottom: 4 }}
+            >
+              Budget*
+            </span>
             <Select
               options={budgetRanges}
               value={budgetRanges.find(
@@ -446,9 +453,23 @@ const ContactForm = () => {
                 }}
               />
             }
+            label={"Send copy of this email to the sender"}
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={sendCopyEmail}
+                onClick={() => setCopyEmail(!sendCopyEmail)}
+                sx={{
+                  "&.Mui-checked": {
+                    color: "#ff8d0b",
+                  },
+                }}
+              />
+            }
             label={"Subscribe to our Newsletter"}
           />
-            <div style={{ marginBottom: 20 }} />
+          <div style={{ marginBottom: 20 }} />
 
           <ReCAPTCHA sitekey={SITE_KEY} />
 
@@ -459,7 +480,6 @@ const ContactForm = () => {
               Send Message
             </button>
           </div>
-
         </div>
       </form>
     </>

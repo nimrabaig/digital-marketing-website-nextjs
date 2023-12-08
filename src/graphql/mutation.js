@@ -13,6 +13,7 @@ export const CONTACT_US = gql`
     $ipAddress: String
     $message: String
     $isSubscribed: Boolean
+    $emailCopyToSender: Boolean
   ) {
     ContactUs(
       name: $name
@@ -26,6 +27,7 @@ export const CONTACT_US = gql`
       ipAddress: $ipAddress
       message: $message
       isSubscribed: $isSubscribed
+      emailCopyToSender: $emailCopyToSender
     )
   }
 `;
