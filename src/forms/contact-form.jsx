@@ -134,6 +134,7 @@ const ContactForm = () => {
         },
       })
         .then((resp) => {
+          toast.dismiss();
           if (resp.data?.ContactUs?.success) {
             setValues({
               name: "",
