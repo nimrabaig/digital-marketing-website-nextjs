@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useMutation } from "@apollo/client";
-import { CONTACT_US, SUBSCRIBE_NEWS_LETTER } from "@/src/graphql/mutation";
+import { CONTACT_US } from "@/src/graphql/mutation";
 import toast from "react-hot-toast";
 import TextField from "@mui/material/TextField";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
 import FormControl from "@mui/material/FormControl";
 import MuiPhoneNumber from "material-ui-phone-number-2";
 import Typography from "@mui/material/Typography";
@@ -41,7 +39,6 @@ const serviceLabels = [
 
 const ContactForm = () => {
   const [ContactUs] = useMutation(CONTACT_US);
-  const [SubscribetoNewsLetter] = useMutation(SUBSCRIBE_NEWS_LETTER);
   const [isSubscribed, setSubscribed] = useState(false);
   const [sendCopyEmail, setCopyEmail] = useState(false);
   const [ipAddress, setIPAddress] = useState("");
@@ -151,24 +148,6 @@ const ContactForm = () => {
             setSubscribed(false);
             setCopyEmail(false);
             toast.success(resp.data?.ContactUs?.message);
-            if (isSubscribed) {
-              SubscribetoNewsLetter({
-                variables: { name: values.name, email: values.email },
-              })
-                .then((response) => {
-                  toast.dismiss();
-                  if (response?.data?.SubscribeNewsLetter?.success) {
-                    toast.success(response.data?.SubscribeNewsLetter?.message);
-                  } else
-                    toast.error(response.data?.SubscribeNewsLetter?.message);
-                })
-                .catch((err) => {
-                  console.log(err);
-                });
-            } else {
-              toast.dismiss();
-              toast.success(resp.data?.ContactUs?.message);
-            }
           } else {
             toast.error(resp.data?.ContactUs?.raw?.message);
           }

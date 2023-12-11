@@ -62,11 +62,18 @@ const {
 
 const FooterTwo = () => {
   const [Subscribe] = useMutation(SUBSCRIBE_NEWS_LETTER);
-
+  const [ipAddress, setIPAddress] = useState("");
   const [values, setValues] = useState({
     name: "",
     email: "",
   });
+
+  useEffect(() => {
+    fetch("https://api.ipify.org?format=json")
+      .then((response) => response.json())
+      .then((data) => setIPAddress(data.ip))
+      .catch((error) => console.log(error));
+  }, []);
 
   const [validation, setValidation] = useState({
     name: { error: false, helperText: "" },
@@ -107,7 +114,7 @@ const FooterTwo = () => {
     if (isValid) {
       toast.loading("Sending request...");
       Subscribe({
-        variables: { ...values },
+        variables: { ...values, ipAddress },
       })
         .then((resp) => {
           toast.dismiss();
