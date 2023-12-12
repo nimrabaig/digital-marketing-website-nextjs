@@ -61,6 +61,7 @@
   }
   &__content {
     padding-top: 28px;
+    text-align: left;
     @media #{$xs} {
       padding-left: 10px;
       padding-right: 10px;

@@ -116,8 +116,8 @@ const BlogDetailsPostbox = () => {
         <>
             <section className="postbox__area pt-120 pb-100">
             <div className="container">
-               <div className="row">
-                  <div className="col-xxl-8 col-xl-8 col-lg-8">
+               <div className="row" style= {{ display: "flex", justifyContent: "center"}}>
+                  <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12">
                      <div className="postbox__wrapper">
                         <article className="postbox__item format-image mb-50 transition-3">
                            <div className="postbox__thumb m-img">
@@ -178,30 +178,11 @@ const BlogDetailsPostbox = () => {
                                  </div>
                                  <p>{des_4}</p> 
 
-                                 <div className="postbox__details-share-wrapper">
-                                    <div className="row">
-                                       <div className="col-lg-7">
-                                          <div className="postbox__details-tag tagcloud">
-                                             <span>Tag:</span>
-                                             {tags.map((tag, i) => <Link href="#" key={i}>{tag}</Link>)} 
-                                          </div>
-                                       </div>
-                                       <div className="col-lg-5">
-                                          <div className="postbox__details-share text-lg-end">
-                                             <span>Share:</span> 
-                                             <a href="#"><i className="fa-brands fa-youtube"></i></a>
-                                             <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                             <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                                             <a href="#"><i className="fab fa-twitter"></i></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
 
                               </div>
                            </div>
                         </article>
-                        <div className="postbox__comment mb-50">
+                        {/* <div className="postbox__comment mb-50">
                            <h3 className="postbox__comment-title">(04) Comment</h3>
                            <ul>
                               {comment_reply.map((comment_reply, index) =>
@@ -230,23 +211,23 @@ const BlogDetailsPostbox = () => {
                                  </li>
                               )} 
                            </ul>
-                        </div>
-                        <div className="postbox__comment-form">
+                        </div> */}
+                        {/* <div className="postbox__comment-form">
                            <h3 className="postbox__comment-form-title">Write a comment</h3> 
                            <CommentForm />
                            <p className="ajax-response"></p>
-                        </div>
+                        </div> */}
                      </div>
                   </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4">
+                  {/* <div className="col-xxl-4 col-xl-4 col-lg-4">
                      <div className="sidebar__wrapper">
                         <UserProfile />
-                        <SearchArea />
+                       <SearchArea />
                         <RecentPost />
-                        <Category />
-                        <Tags /> 
+                       <Category />
+                      <Tags /> 
                      </div>
-                  </div>
+                  </div> */}
                </div>
             </div>
          </section>
