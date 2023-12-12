@@ -120,16 +120,17 @@ const BlogDetailsPostbox = () => {
                   <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12">
                      <div className="postbox__wrapper">
                         <article className="postbox__item format-image mb-50 transition-3">
+                           
+                        <h2 className="postbox__title">{title_1}</h2>
                            <div className="postbox__thumb m-img">
                               <Image src={thumb} alt="theme-pure" />
                            </div>
                            <div className="postbox__content">
                               <div className="postbox__meta">
                                  <span><i className="fa-light fa-calendar-days"></i>{date}</span>
-                                 <span><Link href="#"><i className="fal fa-comments"></i>{comments}</Link></span>
                                  <span><Link href="#"><i className="fa-regular fa-clock"></i>{upload_time}</Link></span>
                               </div>
-                              <h3 className="postbox__title">{title_1}</h3>
+                              
                               <div className="postbox__text">
                                  <p>{des_1}</p> 
                                     <p>{des_2}</p>

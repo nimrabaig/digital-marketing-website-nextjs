@@ -7,7 +7,7 @@ import CounterArea from "./counter-area";
 import IndustryArea from "../../../common/industry-area";
 import FaqArea from "../home/faq-area";
 import BrandArea from "../home/brand-area";
-import BlogArea from "./blog-area";
+import BlogArea from "@/src/common/blog-area";
 import FeatureArea from "../home-3/feature-area";
 import CategoryArea from "../home-3/category-area";
 import TestimonialArea from "../../../common/testimonial-area";
@@ -27,8 +27,7 @@ const HomeTwo = () => {
         {/* <CounterArea /> */}
         {/* <IndustryArea /> */}
         {/* <FeatureArea /> */}
-        {/* <BrandArea />
-          <BlogArea /> */}     
+        {/* <BrandArea />*/}     
         <PricingArea />
         <ServiceArea />
         <BrandArea />
@@ -36,6 +35,8 @@ const HomeTwo = () => {
         <CategoryArea />
         {/* <FeatureArea /> */}
         {/* <TestimonialArea /> */}
+        
+        <BlogArea /> 
         <FaqArea answerQuestionData={answer_question_data} />
       </main>
       <FooterTwo />

@@ -75,7 +75,8 @@
   &__title {
     font-weight: 600;
     margin-top: 40px;
-    font-size: 32px;
+    font-size: 36px;
+    text-align: left;
     color: var(--tp-theme-primary);
     margin-bottom: 22px;
     @media #{$lg,$md,$sm} {
