@@ -8,6 +8,7 @@ import RightArrowTwo from "@/src/svg/right-arrow-2";
 import blog_shape_1 from "@assets/img/blog/shaep-2.png";
 import blog_shape_2 from "@assets/img/blog/shaep-2.png";
 import MiniLoader from "./loader";
+import moment from "moment";
 
 const BlogArea = ({ service }) => {
   const { loading, error, data } = useQuery(GET_BLOGS);
@@ -63,16 +64,12 @@ const BlogArea = ({ service }) => {
                     <div className="tp-blog-date" style={{ display: "flex", justifyContent: "space-between"}}>
                       <span>
                         <i className="fa-light fa-calendar-days"></i>
-                        {item.createdAt
-                          ?.split("T")[0]
-                          .split("-")
-                          .reverse()
-                          .join("/")}
+                        {moment(item?.createdAt).format("Do MMM YYYY ")}
                       </span>
                       <span>{item?.authorName}</span>
                     </div>
                     <h3 className="tp-blog-3-title">
-                      <Link href="/blog-details">{item.title}</Link>
+                      <Link href={`/blog-details/${item.id}`} >{item.title}</Link>
                     </h3>
                   </div>
                   <div className="tp-blog-3-btn d-flex justify-content-between">

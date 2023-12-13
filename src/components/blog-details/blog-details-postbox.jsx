@@ -7,6 +7,7 @@ import { GET_BLOG } from "@/src/graphql/queries";
 import { useLazyQuery } from "@apollo/client";
 import readingTime from "reading-time";
 import MiniLoader from "@/src/common/loader";
+import moment from "moment"
 
 const BlogDetailsPostbox = () => {
   const router = useRouter();
@@ -46,13 +47,11 @@ const BlogDetailsPostbox = () => {
                     {/* </div> */}
                     <div className="postbox__content">
                       <div className="postbox__meta">
+                      
+                        <span><i class="fa-solid fa-pen-nib"></i> By {blog?.authorName}</span>
                         <span>
                           <i className="fa-light fa-calendar-days"></i>
-                          {blog?.createdAt
-                            ?.split("T")[0]
-                            .split("-")
-                            .reverse()
-                            .join("/")}
+                          {moment(blog?.date).format("MMMM Do YYYY ")}
                         </span>
                         <span>
                           <Link href="#">
