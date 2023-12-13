@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Wrapper from "../layout/wrapper";
 import SEO from "../common/seo";
+import Blog from "../components/blog";
 import { useRouter } from "next/router";
-import BlogDetails from "../components/blog-details";
 
 const index = () => {
   const router = useRouter();
@@ -13,7 +13,7 @@ const index = () => {
   return (
     <Wrapper>
       <SEO pageTitle={"Blog"} />
-      <BlogDetails />
+      <Blog />
     </Wrapper>
   );
 };
