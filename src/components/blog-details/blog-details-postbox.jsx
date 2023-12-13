@@ -19,7 +19,7 @@ const BlogDetailsPostbox = () => {
   if (loading) return <MiniLoader />;
 
   const { title, coverPhotoURL, createdAt, content, authorName } =
-    data.ViewBlogPost;
+    data?.ViewBlogPost;
   return (
     <>
       <section className="postbox__area pt-80 pb-100">
