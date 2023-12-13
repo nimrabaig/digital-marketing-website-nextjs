@@ -175,11 +175,10 @@ const BlogDetailsPostbox = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
   console.log(data.ViewBlogPost);
-  const {
+    const {
     title,
     coverPhotoURL,
     createdAt,
-    updatedAt,
     content,
     quate_icon,
     blockquote,
@@ -197,26 +196,28 @@ const BlogDetailsPostbox = () => {
             <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12">
               <div className="postbox__wrapper">
                 <article className="postbox__item format-image mb-50 transition-3">
-                  <h2 className="postbox__title">{title}</h2>
+                  <h2 className="postbox__title">{title_1}</h2>
                   <div className="postbox__thumb m-img">
-                    <Image src={coverPhotoURL} alt="theme-pure" />
+                    <Image src={thumb} alt="theme-pure" />
                   </div>
                   <div className="postbox__content">
                     <div className="postbox__meta">
                       <span>
                         <i className="fa-light fa-calendar-days"></i>
-                        {createdAt}
+                        {date}
                       </span>
                       <span>
                         <Link href="#">
                           <i className="fa-regular fa-clock"></i>
-                          {updatedAt}
+                          {upload_time}
                         </Link>
                       </span>
                     </div>
 
                     <div className="postbox__text">
-                      <div dangerouslySetInnerHTML={{ __html: content }} />
+                      <p>{des_1}</p>
+                      <p>{des_2}</p>
+                      <p>{des_3}</p>
                       <div className="postbox__blockquote p-relative">
                         <div className="postbox__blockquote-shape">
                           <Image src={quate_icon} alt="theme-pure" />
