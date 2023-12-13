@@ -53,7 +53,7 @@ const CategoryArea = () => {
       <section
         id="mousemove"
         ref={mouseRef}
-        style={{ "--x": x, "--y": y, marginBottom: 130 }}
+        style={{ "--x": x, "--y": y }}
         className="tp-category-area p-relative fix pt-120 pb-200"
       >
         <div className="tp-category-shape">
