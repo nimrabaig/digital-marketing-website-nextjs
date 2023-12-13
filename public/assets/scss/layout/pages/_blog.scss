@@ -59,6 +59,14 @@
         font-size: 20px;
         line-height: 33px;
         color: var(--tp-theme-primary);
+        transition: all 200ms ease-in-out;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        height: 113px;
         transition: .3s;
         margin-bottom: 20px;
         & br{
@@ -477,7 +485,6 @@
         &-content {
             position: relative;
             padding: 22px 30px 8px 26px;
-            border-bottom: 1px solid #EBEBEB;
             @media #{$md} {
                 padding: 22px 20px 8px 20px;
             }
@@ -487,6 +494,8 @@
         }
         &-wrapper{
             position: relative;
+            
+        height: 505px;
             border: 1px solid #EBEBEB;
             background: var(--tp-common-white);
             box-shadow: 0px 13px 26px #EEF0F8;
@@ -519,6 +528,10 @@
         }
         &-btn {
             padding: 13px 25px 30px 30px;
+            position: absolute;
+    bottom: 0px;
+    flex-direction: column;
+    width: 100%;
             & .read-more{
                 &::after{
                     position: absolute;
@@ -560,4 +573,10 @@
             }
         }
     }
+}
+
+.separator {
+    width: 100%;
+    margin: 10px auto;
+    border-top: 1px solid #EBEBEB;
 }

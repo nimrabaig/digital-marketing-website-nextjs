@@ -1,193 +1,28 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Tags from "../blog/tags";
-import Category from "../blog/category";
-import SearchArea from "../blog/search-area";
-import RecentPost from "../blog/recent-post";
-import UserProfile from "../blog/user-profile";
-import CommentForm from "@/src/forms/comment-form";
-
-import thumb_1 from "@assets/img/blog/details/blog-1.jpg";
-import thumb_2 from "@assets/img/blog/details/blog-2.jpg";
-import thumb_3 from "@assets/img/blog/details/blog-3.jpg";
-
-import person_1 from "@assets/img/blog/details/comment-1.jpg";
-import person_2 from "@assets/img/blog/details/comment-2.jpg";
-
-import quate from "@assets/img/blog/details/quate.jpg";
-import RightSymbol from "@/src/svg/right-symbol";
-import VideoPopup from "@/src/modals/video-popup";
-import ReplyIcon from "@/src/svg/reply-icon";
+import parse from "html-react-parser";
 import { useRouter } from "next/router";
 import { GET_BLOG } from "@/src/graphql/queries";
 import { useQuery } from "@apollo/client";
+import readingTime from "reading-time";
+import MiniLoader from "@/src/common/loader";
 
-const single_post_details = {
-  thumb: thumb_1,
-  date: "02 Apr 2021",
-  comments: "Comments (03)",
-  upload_time: "3 min Read",
-  title_1: <>The whimsically named Egg Canvas brainchild</>,
-  des_1: (
-    <>
-      he whimsically named Egg Canvas is the brainchild of Erica Choi, a design
-      director and photo grapher based in York. Why the name “Egg Canvas Erica
-      was inspired by her Korean childhood nickname, which means egg, while
-      “canvas” medium with wh art is created. “Egg Canvas therefore, is her
-      life—creating beautiful things each day a blank canvas.
-    </>
-  ),
-  des_2: (
-    <>
-      We have covered many special events such as fireworks, fairs, parades,
-      races, walks, awards ceremonies, fashion shows, sporting events, and even
-      a memorial service.
-    </>
-  ),
-  des_3: (
-    <>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-      vulputate vestibulum rhon cus, dolor eget viverra pretium, dolor tellus
-      aliquet nunc, vitae ultricies erat elit eu lacus. Vestibulum non justo fun
-      consectetur, cursus ante, tincidunt sapien. Nulla quis diam sit amet
-      turpis interd enim. Vivamus fauc ex sed nibh egestas elementum. Mauris et
-      bibendum
-    </>
-  ),
-  quate_icon: quate,
-  blockquote: (
-    <>
-      Your time is limited, so don’t waste it living someone else’s life. Don’t
-      be trapped by dogma – which is living with the results
-    </>
-  ),
-  writer: "Jamil",
-  title_2: <>Let our investment management team</>,
-  postbox_list: [
-    {
-      id: 1,
-      active: "",
-      title: "Lorem Ipsum generators on the tend to repeat.",
-      icon: <RightSymbol />,
-    },
-    {
-      id: 2,
-      active: "active",
-      title: "If you are going to use a passage..",
-      icon: <RightSymbol />,
-    },
-    {
-      id: 3,
-      active: "",
-      title: "series of manual and semi-manual activities.",
-      icon: <RightSymbol />,
-    },
-    {
-      id: 4,
-      active: "",
-      title: "Lorem Ipsum generators on the tend to repeat.",
-      icon: <RightSymbol />,
-    },
-    {
-      id: 5,
-      active: "",
-      title: "If you are going to use a passage.",
-      icon: <RightSymbol />,
-    },
-  ],
-  thumb_list: thumb_2,
-  video_thumb: thumb_3,
-  title_3: <>“Amazing Beach Scenery & Relaxing Ocean Sounds”</>,
-  des_4: (
-    <>
-      We have covered many special events such as fireworks, fairs, parades,
-      races, walks, awards ceremonies, fashion shows, sporting events, and even
-      a memorial service.Lorem ipsum dolor sit amet, consectetur adipiscing
-      elit. vestibulum rhoncus, dolor eget viverra pretium, dolor ellus aliquet
-      nunc,
-    </>
-  ),
-  tags: ["Business", "Design", "apps", "data"],
-  comment_reply: [
-    {
-      id: 1,
-      img: person_1,
-      children_cls: "",
-      name: "Eleanor Fant",
-      date: "July 14, 2022",
-      comment: (
-        <>
-          There are many variations of passages of Lorem Ipsum available, but
-          the leap into electronic type setting, remaining essentiallyuncha
-          opularisedthe with the release of Letrasetsheets containingth leap
-          electrtypesetting remainingmajority have. There are many variations of
-          passages of Lorem Ipsum
-        </>
-      ),
-      reply_icon: <ReplyIcon />,
-    },
-    {
-      id: 1,
-      img: person_2,
-      children_cls: "children",
-      name: "Eleanor Fant",
-      date: "July 14, 2022",
-      comment: (
-        <>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have. There are many variations of passages
-        </>
-      ),
-    },
-  ],
-};
-const {
-  thumb,
-  date,
-  comments,
-  upload_time,
-  title_1,
-  des_1,
-  des_2,
-  des_3,
-  quate_icon,
-  blockquote,
-  writer,
-  title_2,
-  postbox_list,
-  thumb_list,
-  video_thumb,
-  title_3,
-  des_4,
-  tags,
-  comment_reply,
-} = single_post_details;
 const BlogDetailsPostbox = () => {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const router = useRouter();
-  const { categoryId, postId } = router.query;
+  const { postId } = router.query;
 
   const { data, loading, error } = useQuery(GET_BLOG, {
     variables: { viewBlogPostId: Number(postId) }, // Assuming postId is a string and needs to be converted to a number
   });
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
-  console.log(data.ViewBlogPost);
-    const {
-    title,
-    coverPhotoURL,
-    createdAt,
-    content,
-    quate_icon,
-    blockquote,
-    writer,
-  } = data.ViewBlogPost;
+  if (loading) return <MiniLoader />;
 
+  const { title, coverPhotoURL, createdAt, content, authorName } =
+    data.ViewBlogPost;
   return (
     <>
-      <section className="postbox__area pt-120 pb-100">
+      <section className="postbox__area pt-80 pb-100">
         <div className="container">
           <div
             className="row"
@@ -196,78 +31,46 @@ const BlogDetailsPostbox = () => {
             <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12">
               <div className="postbox__wrapper">
                 <article className="postbox__item format-image mb-50 transition-3">
-                  <h2 className="postbox__title">{title_1}</h2>
-                  <div className="postbox__thumb m-img">
-                    <Image src={thumb} alt="theme-pure" />
-                  </div>
+                  <h2 className="postbox__title">{title}</h2>
+                  {/* <div className="postbox__thumb m-img"> */}
+
+                  {/* </div> */}
                   <div className="postbox__content">
                     <div className="postbox__meta">
                       <span>
                         <i className="fa-light fa-calendar-days"></i>
-                        {date}
+                        {createdAt
+                          ?.split("T")[0]
+                          .split("-")
+                          .reverse()
+                          .join("/")}
                       </span>
                       <span>
                         <Link href="#">
                           <i className="fa-regular fa-clock"></i>
-                          {upload_time}
+                          {`${readingTime(parse(content))?.text} `}
                         </Link>
                       </span>
                     </div>
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        position: "relative",
+                      }}
+                    >
+                      <Image
+                        src={coverPhotoURL}
+                        alt="theme-pure"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: "100%", height: "auto" }}
+                      />
+                    </div>
 
                     <div className="postbox__text">
-                      <p>{des_1}</p>
-                      <p>{des_2}</p>
-                      <p>{des_3}</p>
-                      <div className="postbox__blockquote p-relative">
-                        <div className="postbox__blockquote-shape">
-                          <Image src={quate_icon} alt="theme-pure" />
-                        </div>
-                        <blockquote>
-                          <p>{blockquote}</p>
-                          <cite>{writer}</cite>
-                        </blockquote>
-                      </div>
-
-                      <div className="postbox__list">
-                        <h3 className="postbox__list-title">{title_2}</h3>
-                        <div className="row">
-                          <div className="col-xl-7 col-lg-12">
-                            <div className="postbox__list-content">
-                              <ul>
-                                {postbox_list.map((item, i) => (
-                                  <li key={i}>
-                                    <span className={item.active}>
-                                      {item.icon}
-                                    </span>
-                                    {item.title}
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                          <div className="col-xl-5 col-lg-12">
-                            <div className="posbox__list-img">
-                              <Image src={thumb_list} alt="theme-pure" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="postbox__thumb m-img p-relative">
-                        <Image src={video_thumb} alt="theme-pure" />
-                        <div className="tp-video-play play-btn text-center">
-                          <a
-                            className="popup-video"
-                            onClick={() => setIsVideoOpen(true)}
-                          >
-                            <i className="fa-sharp fa-solid fa-play"></i>
-                          </a>
-                        </div>
-                        <span className="postbox-details-desc-thumb-caption">
-                          {title_3}{" "}
-                        </span>
-                      </div>
-                      <p>{des_4}</p>
+                      <p>{parse(content)}</p>
                     </div>
                   </div>
                 </article>
@@ -320,12 +123,6 @@ const BlogDetailsPostbox = () => {
           </div>
         </div>
       </section>
-
-      <VideoPopup
-        isVideoOpen={isVideoOpen}
-        setIsVideoOpen={setIsVideoOpen}
-        videoId={"EW4ZYb3mCZk"}
-      />
     </>
   );
 };
