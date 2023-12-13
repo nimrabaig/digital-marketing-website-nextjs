@@ -1,7 +1,7 @@
 import post_data from "@/src/data/post-data";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import RecentPost from "./recent-post";
 import Category from "./category";
@@ -15,11 +15,37 @@ import { GET_BLOGS } from "@/src/graphql/queries";
 import MiniLoader from "@/src/common/loader";
 
 const PostboxArea = () => {
-  const { loading, data } = useQuery(GET_BLOGS);
+  const limit = 10;
+  const [skip, setSkip] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalCount, setTotaCount] = useState(0);
+  const [blogs, setBlogs] = useState([]);
+  const { loading, data } = useQuery(GET_BLOGS, {
+    variables: {
+      skip,
+      limit,
+    },
+  });
+
+  useEffect(() => {
+    if (data?.AllBlogPosts?.length > 0) {
+      setTotaCount(data?.AllBlogPosts[0]?.total_count);
+      setBlogs(data?.AllBlogPosts);
+    }
+  }, [data]);
 
   if (loading) return <MiniLoader />;
 
-  const blogs = data?.AllBlogPosts || [];
+  const getPages = () => {
+    let pages = 1;
+    if (totalCount < limit) {
+      return (pages += Math.floor(totalCount / limit));
+    } else if (totalCount > limit) {
+      return (pages = Math.ceil(totalCount / limit));
+    } else {
+      return (pages = 1);
+    }
+  };
 
   return (
     <>
@@ -65,13 +91,19 @@ const PostboxArea = () => {
                           </span>
                           <span>{item?.authorName}</span>
                         </div>
-                        <h3 className="tp-blog-3-title" style={{ textAlign: "left"}}>
+                        <h3
+                          className="tp-blog-3-title"
+                          style={{ textAlign: "left" }}
+                        >
                           <Link href={`/blog-details/${item.id}`}>
                             {item.title}
                           </Link>
                         </h3>
                       </div>
-                      <div className="tp-blog-3-btn d-flex justify-content-between" style={{ textAlign: "left"}}>
+                      <div
+                        className="tp-blog-3-btn d-flex justify-content-between"
+                        style={{ textAlign: "left" }}
+                      >
                         <div className="separator" />
                         <div className="read-more p-relative">
                           <Link href={`/blog-details/${item.id}`}>
@@ -125,23 +157,43 @@ const PostboxArea = () => {
                 <nav>
                   <ul>
                     <li>
-                      <Link href="/blog">
+                      <span
+                        onClick={() => {
+                          if (skip > 0) {
+                            setSkip(skip - limit);
+                            setCurrentPage(currentPage - 1);
+                          }
+                        }}
+                      >
                         <i className="fa-regular fa-angles-left"></i>
-                      </Link>
+                      </span>
                     </li>
+                    {[...Array(getPages())].map((_, i) => (
+                      <li>
+                        <span
+                          onClick={() => {
+                            setCurrentPage(i + 1);
+                            setSkip(i * limit);
+                          }}
+                          className={`${
+                            currentPage === i + 1 ? "current" : ""
+                          }`}
+                        >
+                          {i + 1}
+                        </span>
+                      </li>
+                    ))}
                     <li>
-                      <Link href="/blog" className="current">1</Link>
-                    </li>
-                    {/* <li>
-                      <span className="current">2</span>
-                    </li>
-                    <li>
-                      <Link href="/blog">3</Link>
-                    </li> */}
-                    <li>
-                      <Link href="/blog">
+                      <span
+                        onClick={() => {
+                          if (skip <= totalCount && totalCount > skip + limit) {
+                            setSkip(skip + limit);
+                            setCurrentPage(currentPage + 1);
+                          }
+                        }}
+                      >
                         <i className="fa-regular fa-angles-right"></i>
-                      </Link>
+                      </span>
                     </li>
                   </ul>
                 </nav>

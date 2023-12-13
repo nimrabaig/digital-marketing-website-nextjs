@@ -518,8 +518,9 @@
           border: 2px solid var(--tp-theme-secondary);
         }
       }
-      & a {
+      & span {
         height: 50px;
+        cursor: pointer;
         width: 50px;
         display: inline-block;
         line-height: 50px;
