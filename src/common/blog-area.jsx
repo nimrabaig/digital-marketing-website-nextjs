@@ -13,10 +13,8 @@ const BlogArea = ({ service }) => {
   const { loading, error, data } = useQuery(GET_BLOGS);
 
   if (loading) return <MiniLoader />;
-  // if (error) return <p>Error: {error.message}</p>;
 
   const blogs = data?.AllBlogPosts || [];
-  console.log(blogs);
 
   return (
     <>
@@ -81,7 +79,7 @@ const BlogArea = ({ service }) => {
                     <div className="separator" />
                     <div className="read-more p-relative">
                       <Link
-                        href={`/blog-details?categoryId=${item.categoryId}&postId=${item.id}`}
+                        href={`/blog-details/${item.id}`}
                       >
                         Read More
                         <span>
