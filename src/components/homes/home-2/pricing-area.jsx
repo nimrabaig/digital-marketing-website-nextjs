@@ -418,12 +418,12 @@ const PricingArea = () => {
             <div className="col-lg-12">
               <div className="tp-feature-title-wrapper">
                 <div>
-                <h3 className="tp-section-title">
+                <h2 className="tp-section-title">
                   Our <span style={{ color: "#ff8d0b" }}>Pricing </span>Plans
                   {/* <span className="title-left-shape">
                     <LineArrowTwo />
                   </span> */}
-                </h3>
+                </h2>
                 <p>
                   Explore our pricing plans, each with unique service offerings
                   to match your needs.
