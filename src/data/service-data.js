@@ -7,7 +7,7 @@ import PPCImg from "@assets/img/services/service-details/ppc-img.png";
 const service_data = [
   {
     id: 1,
-    title: "Search Engine Optimization (SEO)",
+    title: <h3>Search Engine Optimization (SEO)</h3>,
     subTitle: "Choose a Result-Driven SEO Partner",
     banner: "seo-banner",
     img: SEOImg,
@@ -126,10 +126,10 @@ const service_data = [
     paragraph3:
       "With seasoned experts, strong leadership, and a commitment to ethical practices, we simplify the SEO process. Ensuring transparency and providing real-time insights through custom reporting, we are the proactive choice for businesses seeking online growth and revenue.",
     heading4: (
-      <>
+      <h3>
         <span style={{ color: "#ff8d0b" }}>SEO Services</span> You Can Expect
         from Lumenta Digital
-      </>
+      </h3>
     ),
     paragraph4:
       "As a full-service SEO optimization agency, Lumenta Digital provides a comprehensive range of professional search engine optimization services to enhance your business's visibility in search. We employ trustworthy, future-proof, white hat SEO techniques, including: ",
@@ -193,7 +193,7 @@ const service_data = [
   },
   {
     id: 2,
-    title: "Web Design & Development ",
+    title: <h4>Web Design & Development </h4>,
     subTitle: "Showcase Your Brand with a Well-Optimized Website",
     banner: "social-media-banner",
     img: WebImg,
@@ -345,10 +345,10 @@ const service_data = [
       </>
     ),
     heading4: (
-      <>
+      <h4>
         <span style={{ color: "#ff8d0b" }}>Website Services</span> You Can
         Expect from Lumenta Digital{" "}
-      </>
+      </h4>
     ),
     paragraph4:
       "A website that ranks well becomes a conduit for organic traffic, capable of generating significant business even without running advertisements. Lumenta Digital assists you in making a substantial impact on your website. As one of the best web development companies in the USA, our professional web developers create visually stunning and functional websites. At the forefront of web design websites, Lumenta Digital is your trusted website development company offering top-tier web development services. Partner with us for an unmatched digital presence among the top web design agencies. With us, you can expect:  ",
@@ -406,7 +406,7 @@ const service_data = [
   },
   {
     id: 3,
-    title: "Social Media Marketing",
+    title: <h4>Social Media Marketing</h4>,
     subTitle: "Your Brand, Your Story, Everywhere",
     banner: "web-dev-banner",
     img: SSMImg,
@@ -481,7 +481,7 @@ const service_data = [
       },
     ],
     blockquote: "Want to Know Why SMM is Important? - Contacts Us Today ",
-    heading2: "Our Social Media Marketing Services  ",
+    heading2: <h5>Our Social Media Marketing Services </h5>,
     paragraph2: "We Drive Customer Engagement and Brand Loyalty ",
     services: [
       {
@@ -524,11 +524,11 @@ const service_data = [
       },
     ],
     heading3: (
-      <>
+      <h4>
         Why Lumenta Digital's{" "}
         <span style={{ color: "#ff8d0b" }}>Social Media Marketing</span> Team
         Stands Out{" "}
-      </>
+      </h4>
     ),
     paragraph3: (
       <>
@@ -618,7 +618,7 @@ const service_data = [
   },
   {
     id: 3,
-    title: "Pay Per Click Advertising",
+    title: <h5>Pay Per Click Advertising</h5>,
     subTitle: "Increase Your Brand Exposure and Attract Leads  ",
     banner: "ppc-banner",
     img: PPCImg,

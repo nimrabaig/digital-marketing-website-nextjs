@@ -64,13 +64,13 @@ const HeroArea = () => {
                   </div> */}
                   <div className="tp-hero-2-content text-center pt-200">
                     <div className="tp-hero-2-title-wrapper fadeUp">
-                      <h3
+                      <h1
                         className="tp-hero-2-title"
                         style={{ textShadow: "0 0 #000" }}
                       >
                         Result-Orientated
                         <br /> <span>Digital Marketing </span>Agency
-                      </h3>
+                      </h1>
                     </div>
                     <div className="tp-info">
                     <span className="tp-hero-description">

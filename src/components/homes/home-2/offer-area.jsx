@@ -88,12 +88,12 @@ const OfferArea = () => {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="tp-feature-title-wrapper">
-                <h3 className="tp-section-title">
+                <h2 className="tp-section-title">
                   Our <span style={{ color: "#ff8d0b"}}>Digital Marketing</span><br /> Services
                   {/* <span className="title-left-shape">
                     <LineArrowTwo />
                   </span> */}
-                </h3>
+                </h2>
               </div>
             </div>
             <div className="col-lg-6">

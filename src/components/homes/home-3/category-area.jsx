@@ -86,10 +86,10 @@ const CategoryArea = () => {
           <div className="row">
             <div className="col-xl-12">
               <div className="tp-category-title-wrapper text-center">
-                <h3 className="tp-section-title">
+                <h2 className="tp-section-title">
                   Our <span className="title-color">Digital</span> <br />{" "}
                   Marketing Process
-                </h3>
+                </h2>
               </div>
             </div>
           </div>
