@@ -17,7 +17,6 @@ const HeaderTwo = () => {
   return (
     <>
       <header className="tp-header-2-area tp-header-height p-relative">
-  
         <div
           id="header-sticky"
           className={`tp-header-2-bottom header__sticky p-relative ${
@@ -79,15 +78,18 @@ const HeaderTwo = () => {
                                     </div>
                                  </div>
                               </div> */}
-                  <div className="tp-header-2-mobile-menu d-flex justify-content-end d-block" style={{     marginRight: 20 }}>
-                  <div className="tp-header-2-phone align-items-center">
-                                       <div className="tp-header-2-phone-icon">
-                                          <i className="fa-solid fa-phone"></i>
-                                       </div>
-                                       <div className="tp-header-2-phone-content">
-                                          <a href="tel:16138072399">+1 (613) 807 - 2399</a>
-                                       </div>
-                                    </div>
+                  <div
+                    className="tp-header-2-mobile-menu d-flex justify-content-end d-block"
+                    style={{ marginRight: 20 }}
+                  >
+                    <div className="tp-header-2-phone align-items-center">
+                      <div className="tp-header-2-phone-icon">
+                        <i className="fa-solid fa-phone"></i>
+                      </div>
+                      <div className="tp-header-2-phone-content">
+                        <a href="tel:16138072399">+1 (613) 807 - 2399</a>
+                      </div>
+                    </div>
                     <div
                       className="tp-header-2-hamburger-btn offcanvas-open-btn"
                       onClick={() => setSidebarOpen(true)}
