@@ -13,7 +13,7 @@ const seo = {
 const index = () => {
   return (
     <Wrapper>
-      <SEO pageTitle={seo.title_1} description={seo.description} />
+      <SEO pageTitle={seo?.title_1} description={seo.description} />
       <Contact />
     </Wrapper>
   );
