@@ -10,9 +10,8 @@ export default function Document() {
           rel="stylesheet"
         />
         <meta
-          tag
           name="google-site-verification"
-          content="google60654fadb5932b4e"
+          content="_pH7vMsvWDjLw390bqqWmbDj-bAhf3A4JYtqA8d2hwY"
         />
       </Head>
       <Script

@@ -4,7 +4,6 @@ const SEO = ({ pageTitle, description }) => (
   <>
     <Head>
       <title>
-        {" "}
         {pageTitle ? pageTitle : "Lumenta Digital"}
       </title>
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
