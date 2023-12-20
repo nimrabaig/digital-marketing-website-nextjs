@@ -13,8 +13,8 @@ export default function Document() {
           name="google-site-verification"
           content="_pH7vMsvWDjLw390bqqWmbDj-bAhf3A4JYtqA8d2hwY"
         />
-      </Head>
-      <Script
+
+<Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-6R1K2ZCM7Z"
       ></Script>
@@ -27,6 +27,9 @@ export default function Document() {
           gtag('config', 'G-6R1K2ZCM7Z');
       `}
       </Script>
+      
+      </Head>
+     
       <body>
         <Main />
         <NextScript />
