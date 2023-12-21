@@ -1,6 +1,7 @@
 import "@/src/styles/index.scss";
 import { Toaster } from "react-hot-toast";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 const client = new ApolloClient({
   uri: "https://adz7rajlui.execute-api.ca-central-1.amazonaws.com/graphql",
@@ -14,7 +15,7 @@ if (typeof window !== "undefined") {
 export default function App({ Component, pageProps }) {
   return (
     <ApolloProvider client={client}>
-       <Toaster
+      <Toaster
         position="bottom-center"
         reverseOrder={false}
         gutter={8}
@@ -39,6 +40,7 @@ export default function App({ Component, pageProps }) {
           },
         }}
       />
+      <GoogleAnalytics trackPageViews gaMeasurementId={"G-6R1K2ZCM7Z"} />
       <Component {...pageProps} />
     </ApolloProvider>
   );
