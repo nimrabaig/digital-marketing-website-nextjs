@@ -58,7 +58,7 @@ const PostboxArea = () => {
                   <div key={i} className="col-xl-4 col-md-6">
                     <div className="tp-blog-3-wrapper mb-30 OneByOne">
                       <div className="tp-blog-3-thumb">
-                        <Link href="/blog-details">
+                        <Link href={`/blog-details/${item.id}`}>
                           <div
                             style={{
                               width: "100%",
