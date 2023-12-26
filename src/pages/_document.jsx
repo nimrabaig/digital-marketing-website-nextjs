@@ -14,22 +14,21 @@ export default function Document() {
           content="_pH7vMsvWDjLw390bqqWmbDj-bAhf3A4JYtqA8d2hwY"
         />
 
-<Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-6R1K2ZCM7Z"
-      ></Script>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-6R1K2ZCM7Z"
+        ></Script>
 
-      <Script strategy="lazyOnload">
-        {`
+        <Script strategy="lazyOnload">
+          {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-6R1K2ZCM7Z');
       `}
-      </Script>
-      
+        </Script>
       </Head>
-     
+
       <body>
         <Main />
         <NextScript />
