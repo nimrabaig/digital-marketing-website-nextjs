@@ -15,7 +15,7 @@ const menu_data = [
     mega_menu: false,
     has_dropdown: false,
     title: "About Us",
-    link: "/about",
+    link: "/about-us",
     active: "",
   },   
   {
