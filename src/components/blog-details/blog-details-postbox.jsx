@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import parse from "html-react-parser";
 import { useRouter } from "next/router";
-import { GET_BLOG } from "@/src/graphql/queries";
+import { GET_BLOG, GET_BLOG_BY_SLUG } from "@/src/graphql/queries";
 import { useLazyQuery } from "@apollo/client";
 import readingTime from "reading-time";
 import MiniLoader from "@/src/common/loader";
@@ -12,21 +12,19 @@ import moment from "moment"
 const BlogDetailsPostbox = () => {
   const router = useRouter();
   const [blog, setBlog] = useState(null);
-  const { id } = router.query;
-
-  const [getBlogData] = useLazyQuery(GET_BLOG, {
-    variables: { viewBlogPostId: Number(id) }, // Assuming postId is a string and needs to be converted to a number
+  const slug = router.query.id;
+  const [getBlogData] = useLazyQuery(GET_BLOG_BY_SLUG, {
+    variables: { slug }, // Assuming postId is a string and needs to be converted to a number
     onCompleted: (data) => {
-      console.log(data)
-      setBlog(data?.ViewBlogPost);
+      setBlog(data?.ViewBlogPostBySlug);
     },
   })
 
   useEffect(() => {
-   if (id) {
+   if (slug) {
       getBlogData();
    }
-  }, [id])
+  }, [slug])
 
   if (!blog) return <MiniLoader />;
   else

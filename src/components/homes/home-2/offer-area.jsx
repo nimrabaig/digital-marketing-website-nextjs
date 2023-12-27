@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import AngleArrow from "@/src/svg/angle-arrow";
-import LineArrowTwo from "@/src/svg/line-arrow-2";
+import slugify from "react-slugify";
 
 import offer_shape_1 from "@assets/img/offering/shape.png";
 import offer_shape_2 from "@assets/img/offering/shape-2.png";
@@ -112,7 +111,7 @@ const OfferArea = () => {
                     <Image src={item.img} alt="theme-pure" />
                   </div>
                   <div className="tp-offer-wrapper-btn">
-                    <Link href={`/services/${i+1}`}>
+                    <Link href={`/services/${slugify(item.title)}`}>
                       Read Out More{" "}
                       <i className="fa-solid fa-arrow-up-right"></i>
                     </Link>

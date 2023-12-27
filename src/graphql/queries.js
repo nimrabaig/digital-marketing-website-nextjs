@@ -12,3 +12,8 @@ export const GET_BLOG = gql`
     ViewBlogPost(id: $viewBlogPostId)
   }
 `;
+
+export const GET_BLOG_BY_SLUG = gql`
+query Query($slug: String!) {
+  ViewBlogPostBySlug(slug: $slug)
+}`

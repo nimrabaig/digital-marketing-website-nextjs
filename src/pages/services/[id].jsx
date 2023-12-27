@@ -3,6 +3,7 @@ import Wrapper from "../../layout/wrapper";
 import SEO from "../../common/seo";
 import ServiceDetails from "../../components/service-details";
 import { useRouter } from "next/router";
+import service_data from "@/src/data/service-data";
 
 
 const index = () => {
@@ -43,8 +44,8 @@ const index = () => {
     },
   ];
   const router = useRouter();
-  const index = router.query.id - 1;
-  console.log(seo[index]?.title_1);
+  const slug = router.query.id;
+  const index = service_data.findIndex((service) => service.slug=== slug);
   return (
     <Wrapper>
       <SEO

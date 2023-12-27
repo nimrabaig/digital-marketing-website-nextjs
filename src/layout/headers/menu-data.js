@@ -26,10 +26,10 @@ const menu_data = [
     link: "",
     active: "",
     sub_menus: [
-      { link: "/services/1", title: "Search Engine Optimization" },
-      { link: "/services/2", title: "Website Design & Development" }, 
-      { link: "/services/3", title: "Social Media Marketing" }, 
-      { link: "/services/4", title: "Pay Per Click" }, 
+      { link: "/services/search-engin-optimization", title: "search-engine-optimization" },
+      { link: "/services/website-design-and-Development", title: "Website Design & Development" }, 
+      { link: "/services/social-media-marketing", title: "Social Media Marketing" }, 
+      { link: "/services/pay-per-click", title: "Pay Per Click" }, 
     ],
   },
   // {

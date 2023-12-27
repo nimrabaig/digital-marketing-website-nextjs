@@ -10,7 +10,8 @@ import HeaderTwo from "@/src/layout/headers/header-2";
 
 const ServiceDetails = () => {
   const router = useRouter();
-  const index = router.query.id - 1;
+  const slug = router.query.id;
+  const index = service_data.findIndex((service) => service.slug=== slug);
   const data = service_data[index];
   return (
     <>

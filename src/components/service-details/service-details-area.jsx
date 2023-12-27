@@ -6,7 +6,8 @@ import { useRouter } from "next/router";
 
 const BlogDetailsPostbox = () => {
   const router = useRouter();
-  const index = router.query.id - 1;
+  const slug = router.query.id;
+  const index = service_data.findIndex((service) => service.slug=== slug);
   const data = service_data[index];
 
   return (

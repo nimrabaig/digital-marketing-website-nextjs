@@ -35,9 +35,11 @@
     "react-phone-input-material-ui": "^2.18.1",
     "react-select": "^5.8.0",
     "react-slick": "^0.29.0",
+    "react-slugify": "^3.0.3",
     "reading-time": "^1.5.0",
     "sass": "^1.62.0",
     "slick-carousel": "^1.8.1",
+    "slugify": "^1.6.6",
     "styled-components": "^6.1.1",
     "swiper": "^9.2.2",
     "wowjs": "^1.1.3"

@@ -58,7 +58,7 @@ const PostboxArea = () => {
                   <div key={i} className="col-xl-4 col-md-6">
                     <div className="tp-blog-3-wrapper mb-30 OneByOne">
                       <div className="tp-blog-3-thumb">
-                        <Link href={`/blog-details/${item.id}`}>
+                        <Link href={`/blog-details/${item.slug}`}>
                           <div
                             style={{
                               width: "100%",
@@ -95,7 +95,7 @@ const PostboxArea = () => {
                           className="tp-blog-3-title"
                           style={{ textAlign: "left" }}
                         >
-                          <Link href={`/blog-details/${item.id}`}>
+                          <Link href={`/blog-details/${item.slug}`}>
                             {item.title}
                           </Link>
                         </h3>
@@ -106,7 +106,7 @@ const PostboxArea = () => {
                       >
                         <div className="separator" />
                         <div className="read-more p-relative">
-                          <Link href={`/blog-details/${item.id}`}>
+                          <Link href={`/blog-details/${item.slug}`}>
                             Read More
                             <span>
                               {" "}

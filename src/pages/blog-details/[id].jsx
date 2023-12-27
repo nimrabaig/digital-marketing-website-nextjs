@@ -6,7 +6,7 @@ import BlogDetails from "../../components/blog-details";
 const index = () => {
   return (
     <Wrapper>
-      <SEO pageTitle={"Blog Details"} />
+      <SEO pageTitle={"Blog"} />
       <BlogDetails />
     </Wrapper>
   );

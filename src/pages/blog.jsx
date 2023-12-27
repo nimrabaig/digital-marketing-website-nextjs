@@ -12,7 +12,14 @@ const index = () => {
 
   return (
     <Wrapper>
-      <SEO pageTitle={"Blog"} />
+      <SEO
+        pageTitle={
+          "Our Stories: A Blend of Digital Marketing and Web Development"
+        }
+        description={
+          "Stay ahead in the digital marketing game with Lumenta's blog, offering valuable insights on digital marketing techniques, Web design tips, SEO strategies, PPC best practices, and social media trends."
+        }
+      />
       <Blog />
     </Wrapper>
   );

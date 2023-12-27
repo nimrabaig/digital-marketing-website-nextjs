@@ -8,6 +8,7 @@ const service_data = [
   {
     id: 1,
     title: <h3>Search Engine Optimization (SEO)</h3>,
+    slug: "search-engin-optimization",
     subTitle: "Choose a Result-Driven SEO Partner",
     banner: "seo-banner",
     img: SEOImg,
@@ -194,6 +195,7 @@ const service_data = [
   {
     id: 2,
     title: <h4>Web Design & Development </h4>,
+    slug: "website-design-and-Development",
     subTitle: "Showcase Your Brand with a Well-Optimized Website",
     banner: "social-media-banner",
     img: WebImg,
@@ -407,6 +409,7 @@ const service_data = [
   {
     id: 3,
     title: <h4>Social Media Marketing</h4>,
+    slug: "social-media-marketing",
     subTitle: "Your Brand, Your Story, Everywhere",
     banner: "web-dev-banner",
     img: SSMImg,
@@ -619,6 +622,7 @@ const service_data = [
   {
     id: 3,
     title: <h5>Pay Per Click Advertising</h5>,
+    slug: "pay-per-click",
     subTitle: "Increase Your Brand Exposure and Attract Leads  ",
     banner: "ppc-banner",
     img: PPCImg,
