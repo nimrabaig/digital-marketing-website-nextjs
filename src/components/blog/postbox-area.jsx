@@ -1,7 +1,7 @@
 import post_data from "@/src/data/post-data";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 
 import RecentPost from "./recent-post";
 import Category from "./category";
@@ -10,29 +10,53 @@ import SearchArea from "./search-area";
 import UserProfile from "./user-profile";
 import moment from "moment";
 import RightArrowTwo from "@/src/svg/right-arrow-2";
-import { useQuery } from "@apollo/client";
+import { useLazyQuery, useQuery } from "@apollo/client";
 import { GET_BLOGS } from "@/src/graphql/queries";
 import MiniLoader from "@/src/common/loader";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { BlogsListing, BlogLoading, CategoryId } from "./atom";
+import { useRouter } from "next/router";
 
 const PostboxArea = () => {
   const limit = 10;
+  const router = useRouter();
+  const { search } = router.query;
   const [skip, setSkip] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalCount, setTotaCount] = useState(0);
-  const [blogs, setBlogs] = useState([]);
-  const { loading, data } = useQuery(GET_BLOGS, {
+  const categoryId = useRecoilValue(CategoryId);
+  const [blogs, setBlogs] = useRecoilState(BlogsListing);
+  const [mobileView, setMobileView] = useState(false);
+  const [loading, setLoading] = useRecoilState(BlogLoading);
+  const [getBlogs] = useLazyQuery(GET_BLOGS, {
     variables: {
+      categoryId: categoryId,
       skip,
       limit,
     },
-  });
-
-  useEffect(() => {
-    if (data?.AllBlogPosts?.length > 0) {
+    onCompleted: (data) => {
+      setLoading(false);
       setTotaCount(data?.AllBlogPosts[0]?.total_count);
       setBlogs(data?.AllBlogPosts);
     }
-  }, [data]);
+  }); 
+
+  useEffect(() => {
+    if (!search) getBlogs();
+  }, [search])
+
+  useLayoutEffect(() => {
+    function onChangeScreenSize() {
+      if (window.innerWidth <= 990) {
+        setMobileView(true);
+      } else {
+        setMobileView(false);
+      }
+    }
+    window.addEventListener("resize", onChangeScreenSize);
+    onChangeScreenSize();
+    return () => window.removeEventListener("resize", onChangeScreenSize);
+  }, []);
 
   if (loading) return <MiniLoader />;
 
@@ -50,12 +74,23 @@ const PostboxArea = () => {
   return (
     <>
       <section className="postbox__area pt-120 pb-120">
-        <div className="container">
+        <div className="blogs-container">
           <div className="row">
-            <div className="col-xxl-12 col-xl-12 col-lg-12">
-              <div className="postbox__wrapper">
-                {blogs?.map((item, i) => (
-                  <div key={i} className="col-xl-4 col-md-6">
+            {mobileView && (
+              <div
+                className="col-xxl-4 col-xl-5 col-lg-6 col-md-7"
+                style={{ margin: "0px auto 40px", justifyContent: "center", display: "flex", flexDirection: "column" }}
+              >
+                <div className="sidebar__wrapper">
+                  <SearchArea />
+                  <Category />
+                </div>
+              </div>
+            )}
+            <div className="col-xxl-8 col-xl-8 col-lg-8">
+              <div className="blog-cards-container">
+                {blogs?.length > 0 ? blogs?.map((item, i) => (
+                  <div key={i} className="card-container">
                     <div className="tp-blog-3-wrapper mb-30 OneByOne">
                       <div className="tp-blog-3-thumb">
                         <Link href={`/blog-details/${item.slug}`}>
@@ -105,7 +140,7 @@ const PostboxArea = () => {
                         style={{ textAlign: "left" }}
                       >
                         <div className="separator" />
-                        <div className="read-more p-relative">
+                        <div className="read-more p-relative  d-flex justify-content-between">
                           <Link href={`/blog-details/${item.slug}`}>
                             Read More
                             <span>
@@ -113,6 +148,7 @@ const PostboxArea = () => {
                               <RightArrowTwo />
                             </span>
                           </Link>
+                          <span>{item?.category?.name}</span>
                         </div>
                         {/* <div className="fvrt">
                       <span>
@@ -122,7 +158,7 @@ const PostboxArea = () => {
                       </div>
                     </div>
                   </div>
-                ))}
+                )) : <span style={{ alignSelf: "flex-start"}}>No Results Found</span>}
                 {/* {post_data.map((item, i) => 
                             <article key={i} className="postbox__item format-image mb-50 transition-3">
                                 <div className="postbox__thumb w-img">
@@ -199,15 +235,24 @@ const PostboxArea = () => {
                 </nav>
               </div>
             </div>
-            {/* <div className="col-xxl-4 col-xl-4 col-lg-4">
-                     <div className="sidebar__wrapper"> 
-                        <UserProfile /> 
-                        <SearchArea />
-                        <RecentPost />
-                        <Category />
-                        <Tags /> 
-                     </div>
-                  </div> */}
+            {!mobileView && (
+              <div className="col-xxl-4 col-xl-4 col-lg-4">
+                <div className="sidebar__wrapper">
+                  {/* <UserProfile />  */}
+                  <SearchArea />
+                  <Category />
+                  <RecentPost />
+                </div>
+              </div>
+            )}
+
+            {mobileView && (
+              <div className="col-xxl-4 col-xl-4 col-lg-4">
+                <div className="sidebar__wrapper">
+                  <RecentPost />
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

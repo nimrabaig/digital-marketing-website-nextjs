@@ -550,6 +550,46 @@
 
 .postbox__wrapper {
   display: flex;
-  gap: 10px;
+  gap: 0px;
   margin: auto;
+  flex-wrap: wrap;
+  
+  @media (max-width: 990px) {
+   justify-content: center;
+   margin: auto;
+  }
+}
+
+.blogs-container {
+  margin: auto;
+  width: 90%;
+}
+
+.blog-cards-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  color: black;
+  transition: all 200ms ease-in-out;
+  margin-bottom: 30px;
+  min-height: 500px;
+  align-self: flex-start;
+  @media only screen and (max-width: 768px) {
+      align-content: center;
+      flex-direction: column;
+      flex-flow: column wrap;
+  }
+}
+.card-container {
+  align-self: flex-start;
+  position: relative;
+  width: 350px;
+  height: 500px;
+  min-width: 275px;
+  margin: 1.25rem 0.75rem;
+  background: white;
+  transition: all 300ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  min-height: 430px;
 }

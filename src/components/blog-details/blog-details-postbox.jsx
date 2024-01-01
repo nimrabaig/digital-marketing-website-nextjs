@@ -8,6 +8,9 @@ import { useLazyQuery } from "@apollo/client";
 import readingTime from "reading-time";
 import MiniLoader from "@/src/common/loader";
 import moment from "moment"
+import SearchArea from "../blog/search-area";
+import RecentPost from "../blog/recent-post";
+import Category from "../blog/category";
 
 const BlogDetailsPostbox = () => {
   const router = useRouter();
@@ -117,15 +120,13 @@ const BlogDetailsPostbox = () => {
                         </div> */}
                 </div>
               </div>
-              {/* <div className="col-xxl-4 col-xl-4 col-lg-4">
+              <div className="col-xxl-4 col-xl-4 col-lg-4">
                      <div className="sidebar__wrapper">
-                        <UserProfile />
                        <SearchArea />
-                        <RecentPost />
                        <Category />
-                      <Tags /> 
+                        <RecentPost /> 
                      </div>
-                  </div> */}
+                  </div>
             </div>
           </div>
         </section>

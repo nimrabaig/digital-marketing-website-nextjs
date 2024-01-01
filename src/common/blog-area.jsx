@@ -32,9 +32,7 @@ const BlogArea = ({ service }) => {
           <div className="row">
             <div className="col-xl-12">
               <div className="tp-blog-3-title-wrapper text-center">
-                <h3 className="tp-section-title">
-                  Blogs
-                </h3>
+                <h3 className="tp-section-title">Blogs</h3>
               </div>
             </div>
             {blogs.slice(0, 3).map((item, i) => (
@@ -42,26 +40,32 @@ const BlogArea = ({ service }) => {
                 <div className="tp-blog-3-wrapper mb-30 OneByOne">
                   <div className="tp-blog-3-thumb">
                     <Link href={`/blog-details/${item.slug}`}>
-                    <div
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      position: "relative",
-                    }}
-                  >
-                    <Image
-                      src={item?.coverPhotoURL}
-                      alt="theme-pure"
-                      width={0}
-                      height={240}
-                      sizes="100vw"
-                      style={{ width: '100%', height: '240px' }} 
-                    />
-                  </div>
+                      <div
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          position: "relative",
+                        }}
+                      >
+                        <Image
+                          src={item?.coverPhotoURL}
+                          alt="theme-pure"
+                          width={0}
+                          height={240}
+                          sizes="100vw"
+                          style={{ width: "100%", height: "240px" }}
+                        />
+                      </div>
                     </Link>
                   </div>
                   <div className="tp-blog-3-content">
-                    <div className="tp-blog-date" style={{ display: "flex", justifyContent: "space-between"}}>
+                    <div
+                      className="tp-blog-date"
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
                       <span>
                         <i className="fa-light fa-calendar-days"></i>
                         {moment(item?.createdAt).format("Do MMM YYYY ")}
@@ -69,21 +73,25 @@ const BlogArea = ({ service }) => {
                       <span>{item?.authorName}</span>
                     </div>
                     <h3 className="tp-blog-3-title">
-                      <Link href={`/blog-details/${item.slug}`} >{item.title}</Link>
+                      <Link href={`/blog-details/${item.slug}`}>
+                        {item.title}
+                      </Link>
                     </h3>
                   </div>
                   <div className="tp-blog-3-btn d-flex justify-content-between">
                     <div className="separator" />
-                    <div className="read-more p-relative">
-                      <Link
-                        href={`/blog-details/${item.slug}`}
-                      >
+                    <div
+                      className="read-more p-relative d-flex justify-content-between"
+                      style={{ marginTop: 4 }}
+                    >
+                      <Link href={`/blog-details/${item.slug}`}>
                         Read More
                         <span>
                           {" "}
                           <RightArrowTwo />
                         </span>
                       </Link>
+                      <span>{item?.category?.name}</span>
                     </div>
                     {/* <div className="fvrt">
                       <span>

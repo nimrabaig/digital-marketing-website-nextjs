@@ -14,6 +14,24 @@ export const GET_BLOG = gql`
 `;
 
 export const GET_BLOG_BY_SLUG = gql`
-query Query($slug: String!) {
-  ViewBlogPostBySlug(slug: $slug)
-}`
+  query Query($slug: String!) {
+    ViewBlogPostBySlug(slug: $slug)
+  }
+`;
+
+export const SEARCH_BLOG = gql`
+  query Query($searchString: String!) {
+    SearchBlogPost(searchString: $searchString)
+  }
+`;
+
+export const GET_CATEGORIES = gql`
+  query Query {
+    DropdownCategory
+  }
+`;
+
+export const GET_FEATURED_BLOGS = gql`
+query Query($skip: Int, $take: Int) {
+  FeaturedBlogs(skip: $skip, take: $take)
+}`;
