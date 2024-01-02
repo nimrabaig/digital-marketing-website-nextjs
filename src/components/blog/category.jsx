@@ -1,32 +1,36 @@
-import { GET_BLOGS, GET_CATEGORIES } from "@/src/graphql/queries";
-import { useLazyQuery, useQuery } from "@apollo/client";
+import {  GET_CATEGORIES } from "@/src/graphql/queries";
+import {  useQuery } from "@apollo/client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useSetRecoilState } from "recoil";
 import { BlogLoading, CategoryId } from "./atom";
 
-const category_data = [
-  { id: 1, category: "Cleaning", items: "03" },
-  { id: 2, category: "Consultant", items: "05" },
-  { id: 3, category: "Creative", items: "08" },
-  { id: 4, category: "Technology", items: "06" },
-];
+
 const Category = () => {
   const setCategoryId = useSetRecoilState(CategoryId);
   const [categories, setCategories] = useState([]);
   const setLoading = useSetRecoilState(BlogLoading);
+  const [selected, setSelected] = useState(null);
+
   useQuery(GET_CATEGORIES, {
+    fetchPolicy: "no-cache",
     onCompleted: (data) => {
-      setCategories(data?.DropdownCategory);
+        const _array = data?.CategoryListWithCount;
+        _array.splice(1,1)
+      setCategories(_array);
+      setSelected(_array[0].id)
       setLoading(false);
     },
   });
 
   const SearchByCategory = (id) => {
-    setLoading(true);
+    // setLoading(true);
     setCategoryId(id);
   };
+
+
+
   return (
     <>
       <div className="sidebar__widget mb-30">
@@ -40,10 +44,13 @@ const Category = () => {
           <ul style={{ textAlign: "left" }}>
             {categories?.length > 0 &&
               categories?.map((item, i) => (
-                <li key={i}>
-                  <Link href="/blog" onClick={() => SearchByCategory(item?.id)}>
+                <li key={i} className={`${selected === item?.id ? "selected" : ""}`}>
+                  <Link href="/blog" onClick={() => {
+                    SearchByCategory(item?.id);
+                    setSelected(item?.id);
+                  }}>
                     {item.name}
-                    <span>{item.items}</span>
+                    <span>{item.blogCount}</span>
                   </Link>
                 </li>
               ))}

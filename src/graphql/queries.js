@@ -26,9 +26,9 @@ export const SEARCH_BLOG = gql`
 `;
 
 export const GET_CATEGORIES = gql`
-  query Query {
-    DropdownCategory
-  }
+query Query {
+  CategoryListWithCount
+}
 `;
 
 export const GET_FEATURED_BLOGS = gql`

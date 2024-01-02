@@ -55,7 +55,7 @@ const BlogDetailsPostbox = () => {
                           {moment(blog?.date).format("MMMM Do YYYY ")}
                         </span>
                         <span>
-                          <Link href="#">
+                          <Link href="">
                             <i className="fa-regular fa-clock"></i>
                             {`${readingTime(parse(blog?.content))?.text} `}
                           </Link>

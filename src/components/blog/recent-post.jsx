@@ -89,7 +89,7 @@ const RecentPost = () => {
                       </span>
                     </div>
                     <h3 className="rc__post-title">
-                      <Link href="/blog-details">{item?.title}</Link>
+                      <Link href={`/blog-details/${item?.slug}`}>{item?.title}</Link>
                     </h3>
                   </div>
                 </div>

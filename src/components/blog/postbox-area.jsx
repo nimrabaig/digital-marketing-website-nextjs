@@ -38,12 +38,12 @@ const PostboxArea = () => {
       setLoading(false);
       setTotaCount(data?.AllBlogPosts[0]?.total_count);
       setBlogs(data?.AllBlogPosts);
-    }
-  }); 
+    },
+  });
 
   useEffect(() => {
     if (!search) getBlogs();
-  }, [search])
+  }, [search]);
 
   useLayoutEffect(() => {
     function onChangeScreenSize() {
@@ -79,7 +79,12 @@ const PostboxArea = () => {
             {mobileView && (
               <div
                 className="col-xxl-4 col-xl-5 col-lg-6 col-md-7"
-                style={{ margin: "0px auto 40px", justifyContent: "center", display: "flex", flexDirection: "column" }}
+                style={{
+                  margin: "0px auto 40px",
+                  justifyContent: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
               >
                 <div className="sidebar__wrapper">
                   <SearchArea />
@@ -89,76 +94,82 @@ const PostboxArea = () => {
             )}
             <div className="col-xxl-8 col-xl-8 col-lg-8">
               <div className="blog-cards-container">
-                {blogs?.length > 0 ? blogs?.map((item, i) => (
-                  <div key={i} className="card-container">
-                    <div className="tp-blog-3-wrapper mb-30 OneByOne">
-                      <div className="tp-blog-3-thumb">
-                        <Link href={`/blog-details/${item.slug}`}>
+                {blogs?.length > 0 ? (
+                  blogs?.map((item, i) => (
+                    <div key={i} className="card-container">
+                      <div className="tp-blog-3-wrapper mb-30 OneByOne">
+                        <div className="tp-blog-3-thumb">
+                          <Link href={`/blog-details/${item.slug}`}>
+                            <div
+                              style={{
+                                width: "100%",
+                                height: "100%",
+                                position: "relative",
+                              }}
+                            >
+                              <Image
+                                src={item?.coverPhotoURL}
+                                alt="theme-pure"
+                                width={0}
+                                height={240}
+                                sizes="100vw"
+                                style={{ width: "100%", height: "240px" }}
+                              />
+                            </div>
+                          </Link>
+                        </div>
+                        <div className="tp-blog-3-content">
                           <div
+                            className="tp-blog-date"
                             style={{
-                              width: "100%",
-                              height: "100%",
-                              position: "relative",
+                              display: "flex",
+                              justifyContent: "space-between",
                             }}
                           >
-                            <Image
-                              src={item?.coverPhotoURL}
-                              alt="theme-pure"
-                              width={0}
-                              height={240}
-                              sizes="100vw"
-                              style={{ width: "100%", height: "240px" }}
-                            />
+                            <span>
+                              <i className="fa-light fa-calendar-days"></i>
+                              {moment(item?.createdAt).format("Do MMM YYYY ")}
+                            </span>
+                            <span>{item?.authorName}</span>
                           </div>
-                        </Link>
-                      </div>
-                      <div className="tp-blog-3-content">
-                        <div
-                          className="tp-blog-date"
-                          style={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                          }}
-                        >
-                          <span>
-                            <i className="fa-light fa-calendar-days"></i>
-                            {moment(item?.createdAt).format("Do MMM YYYY ")}
-                          </span>
-                          <span>{item?.authorName}</span>
+                          <h3
+                            className="tp-blog-3-title"
+                            style={{ textAlign: "left" }}
+                          >
+                            <Link href={`/blog-details/${item.slug}`}>
+                              {item.title}
+                            </Link>
+                          </h3>
                         </div>
-                        <h3
-                          className="tp-blog-3-title"
+                        <div
+                          className="tp-blog-3-btn d-flex justify-content-between"
                           style={{ textAlign: "left" }}
                         >
-                          <Link href={`/blog-details/${item.slug}`}>
-                            {item.title}
-                          </Link>
-                        </h3>
-                      </div>
-                      <div
-                        className="tp-blog-3-btn d-flex justify-content-between"
-                        style={{ textAlign: "left" }}
-                      >
-                        <div className="separator" />
-                        <div className="read-more p-relative  d-flex justify-content-between">
-                          <Link href={`/blog-details/${item.slug}`}>
-                            Read More
-                            <span>
-                              {" "}
-                              <RightArrowTwo />
-                            </span>
-                          </Link>
-                          <span>{item?.category?.name}</span>
-                        </div>
-                        {/* <div className="fvrt">
+                          <div className="separator" />
+                          <div className="read-more p-relative  d-flex justify-content-between">
+                            <Link href={`/blog-details/${item.slug}`}>
+                              Read More
+                              <span>
+                                {" "}
+                                <RightArrowTwo />
+                              </span>
+                            </Link>
+                            <span>{item?.category?.name}</span>
+                          </div>
+                          {/* <div className="fvrt">
                       <span>
                         <i className="fa-light fa-heart"></i>
                       </span>
                     </div> */}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )) : <span style={{ alignSelf: "flex-start"}}>No Results Found</span>}
+                  ))
+                ) : (
+                  <span style={{ alignSelf: "flex-start" }}>
+                    No Results Found
+                  </span>
+                )}
                 {/* {post_data.map((item, i) => 
                             <article key={i} className="postbox__item format-image mb-50 transition-3">
                                 <div className="postbox__thumb w-img">
@@ -189,51 +200,58 @@ const PostboxArea = () => {
                         
                         )} */}
               </div>
-              <div className="basic-pagination text-center">
-                <nav>
-                  <ul>
-                    <li>
-                      <span
-                        onClick={() => {
-                          if (skip > 0) {
-                            setSkip(skip - limit);
-                            setCurrentPage(currentPage - 1);
-                          }
-                        }}
-                      >
-                        <i className="fa-regular fa-angles-left"></i>
-                      </span>
-                    </li>
-                    {[...Array(getPages())].map((_, i) => (
+              {blogs?.length > 0 ? (
+                <div className="basic-pagination text-center">
+                  <nav>
+                    <ul>
                       <li>
                         <span
                           onClick={() => {
-                            setCurrentPage(i + 1);
-                            setSkip(i * limit);
+                            if (skip > 0) {
+                              setSkip(skip - limit);
+                              setCurrentPage(currentPage - 1);
+                            }
                           }}
-                          className={`${
-                            currentPage === i + 1 ? "current" : ""
-                          }`}
                         >
-                          {i + 1}
+                          <i className="fa-regular fa-angles-left"></i>
                         </span>
                       </li>
-                    ))}
-                    <li>
-                      <span
-                        onClick={() => {
-                          if (skip <= totalCount && totalCount > skip + limit) {
-                            setSkip(skip + limit);
-                            setCurrentPage(currentPage + 1);
-                          }
-                        }}
-                      >
-                        <i className="fa-regular fa-angles-right"></i>
-                      </span>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+                      {[...Array(getPages())].map((_, i) => (
+                        <li>
+                          <span
+                            onClick={() => {
+                              setCurrentPage(i + 1);
+                              setSkip(i * limit);
+                            }}
+                            className={`${
+                              currentPage === i + 1 ? "current" : ""
+                            }`}
+                          >
+                            {i + 1}
+                          </span>
+                        </li>
+                      ))}
+                      <li>
+                        <span
+                          onClick={() => {
+                            if (
+                              skip <= totalCount &&
+                              totalCount > skip + limit
+                            ) {
+                              setSkip(skip + limit);
+                              setCurrentPage(currentPage + 1);
+                            }
+                          }}
+                        >
+                          <i className="fa-regular fa-angles-right"></i>
+                        </span>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              ) : (
+                <></>
+              )}{" "}
             </div>
             {!mobileView && (
               <div className="col-xxl-4 col-xl-4 col-lg-4">
