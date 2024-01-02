@@ -1,19 +1,22 @@
 import { SEARCH_BLOG } from "@/src/graphql/queries";
 import { useLazyQuery } from "@apollo/client";
 import { useRouter } from "next/router";
-import { useRecoilState, useSetRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 import React, { useEffect, useState } from "react";
 import { BlogLoading, BlogsListing } from "./atom";
-import useDebounce from "@/src/hooks/useDebounce";
 
 const SearchArea = () => {
   const router = useRouter();
   const [searchBlog] = useLazyQuery(SEARCH_BLOG);
-  const [search, setSearch] = useState("");
-  const debouncedValue = useDebounce(search, 800);
+  const [searchString, setSearch] = useState("");
   const setBlogs = useSetRecoilState(BlogsListing);
   const setLoading = useSetRecoilState(BlogLoading);
   const [onFocus, setFocus] = useState(false);
+  const { search } = router.query;
+
+  useEffect(() => {
+    setSearch(search);
+  }, [search])
 
   const onSubmit = (_search) => {
     setLoading(true);
@@ -23,17 +26,13 @@ const SearchArea = () => {
       },
     }).then((resp) => {
       setLoading(false);
-      router.push("/blog?search=true");
+      router.push(`/blog?search=${_search}`);
       if (resp?.data?.SearchBlogPost?.length > 0) {
         setBlogs(resp?.data?.SearchBlogPost);
       }
     });
   };
 
-  useEffect(() => {
-    onFocus && onSubmit(debouncedValue);
-  }, [debouncedValue])
-  
   return (
     <>
       <div className="sidebar__widget mb-30">
@@ -46,17 +45,18 @@ const SearchArea = () => {
           </h3>
           <div className="sidebar__search">
             <form
-              onClick={(e) => 
-                e.preventDefault()}
+              onSubmit={(e) => {
+                e.preventDefault();
+                console.log(e, "==")
+                onSubmit(e.target[0].value);
+              }}
             >
               <div className="sidebar__search-input-2">
                 <input
                   type="text"
                   placeholder="Search"
-                  value={search}
+                  value={searchString}
                   onChange={(e) => setSearch(e.target.value)}
-                  onMouseEnter={() => setFocus(true)}
-                  onMouseLeave={() => setFocus(false)}
                 />
                 <button type="submit">
                   <i className="far fa-search"></i>
