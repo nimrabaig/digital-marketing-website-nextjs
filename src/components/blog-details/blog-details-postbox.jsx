@@ -7,7 +7,7 @@ import { GET_BLOG, GET_BLOG_BY_SLUG } from "@/src/graphql/queries";
 import { useLazyQuery } from "@apollo/client";
 import readingTime from "reading-time";
 import MiniLoader from "@/src/common/loader";
-import moment from "moment"
+import moment from "moment";
 import SearchArea from "../blog/search-area";
 import RecentPost from "../blog/recent-post";
 import Category from "../blog/category";
@@ -19,15 +19,16 @@ const BlogDetailsPostbox = () => {
   const [getBlogData] = useLazyQuery(GET_BLOG_BY_SLUG, {
     variables: { slug }, // Assuming postId is a string and needs to be converted to a number
     onCompleted: (data) => {
-      setBlog(data?.ViewBlogPostBySlug);
+      if (data?.ViewBlogPostBySlug.success) setBlog(data?.ViewBlogPostBySlug);
+      else router.push("/404");
     },
-  })
+  });
 
   useEffect(() => {
-   if (slug) {
+    if (slug) {
       getBlogData();
-   }
-  }, [slug])
+    }
+  }, [slug]);
 
   if (!blog) return <MiniLoader />;
   else
@@ -48,8 +49,10 @@ const BlogDetailsPostbox = () => {
                     {/* </div> */}
                     <div className="postbox__content">
                       <div className="postbox__meta">
-                      
-                        <span><i class="fa-solid fa-pen-nib"></i> By {blog?.authorName}</span>
+                        <span>
+                          <i class="fa-solid fa-pen-nib"></i> By{" "}
+                          {blog?.authorName}
+                        </span>
                         <span>
                           <i className="fa-light fa-calendar-days"></i>
                           {moment(blog?.date).format("MMMM Do YYYY ")}
@@ -121,12 +124,12 @@ const BlogDetailsPostbox = () => {
                 </div>
               </div>
               <div className="col-xxl-4 col-xl-4 col-lg-4">
-                     <div className="sidebar__wrapper">
-                       <SearchArea />
-                       <Category />
-                        <RecentPost /> 
-                     </div>
-                  </div>
+                <div className="sidebar__wrapper">
+                  <SearchArea />
+                  <Category />
+                  <RecentPost />
+                </div>
+              </div>
             </div>
           </div>
         </section>
