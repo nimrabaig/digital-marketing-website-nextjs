@@ -120,7 +120,7 @@ const HeroSlider = () => {
                                   </span>
                                 </h3>
                                 <div className="tp-hero-btn">
-                                  <Link className="tp-btn" href="/about">
+                                  <Link className="tp-btn" href="/about-us">
                                     Learn More{" "}
                                     <i className="fa-regular fa-arrow-right-long"></i>
                                   </Link>

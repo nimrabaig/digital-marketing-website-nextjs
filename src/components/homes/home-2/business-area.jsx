@@ -91,7 +91,7 @@ const BusinessArea = () => {
                         </div>
 
                         <div className="tp-business-btn-area d-flex align-items-center mt-20">
-                           <Link className="tp-btn" href="/about">About Our Agency</Link>
+                           <Link className="tp-btn" href="-us">About Our Agency</Link>
                            <Image className="d-none d-xl-block" src={business_user} alt="theme-pure" />
                            <i>
                               5m+ Customer

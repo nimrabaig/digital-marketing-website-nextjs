@@ -108,7 +108,7 @@ const HeroArea = () => {
                                                     </svg>
                                                     <br />{item.title_2}</h3>
                                                 <div className="tp-hero-3-btn">
-                                                    <Link className="tp-btn-2" href="/about">LEARN MORE</Link>
+                                                    <Link className="tp-btn-2" href="/about-us">LEARN MORE</Link>
                                                 </div>
                                             </div>
                                             </div>

@@ -25,6 +25,7 @@ export default function App({ Component, pageProps }) {
           name="description"
           content="Lumenta Digital is a full-service digital marketing agency that offers tailored marketing services and more to drive your business growth."
         />
+        <link rel="canonical" href="https://www.lumentadigital.com/" />
       </Head>
       <RecoilRoot>
         <ApolloProvider client={client}>

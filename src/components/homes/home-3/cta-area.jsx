@@ -44,7 +44,7 @@ const CtaArea = () => {
                                         </div>
                                     </div>
                                     <div className="tp-cta-3-btn">
-                                        <Link className="tp-btn-3" href="/about">About Our Agency</Link>
+                                        <Link className="tp-btn-3" href="/about-us">About Our Agency</Link>
                                     </div>
                                 </div>
                             </div>

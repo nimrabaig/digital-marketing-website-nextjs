@@ -169,7 +169,7 @@ const AboutArea = () => {
                                             <h4 className="about-title">{item.title}</h4>
                                             <p>{item.description}</p>
                                             <div className="tp-about-item-btn">
-                                                <Link href="/about">
+                                                <Link href="/abou-us">
                                                     <i className="fa-regular fa-arrow-right"></i>
                                                 </Link>
                                             </div>

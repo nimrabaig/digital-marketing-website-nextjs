@@ -1,5 +1,5 @@
 import Breadcrumb from "@/src/common/breadcrumb/breadcrumb";
-import React from "react";
+import React, { useEffect } from "react";
 import ServiceDetailsArea from "./service-details-area";
 import FooterContact from "@/src/layout/footers/footer-contact";
 import FooterTwo from "@/src/layout/footers/footer-2";
@@ -13,6 +13,11 @@ const ServiceDetails = () => {
   const slug = router.query.id;
   const index = service_data.findIndex((service) => service.slug=== slug);
   const data = service_data[index];
+
+  useEffect(() => {
+    if (!data) router.push("/404")
+  }, [data])
+
   return (
     <>
       <HeaderTwo />
