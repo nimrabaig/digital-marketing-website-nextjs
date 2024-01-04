@@ -19,8 +19,8 @@ const BlogDetailsPostbox = () => {
   const [getBlogData] = useLazyQuery(GET_BLOG_BY_SLUG, {
     variables: { slug }, // Assuming postId is a string and needs to be converted to a number
     onCompleted: (data) => {
-      if (data?.ViewBlogPostBySlug.success) setBlog(data?.ViewBlogPostBySlug);
-      else router.push("/404");
+      if (data?.ViewBlogPostBySlug?.success === false) router.push("/404");
+      else setBlog(data?.ViewBlogPostBySlug);
     },
   });
 
