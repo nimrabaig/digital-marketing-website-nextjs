@@ -16,6 +16,7 @@ const ServiceDetails = () => {
 
   useEffect(() => {
     if (slug && !data) router.push("/404")
+    console.log(slug, data)
   }, [slug, data])
 
   return (
