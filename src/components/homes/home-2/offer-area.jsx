@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import slugify from "react-slugify";
 
 import offer_shape_1 from "@assets/img/offering/shape.png";
 import offer_shape_2 from "@assets/img/offering/shape-2.png";
@@ -20,6 +19,7 @@ const offering_data = [
         Search Engine <br /> Optimization (SEO)
       </>
     ),
+    slug: "search-engin-optimization",
     description: (
       <>
        Increase search rankings and attract high-quality, relevant traffic.
@@ -34,6 +34,7 @@ const offering_data = [
         Website Design <br />& Development
       </>
     ),
+    slug: "website-design-and-Development",
     description: (
       <>
         Improve digital marketing results by creating a well-developed website.
@@ -49,6 +50,7 @@ const offering_data = [
         Marketing
       </>
     ),
+    slug: "social-media-marketing",
     description: (
       <>Elevate brand story across online channels with a unique presence.</>
     ),
@@ -61,6 +63,7 @@ const offering_data = [
         Pay Per Click <br /> (PPC)
       </>
     ),
+    slug: "pay-per-click",
     description: (
       <>Optimize & boost search engine visibility and attract valuable leads.</>
     ),
@@ -111,7 +114,7 @@ const OfferArea = () => {
                     <Image src={item.img} alt="theme-pure" />
                   </div>
                   <div className="tp-offer-wrapper-btn">
-                    <Link href={`/services/${slugify(item.title)}`}>
+                    <Link href={`/services/${item.slug}`}>
                       Read Out More{" "}
                       <i className="fa-solid fa-arrow-up-right"></i>
                     </Link>
