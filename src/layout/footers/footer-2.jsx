@@ -14,6 +14,7 @@ import { SUBSCRIBE_NEWS_LETTER } from "@/src/graphql/mutation";
 const footer_two_content = {
   bg_img: "/assets/img/footer/footer-2-bg.png",
   footer_widget: [
+    { title: "About Us", path: "/about-us" },
     {
       title: "Pricing",
       path: "/pricing",
@@ -24,8 +25,7 @@ const footer_two_content = {
     },
     { title: "Sitemap", path: "/coming-soon" },
   ],
-  google_map:
-    "https://maps.app.goo.gl/HkccwAFkhdHNYukw7",
+  google_map: "https://maps.app.goo.gl/HkccwAFkhdHNYukw7",
   about_us: (
     <>
       We're an innovative and dynamic digital marketing agency, harnessing the
@@ -119,11 +119,11 @@ const FooterTwo = () => {
         .then((resp) => {
           toast.dismiss();
           if (resp.data?.SubscribeNewsLetter?.success) {
-            toast.success(resp.data?.SubscribeNewsLetter?.message);;
+            toast.success(resp.data?.SubscribeNewsLetter?.message);
             setValues({
               name: "",
-              email: ""
-            })
+              email: "",
+            });
           } else {
             toast.error(resp.data?.SubscribeNewsLetter?.message);
           }
@@ -153,16 +153,19 @@ const FooterTwo = () => {
               <div className="row">
                 <div className="col-xl-4 col-lg-5 col-md-6">
                   <div className="tp-footer-widget tp-footer-2-col-1">
-                  <div className="col-lg-2 col-md-2" style={{ marginBottom: 20 }}>
-                  <div className="tp-footer-2-logo">
-                    <Image
-                      src={footer_logo}
-                      alt="theme-pure"
-                      width={180}
-                      height={60}
-                    />
-                  </div>
-                </div>
+                    <div
+                      className="col-lg-2 col-md-2"
+                      style={{ marginBottom: 20 }}
+                    >
+                      <div className="tp-footer-2-logo">
+                        <Image
+                          src={footer_logo}
+                          alt="theme-pure"
+                          width={180}
+                          height={60}
+                        />
+                      </div>
+                    </div>
                     <h3 className="tp-footer-widget-title">Newsletter</h3>
                     <form
                       className="tp-footer-from"
@@ -189,7 +192,10 @@ const FooterTwo = () => {
                           }
                         />
                       </div>
-                      <div className="tp-footer-btn" style={{ display: "flex", justifyContent: "flex-end"}}>
+                      <div
+                        className="tp-footer-btn"
+                        style={{ display: "flex", justifyContent: "flex-end" }}
+                      >
                         <div
                           className="tp-btn tp-btn-default mt-10 mb-30"
                           type="submit"
@@ -248,10 +254,9 @@ const FooterTwo = () => {
                           </Link>
                         </div>
                         <div className="tp-footer-widget-social">
-                        <SocialLinks />
+                          <SocialLinks />
+                        </div>
                       </div>
-                      </div>
-                       
                     </div>
                   </div>
                 </div>
@@ -259,10 +264,9 @@ const FooterTwo = () => {
             </div>
             <div className="tp-footer-2-menu-area p-relative">
               <div className="row align-items-center">
-               
                 <div className="col-md-12">
                   <div className="tp-footer-2-menu">
-                  Copyright © 2023 - Lumenta Digital Inc
+                    Copyright © 2023 - Lumenta Digital Inc
                     {/* <ul>
                       {footer_nav.map((item, i) => (
                         <li key={i}>
@@ -270,7 +274,6 @@ const FooterTwo = () => {
                         </li>
                       ))}
                     </ul> */}
-
                   </div>
                 </div>
                 {/* <div className="col-lg-2 col-md-6">
