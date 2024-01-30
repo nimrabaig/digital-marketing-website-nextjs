@@ -78,8 +78,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, home_three }) => {
                 </Link>
               </div>
             </div>
-            <div className="mobile-menu fix d-lg-none"></div>
-            <div className="tp-mobile-menu-pos mean-container d-lg-none">
+            <div className="mobile-menu fix d-xl-none"></div>
+            <div className="tp-mobile-menu-pos mean-container d-xl-none">
               <MobileMenus />
             </div>
             <div className="offcanvas__popup">
