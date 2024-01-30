@@ -9,6 +9,8 @@ import logo_shape from "@assets/img/hero/hero-2/logo-shape.png";
 import SearchPopup from "@/src/modals/search-popup";
 import Sidebar from "@/src/modals/sidebar";
 
+import menu_data from "./menu-data";
+
 const HeaderTwo = () => {
   const { sticky } = useSticky();
   const [searchOpen, setSearchOpen] = useState(false);
@@ -54,7 +56,7 @@ const HeaderTwo = () => {
                   <div className="tp-main-menu-2-area d-flex align-items-center">
                     <div className="tp-main-menu">
                       <nav id="tp-mobile-menu">
-                        <NavMenu />
+                        <NavMenu data={menu_data} />
                       </nav>
                     </div>
                   </div>

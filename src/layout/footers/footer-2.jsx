@@ -23,7 +23,7 @@ const footer_two_content = {
       title: "Blogs",
       path: "/blog",
     },
-    { title: "Sitemap", path: "/coming-soon" },
+    { title: "Sitemap", path: "/sitemap" },
   ],
   google_map: "https://maps.app.goo.gl/HkccwAFkhdHNYukw7",
   about_us: (
@@ -248,7 +248,7 @@ const FooterTwo = () => {
                           </Link>
                         </div>
                         <div className="tp-footer-main-mail">
-                          <Link href={`mailto:${email}`}>
+                          <Link href={`tel:${phone}`}>
                             <i className="fa-regular fa-phone"></i>
                             {phone}
                           </Link>

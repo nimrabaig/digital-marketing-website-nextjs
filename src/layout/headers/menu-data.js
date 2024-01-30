@@ -17,7 +17,7 @@ const menu_data = [
     title: "About Us",
     link: "/about-us",
     active: "",
-  },   
+  },
   {
     id: 3,
     mega_menu: false,
@@ -26,10 +26,38 @@ const menu_data = [
     link: "",
     active: "",
     sub_menus: [
-      { link: "/services/search-engin-optimization", title: "search-engine-optimization" },
-      { link: "/services/website-design-and-Development", title: "Website Design & Development" }, 
-      { link: "/services/social-media-marketing", title: "Social Media Marketing" }, 
-      { link: "/services/pay-per-click", title: "Pay Per Click" }, 
+      {
+        link: "/services/search-engin-optimization",
+        title: "search-engine-optimization",
+        has_dropdown: true,
+        active: "",
+        sub_menus: [
+          {
+            link: "/services/seo/link-building-services",
+            title: "Link Building Services ",
+            has_dropdown: false,
+          },
+          {
+            link: "/services/seo/technical-seo",
+            title: "Technical SEO",
+            has_dropdown: false,
+          },
+          {
+            link: "/services/seo/local-seo",
+            title: "Local SEO",
+            has_dropdown: false,
+          },
+        ],
+      },
+      {
+        link: "/services/website-design-and-Development",
+        title: "Website Design & Development",
+      },
+      {
+        link: "/services/social-media-marketing",
+        title: "Social Media Marketing",
+      },
+      { link: "/services/pay-per-click", title: "Pay Per Click" },
     ],
   },
   // {
@@ -42,9 +70,9 @@ const menu_data = [
   //   sub_menus: [
   //     { link: "/portfolio", title: "Portfolio" },
   //     { link: "/portfolio-details", title: "Portfolio Details" },
-  //     { link: "/team", title: "Team" }, 
+  //     { link: "/team", title: "Team" },
   //     { link: "/team-details", title: "Team Details" },
-  //     { link: "/404", title: "404" }, 
+  //     { link: "/404", title: "404" },
   //   ],
   // },
 
@@ -73,7 +101,5 @@ const menu_data = [
     link: "/contact",
     active: "",
   },
-  
-
 ];
 export default menu_data;
