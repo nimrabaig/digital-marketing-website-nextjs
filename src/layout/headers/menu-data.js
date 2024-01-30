@@ -52,12 +52,18 @@ const menu_data = [
       {
         link: "/services/website-design-and-Development",
         title: "Website Design & Development",
+        has_dropdown: false,
       },
       {
         link: "/services/social-media-marketing",
         title: "Social Media Marketing",
+        has_dropdown: false,
       },
-      { link: "/services/pay-per-click", title: "Pay Per Click" },
+      {
+        link: "/services/pay-per-click",
+        title: "Pay Per Click",
+        has_dropdown: false,
+      },
     ],
   },
   // {
