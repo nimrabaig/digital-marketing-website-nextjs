@@ -46,6 +46,11 @@ const index = () => {
   const router = useRouter();
   const slug = router.query.id;
   const index = service_data.findIndex((service) => service.slug=== slug);
+
+  useEffect(() => {
+    if (!slug) router.push("/404");
+  }, [slug]);
+
   return (
     <Wrapper>
       <SEO
