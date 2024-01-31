@@ -10,7 +10,7 @@ const NavMenu = ({ data, depth = 0 }) => {
   return (
     <>
       <ul>
-        {data.map((menu_item, i) => (
+        {data?.map((menu_item, i) => (
           <li
             key={i}
             className={`${
