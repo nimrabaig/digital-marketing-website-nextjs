@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Wrapper from "../../layout/wrapper";
 import SEO from "../../common/seo";
 import ServiceDetails from "../../components/service-details";
